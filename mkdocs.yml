@@ -1,0 +1,18 @@
+site_name: YHKLAB Wiki
+
+theme:
+    name: 'material'
+
+markdown_extensions:
+    - attr_list
+
+pages:
+        - Home: home.md
+        - About: about.md
+        - Tutorials (basic):
+                - 'Tutorial 0 : Basic SIESTA Calculation': 00_Basic_UM.md
+                - 'Tutorial 1 : Au Electronic Structure Calculation': 01_GOLD_CHJ.md
+                - 'Tutorial 2 : Graphene Electronic Structure Calculation' : 02_Graphene_CHJ.md
+        - YHK Workshop (2020):
+                - 'ML-NEB' : ML-NEB.md
+
