@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Tutorial 0 : Basic SIESTA Calculation - YHKLAB Wiki</title>
+        <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="..">YHKLAB Wiki</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="../home/">Home</a>
+                            </li>
+                            <li >
+                                <a href="../about/">About</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Tutorials <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../MSDFT/">MSDFT</a>
+</li>
+                                    
+<li >
+    <a href="../ML/">Machine Learning</a>
+</li>
+                                    
+<li class="active">
+    <a href="./">Tutorial 0 : Basic SIESTA Calculation</a>
+</li>
+                                    
+<li >
+    <a href="../01_GOLD_CHJ/">Tutorial 1 : Au Electronic Structure Calculation</a>
+</li>
+                                    
+<li >
+    <a href="../02_Graphene_CHJ/">Tutorial 2 : Graphene Electronic Structure Calculation</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li >
+                                <a rel="next" href="../ML/">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="../01_GOLD_CHJ/">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#tutorial-0-basic-siesta-calculation">Tutorial 0: Basic SIESTA Calculation</a></li>
+            <li><a href="#contents">Contents</a></li>
+            <li><a href="#part-1-siesta_1">Part 1: 이론적 배경 &amp; siesta 개요</a></li>
+            <li><a href="#part-2_1">Part 2: 분자</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="tutorial-0-basic-siesta-calculation">Tutorial 0: Basic SIESTA Calculation</h1>
+<h2 id="contents">Contents</h2>
+<h3 id="part-1-siesta">Part 1: 이론적 배경 &amp; siesta 개요</h3>
+<ol>
+<li>이론적배경</li>
+<li>Siesta 개요</li>
+</ol>
+<h3 id="part-2">Part 2: 분자</h3>
+<ol>
+<li>Exercise : CH4 분자 구조 최적화</li>
+<li>Exercise : CH4 분자 basis test</li>
+<li>Exercise : CH3 전자밀도</li>
+</ol>
+<h2 id="part-1-siesta_1">Part 1: 이론적 배경 &amp; siesta 개요</h2>
+<p>참고문헌: SIESTA homepage (<a href="http://www.icmab.es/siesta/">http://www.icmab.es/siesta/</a>)   Documentation Tutorials </p>
+<h3 id="_1">이론적배경</h3>
+<p>a. 튜토리얼에서는 Kohn-Sham 방정식을 푸는 시뮬레이션을 진행한다. Kohn-sham 방정식은 아래와 같다.</p>
+<p><img alt="03_001" src="../img/03/03_001.jpg" /></p>
+<ul>
+<li>Pseudopotential 은 계산의 편의를 위해 원자의 core부분에 해당하는 전자들을 하나의 포텐셜로 치환하는 것을 의미한다. 위의 그림과 같이 pseudopotential은 원자와의 일정 거리(rc) 이상에서 실제 전자의 wave function과 같도록 만들어 준다.</li>
+</ul>
+<p><img alt="03_002" src="../img/03/03_002.jpg" /></p>
+<ul>
+<li>계산 상에서 간소화로 인해 야기되는 무시된 single-particle problem은 LDA나 GGA와 같은 exchange-correlation 함수로 고려한다.</li>
+<li>Kohn-sham equation에서 basis로 사용되는 Wavefunction은 SZ(single zeta), DZ(double zeta), TZ(triple zeta), DZP(double zeta polarized), DZDP(double zeta double polarized)…와 같은 basis로서 표현된다.</li>
+<li>앞서 언급된, Basis의 결정으로 Basis 의 숫자가 결정되며 이는 계산의 정확도와 관련이 있다.</li>
+</ul>
+<p>b. Kohn-Sham DFT계산에서 사용되는 SCF(self-consistent-field) 계산의 알고리즘은  아래의 그림과 같다. </p>
+<p><img alt="03_003" src="../img/03/03_003.jpg" /></p>
+<p>알고리즘에서 H(Hamiltonian)은 LCAO(linear combination of atomic orbitals)로 구성되며 SCF loop를 통해 안정된 에너지를 가지는 H를 구할 수 있다. 이를 통해 Bandstructure, (P)DOS 등 다양한 물질특성을 분석할 수 있다.</p>
+<h3 id="siesta">Siesta 개요</h3>
+<ul>
+<li>위와 같은 DFT 계산을 위해서는 아래와 같은 input 파일과 executable 파일이 필요하다. Input 파일은 <em>.fdf,(RUN.fdf, STRUCT.fdf, KPT.fdf, BASIS.fdf) 와 </em>psf 가 필요하다.</li>
+<li>fdf 파일은 파일을 실행시키는데 필요한 정보들을 가지고 있는 파일이며 psf파일은 pseudopotential 정보를 가지고 있는 파일을 뜻한다.</li>
+<li>이러한 input 파일을 통해 band, PDOS LDOS, eigenvalue 등의 결과를 output으로 알 수 있다. </li>
+<li>Siesta 는 아래 그림과 같은 과정으로 진행된다.</li>
+</ul>
+<p><img alt="03_004" src="../img/03/03_004.jpg" /></p>
+<h2 id="part-2_1">Part 2: 분자</h2>
+<h3 id="exercise-1-ch4">Exercise 1: CH4 분자 구조 최적화</h3>
+<p>DFT 계산을 위해서는 먼저 계산하려는 구조의 최적화가 필요하다.</p>
+<p>a. 구조 최적화는 다음과 같은 방식으로 진행된다. </p>
+<p><img alt="03_005" src="../img/03/03_005.jpg" /></p>
+<ul>
+<li>Step 1. Geometrical optimization 을 추측하여 구조를 계산한다.</li>
+<li>Step 2. 위의 계산결과를 바탕으로 Geometrical optimization없이 구조 계산을 실행한다.</li>
+</ul>
+<p>b. STRUCT 파일 구성 </p>
+<p><img alt="03_006" src="../img/03/03_006.jpg" /></p>
+<ul>
+<li>Material studio 에서 다운받은 파일을 실행시킨 다음 export에서 msi 로 저장한다.</li>
+</ul>
+<p><img alt="03_007" src="../img/03/03_007.jpg" /></p>
+<ul>
+<li>Xshell에서 아래그림과 같이 새 파일 전송을 누른다.</li>
+</ul>
+<p><img alt="03_008" src="../img/03/03_008.jpg" /></p>
+<ul>
+<li>이제 다운받은 파일을 Xftp에서 드래그를 통해 옮긴 후 다음 커맨드를 입력한다. </li>
+</ul>
+<p><img alt="03_009" src="../img/03/03_009.jpg" /></p>
+<p>첫번째 방법</p>
+<pre><code class="bash">$vasptools-linux –poscar (material)_mp-492_primitive.msi
+$vi POSCAR
+$vasptools-linux –xyz POSCAR
+$xyz2structfdf_full.py POSCAR.xyz
+</code></pre>
+
+<p>두번째 방법</p>
+<pre><code class="bash">$msi2fdf.sh (material)_mp-492_primitive.msi
+$vi STRUCT.fdf
+</code></pre>
+
+<p>이로서 구조최적화를 하기 전 기본적인 STRUCT.fdf 파일을 만들 수 있다.</p>
+<pre><code class="bash">$vi STRUCT.fdf
+NumberOfAtoms    5           # Number of atoms
+NumberOfSpecies  2           # Number of species
+%block ChemicalSpeciesLabel
+ 1 6 C
+ 2 1 H
+%endblock ChemicalSpeciesLabel
+LatticeConstant      40.000000000 Ang
+%block LatticeVectors
+    1.000000000     0.000000000     0.000000000
+    0.000000000     1.000000000     0.000000000
+    0.000000000     0.000000000     1.000000000
+%endblock LatticeVectors
+AtomicCoordinatesFormat ScaledCartesian
+%block AtomicCoordinatesAndAtomicSpecies
+    -0.000196800    -0.000196800    -0.000178525    1    1
+     0.025718150    -0.006302475    -0.007980825    2    2
+    -0.006302475     0.025718150    -0.007980825    2    3
+    -0.002297125    -0.002297125     0.027402550    2    4
+    -0.017873200    -0.017873200    -0.012210550    2    5
+%endblock AtomicCoordinatesAndAtomicSpecies
+</code></pre>
+
+<p>c.pseudopotentil 파일은 default pseudopotential (ChemicalSpeciesLabel.psf) for each atomic species. (<a href="https://departments.icmab.es/leem/siesta/Databases/Pseudopotentials/periodictable-lda-abinit.html">https://departments.icmab.es/leem/siesta/Databases/Pseudopotentials/periodictable-lda-abinit.html</a>) 에서 다운 받거나 직접 만들 수 있다. 계산에 필요한 pseudopotential 파일과 BASIS.fdf, KPT.fdf, slm_siesta_run파일은 폴더에 정리해 두었다.</p>
+<p>d. 계산을 위한 폴더 만들기</p>
+<pre><code class="bash">$ mkdir ch4(폴더이름) 
+$ cd ch4
+slm_siesta_run을 ch4 폴더에 복사
+$ mkdir input(폴더이름)
+$ cd input 
+C.psf, H.psf, RUN.fdf, STRUCT.fdf, KPT.fdf, BASIS.fdf 파일을 input 폴더에 복사
+$  cd ..
+$ sbatch slm_siesta_run
+</code></pre>
+
+<p>Geometrical optimization을 위해서는 계산된 결과(OUT)를 통해 새로운 input 파일을 생성하여 새로운 계산을 실행해야 한다. 
+새로운 STRUCT.fdf 파일을 만들기 위해 아래와 같은 작업이 필요하다.</p>
+<pre><code class="bash">$ cd input
+$ siesta2xyz.py STRUCT.fdf
+$ vi STRUCT.xyz
+셀정보를 복사(아래그림의 빨간색 영역)
+</code></pre>
+
+<p><img alt="03_010" src="../img/03/03_010.jpg" /></p>
+<pre><code class="bash">$ cd ..
+$ cd OUT
+$ vi Test.xyz(cell정보가 포함되어 있는 파일)
+셀정보를 붙여넣기
+
+$ xyz2fdf_cell.py Test.xyz
+$ cd ../../
+$ cp Text.fdf ../input/
+새로운 STRUCT.fdf 파일 생성
+$ cp Text.fdf STRUCT.fdf
+$ cd ..
+$ cd input
+$ vi RUN.fdf
+MD.NumberCGstep을 0으로 바꾼다.
+$ cd ..
+$ sbatch slm_siesta_run
+</code></pre>
+
+<p>STRUCT.fdf 파일 시각화를 통해 구조최적화 전후의 bonding length 와 bonding angle이 달라짐을 확인 할 수 있다. </p>
+<pre><code class="bash">$ cd (OUT directory)
+$ xyz2fdf_cell.py STRUCT.fdf (STRUCT.fdf 파일을 xyz 파일로 변환)
+$ xyz2xcrysden.py STRUCT.xyz
+</code></pre>
+
+<p>Display-Unit of Repetition-Translational asymmetric unit 선택</p>
+<p><img alt="03_011" src="../img/03/03_011.jpg" /></p>
+<p>Distance 선택 후 원자 두개를 선택한 후 Done을 선택하면 Distance를 알 수 있다.</p>
+<p><img alt="03_012" src="../img/03/03_012.jpg" /></p>
+<p>Angle 선택 후 원자 세개를 선택한 후 Done을 선택하면 Angle을 알 수 있다.</p>
+<p><img alt="03_013" src="../img/03/03_013.jpg" /></p>
+<blockquote>
+<p>구조 최적화 전 bonding length : 1.30719 Ang, bonding angle : 108.7856 deg
+구조 최적화 된 bonding length : 1.10977 Ang, bonding angle : 109.4914 deg</p>
+</blockquote>
+<h3 id="exercise-2-ch4-basis-test">Exercise 2: CH4 분자 basis test</h3>
+<p>Geometrical Optimization 을 위와 같이 진행 한 후에는 Basis test를 통해 사용한 Basis가 적절한지 테스트를 한다. Basis 테스트는 Geometrical Optimization 가 완료된 구조에서 각 Basis 별로 계산을 진행하여 안정된 에너지를 가지는 Basis를 선택하면 된다. </p>
+<ul>
+<li>Siesta code</li>
+</ul>
+<pre><code class="bash">$ cd input
+$ vi BASIS.fdf
+아래 그림의 PAO.BasisSize를 SZ, DZ, TZ, DZDP 등으로 테스트 한다.
+</code></pre>
+
+<p><img alt="03_014" src="../img/03/03_014.jpg" />\</p>
+<ul>
+<li>xyz 파일보기 -Basis 별 bonding length 과 Reference(Handy, Nicholas C., Christopher W. </li>
+</ul>
+<pre><code class="bash">$ cd OUT
+Control + Alt + F
+Test.xyz 파일을 바탕화면에 옮기고 Vesta 툴을 사용하여 xyz 파일을 볼 수 있다.
+또는 xyz2xcrysden.py Test.xyz로 파일을 볼 수 있다. 
+아래 그림의 PAO.BasisSize를 SZ, DZ, TZ, DZDP 등으로 테스트 한다.
+</code></pre>
+
+<p>Murray, and Roger D. Amos. "Study of methane, acetylene, ethene, and benzene using Kohn-Sham theory." The Journal of Physical Chemistry 97.17 (1993): 4392-4396.) 와 비교</p>
+<p><img alt="03_015" src="../img/03/03_015.jpg" /></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th align="center">SZ</th>
+<th align="center">DZ</th>
+<th align="center">TZ</th>
+<th align="center">DZP</th>
+<th align="right">DZDP</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Bonding length [Ang]</code></td>
+<td align="center">1.20100</td>
+<td align="center">1.10876</td>
+<td align="center">1.11050</td>
+<td align="center">1.10977</td>
+<td align="right">1.10861</td>
+</tr>
+<tr>
+<td><code>Bonding angle [degree]</code></td>
+<td align="center">109.4398</td>
+<td align="center">1.091358</td>
+<td align="center">109.1567</td>
+<td align="center">109.4914</td>
+<td align="right">109.3702</td>
+</tr>
+</tbody>
+</table>
+<h3 id="exercise-3-ch3">Exercise 3: CH3 전자밀도</h3>
+<p>a. spin에 따른 전자밀도를 보는 방법은 아래와 같다. Spin 에 따른 전자밀도를 시각화 하기 위해서는 RUN.fdf 에서 아래와 같은 코드를 추가하여야한다</p>
+<pre><code class="bash">%include STRUCT.fdf
+%include BASIS.fdf
+%include KPT.fdf
+#General system specifications
+SystemName          CH3 molecule
+SystemLabel         ch3
+#Density functional
+XC.functional GGA
+XC.authors  PBE
+#Real space grid 
+MeshCutoff    400.0 Ry
+# Convergence of SCF 
+MaxSCFIterations   100
+DM.MixingWeight    0.25
+DM.NumberPulay     5
+# Type of solution (diagon is the  default for less than 100 atoms)
+SolutionMethod diagon
+#Geometrical optimization
+MD.TypeOfRun         CG
+MD.NumCGsteps        100
+MD.MaxCGDispl         0.1 Bohr
+MD.MaxForceTol        0.02 eV/Ang
+
+#Spin polarization 
+ SpinPolarized .ture.
+
+#3DPlos
+ SaveRho .true.
+%block LocalDensityOfStates
+ -6.00 -3.00 eV
+%endblock LocalDensityOfStates
+
+WriteCoorXmol        .true.  # SystemLavel.xyz 
+WriteMDXmol    .true.
+
+</code></pre>
+
+<p>b. siesta code</p>
+<pre><code class="bash">$ mkdir Ch3 (Ch3폴더 생성)
+slm-siesta_run 파일을 여기에 복사
+$ mkdir input
+$ cd input 
+ch3input, c.psf, H.psf 파일을 여기에 복사
+$ cp ch3input RUN.fdf
+$ cd ..
+$ sbatch slm-siesta_run
+&amp; cd OUT
+rho2xsf 파일을 여기에 복사
+$ rho2xsf
+$ ch3
+$ A
+$ -2 -2 -2
+$ 5 0 0
+$ 0 5 0
+$ 0 0 5
+$ 100 100 100
+$ RHO
+$ BYE
+$ xcrysden –-xsf *.XSF
+입력하면 XCrySDen 창이 열린다.
+ToolData Grid(up, down 선택)Isovalue 범위 설정submit으로 charge density를 아래와 같이 그릴 수 있다.
+</code></pre>
+
+<p><img alt="03_016" src="../img/03/03_016.jpg" /></p></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js" defer></script>
+        <script src="../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
