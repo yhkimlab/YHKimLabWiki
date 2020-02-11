@@ -13,6 +13,12 @@ pages:
                 - 'Tutorial 0 : Basic SIESTA Calculation': 00_Basic_UM.md
                 - 'Tutorial 1 : Au Electronic Structure Calculation': 01_GOLD_CHJ.md
                 - 'Tutorial 2 : Graphene Electronic Structure Calculation' : 02_Graphene_CHJ.md
+                - 'Tutorial 3 : Pseudopotential generations' : 03_Pseudopotential_RG.md
         - YHK Workshop (2020):
                 - 'ML-NEB' : ML-NEB.md
-
+        - NanoCore :
+                - 'K-point Sampling' : kpoint.md
+                - 'Structure Optimization' :
+                        - 'Equation Of State ' : Nano02_EOS.md
+                        - 'Murnaghan Equatuin Of State' : Nano02_3dEOS.md
+                        - 'Geometry Optimization' : Nano03_GEO.md

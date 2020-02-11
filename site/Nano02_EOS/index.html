@@ -36,7 +36,7 @@
     
     
       
-        <title>Code Tutorial : MSDFT - YHKLAB Wiki</title>
+        <title>Equation Of State - YHKLAB Wiki</title>
       
     
     
@@ -75,7 +75,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#code-tutorial-msdft" tabindex="1" class="md-skip">
+      <a href="#equation-of-state" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -101,7 +101,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                Code Tutorial : MSDFT
+                Equation Of State 
               
             </span>
           
@@ -300,10 +300,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
     
     <label class="md-nav__link" for="nav-5">
       NanoCore
@@ -331,10 +333,12 @@
           
           
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-2" type="checkbox" id="nav-5-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-2" type="checkbox" id="nav-5-2" checked>
     
     <label class="md-nav__link" for="nav-5-2">
       Structure Optimization
@@ -350,11 +354,59 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../Nano02_EOS/" title="Equation Of State" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Equation Of State 
+      </label>
+    
+    <a href="./" title="Equation Of State" class="md-nav__link md-nav__link--active">
       Equation Of State 
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#equation-of-state" class="md-nav__link">
+    상태방정식 (Equation of state)을 통한 격자상수 찾기
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#polynomial-fitting" class="md-nav__link">
+    다항식 곡선 피팅 (Polynomial fitting)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    결과 정리
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -406,8 +458,36 @@
 <nav class="md-nav md-nav--secondary">
   
   
-    
   
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#equation-of-state" class="md-nav__link">
+    상태방정식 (Equation of state)을 통한 격자상수 찾기
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#polynomial-fitting" class="md-nav__link">
+    다항식 곡선 피팅 (Polynomial fitting)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    결과 정리
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
   
 </nav>
                   </div>
@@ -420,11 +500,130 @@
               
                 
                 
-                <h1 id="code-tutorial-msdft">Code Tutorial : MSDFT</h1>
-<p>This is a tutorial for MSDFT(Multi-space constrained-search Density Functional Theory).</p>
-<ul>
-<li>Topic 1 : How to install the code from github</li>
-</ul>
+                  <h1>Equation Of State </h1>
+                
+                <h3 id="equation-of-state">상태방정식 (Equation of state)을 통한 격자상수 찾기</h3>
+<p>지금까지 <code>NanoCore</code>를 이용해 그래핀 모델을 생성하고, <strong>k-point sampling</strong> 과정을 통해 전체 에너지가 수렴하는 k-point 임계점을 구했다. DFT 계산을 통해 얻은 전체 에너지는 압력, 격자상수, 부피 탄성계수 등에 영향을 받으며, 에너지가 최소가 되는 지점에서 안정화된 구조를 가진다. 이번 장에서는 이차원 물질인 그래핀의 격자상수에 변화를 주며 전체 에너지가 최소가 되는 지점을 구할 것이다.</p>
+<p>우선 저번 장과 동일한 그래핀 모델과 <strong>k-point sampling</strong>을 통해 얻은 k-point 값을 이용한다.</p>
+<pre><code class="python">from NanoCore import *
+import numpy as np
+
+# Modeling
+atoms = carbonlab.grp(0,0)
+sim = s2.Siesta(atoms)
+
+# Previous options
+sim.set_option('kshift', [0.5,0.5,0.0]) # set k shift from gamma
+sim.set_option('MixingWt', 0.10)        # adjust mixing weight (density)
+sim.set_option('BasisSize', 'SZ')       # adjust basis size
+
+# Import Kpt from k-sampling
+converged_kpt = 10          # From k-sampling
+sim.set_option('kgrid', [converged_kpt, converged_kpt, 1])
+</code></pre>
+
+<p><code>atoms</code>는 <code>carbonlab</code> 모듈에 종속된 <code>Atom</code> 클래스이다. <code>Atom</code> 클래스에 <code>_cell</code> 함수를 이용하면 <code>Atom</code>의 격자벡터 (lattice vector)에 대한 배열을 얻을 수 있다. 이 격자벡터를 여러 비율로 바꿔가며 전체 에너지를 계산한다.</p>
+<pre><code class="python">import copy
+import os
+import numpy as np
+
+# Initial values for lattice vectors
+init_latticevectors = copy.copy(atoms._cell)
+init_latticeconst = sqrt(sum(init_latticevectors[0]*init_latticevectors[0]))
+
+# Lattice variations
+ratios = [0.98, 1.00, 1.02, 1.04]
+
+# Simulations
+Etot = []
+Latticeconsts = []
+
+for ratio in ratios:
+    atoms._cell[0] = ratio * init_latticevectors[0]     # modifies lattice vectors
+    atoms._cell[1] = ratio * init_latticevectors[1]
+
+    latticeconsts = sqrt(sum(atoms._cell[0]*atoms._cell[0]))
+
+    os.system('mkdir EOS_%5.3f' %latticeconsts)         # make directions for each lattice constants
+    os.chdir('EOS_%5.3f' %latticeconsts)
+
+    print('Calculating for lattice constant = %5.3f A \n' %latticeconsts)
+    sim = s2.Siesta(atoms)            # set simulation
+    sim.run()                         # run simulation
+    energy =s2.get_total_energy()
+
+    os.chdir('..')
+
+    Latticeconsts.append(latticeconsts)
+    Etot.append(energy)
+    print('Lattice constant : %9.5f [A], Total energy : %4.2f [eV]' %(latticeconsts , energy))
+    print('\n')
+
+# Convert array to np.array
+Etot = np.array(Etot)
+Latticeconsts = np.array(Latticeconsts)
+</code></pre>
+
+<h3 id="polynomial-fitting">다항식 곡선 피팅 (Polynomial fitting)</h3>
+<p>계산을 통해 <code>Latticeconsts</code> (격자상수)와 <code>Etot</code> (전체 에너지) 배열을 얻었다. 이 값을 <code>matplotlib</code>과 <code>scipy</code> 라이브러리를 이용해, <strong>다항식 곡선 피팅</strong>을 하여 극소값을 찾을 것이다.</p>
+<pre><code class="python">import matplotlib.pylab as plb
+from scipy.optimize import fminbound
+
+# Get polynomial equations
+para_init = plb.polyfit(Latticeconsts, Etot, 4)
+
+def Polynomial(parameters, x):
+    A = parameters[0]
+    B = parameters[1]
+    C = parameters[2]
+    D = parameters[3]
+    E = parameters[4]
+    Y = A*x**4 + B*x**3 + C*x**2 + D*x + E
+    return Y
+
+Polynomial_function = lambda x : Polynomial(para_init,x)
+
+
+# Find local minima
+optimized_latticeconst = fminbound(Polynomial_function,min(Latticeconsts),max(Latticeconsts))
+print('We found local minimum of total energy : %5.3f' %optimized_latticeconst)
+print('\n')
+</code></pre>
+
+<p>전체 에너지가 최소가 되는 지점 <code>optimized_latticeconst</code>을 얻었다.</p>
+<h3 id="_1">결과 정리</h3>
+<p>다음 계산을 위해 최적화된 격자상수에 대한 정보를 저장한다.</p>
+<pre><code class="python"># Save optimized lattice vectors
+ratio_of_optimization =  optimized_latticeconst/init_latticeconst
+atoms._cell[0] = ratio_of_optimization * init_latticevectors[0]
+atoms._cell[1] = ratio_of_optimization * init_latticevectors[1]
+
+optimized_lattice_vector = copy.copy(atoms._cell)
+# Visualizations
+vfit = np.linspace(min(Latticeconsts),max(Latticeconsts),100)
+
+plb.figure(figsize=(10,6))
+plb.plot(Latticeconsts,Etot,'ro',label='raw data')
+plb.plot(vfit, Polynomial(para_init,vfit),label='polynomial fit')
+
+plb.xlabel('Lattice Constant ($\AA$)')
+plb.ylabel('Energy (eV)')
+plb.legend(loc='best')
+
+# Add some text to the figure in figure coordinates
+ax = plb.gca()
+plb.text(0.02,0.95,'Polynomial Equation : %1.2f$x^4$ + %1.2f$x^3$ + %1.2f$x^2$ + %1.2f$x^1$ + %1.2f' \
+    %( para_init[0],para_init[1],para_init[2],para_init[3],para_init[4]), transform = ax.transAxes)
+plb.text(0.02,0.90,'Minimum lattice constant : %1.2f $\AA$' % optimized_latticeconst, transform = ax.transAxes)
+
+plb.savefig('EOS.png')
+plb.show()
+</code></pre>
+
+<p><img alt="Nano02_01" src="../img/NanoCore/02/02_01.png" /></p>
+<blockquote>
+<p>Appendix : <a href="../Nano02_3dEOS/">Murnaghan 상태방정식</a></p>
+</blockquote>
                 
                   
                 
@@ -442,6 +641,41 @@
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../kpoint/" title="K-point Sampling" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                K-point Sampling
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../Nano02_3dEOS/" title="Murnaghan Equatuin Of State" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Murnaghan Equatuin Of State
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

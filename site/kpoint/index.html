@@ -36,7 +36,7 @@
     
     
       
-        <title>Code Tutorial : MSDFT - YHKLAB Wiki</title>
+        <title>K-point Sampling - YHKLAB Wiki</title>
       
     
     
@@ -75,7 +75,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#code-tutorial-msdft" tabindex="1" class="md-skip">
+      <a href="#k-point-sampling" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -101,7 +101,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                Code Tutorial : MSDFT
+                K-point Sampling
               
             </span>
           
@@ -300,10 +300,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
     
     <label class="md-nav__link" for="nav-5">
       NanoCore
@@ -319,11 +321,52 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../kpoint/" title="K-point Sampling" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        K-point Sampling
+      </label>
+    
+    <a href="./" title="K-point Sampling" class="md-nav__link md-nav__link--active">
       K-point Sampling
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#k-point-sampling" class="md-nav__link">
+    K-point sampling
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    결과정리
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -406,8 +449,29 @@
 <nav class="md-nav md-nav--secondary">
   
   
-    
   
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#k-point-sampling" class="md-nav__link">
+    K-point sampling
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    결과정리
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
   
 </nav>
                   </div>
@@ -420,11 +484,164 @@
               
                 
                 
-                <h1 id="code-tutorial-msdft">Code Tutorial : MSDFT</h1>
-<p>This is a tutorial for MSDFT(Multi-space constrained-search Density Functional Theory).</p>
-<ul>
-<li>Topic 1 : How to install the code from github</li>
-</ul>
+                  <h1>K-point Sampling</h1>
+                
+                <h3 id="k-point-sampling">K-point sampling</h3>
+<p>이번장에서는 <code>NanoCore</code>를 이용해 그래핀 모델을 생성하고, <strong>k-point sampling</strong> 과정을 통해 전체 에너지가 수렴하는 k-point를 구할 것이다. </p>
+<pre><code class="python">from NanoCore import *
+import numpy as np
+
+ # Modeling
+atoms = carbonlab.grp(0,0)
+
+# Number of system's atoms
+num_atoms = len(atoms._atoms)
+
+# Test for supercell
+kpoint_sample = [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25]
+
+Energy = [] # given energy
+
+for i in kpoint_sample:
+     sim = s2.Siesta(atoms)
+      sim.set_option('CGsteps', 0)
+      sim.set_option('kgrid', [i, i, 1])
+      sim.set_option('kshift', [0.5,0.5,0.0]) # set k shift from gamma
+      sim.set_option('MixingWt', 0.10)        # adjust mixing weight (density)
+      sim.set_option('BasisSize', 'SZ')       # adjust basis size
+      sim.run(mpi=1, nproc=8)
+      energy = s2.get_total_energy()
+      Energy.append(energy)
+</code></pre>
+
+<p>'atom'는 'carbonlab 모듈에 종속된 'Atom'의 클래스 이며, 이를 통해 'grephene'을 생성한다. 이후 확인할 k-point 를 설정하고 설정한 k-point안에서 계산을 진행한다. 계산을 진행하며 각 계산에서 얻어진 에너지를 'Energy'에 저장하였다.</p>
+<pre><code class="python">f = open('Ediff.txt', 'w')
+for i in range(len(Energy)+1):
+    if i == 0:
+        f.write('k-points : %02d %02d %02d, Energy = %9.5f, Ediff=    %s' % (2*i+1, 2*i+1, 1, Energy[i], 'Not_intial_difference'))
+        f.write('\n')
+    elif i &lt; len(Energy):
+        f.write('k-points : %02d %02d %02d, Energy = %9.5f, Ediff=%9.5f' % (2*i+1, 2*i+1, 1, Energy[i], Energy[i]-Energy[i-1]))
+        f.write('\n')
+    elif i == len(Energy):
+        f.write('over')
+        f.write('\n')
+    else:
+            pass
+f.close()
+</code></pre>
+
+<p>'Ediff.txt'라는 파일을 만들어 저장된 에너지를 저장하였다. 이는 이후 수렴되는 에너지를 찾을 때 사용 될 것이다. Ediff파일은 아래와같다.</p>
+<pre><code>k-points : 01 01 01, Energy = -321.36050, Ediff=    Not_intial_difference
+k-points : 03 03 01, Energy = -322.42307, Ediff= -1.06257
+k-points : 05 05 01, Energy = -322.33655, Ediff=  0.08653
+k-points : 07 07 01, Energy = -322.32165, Ediff=  0.01490
+k-points : 09 09 01, Energy = -322.32810, Ediff= -0.00645
+k-points : 11 11 01, Energy = -322.32556, Ediff=  0.00253
+k-points : 13 13 01, Energy = -322.32485, Ediff=  0.00072
+k-points : 15 15 01, Energy = -322.32595, Ediff= -0.00110
+k-points : 17 17 01, Energy = -322.32532, Ediff=  0.00063
+k-points : 19 19 01, Energy = -322.32518, Ediff=  0.00014
+k-points : 21 21 01, Energy = -322.32555, Ediff= -0.00036
+k-points : 23 23 01, Energy = -322.32530, Ediff=  0.00024
+k-points : 25 25 01, Energy = -322.32526, Ediff=  0.00005
+over
+</code></pre>
+
+<pre><code class="python">import os, sys 
+
+def file_len(filename):
+    with open(filename) as f:
+        for i, l in enumerate(f):
+            pass
+    return i+1 
+
+tlines = file_len('RUN.fdf')
+struct_info1 = []
+struct_info2 = []
+
+f = open('RUN.fdf', 'r')
+for i in range(tlines):
+    line = f.readline()
+    words = line.split()
+    struct_info1.append(line)
+    struct_info2.append(words)
+f.close()
+
+# Get line DM.Tolerence
+
+for i in range(len(struct_info1)):
+    if len(struct_info2[i]) &gt;= 2:
+        if (struct_info2[i][0]) =='DM.Tolerance':
+                startnum = i
+        else:
+           pass
+tolerance = []
+tolerance =  struct_info2[startnum][1]
+Tol = int(tolerance[4])
+tole=1.00000
+for i in range(Tol):
+    tole=tole*0.1
+</code></pre>
+
+<p>수렴되는 에너지의 기준을 설정하기 위해 RUN.fdf 파일을 읽어서 Tolerance를 읽어 기준을 받아왔다. </p>
+<pre><code class="python"># Checking Energy difference and find proper k-point
+
+tline2 = file_len('Ediff.txt')
+
+struct_info3 = []
+struct_info4 = []
+
+f = open('Ediff.txt', 'r')
+for i in range(tline2):
+    line = f.readline()
+    words = line.split()
+    struct_info3.append(line)
+    struct_info4.append(words)
+f.close()
+
+#---------------------------------------------------------
+
+for i in range(len(struct_info3)):
+    if str(struct_info3[i].strip()) == 'over':
+            blacknum = i+1
+    else:
+        pass
+for j in range(1, blacknum-1):
+    if abs(float(struct_info4[j][9])) &lt;= tole:
+            print('kpoint= %s' % struct_info4[j][2])
+            kpoint=2*j+1
+    else:
+            print('kpoint is not converage')
+
+print('Converge kpoint = %d' % kpoint)
+</code></pre>
+
+<p>이제 에너지가 저장된 'Ediff.txt' 파일을 열어 에너지의 차이가 Tolerance보다 작은 k-point를 찾는다. 수렴되는 k-point는 리눅스 화면에서 확인 할 수 있다.</p>
+<h3 id="_1">결과정리</h3>
+<pre><code class="python">plt.plot(kpoint_sample, Energy)
+plt.xlabel(&quot;Kpoint&quot;)
+plt.ylabel(&quot;Energy (eV)&quot;)
+plt.savefig('k-test.png', dpi=300, bbox_inches =&quot;tight&quot;)
+plt.show()
+</code></pre>
+
+<p>계산된 k-point 별 에너지는 다음과 같다. 또한 이를 확인하면 수렴되는 에너지의 k-point가 적절히 구해졌는지 확인할 수 있다. 또한 수렴된 k-point는 리눅스 화면을 통해서 확인할 수 있다.</p>
+<p><img alt="Screenshot" src="../img/KPOINT-02.png" /></p>
+<pre><code>kpoint is not converage
+kpoint is not converage
+kpoint is not converage
+kpoint is not converage
+kpoint is not converage
+kpoint is not converage
+kpoint is not converage
+kpoint is not converage
+kpoint is not converage
+kpoint is not converage
+kpoint is not converage
+kpoint= 25
+Converge kpoint = 25
+</code></pre>
                 
                   
                 
@@ -442,6 +659,41 @@
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../ML-NEB/" title="ML-NEB" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                ML-NEB
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../Nano02_EOS/" title="Equation Of State" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Equation Of State 
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
