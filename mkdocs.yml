@@ -17,7 +17,7 @@ pages:
         - YHK Workshop (2020):
                 - 'ML-NEB' : ML-NEB.md
         - NanoCore :
-                - 'K-point Sampling' : kpoint.md
+                - 'k-point Sampling' : kpoint.md
                 - 'Structure Optimization' :
                         - 'Equation Of State ' : Nano02_EOS.md
                         - 'Murnaghan Equatuin Of State' : Nano02_3dEOS.md
