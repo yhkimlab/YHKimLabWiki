@@ -3,22 +3,28 @@ site_name: YHKLAB Wiki
 theme:
     name: 'material'
 
+plugins:
+    - search
+
 markdown_extensions:
     - attr_list
 
 pages:
-        - Home: home.md
-        - About: about.md
-        - Tutorials (basic):
-                - 'Tutorial 0 : Basic SIESTA Calculation': 00_Basic_UM.md
+        - Basic Setting:
+                - 'Linux cheat sheet' : 1.Basic_setting/1.1_LinuxCheatSheet.md
+                - 'Emacs cheat sheet' : 1.Basic_setting/1.2_EmacsCheatSheet.md
+                - 'Anaconda cheat sheet' : 1.Basic_setting/1.3_AnacondaCheatSheet.md
+
+        - DFT Tutorials (SIESTA):
+                - 'Tutorial 0 : Basic SIESTA Calculation': Tutorial_0.md 
                 - 'Tutorial 1 : Au Electronic Structure Calculation': 01_GOLD_CHJ.md
                 - 'Tutorial 2 : Graphene Electronic Structure Calculation' : 02_Graphene_CHJ.md
                 - 'Tutorial 3 : Pseudopotential generations' : 03_Pseudopotential_RG.md
-        - YHK Workshop (2020):
-                - 'ML-NEB' : ML-NEB.md
-        - NanoCore :
-                - 'k-point Sampling' : kpoint.md
-                - 'Structure Optimization' :
-                        - 'Equation Of State ' : Nano02_EOS.md
-                        - 'Murnaghan Equatuin Of State' : Nano02_3dEOS.md
-                        - 'Geometry Optimization' : Nano03_GEO.md
+        - DFT Tutorials (VASP):
+                - 'Machine learning for nudged elastic band' : ML-NEB.md
+        - DFT Platform (NanoCore) :
+                - 'k-point sampling' : kpoint.md
+                - 'Structure optimization' :
+                        - 'Equation of state (EOS) ' : Nano02_EOS.md
+                        - 'Murnaghan fitting' : Nano02_3dEOS.md
+                        - 'Geometry optimization' : Nano03_GEO.md
