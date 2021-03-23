@@ -8,24 +8,39 @@ Tutorial 3: Pseudopotential generations
 - 만들어진 pseudopotential를 통해 원자핵이 미치는 효과 계산  
 `ATOM`를 설치하기 앞서 다음과 같은 패키지를 준비해야한다.  
 
-`xmlf90` : <https://launchpad.net/libgridxc/+download> (1.5.0. 버전)
+`xmlf90` : <https://launchpad.net/xmlf90/+download> (1.5.0. 버전)
 
 `libGridXC` : <https://launchpad.net/libgridxc/+download> (0.7.3 버전)
 
-리눅스 환경에 설치한 후에 다음과 같은 명령어를 통해 압축을 풀어준다.
+리눅스 환경에 다운로드한 후 압축을 풀어주는 명령어는 다음과 같다.
 
 ```bash
+$ wget https://launchpad.net/xmlf90/trunk/1.5/+download/xmlf90-1.5.4.tar.gz // 1.5.4버전
+$ wget https://launchpad.net/libgridxc/trunk/0.7/+download/libgridxc-0.7.6.tgz // 0.7.6버전
 $ tar xvzf xmlf90-1.5.0.tgz
 $ tar xvzf libgridxc-0.7.3.tgz
 ```
 압축을 풀어준 위치에서 다음과 같은 과정을 통해 컴파일을 진행한다.
 
 `xmlf90` :
+
 ```bash
 $ cd xmlf90-1.5.0
 $ mkdir Gfortran
 $ cd Sys
 $ cp gfortran.make ../Gfortran/fortran.mk
+```
+
+라이브러리를 생성하기 전에 fortran.mk을 다음과 같이 수정해준다.
+
+```bash  
+LDFLAGS=-mkl=cluster
+AR=/usr/bin/ar
+```
+
+이후 make명령어로 라이브러리를 빌드해준다.
+
+```bash  
 $ cd ../Gfortran
 $ sh ../config.sh
 $ make
@@ -33,16 +48,25 @@ $ make
 `xmlf90.mk` 생성확인
 
 `libgridxc` :
+
 ```bash
 (설치한 위치로 돌아와서)
 $ cd libgridxc-0.7.3
 $ mkdir Gfortran
 $ cd Gfortran
-$ cp ../extra/fortran.mk
+$ cp ../extra/fortran.mk .
 $ sh ../src/config.sh
 $ make clean
 $ make
 ```
+
+마찬가지로 make를 하기 전 fortran.mk을 다음과 같이 수정해준다.
+
+```bash  
+LDFLAGS=-mkl=cluster
+AR=/usr/bin/ar
+```
+
 `gridxc.mk` 생성확인
 
 `ATOM`를 위한 라이브러리가 준비되었으니 이제 `ATOM`을 설치한다.  
@@ -90,7 +114,7 @@ $ sh ../Utils/ae.sh si.ae.inp
 생성된 `si.ae` 위치에 가면 결과 파일들이 생성되어 있다. 결과 파일들에 대한 자세한 설명은 `Manual` 참조하길 바란다. 
 `.gplot`, `.gps` 형식 파일은 `gnuplot`과 관련한 결과 파일들이다. `gnuplot` 패키지가 설치되어 있다면 다음과 같은 명령어로 그래프를 생성할 수 있다. (`-persist` 옵션을 추가하지 않으면 그래프가 유지되지 않는 현상이 있다)
 ```bash
-$ gnuplot -persist 
+$ gnuplot -persist ae.gplot //gplot 파일들을 불러오면 다양한 그래프들을 볼 수 있다.
 ```
 
 ##Pseudopotential generations
@@ -121,7 +145,7 @@ $ gnuplot -persist
 `All_electron` 입력 파일과 다른 점은 우선 상단 왼쪽에 위치한 계산 모드가 `ae`가 아닌 `pg`로 되어있다는 것이다. 이를 꼭 `pg`로 수정해야 pseudopotential을 위한 계산을 할 수 있다. 마지막 줄은 6개의 슬롯으로 구성 되어있다. 처음 4개의 값은 각각 s, p, d, f 오비탈의 cut off radius에 해당하고, 마지막 두 값은 추후에 설명할 core corrections와 관련있다. 그 외에 입력 옵션들은 꼭 매뉴얼을 통해 확인하기를 바란다. All-electron과 마찬가지로 쉘 스크립트로 계산을 수행할 수 있는데, Pseudopotential을 만들기 위한 쉘 스크립트는 `ae.sh`가 아닌 `pg.sh`이다.  
 
 ``` bash
-$ sh ../Utils/pg.sh Si.tm2.inp
+$ sh ../../Utils/pg.sh Si.tm2.inp
 ```
 `SIESTA` 프로그램이 입력 파일로 이용할 수 있는 `Si.psf` 파일이 생성되었다. 여기서 주의할 점은 `SIESTA`에서는 basis가 되는 오비탈이 (l =3)까지 있어야한다. 따라서 실제 원자의 원자가 오비탈이 l = 3 까지 차 있지 않더라도 전자가 차 있지 않은 가상의 오비탈을 넣고 계산을 돌려야 한다. (위의 경우 3d, 4f)
 
@@ -287,7 +311,7 @@ $ grep ‘&d’ OUT
 
 Eigenstate 비교 :  
 ```
-$ grep ‘&d’ OUT
+$ grep ‘&v’ OUT
 ```
 ![04_06](img/04/04_06.JPG)
 
@@ -295,7 +319,7 @@ $ grep ‘&d’ OUT
 
 위 과정을 통해 `Si` 원자의 all-electron과 pseudopotential에 대한 여러 전자배치의 `total energy`와 `eigenvalue`를 비교하여, transferability를 시험할 수 있다.
 
-### Practice : Au
+### Practice : Fe
 
 이제 실제 `SIESTA` 프로그램을 위한 pseudopotential 입력파일을 만들어보자. 위에서 언급했듯 `SIESTA`는 basis가 되는 오비탈이 (l =3)까지 있어야한다. 이런 점을 만족시키는 pseudopotential generations의 입력파일은 다음 사이트에서 얻을 수 있다. [pseudo](https://departments.icmab.es/leem/SIESTA_MATERIAL/Databases/Pseudopotentials/periodictable-intro.html)
 
@@ -318,7 +342,7 @@ pe                 -- file generated from Fe ps file
 ```
 
 입력 파일을 살펴보면 첫번째 줄에 `pe` 계산모드가 되어있는 것을 확인할 수 있다. 앞서 설명했듯이 이는 pseudopotential generations를 하는데 core correction을 추가한 옵션이다. Core correction를 통해 더욱 안정적으로 pseudopotential을 만들 수 있다.  
-두번째 줄은 `tm2`은 이전에 설명한 transferability를 위해 로그도함수를 시험하기 위한 옵션이다. 또한 세번째 줄에 `pb` 옵션을 볼 수 있는데, 이는 `GGA` 방법의 종류로 ` PBE` ((Perdew, Burke, and Ernzerhof) 방법을 의미한다. 다른 방법들은 메뉴얼을 통해서 확인하도록 한다.
+두번째 줄의 `tm2`은 이전에 설명한 transferability를 위해 로그도함수를 시험하기 위한 옵션이다. 또한 세번째 줄에 `pb` 옵션을 볼 수 있는데, 이는 `GGA` 방법의 종류로 ` PBE` ((Perdew, Burke, and Ernzerhof) 방법을 의미한다. 다른 방법들은 메뉴얼을 통해서 확인하도록 한다.
 `Au`와 같이 원자번호가 큰 금속은 상대론적 효과가 나타난다 (원자핵 주변으로 핵 전자들이 더욱 구속되면서 가림 효과 (shielding effect)가 커지고, d나 f 오비탈의 전자들의 구속력이 약해진다)[4]( https://link.springer.com/article/10.1007/BF03215471). 따라서 계산에서도 상대론적 효과를 고려하는 것이 좋다. `pb` 옵션 뒤에 `s`를 붙여주면 `spin-polarized`, `non-relativistic` 계산을 수행할 수 있고, `r`를 붙여주면 `spin-polarized`, `relativistic` 계산을 수행할 수 있다. `pb`를 `pbr`로 바꾸어 주어 상대론적 효과를 고려한 pseudopotential을 만들어보자.
 ```bash
 $ <ATOM 프로그램 위치>/Tutorial/Utils/pg.sh Fe.inp

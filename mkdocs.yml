@@ -11,12 +11,16 @@ markdown_extensions:
 
 pages:
         - Basic Setting:
-                - 'Linux cheat sheet' : 1.Basic_setting/1.1_LinuxCheatSheet.md
-                - 'Emacs cheat sheet' : 1.Basic_setting/1.2_EmacsCheatSheet.md
-                - 'Anaconda cheat sheet' : 1.Basic_setting/1.3_AnacondaCheatSheet.md
-
+                - 'Anaconda installation using Windows subsystem for Linux 2' : setting.md
+                - 'Cheat sheet' :
+                        - 'Linux' : 1.Basic_setting/1.1_LinuxCheatSheet.md
+                        - 'Python' : 1.Basic_setting/1.2_PythonCheatSheet.md
+                        - 'Emacs' : 1.Basic_setting/1.3_EmacsCheatSheet.md
+                        - 'Anaconda' : 1.Basic_setting/1.4_AnacondaCheatSheet.md
+        - Git Tutorials:
+                - 'Create repository' : github_tutorial/0.github_create_repository.md
         - DFT Tutorials (SIESTA):
-                - 'Tutorial 0 : Basic SIESTA Calculation': Tutorial_0.md 
+                - 'Tutorial 0 : Basic SIESTA Calculation': 00_BASIC_UM.md
                 - 'Tutorial 1 : Au Electronic Structure Calculation': 01_GOLD_CHJ.md
                 - 'Tutorial 2 : Graphene Electronic Structure Calculation' : 02_Graphene_CHJ.md
                 - 'Tutorial 3 : Pseudopotential generations' : 03_Pseudopotential_RG.md

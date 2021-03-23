@@ -37,7 +37,7 @@ b. Kohn-Sham DFT(Density Functional Theory)은 화학적 및 재료특성을 예
 
 ## Part 2: 분자
 
-### Exercise 1: CH4 분자 구조 최적화
+### Exercise 1: CH4 분자 계산 준비
 
 DFT 계산을 위해서는 먼저 계산하려는 구조의 최적화가 필요하다.
 
@@ -50,40 +50,31 @@ a. 구조 최적화는 다음과 같은 방식으로 진행된다.
 
 b. STRUCT 파일 구성 
 
-- 사이트 (<https://materialsproject.org>)에서 원하는 원자 구조를 Primitive Cell 로 받는다.
+ - 사이트(https://materialsproject.org)에서 원하는 원자 구조를 Primitive Cell 로 받는다.
 
-![03_006](img/03/03_006.jpg)
+![Screenshot](img/0-05.png)
 
-- Material studio 에서 다운받은 파일을 실행시킨 다음 export에서 msi 로 저장한다.
-
-![03_007](img/03/03_007.jpg)
-
-- Xshell에서 아래그림과 같이 새 파일 전송을 누른다.
-
-![03_008](img/03/03_008.jpg)
-
-- 이제 다운받은 파일을 Xftp에서 드래그를 통해 옮긴 후 다음 커맨드를 입력한다. 
-
-![03_009](img/03/03_009.jpg)
-
-첫번째 방법
+계산을 하기위해 위에서 받은 cif파일을 fdf파일로 바꿔줘야한다.
 
 ```bash
-$vasptools-linux –poscar (material)_mp-492_primitive.msi
-$vi POSCAR
-$vasptools-linux –xyz POSCAR
-$xyz2structfdf_full.py POSCAR.xyz
+$ vaspkit
+1
+105
+struct.cif // cif 파일의 이름
 ```
 
-두번째 방법
+위 순서대로 입력하고 enter를 치면 cif 파일에서 POSCAR 파일이 생성된다.
 
 ```bash
-$msi2fdf.sh (material)_mp-492_primitive.msi
-$vi STRUCT.fdf
+$ poscar2fdf.py POSCAR 
 ```
+
+위 명령어를 치면 POSCAR 파일을 fdf 파일로 변환해준다.
+
 이로서 구조최적화를 하기 전 기본적인 STRUCT.fdf 파일을 만들 수 있다.
+
 ```bash
-$vi STRUCT.fdf
+$ vi STRUCT.fdf
 NumberOfAtoms    5           # Number of atoms
 NumberOfSpecies  2           # Number of species
 %block ChemicalSpeciesLabel
@@ -105,9 +96,24 @@ AtomicCoordinatesFormat ScaledCartesian
     -0.017873200    -0.017873200    -0.012210550    2    5
 %endblock AtomicCoordinatesAndAtomicSpecies
 ```
+
 c.pseudopotentil 파일은 default pseudopotential (ChemicalSpeciesLabel.psf) for each atomic species. (<https://departments.icmab.es/leem/siesta/Databases/Pseudopotentials/periodictable-lda-abinit.html>) 에서 다운 받거나 직접 만들 수 있다. 계산에 필요한 pseudopotential 파일과 BASIS.fdf, KPT.fdf, slm_siesta_run파일은 폴더에 정리해 두었다.
 
 d. 계산을 위한 폴더 만들기
+
+```sh
+├─CH4
+│  │  slm_siesta_run
+│  └─input
+│       BASIS.fdf
+│       C.psf
+│       H.psf
+│       KPT.fdf
+│       RUN.fdf
+│       STRUCT.fdf
+```
+
+계산을 위해 다음과 같은 배치로 파일을 넣어주어야 한다. 이를 수행하기 위한 명령어는 아래와 같다.
 
 ```bash
 $ mkdir ch4(폴더이름) 
@@ -116,46 +122,48 @@ slm_siesta_run을 ch4 폴더에 복사
 $ mkdir input(폴더이름)
 $ cd input 
 C.psf, H.psf, RUN.fdf, STRUCT.fdf, KPT.fdf, BASIS.fdf 파일을 input 폴더에 복사
-$  cd ..
-$ sbatch slm_siesta_run
-```
-
-구조최적화를 위해서는 계산된 결과(OUT)를 통해 새로운 입력(input) 파일을 생성하여 새로운 계산을 실행해야 한다. 
-
-```bash
-$ cd input
-$ siesta2xyz.py STRUCT.fdf
-$ vi STRUCT.xyz
-셀정보를 복사(아래그림의 빨간색 영역)
-```
-![03_010](img/03/03_010.jpg)
-
-```bash
-$ cd ..
-$ cd OUT
-$ vi Test.xyz(cell정보가 포함되어 있는 파일)
-셀정보를 붙여넣기
-
-$ xyz2fdf_cell.py Test.xyz
-$ cd ../../
-$ cp Text.fdf ../input/
-새로운 STRUCT.fdf 파일 생성
-$ cp Text.fdf STRUCT.fdf
-$ cd ..
-$ cd input
-$ vi RUN.fdf
-MD.NumberCGstep을 0으로 바꾼다.
 $ cd ..
 $ sbatch slm_siesta_run
 ```
-STRUCT.fdf 파일 시각화를 통해 구조최적화 전후의 bonding length 와 bonding angle이 달라짐을 확인 할 수 있다. 
+
+### Exercise 2: CH4 분자 구조 최적화
+
+Exercise 1에서 주어진 STRUCT.fdf 파일은 이미 최적화가 완료된 파일이다. 이번에는 CH4의 틀린 구조를 입력으로 넣고 계산을 통해 올바른 구조가 도출되게 됨을 확인해 볼 것이다.  
+CH4는 결합의 길이가 모두 같음이 알려져 있다. Exercise 1의 STRUCT.fdf파일도 결합 길이가 모두 같으므로 H 하나의 결합길이를 임의로 늘린 STRUCT.fdf파일을 입력으로 사용할 것이다.
 
 ```bash
-$ cd (OUT directory)
-$ xyz2fdf_cell.py STRUCT.fdf (STRUCT.fdf 파일을 xyz 파일로 변환)
+NumberOfAtoms    5           # Number of atoms
+NumberOfSpecies  2           # Number of species
+%block ChemicalSpeciesLabel
+ 1 6 C
+ 2 1 H
+%endblock ChemicalSpeciesLabel
+LatticeConstant      40.000000000 Ang
+%block LatticeVectors
+    1.000000000     0.000000000     0.000000000
+    0.000000000     1.000000000     0.000000000
+    0.000000000     0.000000000     1.000000000
+%endblock LatticeVectors
+AtomicCoordinatesFormat ScaledCartesian
+%block AtomicCoordinatesAndAtomicSpecies
+    -0.000206800    -0.000206800    -0.000188525    1    1
+     0.025718150    -0.006302475    -0.007980825    2    2
+    -0.006302475     0.025718150    -0.007980825    2    3
+    -0.002297125    -0.002297125     0.027402550    2    4
+    -0.017873200    -0.017873200    -0.012210550    2    5
+%endblock AtomicCoordinatesAndAtomicSpecies
+```
+
+우선적으로 부정확한 STRUCT.fdf의 구조를 보도록 하자. STRUCT.fdf파일을 바로 볼 수는 없어서 fdf파일을 xyz로 바꾸고 xcrysen을 통해 분자구조를 확인할 것이다.
+
+```bash
+$ cd (input directory)
+$ fdf2xyz.py STRUCT.fdf (STRUCT.fdf 파일을 xyz 파일로 변환) 
 $ xyz2xcrysden.py STRUCT.xyz
 ```
-Display-Unit of Repetition-Translational asymmetric unit 선택
+
+**Display-Unit of Repetition-Translational asymmetric unit 선택**  
+(이를 반드시 해줘야 원자 구조를 알아볼 수 있다.)
 
 ![03_011](img/03/03_011.jpg)
 
@@ -167,11 +175,41 @@ Angle 선택 후 원자 세개를 선택한 후 Done을 선택하면 Angle을 �
 
 ![03_013](img/03/03_013.jpg)
 
-> 구조 최적화 전 bonding length : 1.30719 Ang, bonding angle : 108.7856 deg
-> 구조 최적화 된 bonding length : 1.10977 Ang, bonding angle : 109.4914 deg
+이 방법을 통해 input에 들어가 있는 STRUCT.xyz의 결합 길이를 보도록 하자.
 
+![03_010](img/03/03_017.png)
 
-### Exercise 2: CH4 분자 basis 확인
+그림에서 볼 수 있듯이 CH4 분자의 왼쪽 H가 다른 분자보다 0.001 Ang 더 짧음을 알 수 있다.  
+이 STRUCT.fdf파일을 input 폴더에 넣는다. 계산을 위해 RUN.fdf와 BASIS.fdf를 수정해준다.
+
+```bash
+$ cd input
+$ vi RUN.fdf
+MD.NumberCGstep을 300으로 바꾼다.
+$ vi BASIS.fdf
+PAO.BasisSize를 SZ로 바꾼다.
+$ cd ..
+$ sbatch slm_siesta_run
+```
+
+MD.NumberCGstep은 계산의 최대 iteration 횟수를 설정해주는 것이다. 300번 계산을 돌려도 값이 수렴하지 않으면 프로그램을 끝낸다. BasisSize는 빠른 구조확인을 위해 정확도는 떨어지지만 빠른 SZ로 설정해준다.
+계산을 완료하면 OUT폴더에 계산이 끝난 파일인 Test.xyz를 확인할 수 있다. 이 파일이 구조 최적화 된 결과이다.  
+Test.xyz를 xcrysden으로 계산된 구조를 확인해보도록 하자. 그 전에 Test.xyz에는 Cell정보가 포함되어 있지 않다. 따라서 xcrysden으로 바로 읽어올 수 없다. input에 있는 STRUCT.xyz파일의 Cell정보를 Test.xyz에 복사해준다.
+
+![03_010](img/03/03_010.jpg)
+
+Cell정보 복사가 완료되면 xcrysden으로 Test.xyz의 분자구조를 확인해보자.
+
+```bash
+$ cd (Output directory)
+$ xyz2xcrysden.py Test.xyz
+```
+
+![03_010](img/03/03_017.png)
+
+input의 결합길이가 0.001 Ang 차이났던 것과 달리 계산된 결과는 0.0001 Ang 수준으로 차이가 줄었다. 따라서 최적화된 구조가 형성되었음을 확인해볼 수 있다. C와 H간 분자간 길이가 1.2 Ang으로 Exercise 3의 결과와 거의 일치함도 확인해볼 수 있다.
+
+### Exercise 3: CH4 분자 basis 확인
 
  구조최적화를 위와 같이 진행 한 후에는 Basis 확인를 통해 사용한 Basis가 적절한지 테스트를 한다. Basis 테스트는 구조최적화가 완료된 구조에서 각 Basis 별로 계산을 진행하여 안정된 에너지를 가지는 Basis를 선택하면 된다. 
 
@@ -183,7 +221,6 @@ $ vi BASIS.fdf
 ```
 
 ![03_014](img/03/03_014.jpg)\
-
 
 - xyz 파일보기 -Basis 별 bonding length 과 Reference(Handy, Nicholas C., Christopher W. 
 
@@ -199,14 +236,13 @@ Murray, and Roger D. Amos. "Study of methane, acetylene, ethene, and benzene usi
 
 ![03_015](img/03/03_015.jpg)
 
-
 |   | SZ | DZ | TZ | DZP | DZDP |
 |---|:---:|:---:|:---:|:---:|---:|
 | `Bonding length [Ang]` | 1.20100 | 1.10876 | 1.11050 | 1.10977 |	1.10861 |
-| `Bonding angle [degree]` | 109.4398 |	1.091358 | 109.1567 |	109.4914 | 109.3702|
+| `Bonding angle [degree]` | 109.4398 |	109.1358 | 109.1567 |	109.4914 | 109.3702|
 
 
-### Exercise 3: CH3 전자밀도
+### Exercise 4: CH3 전자밀도
 
 a. spin에 따른 전자밀도를 보는 방법은 아래와 같다. Spin 에 따른 전자밀도를 시각화 하기 위해서는 RUN.fdf 에서 아래와 같은 코드를 추가하여야한다
 

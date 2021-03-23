@@ -45,7 +45,7 @@ set arrow from 0, -4.5682, graph 1 to 2.1270, -4.5682 ls 3 // Fermi level plot
 replot
 ```
 
-![02_001](/img/02/02_001.jpg)
+![02_001](img/02/02_001.jpg)
   
 Fat band 시각화 (폴더에 있는 fat 파일과 eigfat2plot 파일을 output file에 넣어준다.)
 
@@ -119,15 +119,15 @@ wantit=((orbid%species == 'C').and.( orbid%n == 2).and.(orbid%l == 0)) // C_2s
 $ make // pdosxml 파일을 생성함
 $ mv pdosxml pdosxml_C_2s
 $ vi m_orbital_chooser.f90
-wantit =(orbid%species == 'C').and.(orbid%n == 2).and.(orbid%l == 1).and.(orbid%m == -1)) // C_2px
+wantit =((orbid%species == 'C').and.(orbid%n == 2).and.(orbid%l == 1).and.(orbid%m == -1)) // C_2px
 $ make
 $ mv pdosxml pdosxml_C_2px
 $ vi m_orbital_chooser.f90
-wantit =(orbid%species == 'C').and.(orbid%n == 2).and.(orbid%l == 1).and.(orbid%m == 1) // C_2py
+wantit =((orbid%species == 'C').and.(orbid%n == 2).and.(orbid%l == 1).and.(orbid%m == 1)) // C_2py
 $ make
 $ mv pdosxml pdosxml_C_2py
 $ vi m_orbital_chooser.f90
-wantit =(orbid%species == 'C').and.(orbid%n == 2).and.(orbid%l == 1).and.(orbid%m == 0) // C_2pz
+wantit =((orbid%species == 'C').and.(orbid%n == 2).and.(orbid%l == 1).and.(orbid%m == 0)) // C_2pz
 $ make
 $ mv pdosxml pdosxml_C_2pz
 $ cp pdosxml_C_* (Working Directory) //pdos를 그릴 폴더에 pdosxml을 복사한다
@@ -181,3 +181,4 @@ $ xcrysden --xsf Graphene.XSF
 여기서 isovalue는 임의의 적당한 값을 입력하면 되는데 LDOS를 적절하게 분석할 수 있을 정도의 값을 넣어주면 된다. 이번 Tutorial에서는 0.000005의 값을 입력했다.
 
 ![02_006](img/02/02_006.jpg)
+
