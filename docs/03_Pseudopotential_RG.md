@@ -1,6 +1,12 @@
 Tutorial 3: Pseudopotential generations
-------------------------------------------
-###Preliminary information
+===============================
+## Contents
+
+1. Preliminary information
+2. All-electron calculations
+3. Pseudopotential generations
+4. Pseudopotential test
+## Preliminary information
 
 `ATOM` 프로그램을 통해 `SIESTA`에 이용되는 원자의 `psf` 파일을 만들 수 있다. 그 외에도 `ATOM`은 다음과 같은 목적에 이용된다.  
 - 특정 전자 배치에 대한 All-electron DFT (density functional theory) 계산 수행  
@@ -92,7 +98,7 @@ $ make
 ```
 `ATOM` 프로그램이 준비되었다.
 
-###All-electron calculations
+## All-electron calculations
 
 바닥 상태의 Si 원자를 예시로 `ATOM`의 입력파일을 살펴보겠다. 보통 `ATOM` 입력 파일의 확장자는 `.inp`로 표시한다. 설치된 `ATOM` 위치에서 `/Tutorial/All_electron`에 다음과 같은 파일이 있다.
 `Si.ae.inp`
@@ -117,7 +123,7 @@ $ sh ../Utils/ae.sh si.ae.inp
 $ gnuplot -persist ae.gplot //gplot 파일들을 불러오면 다양한 그래프들을 볼 수 있다.
 ```
 
-##Pseudopotential generations
+## Pseudopotential generations
 
 다시 `/Tutorial` 위치로 돌아가서 `/PS_Generation`에 들어가본다. Pseudopotential를 만들기 위한 예시 파일들이 있다. 우리는 Si을 예시로 살펴본다. `Si.tm2.inp` 파일을 열어본다.
 `Si.tm2.inp`
@@ -149,12 +155,12 @@ $ sh ../../Utils/pg.sh Si.tm2.inp
 ```
 `SIESTA` 프로그램이 입력 파일로 이용할 수 있는 `Si.psf` 파일이 생성되었다. 여기서 주의할 점은 `SIESTA`에서는 basis가 되는 오비탈이 (l =3)까지 있어야한다. 따라서 실제 원자의 원자가 오비탈이 l = 3 까지 차 있지 않더라도 전자가 차 있지 않은 가상의 오비탈을 넣고 계산을 돌려야 한다. (위의 경우 3d, 4f)
 
-###Core correction
+### Core correction
 
 `ATOM` 프로그램은 **non-linear exchange-correlation correction** [1](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.26.1738) 계산을 수행할 수 있다.  
 Pseudo core의 전하밀도가 특정한 pseudo radius 밖에서 전하밀도도가 일치하고 경계부에서 매끈한 형태를 가지게 맞추어 주는 일련의 과정이 core correction이다. Pseudopotential를 만드는 계산에서 이 계산을 포함시키기 위해서 앞서 실행한 입력 파일에서 `pg` 옵션을 `pe`로 바꾸어 주면 된다. 또한 마지막 줄에서 6번째 해당하는 값인 pseudo radius을 넣어준다. 만약 이 값이 음수이거나 0이면 5번째 값인 valence charge density를 통해 이 반경을 직접 계산하게 되는데, 이 값 역시 음수이면 전체 핵 전하를 기준으로, 0이면 1 값을 기준으로 계산하도록 되어있다. 따라서 pseudo radius을 실험적으로 얻은 외부 참조 값을 이용하여 넣어주는 것을 강력히 추천한다.
 
-###Pseudopotential test
+### Pseudopotential test: compare with AE
 
 **Norm-Conserving Pseudopotentials, D. R. Hamann, M. Schlüter, and C. Chiang PRL (1979) ** [2](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.43.1494) 논문에서 제시한 pseudopotential의 조건은 다음과 같다.  
 > 1. Pseudo와 real의 원자가 고유함수 (valence eigenvalue)가 일치한다
@@ -344,14 +350,120 @@ pe                 -- file generated from Fe ps file
 입력 파일을 살펴보면 첫번째 줄에 `pe` 계산모드가 되어있는 것을 확인할 수 있다. 앞서 설명했듯이 이는 pseudopotential generations를 하는데 core correction을 추가한 옵션이다. Core correction를 통해 더욱 안정적으로 pseudopotential을 만들 수 있다.  
 두번째 줄의 `tm2`은 이전에 설명한 transferability를 위해 로그도함수를 시험하기 위한 옵션이다. 또한 세번째 줄에 `pb` 옵션을 볼 수 있는데, 이는 `GGA` 방법의 종류로 ` PBE` ((Perdew, Burke, and Ernzerhof) 방법을 의미한다. 다른 방법들은 메뉴얼을 통해서 확인하도록 한다.
 `Au`와 같이 원자번호가 큰 금속은 상대론적 효과가 나타난다 (원자핵 주변으로 핵 전자들이 더욱 구속되면서 가림 효과 (shielding effect)가 커지고, d나 f 오비탈의 전자들의 구속력이 약해진다)[4]( https://link.springer.com/article/10.1007/BF03215471). 따라서 계산에서도 상대론적 효과를 고려하는 것이 좋다. `pb` 옵션 뒤에 `s`를 붙여주면 `spin-polarized`, `non-relativistic` 계산을 수행할 수 있고, `r`를 붙여주면 `spin-polarized`, `relativistic` 계산을 수행할 수 있다. `pb`를 `pbr`로 바꾸어 주어 상대론적 효과를 고려한 pseudopotential을 만들어보자.
+
 ```bash
 $ <ATOM 프로그램 위치>/Tutorial/Utils/pg.sh Fe.inp
 ```
+
 `SIESTA` 계산을 위한 `Fe.psf` 파일이 생성되었다.
 
+## Pseudopotential test
+
+pseudopotential을 만든 이유는 보통 계산에 사용하기 위에서이다. 일반적으로는 pseudopotential의 4가지 조건을 확인한 것 만으로 정확한 계산을 할 수 있다. 그러나, Au와 같이 전자수가 많은 경우 그렇지 않다. 이번에는 두가지 Au pseudopotential을 만들어 보고, 만든 pseudopotential이 계산에 적합한지 확인해보겠다.
+
+### 사용할 Pseudopotential
+
+위에서 언급했듯이 원자번호가 큰 원자는 상대론적 효과가 나타난다. 원자의 무게가 크면 클수록 상대론적 효과는 더 크게 나타나고, 상대론적 효과가 커질수록 상대론적 효과를 고려한 pseudopotential과 고려하지 않은 pseudopotential의 결과의 차이가 커진다. 이번에는 79번 Au 원소를 사용해 상대론적 효과를 고려한 pseudopotential과 고려하지 않은 pseudopotential을 만들고 계산을 수행한 후 그 결과를 비교해보겠다.
+
+### Pseudopotential 생성
+
+우선 atom코드에서 사용할 input 코드를 가져와야 한다. atom에서 사용할 reference 코드는 [pseudo](https://departments.icmab.es/leem/SIESTA_MATERIAL/Databases/Pseudopotentials/periodictable-intro.html)에서 가져올 수 있다. 페이지에서 LDA를 선택한 후, Au를 선택하고, "input file for the ATOM program"을 선택한다. 그러면 Au.inp파일을 받을 수 있다.
+
+Au.inp
+
+```bash
+   pg                 -- file generated from Au ps file
+        tm2
+   Au   ca 
+     0.000     0.000     0.000     0.000     0.000     0.000
+   12    4
+    6    0     1.000     0.000    #6s
+    6    1     0.000     0.000    #6p
+    5    2    10.000     0.000    #5d
+    5    3     0.000     0.000    #5f
+   2.63000   2.77000   2.63000   2.63000   0.00000   0.00000
+
+#23456789012345678901234567890123456789012345678901234567890      Ruler
+```
+
+Au pseudopotential에 상대론적 효과 옵션을 넣기 위해서는 r옵션을 넣어주어야 한다. 이 옵션은 ca오른쪽에 넣어주면 된다. 주의할 점은 위치이다. r옵션은 Ruler의 첫번째 0 위에 반드시 위치해야한다. 만약 이 위치가 다르다면 atom으로 pseudopotential을 생성할 때 에러 메세지가 생길 것이다.
+
+사용 불가능한 Au.inp
+
+```bash
+   pg                 -- file generated from Au ps file
+        tm2    2.63
+   Au    car  #위치가 잘못됨
+     0.000     0.000     0.000     0.000     0.000     0.000
+   12    4
+    6    0     1.000     0.000    #6s
+    6    1     0.000     0.000    #6p
+    5    2    10.000     0.000    #5d
+    5    3     0.000     0.000    #5f
+   2.63000   2.77000   2.63000   2.63000   0.00000   0.00000
+
+#23456789012345678901234567890123456789012345678901234567890      Ruler
+```
+
+상대론적 효과 이외에도 계산 과정에서 xc를 바꾸거나 rc를 바꾸거나 해야할 수 있다. 이런 옵션들을 알아보려면 [atom manual](https://siesta-project.org/SIESTA_MATERIAL/Pseudos/Code/atom-4.2.0.pdf)을 찾아보면 된다.
+
+### 1. lattice constant
+
+우선적으로 두가지 Au pseudopotential로 만든 fcc 구조 bulk cell의 lattice constant를 각각 구해볼 것이다. bulk model은 Tutorial 1에서 사용한 fcc모델을 사용할 것이다. Tutorial 1에서 k-point test를 이미 거쳤기 때문에 tutorial 1에서 사용한 k인 k=35를 사용해서 lattice constant를 계산했다.
+
+|     Basis size     |      DZP       |
+| :----------------: | :------------: |
+| Basis energy shift |   100 [meV]    |
+|         XC         |      LDA       |
+|       DM.tol       | $10^{-3}$ [eV] |
+
+lattice constant는 Tutorial 1에서와 마찬가지로 일정한 간격으로 lattice constant를 변화시키면서 에너지가 가장 낮은 lattice constant를 찾으면 된다.계산의 효율을 위해 처음에는 sparse하게 계산한 후 에너지가 가장 낮은 값 근처에서 dense하게 계산하면 좋다. 이후 3d 물질에서 lattice constant를 찾기에 적합한 murnaghan fitting을 통해 에너지가 가장 낮은 lattice constant를 찾았다
+
+![lattice_compare](img/05/lattice_comp.PNG)
+
+relativistic 효과를 킨 경우 최적화된 volume은 69.28785$\overset{\circ}{A}^3$이고, relativistic 효과를 끈 경우 최적화된 volume은 79.22283$\overset{\circ}{A}^3$이다. 이를 통해 lattice constant를 구하려면 부피의 세제곱근을 하면 된다. relativistic 효과를 킨 경우 lattice constant는 4.107$\overset{\circ}{A}$이고, relativistic 효과를 끈 경우 lattice constant는 4.295$\overset{\circ}{A}$이다. [reference](https://www.sciencedirect.com/science/article/pii/S0927025614007940#t0015)에서 구한 실험의 lattice constant는 4.080$\overset{\circ}{A}$이므로 relativistic 효과를 킨 경우가 더 정확함을 알 수 있다.
+
+
+### 2. band structure
+
+이번에는 Au bulk의 band를 그려서 두 pseudopotential에 어떤 차이가 있는지 알아보자. band structure를 그릴 때 사용할 [reference](https://www.sciencedirect.com/science/article/pii/S0927025614007940#t0015)는 Tutorial 1에서도 사용한 이 band 그래프이다. band path는 모두 $\Gamma-X-W-L-\Gamma-K$로 설정해준다. 보고싶은 에너지 범위는 Fermi energy ±10 eV이다. 이 조건들을 만족시키면서 band 그래프를 그려보면 결과는 다음과 같다.
+
+![band_result](img/05/band2.PNG)
+
+페르미 에너지 위 5eV부분을 보면 relativistic의 band structure은 reference와 비슷하지만, non-relativistic의 band structure은 reference와 상이함을 알 수 있다. 따라서 Au pseudopotential은 relativistic 옵션을 켜야하고, 이를 키지 않을시 문제가 생길 수 있다는 것을 확인할 수 있다.
+
+### 3. work function
+
+마지막으로 두 경우의 work function을 확인해보자. Work function을 구하기 위해서는 slab 모델을 만들어주어야 한다. Slab 모델은 위에서 구한 최적화된 bulk model을 이용해서 [1, 1, 1]면을 표면으로 설정해줄 것이다. work function의 차이만 비교해보기 위해서 다른 변수들은 전부 고정해주었다.
+
+![01_010](img/05/slab_model.PNG)
+
+Slab 모델을 만든 후에는 basis를 설정해준다. work function을 구할 때는 100meV를 사용하면 reference와의 차이가 매우 크기 때문에 PAO.EnergyShift 항목을 50meV로 바꾸고 계산을 해야 한다.
+
+|     Basis size     |      DZP       |
+| :----------------: | :------------: |
+| Basis energy shift |    50 [meV]    |
+|         XC         |      LDA       |
+|       DM.tol       | $10^{-3}$ [eV] |
+
+slab model을 만들면 bulk model에서 했던 것과 마찬가지로 k-point test를 해야한다. slab model의 경우 z축의 k-point는 1로 고정하고 x, y값만 변화시켜가며 측정하면 된다. tutorial 1에서 slab model에 대한 k-point를 구했기 때문에 구했던 [31,31,1]의 k-point를 그대로 사용하겠다. relativistic 효과를 준 경우와 주지 않은 경우 work function을 측정해보면 결과는 다음과 같다.
+
+|                  | Fermi [eV] | Vacuum [eV] | Work Function [eV] |
+| :--------------: | :--------: | :---------: | :----------------: |
+|   relativistic   | -4.506018  |  0.750869   |      5.256887      |
+| non-relativistic | -4.201008  |  0.074519   |      4.275527      |
+
+Metal work function의 [reference](https://public.wsu.edu/~pchemlab/documents/Work-functionvalues.pdf)에서 Au의 111면에서 work function은 5.31eV임을 알 수 있다. Relativistic의 경우 0.06 eV정도 차이가 나지만, non-relativistic의 경우 1.04 eV로 차이가 매우 심하게 나게 됨을 알 수 있다.
+
+Au Tutorial에서 했던 것처럼 macroave.in을 통해 Wave function을 시각화 해보면 다음과 같은 결과를 얻을 수 있다.
+
+![work_compare](img/05/work_compare.png)
+
+이와 같은 일련의 과정들을 통해 Pseudopotential을 테스트할 수 있다. 테스트 결과 Au같은 원자번호가 큰 원자의 경우 Relativistic 효과를 고려하는 경우 reference와 거의 일치하지만 Relativistic 효과를 고려하지않는 경우는 reference와 큰 차이가 난다. 따라서 Au의 경우 relativistic 효과를 고려해줘야 한다는 것을 알 수 있다.
 
 ### 참고문헌
 [1](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.26.1738): S. G. Louie, S. Froyen, and M. L. Cohen, Phys. Rev. B 26, 1738 (1982)  
 [2](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.43.1494): Norm-Conserving Pseudopotentials, D. R. Hamann, M. Schlüter, and C. Chiang PRL (1970)  
 [3](https://iopscience.iop.org/article/10.1088/0953-8984/13/42/307/meta): J. Phys.: Condens. Matter13 (2001) 9463–9470  
-[4](https://link.springer.com/article/10.1007/BF03215471): Relativistic effects and the chemistry of gold (1998)
+[4](https://link.springer.com/article/10.1007/BF03215471): Relativistic effects and the chemistry of gold (1998)  
+[5](https://www.sciencedirect.com/science/article/pii/S0927025614007940#t0015): P Rivero et al. Comput. Mater. Sci. (2015), 98, 372

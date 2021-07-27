@@ -6,12 +6,19 @@ theme:
 plugins:
     - search
 
+extra_javascript:
+  - javascripts/config.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
 markdown_extensions:
     - attr_list
-
+    - pymdownx.arithmatex:
+        generic: true
 pages:
         - Basic Setting:
                 - 'Anaconda installation using Windows subsystem for Linux 2' : setting.md
+                - 'Editor : VsCode' : Vscode_SHY.md
                 - 'Cheat sheet' :
                         - 'Linux' : 1.Basic_setting/1.1_LinuxCheatSheet.md
                         - 'Python' : 1.Basic_setting/1.2_PythonCheatSheet.md
