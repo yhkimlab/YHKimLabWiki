@@ -1,3 +1,3 @@
-KAIST EE YHK Lab wiki site
+KAIST EE YHKim Lab wiki site
 
 https://yhkimlab.github.io/wiki/site/
