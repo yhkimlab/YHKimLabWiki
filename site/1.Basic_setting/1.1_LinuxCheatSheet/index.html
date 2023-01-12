@@ -1,0 +1,1601 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-6.2.3">
+    
+    
+      
+        <title>Linux - YHKLAB Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.3b61ea93.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.39b8e14a.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+      
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#unixlinux" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../.." title="YHKLAB Wiki" class="md-header-nav__button md-logo" aria-label="YHKLAB Wiki">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      <div class="md-header-nav__ellipsis">
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
+            YHKLAB Wiki
+          </span>
+        </div>
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
+            
+              Linux
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../setting/" class="md-tabs__link">
+        Environment Setup
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../build_siesta/" class="md-tabs__link">
+        SIESTA Tutorial
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../ML-NEB/" class="md-tabs__link">
+        Vasp Tutorial
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../kpoint/" class="md-tabs__link md-tabs__link--active">
+        Other
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../about/" class="md-tabs__link">
+      About Us
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="YHKLAB Wiki" class="md-nav__button md-logo" aria-label="YHKLAB Wiki">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    YHKLAB Wiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+
+  <li class="md-nav__item">
+    <a href="../.." class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" >
+    
+    <label class="md-nav__link" for="nav-2">
+      Environment Setup
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Environment Setup" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon"></span>
+        Environment Setup
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../setting/" class="md-nav__link">
+      Windows Subsystem for Linux
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../Vscode_SHY/" class="md-nav__link">
+      VSCode
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" >
+    
+    <label class="md-nav__link" for="nav-3">
+      SIESTA Tutorial
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="SIESTA Tutorial" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon"></span>
+        SIESTA Tutorial
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../build_siesta/" class="md-nav__link">
+      SIESTA Installation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+    
+  
+  <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-2" type="checkbox" id="nav-3-2" >
+    
+    <label class="md-nav__link" for="nav-3-2">
+      Atom calculations
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Atom calculations" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-2">
+        <span class="md-nav__icon md-icon"></span>
+        Atom calculations
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../03_building_ATOM/" class="md-nav__link">
+      ATOM Installation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../03_all_electron/" class="md-nav__link">
+      All-electron calculation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../03_pseudopotential/" class="md-nav__link">
+      Pseudopotential Generation
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+    
+  
+  <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3" >
+    
+    <label class="md-nav__link" for="nav-3-3">
+      DFT calculations
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="DFT calculations" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-3">
+        <span class="md-nav__icon md-icon"></span>
+        DFT calculations
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../00_BASIC_UM/" class="md-nav__link">
+      Basic SIESTA calculations
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../01_GOLD_CHJ/" class="md-nav__link">
+      Example: Gold
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../02_Graphene_CHJ/" class="md-nav__link">
+      Example: Graphene
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+    
+  
+  <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-4" type="checkbox" id="nav-3-4" >
+    
+    <label class="md-nav__link" for="nav-3-4">
+      Transport calculations
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Transport calculations" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-4">
+        <span class="md-nav__icon md-icon"></span>
+        Transport calculations
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../transiesta_Si1D/" class="md-nav__link">
+      Basic TranSIESTA calculations
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../transiesta_GNR/" class="md-nav__link">
+      Example: Granphene nanoribbons
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../transiesta_graphene/" class="md-nav__link">
+      Example: Graphene
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../transiesta_Si-SiO2-Si/" class="md-nav__link">
+      Example: Si-SiO2-Si
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" >
+    
+    <label class="md-nav__link" for="nav-4">
+      Vasp Tutorial
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Vasp Tutorial" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon"></span>
+        Vasp Tutorial
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  
+    
+  
+  <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-1" type="checkbox" id="nav-4-1" >
+    
+    <label class="md-nav__link" for="nav-4-1">
+      Nudged Elastic Band (NEB)
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Nudged Elastic Band (NEB)" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-1">
+        <span class="md-nav__icon md-icon"></span>
+        Nudged Elastic Band (NEB)
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../ML-NEB/" class="md-nav__link">
+      Machine learning for nudged elastic band
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  
+
+
+  
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
+    
+    <label class="md-nav__link" for="nav-5">
+      Other
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Other" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        <span class="md-nav__icon md-icon"></span>
+        Other
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  
+    
+  
+  <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5-1" type="checkbox" id="nav-5-1" >
+    
+    <label class="md-nav__link" for="nav-5-1">
+      NanoCore
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="NanoCore" data-md-level="2">
+      <label class="md-nav__title" for="nav-5-1">
+        <span class="md-nav__icon md-icon"></span>
+        NanoCore
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../kpoint/" class="md-nav__link">
+      k-point sampling
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5-1-2" type="checkbox" id="nav-5-1-2" >
+    
+    <label class="md-nav__link" for="nav-5-1-2">
+      Structure optimization
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Structure optimization" data-md-level="3">
+      <label class="md-nav__title" for="nav-5-1-2">
+        <span class="md-nav__icon md-icon"></span>
+        Structure optimization
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../Nano02_EOS/" class="md-nav__link">
+      Equation of state (EOS) 
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../Nano02_3dEOS/" class="md-nav__link">
+      Murnaghan fitting
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../Nano03_GEO/" class="md-nav__link">
+      Geometry optimization
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  
+
+
+  
+    
+  
+  <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5-2" type="checkbox" id="nav-5-2" checked>
+    
+    <label class="md-nav__link" for="nav-5-2">
+      Cheat sheet
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Cheat sheet" data-md-level="2">
+      <label class="md-nav__title" for="nav-5-2">
+        <span class="md-nav__icon md-icon"></span>
+        Cheat sheet
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Linux
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
+      Linux
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#unixlinux" class="md-nav__link">
+    유닉스/리눅스(Unix/Linux) 기본 명령어
+  </a>
+  
+    <nav class="md-nav" aria-label="유닉스/리눅스(Unix/Linux) 기본 명령어">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pwd-print-working-directory" class="md-nav__link">
+    pwd (print working directory)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ls-list" class="md-nav__link">
+    ls (list)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cd-change-directory" class="md-nav__link">
+    cd (change directory)
+  </a>
+  
+    <nav class="md-nav" aria-label="cd (change directory)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    절대 경로 지정
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    상대 경로 지정
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cp-copy" class="md-nav__link">
+    cp (copy)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mv-move" class="md-nav__link">
+    mv (move)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mkdir-make-directory" class="md-nav__link">
+    mkdir (make directory)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rm-remove" class="md-nav__link">
+    rm (remove)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cat-concatenate" class="md-nav__link">
+    cat (concatenate)
+  </a>
+  
+    <nav class="md-nav" aria-label="cat (concatenate)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    새로운 파일 작성
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    기존 파일에 덮어쓰기
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    기타 명령어
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../1.2_PythonCheatSheet/" class="md-nav__link">
+      Python
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../1.3_EmacsCheatSheet/" class="md-nav__link">
+      Emacs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../1.4_AnacondaCheatSheet/" class="md-nav__link">
+      Anaconda
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+    
+  
+  <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5-3" type="checkbox" id="nav-5-3" >
+    
+    <label class="md-nav__link" for="nav-5-3">
+      Git
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Git" data-md-level="2">
+      <label class="md-nav__title" for="nav-5-3">
+        <span class="md-nav__icon md-icon"></span>
+        Git
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../github_tutorial/0.github_create_repository/" class="md-nav__link">
+      Create Repository
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  <li class="md-nav__item">
+    <a href="../../about/" class="md-nav__link">
+      About Us
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#unixlinux" class="md-nav__link">
+    유닉스/리눅스(Unix/Linux) 기본 명령어
+  </a>
+  
+    <nav class="md-nav" aria-label="유닉스/리눅스(Unix/Linux) 기본 명령어">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pwd-print-working-directory" class="md-nav__link">
+    pwd (print working directory)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ls-list" class="md-nav__link">
+    ls (list)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cd-change-directory" class="md-nav__link">
+    cd (change directory)
+  </a>
+  
+    <nav class="md-nav" aria-label="cd (change directory)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    절대 경로 지정
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    상대 경로 지정
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cp-copy" class="md-nav__link">
+    cp (copy)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mv-move" class="md-nav__link">
+    mv (move)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mkdir-make-directory" class="md-nav__link">
+    mkdir (make directory)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rm-remove" class="md-nav__link">
+    rm (remove)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cat-concatenate" class="md-nav__link">
+    cat (concatenate)
+  </a>
+  
+    <nav class="md-nav" aria-label="cat (concatenate)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    새로운 파일 작성
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    기존 파일에 덮어쓰기
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    기타 명령어
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>Linux</h1>
+                
+                <h2 id="unixlinux">유닉스/리눅스(Unix/Linux) 기본 명령어</h2>
+<p><strong>유닉스/리눅스</strong> 기반의 운영체제는 쉘(shell)을 통해서 사용자의 명령이 커널로 전달되어 작동한다. 가장 기본적으로 이용되는 쉘이 <code>bash</code>인데 본 장에서는 기초적인 <code>bash</code> 언어에 대해서 알아본다.</p>
+<h3 id="pwd-print-working-directory">pwd (print working directory)</h3>
+<p>현재 작업중인 디렉토리 정보 출력한다.</p>
+<pre><code class="language-bash">$ pwd
+/YHKlab/tmp
+</code></pre>
+<h3 id="ls-list">ls (list)</h3>
+<p>디렉토리 목록 확인한다.</p>
+<pre><code class="language-bash">$ ls
+dir1  dir2  dir3
+</code></pre>
+<h3 id="cd-change-directory">cd (change directory)</h3>
+<p>지정된 경로 이동한다. 경로를 지정하는 방법에 대해서는 아래와 같이 크게 두 가지 방식이 있다.</p>
+<h4 id="_1">절대 경로 지정</h4>
+<blockquote>
+<p><strong>cd</strong>: 홈 디렉토리로 이동</p>
+</blockquote>
+<pre><code class="language-bash">$ cd /YHKlab/tmp/dir1
+$ pwd
+/YHKlab/tmp/dir1
+</code></pre>
+<h4 id="_2">상대 경로 지정</h4>
+<blockquote>
+<p><strong>cd ../ </strong>: 하위 디렉토리로 이동
+<strong>cd - </strong>: 이전 디렉토리로 이동</p>
+</blockquote>
+<pre><code class="language-bash">$ pwd
+/YHKlab/tmp/dir1
+$ cd ../
+$ pwd
+/YHKlab/tmp
+$ cd -
+$ pwd
+/YHKlab/tmp/dir1
+</code></pre>
+<h3 id="cp-copy">cp (copy)</h3>
+<p>파일 혹은 디렉토리를 복사한다.</p>
+<blockquote>
+<p>디렉토리를 복사할때는 -r 옵션을 추가</p>
+</blockquote>
+<pre><code class="language-bash">$ ls
+dir  file1  file2  file3
+$ cp file1 file_copy
+$ ls
+dir  file_copy  file1  file2  file3 
+$ cp -r dir dir_copy
+$ ls
+dir  dir_copy  file_copy  file1  file2  file3 
+</code></pre>
+<h3 id="mv-move">mv (move)</h3>
+<p>파일 및 디렉토리 이동한다.</p>
+<pre><code class="language-bash">$ pwd
+/YHKlab
+$ ls
+dir  file1  file2  file3 
+$ mv file1 dir/.
+$ cd dir
+$ pwd
+/YHKlab/dir
+$ ls
+file1
+</code></pre>
+<p>파일 및 디렉토리 이름 변경하는 기능을 한다.</p>
+<pre><code>$ mv file1 file_changed_name
+$ ls
+file_changed_name
+</code></pre>
+<h3 id="mkdir-make-directory">mkdir (make directory)</h3>
+<p>디렉토리 생성한다.</p>
+<blockquote>
+<p>-p 옵션을 주면 하위 디렉토리까지 한 번에 생성 가능</p>
+</blockquote>
+<pre><code class="language-bash">$ mkdir new_dir_name
+$ ls
+new_dir_name
+</code></pre>
+<h3 id="rm-remove">rm (remove)</h3>
+<p>파일 혹은 디렉토리를 제거한다.</p>
+<blockquote>
+<p>디렉토리를 제거할때는 -r 옵션을 주어야함</p>
+</blockquote>
+<pre><code>$ ls
+file  dir
+$ rm file
+$ ls
+dir
+$ rm -r dir
+$ ls
+
+</code></pre>
+<h3 id="cat-concatenate">cat (concatenate)</h3>
+<p>파일의 내용을 출력한다.</p>
+<pre><code>$ ls
+file1  file2
+$ cat file1
+Hellow
+$ cat file2
+World
+</code></pre>
+<p><code>cat</code> 명령어를 통해 두 파일의 내용을 합칠 수도 있다.</p>
+<h4 id="_3">새로운 파일 작성</h4>
+<pre><code>$ cat file1 file2 &gt; file_new
+$ cat file_new
+Hellow World
+</code></pre>
+<pre><code>$ cat file2 file1 &gt; file_new
+$ cat file_new
+World Hellow
+</code></pre>
+<h4 id="_4">기존 파일에 덮어쓰기</h4>
+<pre><code>$ cat file1 &gt;&gt; file2 
+$ cat file2
+Hellow World
+</code></pre>
+<pre><code>$ cat file2 &gt;&gt; file1
+$ cat file1
+World Hellow
+</code></pre>
+<h2 id="_5">기타 명령어</h2>
+<p>지금까지 가장 기초적인 <code>bash</code> 명령어에 대해서 알아보았다. 그 외 기타 명령어는 다음을 참조하자.</p>
+<table>
+<thead>
+<tr>
+<th align="center">커멘드</th>
+<th align="center">의미</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">control + c</td>
+<td align="center">현재 커맨스를 정지</td>
+</tr>
+<tr>
+<td align="center">control + insert</td>
+<td align="center">복사</td>
+</tr>
+<tr>
+<td align="center">shift + insert</td>
+<td align="center">붙여넣기</td>
+</tr>
+<tr>
+<td align="center">ls</td>
+<td align="center">리스트 파일표시</td>
+</tr>
+<tr>
+<td align="center">ls -al</td>
+<td align="center">리스트 파일 세부표시</td>
+</tr>
+<tr>
+<td align="center">pwd</td>
+<td align="center">현재 디렉토리 표시</td>
+</tr>
+<tr>
+<td align="center">rm flle_name</td>
+<td align="center">파일 삭제</td>
+</tr>
+<tr>
+<td align="center">rm -r file_name</td>
+<td align="center">파일강제삭제</td>
+</tr>
+<tr>
+<td align="center">rm -rf file_name</td>
+<td align="center">파일강제삭제, 질문무시</td>
+</tr>
+<tr>
+<td align="center">cp -file1 file2</td>
+<td align="center">파일 복사</td>
+</tr>
+<tr>
+<td align="center">cp -r dir1 dir2</td>
+<td align="center">파일(폴더) 복사</td>
+</tr>
+<tr>
+<td align="center">mv file1 file2</td>
+<td align="center">파일 이름 변경</td>
+</tr>
+<tr>
+<td align="center">mkdir</td>
+<td align="center">디렉토리 생성</td>
+</tr>
+<tr>
+<td align="center">ln -s /path/to/file_name link_name</td>
+<td align="center">링크 파일 생성</td>
+</tr>
+<tr>
+<td align="center">touch file_name</td>
+<td align="center">파일생성</td>
+</tr>
+<tr>
+<td align="center">chmod 777 /data/test.c</td>
+<td align="center">서버에 접근가능한 사용자에게 rwx 권한을 위임</td>
+</tr>
+<tr>
+<td align="center">grep 'patten' files</td>
+<td align="center">파일안에 패턴을 모두 검색</td>
+</tr>
+<tr>
+<td align="center">locate file</td>
+<td align="center">파일 검색</td>
+</tr>
+<tr>
+<td align="center">find /home/ -name "index"</td>
+<td align="center">home 폴더안에 index 로 시작하는 파일이름 검색</td>
+</tr>
+<tr>
+<td align="center">find /home -size +100000k</td>
+<td align="center">100000k 보다 큰 파일을 home 폴더에서 검색</td>
+</tr>
+<tr>
+<td align="center">ssh user@host</td>
+<td align="center">사용자로 host에 연결</td>
+</tr>
+<tr>
+<td align="center">du -sh</td>
+<td align="center">디렉토리의 파일 용량 확인</td>
+</tr>
+<tr>
+<td align="center">cd ..</td>
+<td align="center">현재디렉토리 보다 상위로 이동</td>
+</tr>
+<tr>
+<td align="center">cd</td>
+<td align="center">home 디렉토리로 이동</td>
+</tr>
+<tr>
+<td align="center">cd /test</td>
+<td align="center">/test 디렉토리로 이동</td>
+</tr>
+<tr>
+<td align="center">tar -xsf</td>
+<td align="center">압축풀기</td>
+</tr>
+<tr>
+<td align="center">display file_name.png</td>
+<td align="center">그림 파일 보기</td>
+</tr>
+<tr>
+<td align="center">!!</td>
+<td align="center">이전 커맨드 반복</td>
+</tr>
+<tr>
+<td align="center">control + D</td>
+<td align="center">현재 세션 로그아웃</td>
+</tr>
+</tbody>
+</table>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../../Nano03_GEO/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Geometry optimization
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../1.2_PythonCheatSheet/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Python
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/vendor.08c56446.min.js"></script>
+      <script src="../../assets/javascripts/bundle.6ced434e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../..",
+          features: ['navigation.instant', 'navigation.tabs', 'navigation.sections'],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.8c7e0a7e.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+        <script src="../../javascripts/config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
