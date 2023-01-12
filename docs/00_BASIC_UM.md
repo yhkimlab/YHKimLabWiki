@@ -1,10 +1,10 @@
-Tutorial 0: Basic SIESTA Calculation
+Basic SIESTA Calculation
 ====================================
+## Contents
+1. SIESTA 개요
+2. Example: 분자 계산
 
-## Part 1: 이론적 배경 & siesta 개요
-
-참고문헌: SIESTA homepage (<http://www.icmab.es/siesta/>)   Documentation Tutorials 
-
+## SIESTA 개요
 ### 이론적배경
 a. SIESTA에서는 Kohn-Sham 방정식을 푸는 시뮬레이션을 진행한다. Kohn-sham 방정식은 아래와 같다.
 
@@ -24,7 +24,7 @@ b. Kohn-Sham DFT(Density Functional Theory)은 화학적 및 재료특성을 예
 알고리즘에서 H(Hamiltonian)은 LCAO(linear combination of atomic orbitals)로 구성되며 SCF loop를 통해 안정된 에너지를 가지는 H를 구할 수 있다. 이를 통해 Bandstructure, (P)DOS 등 다양한 물질특성을 분석할 수 있다.
 
 
-### Siesta 개요
+### SIESTA 계산과정
 
 - 위와 같은 DFT 계산을 위해서는 아래와 같은 입력(input) 파일과 실행(executable) 파일이 필요하다. Input 파일은 *.fdf,(RUN.fdf, STRUCT.fdf, KPT.fdf, BASIS.fdf) 와 *psf 가 필요하다.
 - fdf 파일은 파일을 실행시키는데 필요한 정보들을 가지고 있는 파일이며 psf파일은 pseudopotential 정보를 가지고 있는 파일을 뜻한다.
@@ -35,7 +35,7 @@ b. Kohn-Sham DFT(Density Functional Theory)은 화학적 및 재료특성을 예
 
 
 
-## Part 2: 분자
+## Example: 분자 계산
 
 ### Exercise 1: CH4 분자 계산 준비
 
@@ -322,3 +322,5 @@ A : Ang or Bohr
 100 100 100 : 방향에 따른 grid points 정의
 RHO : 변환되는 grid 파일 
 
+### 참고문헌
+SIESTA homepage (<http://www.icmab.es/siesta/>)

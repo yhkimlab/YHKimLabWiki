@@ -1,10 +1,11 @@
-# Anaconda installation using Windows subsystem for Linux 2
+Windows subsystem for Linux
+====================================
+## Contents
+1. WSL2 installation
+2. X11 server installation
+3. Anaconda installation
 
-![img/Jupyter/Untitled.png](img/Jupyter/Untitled.png)
-
----
-
-## 1. Ubuntu installation @ Windows 10 – WSL2
+## 1. WSL2 installation
 
 2020년 05월 windows 10 update를 통해 **Windows subsystem for Linux 2 (WSL2)**가 정식 설치가 가능해졌습니다. **WSL2**를 이용하면 Windows 10 환경에서 Linux 를 구동할 수 있고 구축된 Linux 환경에서 **Ubuntu**를 설치하여 python code 개발 통합환경인 **Anaconda**를 설치할 수 있습니다. 우선 아래 링크를 참조하여 **WSL2** 및 **Ubuntu** 설치를 진행합니다.
 
@@ -12,7 +13,7 @@ WSL2 installation: [[Link]](https://docs.microsoft.com/en-us/windows/wsl/install
 
 `Error: 0x8037012` Error: [[Link]](https://stackoverflow.com/questions/62340566/fix-wslregisterdistribution-failed-with-error-0x80370102)
 
-## 2. Visualization: X11 server
+## 2. X11 server (visualization)
 
 가상머신에서 시각화를 위해서 GUI 프로그램인 **VcXsrv**를 설치하도록 합니다: [[Link]](https://sourceforge.net/projects/vcxsrv/)
 
@@ -101,7 +102,7 @@ anaconda-navigator
 
 
 
-## 4. Text editor: Emacs installation
+### Text editor: Emacs installation
 
 Unix 환경에서 유용한 text editor인 emacs를 설치합니다:
 
@@ -114,12 +115,12 @@ sudo apt install emacs26
 How to use Emacs: [[Link]](https://www.gnu.org/software/emacs/refcards/pdf/refcard.pdf)
 
 
-## 5. Run Jupyter notebook
+### Run Jupyter notebook
 
 Python 코드를 실행해볼 수 있는 **Jupyter notebook**를 원격 브라우저 환경에서 실행시기키 위해서는 다음과 같은 방법을 따릅니다.
 
 
-#### Firefox browser installation
+### Firefox browser installation
 
 ```bash
 sudo add-apt-repository ppa:ubuntu-mozilla-security/ppa
@@ -148,7 +149,7 @@ c.NotebookApp.browser = '/usr/bin/firefox %s'
 이를 통해서  **Jupyter notebook**가 실행될 때 자동으로 Firefox browser를 통해 실행될 수 있게 합니다.
 
 
-#### (Optional: not using the remote browser)
+### (Optional: not using the remote browser)
 
 위의 옵션을 수정하는 대신 `/c.NotebookApp.open_browser` 을 입력하여 관련 키워드를 검색합니다. 발견된 위치에 해당하는 코드의 줄을 다음과 같이 수정합니다(주석 문자 `#` 지움).  이를 통해서  **Jupyter notebook**가 실행될 때 자동으로 브라우저를 실행하지 않도록 할 수 있습니다.
 

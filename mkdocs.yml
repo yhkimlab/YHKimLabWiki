@@ -2,6 +2,10 @@ site_name: YHKLAB Wiki
 
 theme:
     name: 'material'
+    features:
+        - navigation.instant
+        - navigation.tabs
+        - navigation.sections
 
 plugins:
     - search
@@ -13,29 +17,46 @@ extra_javascript:
 
 markdown_extensions:
     - attr_list
+    - pymdownx.mark
     - pymdownx.arithmatex:
         generic: true
-pages:
-        - Basic Setting:
-                - 'Anaconda installation using Windows subsystem for Linux 2' : setting.md
-                - 'Editor : VsCode' : Vscode_SHY.md
-                - 'Cheat sheet' :
+nav:
+        - Home: index.md
+        - Environment Setup:
+                - 'Windows Subsystem for Linux' : setting.md
+                - 'VSCode' : Vscode_SHY.md
+        - SIESTA Tutorial:
+                - 'SIESTA Installation': build_siesta.md
+                - Atom calculations:
+                        - 'ATOM Installation': 03_building_ATOM.md
+                        - 'All-electron calculation': 03_all_electron.md 
+                        - 'Pseudopotential Generation' : 03_pseudopotential.md
+                - DFT calculations:
+                        - 'Basic SIESTA calculations': 00_BASIC_UM.md
+                        - 'Example: Gold': 01_GOLD_CHJ.md
+                        - 'Example: Graphene' : 02_Graphene_CHJ.md
+                - Transport calculations:
+                        - 'Basic TranSIESTA calculations': transiesta_Si1D.md
+                        - 'Example: Granphene nanoribbons': transiesta_GNR.md
+                        - 'Example: Graphene': transiesta_graphene.md
+                        - 'Example: Si-SiO2-Si': transiesta_Si-SiO2-Si.md
+        - Vasp Tutorial:
+                - Nudged Elastic Band (NEB):
+                        - 'Machine learning for nudged elastic band' : ML-NEB.md
+        - Other:
+                - NanoCore:
+                        - 'k-point sampling' : kpoint.md
+                        - 'Structure optimization' :
+                                - 'Equation of state (EOS) ' : Nano02_EOS.md
+                                - 'Murnaghan fitting' : Nano02_3dEOS.md
+                                - 'Geometry optimization' : Nano03_GEO.md
+
+                - Cheat sheet:
                         - 'Linux' : 1.Basic_setting/1.1_LinuxCheatSheet.md
                         - 'Python' : 1.Basic_setting/1.2_PythonCheatSheet.md
                         - 'Emacs' : 1.Basic_setting/1.3_EmacsCheatSheet.md
                         - 'Anaconda' : 1.Basic_setting/1.4_AnacondaCheatSheet.md
-        - Git Tutorials:
-                - 'Create repository' : github_tutorial/0.github_create_repository.md
-        - DFT Tutorials (SIESTA):
-                - 'Tutorial 0 : Basic SIESTA Calculation': 00_BASIC_UM.md
-                - 'Tutorial 1 : Au Electronic Structure Calculation': 01_GOLD_CHJ.md
-                - 'Tutorial 2 : Graphene Electronic Structure Calculation' : 02_Graphene_CHJ.md
-                - 'Tutorial 3 : Pseudopotential generations' : 03_Pseudopotential_RG.md
-        - DFT Tutorials (VASP):
-                - 'Machine learning for nudged elastic band' : ML-NEB.md
-        - DFT Platform (NanoCore) :
-                - 'k-point sampling' : kpoint.md
-                - 'Structure optimization' :
-                        - 'Equation of state (EOS) ' : Nano02_EOS.md
-                        - 'Murnaghan fitting' : Nano02_3dEOS.md
-                        - 'Geometry optimization' : Nano03_GEO.md
+                - Git:
+                        - 'Create Repository' : github_tutorial/0.github_create_repository.md
+        - About Us: about.md
+
