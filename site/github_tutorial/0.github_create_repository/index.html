@@ -161,7 +161,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../setting/" class="md-tabs__link">
+      <a href="../../environment/wsl2/" class="md-tabs__link">
         Environment Setup
       </a>
     </li>
@@ -176,34 +176,18 @@
   
   
   
+    
+
+  
+  
+  
     <li class="md-tabs__item">
-      <a href="../../build_siesta/" class="md-tabs__link">
+      <a href="../../build/build_siesta/" class="md-tabs__link">
         SIESTA Tutorial
       </a>
     </li>
   
 
-      
-        
-  
-  
-
-
-  
-  
-  
-    
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../../ML-NEB/" class="md-tabs__link">
-        Vasp Tutorial
-      </a>
-    </li>
-  
-
   
 
       
@@ -222,11 +206,18 @@
   
   
   
+    
+
+  
+  
+  
     <li class="md-tabs__item">
-      <a href="../../kpoint/" class="md-tabs__link md-tabs__link--active">
+      <a href="../../vasp/ml-neb/" class="md-tabs__link md-tabs__link--active">
         Other
       </a>
     </li>
+  
+
   
 
   
@@ -239,7 +230,7 @@
 
   <li class="md-tabs__item">
     <a href="../../about/" class="md-tabs__link">
-      About Us
+      About
     </a>
   </li>
 
@@ -321,7 +312,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../setting/" class="md-nav__link">
+    <a href="../../environment/wsl2/" class="md-nav__link">
       Windows Subsystem for Linux
     </a>
   </li>
@@ -334,7 +325,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Vscode_SHY/" class="md-nav__link">
+    <a href="../../environment/vscode/" class="md-nav__link">
       VSCode
     </a>
   </li>
@@ -375,10 +366,54 @@
 
 
 
+  
+    
+  
+  <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-1" type="checkbox" id="nav-3-1" >
+    
+    <label class="md-nav__link" for="nav-3-1">
+      0. 준비
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="0. 준비" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-1">
+        <span class="md-nav__icon md-icon"></span>
+        0. 준비
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
   <li class="md-nav__item">
-    <a href="../../build_siesta/" class="md-nav__link">
-      SIESTA Installation
+    <a href="../../build/build_siesta/" class="md-nav__link">
+      SIESTA 설치
     </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../build/build_atom/" class="md-nav__link">
+      ATOM 설치
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
         
@@ -397,13 +432,37 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-2" type="checkbox" id="nav-3-2" >
     
     <label class="md-nav__link" for="nav-3-2">
-      Atom calculations
+      1. ATOM 계산
       <span class="md-nav__icon md-icon"></span>
     </label>
-    <nav class="md-nav" aria-label="Atom calculations" data-md-level="2">
+    <nav class="md-nav" aria-label="1. ATOM 계산" data-md-level="2">
       <label class="md-nav__title" for="nav-3-2">
         <span class="md-nav__icon md-icon"></span>
-        Atom calculations
+        1. ATOM 계산
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-2-1" type="checkbox" id="nav-3-2-1" >
+    
+    <label class="md-nav__link" for="nav-3-2-1">
+      A. 기초 과정
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="A. 기초 과정" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-2-1">
+        <span class="md-nav__icon md-icon"></span>
+        A. 기초 과정
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -415,8 +474,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../03_building_ATOM/" class="md-nav__link">
-      ATOM Installation
+    <a href="../../atom/atom_all_electron/" class="md-nav__link">
+      온-전자 계산
     </a>
   </li>
 
@@ -428,22 +487,14 @@
 
 
   <li class="md-nav__item">
-    <a href="../../03_all_electron/" class="md-nav__link">
-      All-electron calculation
+    <a href="../../atom/atom_pseudopotential/" class="md-nav__link">
+      슈도퍼텐셜 생성
     </a>
   </li>
 
         
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../03_pseudopotential/" class="md-nav__link">
-      Pseudopotential Generation
-    </a>
+      </ul>
+    </nav>
   </li>
 
         
@@ -467,13 +518,37 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3" >
     
     <label class="md-nav__link" for="nav-3-3">
-      DFT calculations
+      2. SIESTA 계산
       <span class="md-nav__icon md-icon"></span>
     </label>
-    <nav class="md-nav" aria-label="DFT calculations" data-md-level="2">
+    <nav class="md-nav" aria-label="2. SIESTA 계산" data-md-level="2">
       <label class="md-nav__title" for="nav-3-3">
         <span class="md-nav__icon md-icon"></span>
-        DFT calculations
+        2. SIESTA 계산
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-3-1" type="checkbox" id="nav-3-3-1" >
+    
+    <label class="md-nav__link" for="nav-3-3-1">
+      A. 기초 과정
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="A. 기초 과정" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-3-1">
+        <span class="md-nav__icon md-icon"></span>
+        A. 기초 과정
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -485,8 +560,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../00_BASIC_UM/" class="md-nav__link">
-      Basic SIESTA calculations
+    <a href="../../siesta/siesta_basic/" class="md-nav__link">
+      SIESTA 개요
     </a>
   </li>
 
@@ -498,8 +573,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../01_GOLD_CHJ/" class="md-nav__link">
-      Example: Gold
+    <a href="../../siesta/siesta_gold/" class="md-nav__link">
+      Au 벌크/슬랩 구조
     </a>
   </li>
 
@@ -511,9 +586,14 @@
 
 
   <li class="md-nav__item">
-    <a href="../../02_Graphene_CHJ/" class="md-nav__link">
-      Example: Graphene
+    <a href="../../siesta/siesta_graphene/" class="md-nav__link">
+      Graphene
     </a>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
         
@@ -537,13 +617,13 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-4" type="checkbox" id="nav-3-4" >
     
     <label class="md-nav__link" for="nav-3-4">
-      Transport calculations
+      3. TranSIESTA 계산
       <span class="md-nav__icon md-icon"></span>
     </label>
-    <nav class="md-nav" aria-label="Transport calculations" data-md-level="2">
+    <nav class="md-nav" aria-label="3. TranSIESTA 계산" data-md-level="2">
       <label class="md-nav__title" for="nav-3-4">
         <span class="md-nav__icon md-icon"></span>
-        Transport calculations
+        3. TranSIESTA 계산
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -551,68 +631,6 @@
           
           
           
-
-
-
-  <li class="md-nav__item">
-    <a href="../../transiesta_Si1D/" class="md-nav__link">
-      Basic TranSIESTA calculations
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../transiesta_GNR/" class="md-nav__link">
-      Example: Granphene nanoribbons
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../transiesta_graphene/" class="md-nav__link">
-      Example: Graphene
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../transiesta_Si-SiO2-Si/" class="md-nav__link">
-      Example: Si-SiO2-Si
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
 
 
 
@@ -620,42 +638,16 @@
   <li class="md-nav__item md-nav__item--nested">
     
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" >
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-4-1" type="checkbox" id="nav-3-4-1" >
     
-    <label class="md-nav__link" for="nav-4">
-      Vasp Tutorial
+    <label class="md-nav__link" for="nav-3-4-1">
+      A. 기초 과정
       <span class="md-nav__icon md-icon"></span>
     </label>
-    <nav class="md-nav" aria-label="Vasp Tutorial" data-md-level="1">
-      <label class="md-nav__title" for="nav-4">
+    <nav class="md-nav" aria-label="A. 기초 과정" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-4-1">
         <span class="md-nav__icon md-icon"></span>
-        Vasp Tutorial
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-
-  
-    
-  
-  <li class="md-nav__item md-nav__item--section md-nav__item--nested">
-    
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-1" type="checkbox" id="nav-4-1" >
-    
-    <label class="md-nav__link" for="nav-4-1">
-      Nudged Elastic Band (NEB)
-      <span class="md-nav__icon md-icon"></span>
-    </label>
-    <nav class="md-nav" aria-label="Nudged Elastic Band (NEB)" data-md-level="2">
-      <label class="md-nav__title" for="nav-4-1">
-        <span class="md-nav__icon md-icon"></span>
-        Nudged Elastic Band (NEB)
+        A. 기초 과정
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -667,9 +659,137 @@
 
 
   <li class="md-nav__item">
-    <a href="../../ML-NEB/" class="md-nav__link">
-      Machine learning for nudged elastic band
+    <a href="../../transiesta/transiesta_overview/" class="md-nav__link">
+      (1) TranSIESTA 개요
     </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../transiesta/transiesta_modeling/" class="md-nav__link">
+      (2) 접합구조 모델링
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../transiesta/transiesta_si1d/" class="md-nav__link">
+      (3) Si chain (1D)
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-4-2" type="checkbox" id="nav-3-4-2" >
+    
+    <label class="md-nav__link" for="nav-3-4-2">
+      B. 중급/고급 과정
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="B. 중급/고급 과정" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-4-2">
+        <span class="md-nav__icon md-icon"></span>
+        B. 중급/고급 과정
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-4-2-1" type="checkbox" id="nav-3-4-2-1" >
+    
+    <label class="md-nav__link" for="nav-3-4-2-1">
+      평형상태 계산
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="평형상태 계산" data-md-level="4">
+      <label class="md-nav__title" for="nav-3-4-2-1">
+        <span class="md-nav__icon md-icon"></span>
+        평형상태 계산
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../transiesta/transiesta_graphene/" class="md-nav__link">
+      (1) Graphene (2D)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../transiesta/transiesta_gnr/" class="md-nav__link">
+      (2) Pristine & defective GNRs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../transiesta/transiesta_si-sio2-si/" class="md-nav__link">
+      (3) Si-SiO2-Si
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
         
@@ -695,14 +815,14 @@
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
     
-    <label class="md-nav__link" for="nav-5">
+    <label class="md-nav__link" for="nav-4">
       Other
       <span class="md-nav__icon md-icon"></span>
     </label>
     <nav class="md-nav" aria-label="Other" data-md-level="1">
-      <label class="md-nav__title" for="nav-5">
+      <label class="md-nav__title" for="nav-4">
         <span class="md-nav__icon md-icon"></span>
         Other
       </label>
@@ -721,32 +841,19 @@
   <li class="md-nav__item md-nav__item--section md-nav__item--nested">
     
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5-1" type="checkbox" id="nav-5-1" >
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-1" type="checkbox" id="nav-4-1" >
     
-    <label class="md-nav__link" for="nav-5-1">
-      NanoCore
+    <label class="md-nav__link" for="nav-4-1">
+      Vasp
       <span class="md-nav__icon md-icon"></span>
     </label>
-    <nav class="md-nav" aria-label="NanoCore" data-md-level="2">
-      <label class="md-nav__title" for="nav-5-1">
+    <nav class="md-nav" aria-label="Vasp" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-1">
         <span class="md-nav__icon md-icon"></span>
-        NanoCore
+        Vasp
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../kpoint/" class="md-nav__link">
-      k-point sampling
-    </a>
-  </li>
-
         
           
           
@@ -758,16 +865,16 @@
   <li class="md-nav__item md-nav__item--nested">
     
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5-1-2" type="checkbox" id="nav-5-1-2" >
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-1-1" type="checkbox" id="nav-4-1-1" >
     
-    <label class="md-nav__link" for="nav-5-1-2">
-      Structure optimization
+    <label class="md-nav__link" for="nav-4-1-1">
+      Nudged Elastic Band (NEB)
       <span class="md-nav__icon md-icon"></span>
     </label>
-    <nav class="md-nav" aria-label="Structure optimization" data-md-level="3">
-      <label class="md-nav__title" for="nav-5-1-2">
+    <nav class="md-nav" aria-label="Nudged Elastic Band (NEB)" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-1-1">
         <span class="md-nav__icon md-icon"></span>
-        Structure optimization
+        Nudged Elastic Band (NEB)
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -779,34 +886,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Nano02_EOS/" class="md-nav__link">
-      Equation of state (EOS) 
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../Nano02_3dEOS/" class="md-nav__link">
-      Murnaghan fitting
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../Nano03_GEO/" class="md-nav__link">
-      Geometry optimization
+    <a href="../../vasp/ml-neb/" class="md-nav__link">
+      Machine learning for nudged elastic band
     </a>
   </li>
 
@@ -833,16 +914,16 @@
   <li class="md-nav__item md-nav__item--section md-nav__item--nested">
     
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5-2" type="checkbox" id="nav-5-2" >
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2" >
     
-    <label class="md-nav__link" for="nav-5-2">
-      Cheat sheet
+    <label class="md-nav__link" for="nav-4-2">
+      NanoCore
       <span class="md-nav__icon md-icon"></span>
     </label>
-    <nav class="md-nav" aria-label="Cheat sheet" data-md-level="2">
-      <label class="md-nav__title" for="nav-5-2">
+    <nav class="md-nav" aria-label="NanoCore" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-2">
         <span class="md-nav__icon md-icon"></span>
-        Cheat sheet
+        NanoCore
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -854,8 +935,45 @@
 
 
   <li class="md-nav__item">
-    <a href="../../1.Basic_setting/1.1_LinuxCheatSheet/" class="md-nav__link">
-      Linux
+    <a href="../../nanocore/nanocore_kpoint/" class="md-nav__link">
+      k-point sampling
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-2-2" type="checkbox" id="nav-4-2-2" >
+    
+    <label class="md-nav__link" for="nav-4-2-2">
+      Structure optimization
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Structure optimization" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-2-2">
+        <span class="md-nav__icon md-icon"></span>
+        Structure optimization
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../nanocore/nanocore_eos/" class="md-nav__link">
+      Equation of state (EOS) 
     </a>
   </li>
 
@@ -867,8 +985,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../1.Basic_setting/1.2_PythonCheatSheet/" class="md-nav__link">
-      Python
+    <a href="../../nanocore/nanocore_murnaghan/" class="md-nav__link">
+      Murnaghan fitting
     </a>
   </li>
 
@@ -880,22 +998,14 @@
 
 
   <li class="md-nav__item">
-    <a href="../../1.Basic_setting/1.3_EmacsCheatSheet/" class="md-nav__link">
-      Emacs
+    <a href="../../nanocore/nanocore_geo/" class="md-nav__link">
+      Geometry optimization
     </a>
   </li>
 
         
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../1.Basic_setting/1.4_AnacondaCheatSheet/" class="md-nav__link">
-      Anaconda
-    </a>
+      </ul>
+    </nav>
   </li>
 
         
@@ -918,14 +1028,14 @@
   <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
     
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5-3" type="checkbox" id="nav-5-3" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-3" type="checkbox" id="nav-4-3" checked>
     
-    <label class="md-nav__link" for="nav-5-3">
+    <label class="md-nav__link" for="nav-4-3">
       Git
       <span class="md-nav__icon md-icon"></span>
     </label>
     <nav class="md-nav" aria-label="Git" data-md-level="2">
-      <label class="md-nav__title" for="nav-5-3">
+      <label class="md-nav__title" for="nav-4-3">
         <span class="md-nav__icon md-icon"></span>
         Git
       </label>
@@ -1056,6 +1166,89 @@
   </li>
 
         
+          
+          
+          
+
+
+
+  
+    
+  
+  <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-4" type="checkbox" id="nav-4-4" >
+    
+    <label class="md-nav__link" for="nav-4-4">
+      유용한 명령어
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="유용한 명령어" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-4">
+        <span class="md-nav__icon md-icon"></span>
+        유용한 명령어
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../other/1.1_LinuxCheatSheet/" class="md-nav__link">
+      Linux
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../other/1.2_PythonCheatSheet/" class="md-nav__link">
+      Python
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../other/1.3_EmacsCheatSheet/" class="md-nav__link">
+      Emacs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../other/1.4_AnacondaCheatSheet/" class="md-nav__link">
+      Anaconda
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -1069,7 +1262,7 @@
 
   <li class="md-nav__item">
     <a href="../../about/" class="md-nav__link">
-      About Us
+      About
     </a>
   </li>
 
@@ -1205,36 +1398,36 @@ local repository 라고 불린다. 내 PC에 파일이 저장되는 개인 전�
 <h2 id="2">2. 로컬 저장소 만들기</h2>
 <h3 id="1-create-a-local-repository">(1) Create a local repository</h3>
 <p>터미널에서 자신의 원하는 디렉터리 이동한 후 아래의 명령어를 입력한다.</p>
-<pre><code class="language-bash">git init
-</code></pre>
+<div class="highlight"><pre><span></span><code>git init
+</code></pre></div>
 <p>명령어를 수행하면 해당 디렉토리에 <code>.git</code> 파일이 생성되는 것을 확인 할 수 있다.</p>
 <h3 id="2-add-source-files-into-the-repository">(2) Add source files into the repository</h3>
 <p>로컬 저장소에서 다음과 같은 명령어를 통해 로컬 저장소의 파일들을 스테이징 영역에 추가할 수 있다.</p>
-<pre><code class="language-bash">git add . # 변경된 모든 파일을 스테이징 영역에 추가
-git add [some-file] # 스테이징 영역에 some-file 추가
-</code></pre>
+<div class="highlight"><pre><span></span><code>git add . <span class="c1"># 변경된 모든 파일을 스테이징 영역에 추가</span>
+git add <span class="o">[</span>some-file<span class="o">]</span> <span class="c1"># 스테이징 영역에 some-file 추가</span>
+</code></pre></div>
 <p>스테이징 영역에 추가된 파일을 다음과 같은 명령어를 통해 확인할 수 있다.</p>
-<pre><code class="language-bash">git status
-</code></pre>
+<div class="highlight"><pre><span></span><code>git status
+</code></pre></div>
 <p>마지막으로 다음과 같은 명령어로 로컬 저장소에 스테이징 영역에 저장된 변경 내역을 확정 지을 수 있다.</p>
-<pre><code class="language-bash">git commit -m 'message'
-</code></pre>
+<div class="highlight"><pre><span></span><code>git commit -m <span class="s1">&#39;message&#39;</span>
+</code></pre></div>
 <p><strong>확정된 commit 내역 확인</strong></p>
-<pre><code class="language-bash">git log
-</code></pre>
+<div class="highlight"><pre><span></span><code>git log
+</code></pre></div>
 <h3 id="3-add-remote-to-local-repository-github">(3) Add remote to local repository (github)</h3>
 <p><code>.git</code> 파일이 생성된 로컬 저장소와 이전에 github를 통해 만든 원격 저장소를 연결하기 위해서 다음과 같은 명령어를 통해 <code>origin</code>의 이름으로 원격 저상소를 등록한다.</p>
 <p><img alt="img/Untitled%202.png" src="../img/Untitled%202.png" /></p>
-<pre><code class="language-bash">git remote add origin [remote repository URL]
-</code></pre>
+<div class="highlight"><pre><span></span><code>git remote add origin <span class="o">[</span>remote repository URL<span class="o">]</span>
+</code></pre></div>
 <h3 id="4-push-local-branch-to-remote-branch">(4) Push local branch to remote branch</h3>
 <p>로컬 저장소에 저장된 </p>
-<pre><code class="language-bash">git push -u origin master
-</code></pre>
+<div class="highlight"><pre><span></span><code>git push -u origin master
+</code></pre></div>
 <h3 id="additional-create-a-local-repository-from-external-remote-repository">(Additional) Create a local repository from external remote repository</h3>
 <p>이미 원격 저장소에서 관리되고 있는 외부 프로젝트를 개인의 저장소로 가져오는 경우에는 다음과 같은 명령어를 수행한다.</p>
-<pre><code class="language-bash">git clone [remote repository URL]
-</code></pre>
+<div class="highlight"><pre><span></span><code>git clone <span class="o">[</span>remote repository URL<span class="o">]</span>
+</code></pre></div>
 <p>진행이 된 디렉토리에 원격 저장소와 동일한 이름의 디렉토리 생성된 것을 확인할 수 있다.</p>
                 
               
@@ -1254,7 +1447,7 @@ git add [some-file] # 스테이징 영역에 some-file 추가
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../../1.Basic_setting/1.4_AnacondaCheatSheet/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../../nanocore/nanocore_geo/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -1263,19 +1456,19 @@ git add [some-file] # 스테이징 영역에 some-file 추가
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Anaconda
+                Geometry optimization
               </div>
             </div>
           </a>
         
         
-          <a href="../../about/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../../other/1.1_LinuxCheatSheet/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                About Us
+                Linux
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
@@ -1308,7 +1501,7 @@ git add [some-file] # 스테이징 영역에 some-file 추가
       <script>
         app = initialize({
           base: "../..",
-          features: ['navigation.instant', 'navigation.tabs', 'navigation.sections'],
+          features: ['navigation.tabs', 'navigation.instant', 'navigation.sections'],
           search: Object.assign({
             worker: "../../assets/javascripts/worker/search.8c7e0a7e.min.js"
           }, typeof search !== "undefined" && search)

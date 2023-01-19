@@ -1,0 +1,1914 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-6.2.3">
+    
+    
+      
+        <title>슈도퍼텐셜 생성 - YHKLAB Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.3b61ea93.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.39b8e14a.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+      
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#pseudopotential-generations" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../.." title="YHKLAB Wiki" class="md-header-nav__button md-logo" aria-label="YHKLAB Wiki">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      <div class="md-header-nav__ellipsis">
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
+            YHKLAB Wiki
+          </span>
+        </div>
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
+            
+              슈도퍼텐셜 생성
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../environment/wsl2/" class="md-tabs__link">
+        Environment Setup
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../build/build_siesta/" class="md-tabs__link md-tabs__link--active">
+        SIESTA Tutorial
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../vasp/ml-neb/" class="md-tabs__link">
+        Other
+      </a>
+    </li>
+  
+
+  
+
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../about/" class="md-tabs__link">
+      About
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="YHKLAB Wiki" class="md-nav__button md-logo" aria-label="YHKLAB Wiki">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    YHKLAB Wiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+
+  <li class="md-nav__item">
+    <a href="../.." class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" >
+    
+    <label class="md-nav__link" for="nav-2">
+      Environment Setup
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Environment Setup" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon"></span>
+        Environment Setup
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../environment/wsl2/" class="md-nav__link">
+      Windows Subsystem for Linux
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../environment/vscode/" class="md-nav__link">
+      VSCode
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  
+
+
+  
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      SIESTA Tutorial
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="SIESTA Tutorial" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon"></span>
+        SIESTA Tutorial
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  
+    
+  
+  <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-1" type="checkbox" id="nav-3-1" >
+    
+    <label class="md-nav__link" for="nav-3-1">
+      0. 준비
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="0. 준비" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-1">
+        <span class="md-nav__icon md-icon"></span>
+        0. 준비
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../build/build_siesta/" class="md-nav__link">
+      SIESTA 설치
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../build/build_atom/" class="md-nav__link">
+      ATOM 설치
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  
+
+
+  
+    
+  
+  <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-2" type="checkbox" id="nav-3-2" checked>
+    
+    <label class="md-nav__link" for="nav-3-2">
+      1. ATOM 계산
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="1. ATOM 계산" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-2">
+        <span class="md-nav__icon md-icon"></span>
+        1. ATOM 계산
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  
+
+
+  
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-2-1" type="checkbox" id="nav-3-2-1" checked>
+    
+    <label class="md-nav__link" for="nav-3-2-1">
+      A. 기초 과정
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="A. 기초 과정" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-2-1">
+        <span class="md-nav__icon md-icon"></span>
+        A. 기초 과정
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../atom_all_electron/" class="md-nav__link">
+      온-전자 계산
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        슈도퍼텐셜 생성
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
+      슈도퍼텐셜 생성
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#contents" class="md-nav__link">
+    Contents
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pseudopotential-generations_1" class="md-nav__link">
+    Pseudopotential generations
+  </a>
+  
+    <nav class="md-nav" aria-label="Pseudopotential generations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-correction" class="md-nav__link">
+    Core correction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pseudopotential-test-compare-with-all-electron" class="md-nav__link">
+    Pseudopotential test: compare with All-electron
+  </a>
+  
+    <nav class="md-nav" aria-label="Pseudopotential test: compare with All-electron">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-valence-eigenvalue" class="md-nav__link">
+    1. 원자가 고유함수 (valence eigenvalue)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-wavefunctions" class="md-nav__link">
+    2. 파동함수 (Wavefunctions)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-charge-density" class="md-nav__link">
+    3. 전하 밀도 (Charge density)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-logarithmic-derivatives-of-wavefunctions" class="md-nav__link">
+    4: 로그도함수 (Logarithmic derivatives of wavefunctions)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-transferability-test" class="md-nav__link">
+    5: Transferability test
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#practice-fe" class="md-nav__link">
+    Practice : Fe
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pseudopotential-test" class="md-nav__link">
+    Pseudopotential test
+  </a>
+  
+    <nav class="md-nav" aria-label="Pseudopotential test">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pseudopotential" class="md-nav__link">
+    사용할 Pseudopotential
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pseudopotential_1" class="md-nav__link">
+    Pseudopotential 생성
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-lattice-constant" class="md-nav__link">
+    1. lattice constant
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-band-structure" class="md-nav__link">
+    2. band structure
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-work-function" class="md-nav__link">
+    3. work function
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    참고문헌
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+    
+  
+  <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3" >
+    
+    <label class="md-nav__link" for="nav-3-3">
+      2. SIESTA 계산
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="2. SIESTA 계산" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-3">
+        <span class="md-nav__icon md-icon"></span>
+        2. SIESTA 계산
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-3-1" type="checkbox" id="nav-3-3-1" >
+    
+    <label class="md-nav__link" for="nav-3-3-1">
+      A. 기초 과정
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="A. 기초 과정" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-3-1">
+        <span class="md-nav__icon md-icon"></span>
+        A. 기초 과정
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../siesta/siesta_basic/" class="md-nav__link">
+      SIESTA 개요
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../siesta/siesta_gold/" class="md-nav__link">
+      Au 벌크/슬랩 구조
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../siesta/siesta_graphene/" class="md-nav__link">
+      Graphene
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+    
+  
+  <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-4" type="checkbox" id="nav-3-4" >
+    
+    <label class="md-nav__link" for="nav-3-4">
+      3. TranSIESTA 계산
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="3. TranSIESTA 계산" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-4">
+        <span class="md-nav__icon md-icon"></span>
+        3. TranSIESTA 계산
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-4-1" type="checkbox" id="nav-3-4-1" >
+    
+    <label class="md-nav__link" for="nav-3-4-1">
+      A. 기초 과정
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="A. 기초 과정" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-4-1">
+        <span class="md-nav__icon md-icon"></span>
+        A. 기초 과정
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../transiesta/transiesta_overview/" class="md-nav__link">
+      (1) TranSIESTA 개요
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../transiesta/transiesta_modeling/" class="md-nav__link">
+      (2) 접합구조 모델링
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../transiesta/transiesta_si1d/" class="md-nav__link">
+      (3) Si chain (1D)
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-4-2" type="checkbox" id="nav-3-4-2" >
+    
+    <label class="md-nav__link" for="nav-3-4-2">
+      B. 중급/고급 과정
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="B. 중급/고급 과정" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-4-2">
+        <span class="md-nav__icon md-icon"></span>
+        B. 중급/고급 과정
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-4-2-1" type="checkbox" id="nav-3-4-2-1" >
+    
+    <label class="md-nav__link" for="nav-3-4-2-1">
+      평형상태 계산
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="평형상태 계산" data-md-level="4">
+      <label class="md-nav__title" for="nav-3-4-2-1">
+        <span class="md-nav__icon md-icon"></span>
+        평형상태 계산
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../transiesta/transiesta_graphene/" class="md-nav__link">
+      (1) Graphene (2D)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../transiesta/transiesta_gnr/" class="md-nav__link">
+      (2) Pristine & defective GNRs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../transiesta/transiesta_si-sio2-si/" class="md-nav__link">
+      (3) Si-SiO2-Si
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" >
+    
+    <label class="md-nav__link" for="nav-4">
+      Other
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Other" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon"></span>
+        Other
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  
+    
+  
+  <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-1" type="checkbox" id="nav-4-1" >
+    
+    <label class="md-nav__link" for="nav-4-1">
+      Vasp
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Vasp" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-1">
+        <span class="md-nav__icon md-icon"></span>
+        Vasp
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-1-1" type="checkbox" id="nav-4-1-1" >
+    
+    <label class="md-nav__link" for="nav-4-1-1">
+      Nudged Elastic Band (NEB)
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Nudged Elastic Band (NEB)" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-1-1">
+        <span class="md-nav__icon md-icon"></span>
+        Nudged Elastic Band (NEB)
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../vasp/ml-neb/" class="md-nav__link">
+      Machine learning for nudged elastic band
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+    
+  
+  <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2" >
+    
+    <label class="md-nav__link" for="nav-4-2">
+      NanoCore
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="NanoCore" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-2">
+        <span class="md-nav__icon md-icon"></span>
+        NanoCore
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../nanocore/nanocore_kpoint/" class="md-nav__link">
+      k-point sampling
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-2-2" type="checkbox" id="nav-4-2-2" >
+    
+    <label class="md-nav__link" for="nav-4-2-2">
+      Structure optimization
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Structure optimization" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-2-2">
+        <span class="md-nav__icon md-icon"></span>
+        Structure optimization
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../nanocore/nanocore_eos/" class="md-nav__link">
+      Equation of state (EOS) 
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../nanocore/nanocore_murnaghan/" class="md-nav__link">
+      Murnaghan fitting
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../nanocore/nanocore_geo/" class="md-nav__link">
+      Geometry optimization
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+    
+  
+  <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-3" type="checkbox" id="nav-4-3" >
+    
+    <label class="md-nav__link" for="nav-4-3">
+      Git
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Git" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-3">
+        <span class="md-nav__icon md-icon"></span>
+        Git
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../github_tutorial/0.github_create_repository/" class="md-nav__link">
+      Create Repository
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+    
+  
+  <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-4" type="checkbox" id="nav-4-4" >
+    
+    <label class="md-nav__link" for="nav-4-4">
+      유용한 명령어
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="유용한 명령어" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-4">
+        <span class="md-nav__icon md-icon"></span>
+        유용한 명령어
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../other/1.1_LinuxCheatSheet/" class="md-nav__link">
+      Linux
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../other/1.2_PythonCheatSheet/" class="md-nav__link">
+      Python
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../other/1.3_EmacsCheatSheet/" class="md-nav__link">
+      Emacs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../other/1.4_AnacondaCheatSheet/" class="md-nav__link">
+      Anaconda
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  <li class="md-nav__item">
+    <a href="../../about/" class="md-nav__link">
+      About
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#contents" class="md-nav__link">
+    Contents
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pseudopotential-generations_1" class="md-nav__link">
+    Pseudopotential generations
+  </a>
+  
+    <nav class="md-nav" aria-label="Pseudopotential generations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-correction" class="md-nav__link">
+    Core correction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pseudopotential-test-compare-with-all-electron" class="md-nav__link">
+    Pseudopotential test: compare with All-electron
+  </a>
+  
+    <nav class="md-nav" aria-label="Pseudopotential test: compare with All-electron">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-valence-eigenvalue" class="md-nav__link">
+    1. 원자가 고유함수 (valence eigenvalue)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-wavefunctions" class="md-nav__link">
+    2. 파동함수 (Wavefunctions)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-charge-density" class="md-nav__link">
+    3. 전하 밀도 (Charge density)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-logarithmic-derivatives-of-wavefunctions" class="md-nav__link">
+    4: 로그도함수 (Logarithmic derivatives of wavefunctions)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-transferability-test" class="md-nav__link">
+    5: Transferability test
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#practice-fe" class="md-nav__link">
+    Practice : Fe
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pseudopotential-test" class="md-nav__link">
+    Pseudopotential test
+  </a>
+  
+    <nav class="md-nav" aria-label="Pseudopotential test">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pseudopotential" class="md-nav__link">
+    사용할 Pseudopotential
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pseudopotential_1" class="md-nav__link">
+    Pseudopotential 생성
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-lattice-constant" class="md-nav__link">
+    1. lattice constant
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-band-structure" class="md-nav__link">
+    2. band structure
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-work-function" class="md-nav__link">
+    3. work function
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    참고문헌
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="pseudopotential-generations">Pseudopotential generations</h1>
+<h2 id="contents">Contents</h2>
+<ol>
+<li>Pseudopotential generations</li>
+<li>Pseudopotential test</li>
+</ol>
+<h2 id="pseudopotential-generations_1">Pseudopotential generations</h2>
+<p>이전 all-electron calculations 강의에 이어 <code>/Tutorial</code> 위치로 돌아가서 <code>/PS_Generation</code>에 들어가본다. Pseudopotential를 만들기 위한 예시 파일들이 있다. 우리는 Si을 예시로 살펴본다. <code>Si.tm2.inp</code> 파일을 열어본다.
+<code>Si.tm2.inp</code>
+<div class="highlight"><pre><span></span><code><span class="c1">#</span>
+<span class="c1">#  Pseudopotential generation for Silicon</span>
+<span class="c1">#  pg: simple generation</span>
+<span class="c1">#</span>
+   pg      Silicon
+        tm2      <span class="m">3</span>.0             <span class="c1"># PS flavor, logder R</span>
+ <span class="nv">n</span><span class="o">=</span>Si <span class="nv">c</span><span class="o">=</span>car                       <span class="c1"># Symbol, XC flavor,{ |r|s}</span>
+       <span class="m">0</span>.0       <span class="m">0</span>.0       <span class="m">0</span>.0       <span class="m">0</span>.0       <span class="m">0</span>.0       <span class="m">0</span>.0
+    <span class="m">3</span>    <span class="m">4</span>                       <span class="c1"># norbs_core, norbs_valence</span>
+    <span class="m">3</span>    <span class="m">0</span>      <span class="m">2</span>.00      <span class="m">0</span>.00   <span class="c1"># 3s2</span>
+    <span class="m">3</span>    <span class="m">1</span>      <span class="m">2</span>.00      <span class="m">0</span>.00   <span class="c1"># 3p2</span>
+    <span class="m">3</span>    <span class="m">2</span>      <span class="m">0</span>.00      <span class="m">0</span>.00   <span class="c1"># 3d0</span>
+    <span class="m">4</span>    <span class="m">3</span>      <span class="m">0</span>.00      <span class="m">0</span>.00   <span class="c1"># 4f0</span>
+      <span class="m">1</span>.90      <span class="m">1</span>.90      <span class="m">1</span>.90      <span class="m">1</span>.90      <span class="m">0</span>.00      <span class="m">0</span>.00
+<span class="c1">#</span>
+<span class="c1"># Last line (above): </span>
+<span class="c1">#    rc(s)     rc(p)     rc(d)     rc(f)   rcore_flag  rcore</span>
+<span class="c1">#</span>
+<span class="c1">#2345678901234567890123456789012345678901234567890123456789</span>
+</code></pre></div>
+<code>All_electron</code> 입력 파일과 다른 점은 우선 상단 왼쪽에 위치한 계산 모드가 <code>ae</code>가 아닌 <code>pg</code>로 되어있다는 것이다. 이를 꼭 <code>pg</code>로 수정해야 pseudopotential을 위한 계산을 할 수 있다. 마지막 줄은 6개의 슬롯으로 구성 되어있다. 처음 4개의 값은 각각 s, p, d, f 오비탈의 cut off radius에 해당하고, 마지막 두 값은 추후에 설명할 core corrections와 관련있다. 그 외에 입력 옵션들은 꼭 매뉴얼을 통해 확인하기를 바란다. All-electron과 마찬가지로 쉘 스크립트로 계산을 수행할 수 있는데, Pseudopotential을 만들기 위한 쉘 스크립트는 <code>ae.sh</code>가 아닌 <code>pg.sh</code>이다.  </p>
+<p><div class="highlight"><pre><span></span><code>$ sh ../../Utils/pg.sh Si.tm2.inp
+</code></pre></div>
+<code>SIESTA</code> 프로그램이 입력 파일로 이용할 수 있는 <code>Si.psf</code> 파일이 생성되었다. 여기서 주의할 점은 <code>SIESTA</code>에서는 basis가 되는 오비탈이 (l =3)까지 있어야한다. 따라서 실제 원자의 원자가 오비탈이 l = 3 까지 차 있지 않더라도 전자가 차 있지 않은 가상의 오비탈을 넣고 계산을 돌려야 한다. (위의 경우 3d, 4f)</p>
+<h3 id="core-correction">Core correction</h3>
+<p><code>ATOM</code> 프로그램은 <strong>non-linear exchange-correlation correction</strong> <a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.26.1738">1</a> 계산을 수행할 수 있다.<br />
+Pseudo core의 전하밀도가 특정한 pseudo radius 밖에서 전하밀도도가 일치하고 경계부에서 매끈한 형태를 가지게 맞추어 주는 일련의 과정이 core correction이다. Pseudopotential를 만드는 계산에서 이 계산을 포함시키기 위해서 앞서 실행한 입력 파일에서 <code>pg</code> 옵션을 <code>pe</code>로 바꾸어 주면 된다. 또한 마지막 줄에서 6번째 해당하는 값인 pseudo radius을 넣어준다. 만약 이 값이 음수이거나 0이면 5번째 값인 valence charge density를 통해 이 반경을 직접 계산하게 되는데, 이 값 역시 음수이면 전체 핵 전하를 기준으로, 0이면 1 값을 기준으로 계산하도록 되어있다. 따라서 pseudo radius을 실험적으로 얻은 외부 참조 값을 이용하여 넣어주는 것을 강력히 추천한다.</p>
+<h3 id="pseudopotential-test-compare-with-all-electron">Pseudopotential test: compare with All-electron</h3>
+<p><strong>Norm-Conserving Pseudopotentials, D. R. Hamann, M. Schlüter, and C. Chiang PRL (1979) </strong> <a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.43.1494">2</a> 논문에서 제시한 pseudopotential의 조건은 다음과 같다.  </p>
+<blockquote>
+<ol>
+<li>Pseudo와 real의 원자가 고유함수 (valence eigenvalue)가 일치한다</li>
+<li>Pseudo와 real의 파동함수 (wavefunction)가 rc (core radius) 이후로 일치한다</li>
+<li>Pseudo와 real의 전하 밀도 (charge density)를 0에서 r까지 적분한 값이, r이 rc보다 클 때 일치한다 (norm conserving)</li>
+<li>Pseudo와 real의 파동함수에 대한 로그도함수 (logarithmic derivatives)가 rc 이후로 일치한다
+<code>ATOM</code>을 통해 위 조건들을 확인하는 방법을 소개한다.</li>
+</ol>
+</blockquote>
+<h4 id="1-valence-eigenvalue">1. 원자가 고유함수 (valence eigenvalue)</h4>
+<p>Pseudo와 real의 원자가 고유값이 일치하는지 확인하기 위해 all-electron과 pseudopotenial generations에 대한 계산 결과를 비교하면 된다. <code>pg</code> 계산에서는 <code>OUT</code> 파일에 이 두가지 정보를 모두 담고 있다. 따라서 두 고유값을 비교하기 위해서 <code>pg</code> 계산 결과가 나온 <code>OUT</code> 파일이 포함된 폴더에서 다음과 같은 명령어를 수행한다.</p>
+<div class="highlight"><pre><span></span><code><span class="o">(</span>Pseudopotential generation 결과 폴더에서<span class="o">)</span>
+$ grep ‘<span class="p">&amp;</span>v’ OUT
+</code></pre></div>
+<p><img alt="04_01" src="../img/04/04_01.JPG" /></p>
+<p>명령어를 통해 보여지는 결과, all-electron과 pseudopotential generations에 대한 오비탈 정보가 두 영역으로 나타난다. 이에 해당하는 영역은 <code>vi</code> 명령어를 통해 직접 <code>OUT</code> 파일을 직접 열어본 위 사진을 통해 확인할 수 있다. 오른쪽 <code>&amp;v</code> 라벨이 valenace 오비탈을 지칭하고, 4번째 행이 그 고유값이다. 이를 통해 pseudo와 real의 원자가 고유값이 일치하는 것을 확인할 수 있다.</p>
+<h4 id="2-wavefunctions">2. 파동함수 (Wavefunctions)</h4>
+<p><code>pg</code> 계산에서 <code>AEWFNR0</code> <code>R1</code> <code>R2</code> <code>R3</code> 파일은 s, p, d, f 오비탈에 대한 all-electron 원자가 파동함수 결과이다. <code>PSFNR0</code> <code>R1</code> <code>R2</code> <code>R3</code> 파일은 s, p, d, f 오비탈에 대한 pseudo 원자가 파동함수 결과이다. <code>gnuplot</code>을 이용하여 두 결과가 rc 이후에서 일치하는 것을 확인할 수 있다. 아래는 바닥 상태의 <code>Si</code> 원자에 대한 예시이다.</p>
+<p><div class="highlight"><pre><span></span><code>$ gnuplot
+gnuplot &gt; plot <span class="s1">&#39;AEWFNR1&#39;</span> w l, <span class="s1">&#39;PSWFNR1&#39;</span> w l
+<span class="o">(</span>R1 : 3p 오비탈<span class="o">)</span>
+</code></pre></div>
+<img alt="04_02" src="../img/04/04_02.JPG" /></p>
+<h4 id="3-charge-density">3. 전하 밀도 (Charge density)</h4>
+<p><code>pg</code> 계산에서 <code>AECHARGE</code>는 <code>all-electron</code>의 전자밀도이다. 첫번째 열은 반경 (r), 두번째, 세번째 열은 각각 스핀에 해당하는 전체 전자밀도, 마지막 열은 핵 (core) 전자밀도이다. <code>PSCHARGE</code>는 ‘pseudopotential’에 대한 원자가 (valence) 전자밀도이다. 마찬가지로 첫번째 열은 반경 (r), 두번째, 세번째 열은 각각 스핀에 해당하는 전자밀도이다. 따라서 두 계산의 원자가 전자밀도를 비교하기 위해서는 다음과 같은 과정을 따른다.</p>
+<div class="highlight"><pre><span></span><code>$ gnuplot
+gnuplot &gt;plot <span class="s1">&#39;PSCHARGE&#39;</span> u <span class="m">1</span>:<span class="o">(</span><span class="nv">$2</span>+<span class="nv">$3</span><span class="o">)</span> w l        <span class="o">(</span><span class="nv">$2</span>+<span class="nv">$3</span> : 전체 원자가 전자밀도<span class="o">)</span>
+gnuplot &gt; <span class="nb">set</span> xrange <span class="o">[</span><span class="m">0</span>:20<span class="o">]</span>
+gnuplot &gt;replot <span class="s1">&#39;AECHARGE&#39;</span> u <span class="m">1</span>:<span class="o">(</span><span class="nv">$2</span>+<span class="nv">$3</span>-<span class="nv">$4</span><span class="o">)</span> w l    <span class="o">(</span><span class="nv">$4</span> : 핵 전자밀도<span class="o">)</span>
+</code></pre></div>
+<p><img alt="04_03" src="../img/04/04_03.JPG" /></p>
+<h4 id="4-logarithmic-derivatives-of-wavefunctions">4: 로그도함수 (Logarithmic derivatives of wavefunctions)</h4>
+<p>위 <code>pg</code> 모드 계산 코드를 보면 두번째 줄에 <code>tm2</code>와 <code>3.0</code> 옵션을 볼 수 있다. 이에 해당하는 옵션이 로그도함수 계산을 위한 종류와 반경이다. 메뉴얼을 참고하여 다른 옵션을 줄 수 있다.
+<code>pg</code> 계산에서 <code>AELOGD0</code> <code>D1</code> <code>D2</code> <code>D3</code> 파일이 s, p, d, f 오비탈에 대한 all-electron 파동함수의 로그도함수이다. 또한 <code>PSLOGD0</code> <code>D1</code> <code>D2</code> <code>D3</code> 파일이 s, p, d, f 오비탈에 대한 pseuodopotential 파동함수의 로그도함수이다. 위 과정들과 마찬가지로 <code>gnuplot</code>을 통해 비교한다.</p>
+<div class="highlight"><pre><span></span><code>$ gnuplot
+gnuplot &gt;plot <span class="s1">&#39; AELOGD1&#39;</span> w l
+gnuplot &gt;replot <span class="s1">&#39; PSLOGD1&#39;</span> w l
+</code></pre></div>
+<p><img alt="04_04" src="../img/04/04_04.JPG" /></p>
+<h4 id="5-transferability-test">5: Transferability test</h4>
+<p>여기서 (3), (4) 조건은 transferability와 관련한 조건이다. Transferability는 외부 화학반응에 있어 중요한 부분인 만큼 pseudopotential generations에 핵심 조건 중 하나가 된다. 이를 <code>ATOM</code> 프로그램을 통해 직접 확인하는 방법은 다음 절차를 따른다. <code>Tutorial/Si</code> 위치에 있는 <code>Si.test.inp</code> 파일을 확인해본다.</p>
+<p><code>Si.test.inp</code> :
+<div class="highlight"><pre><span></span><code><span class="c1">#</span>
+<span class="c1"># All-electron calculations for a series of Si configurations</span>
+<span class="c1">#</span>
+   ae Si Test -- GS 3s2 3p2
+   Si   ca
+       <span class="m">0</span>.0
+    <span class="m">3</span>    <span class="m">2</span>
+    <span class="m">3</span>    <span class="m">0</span>      <span class="m">2</span>.00
+    <span class="m">3</span>    <span class="m">1</span>      <span class="m">2</span>.00
+   ae Si Test -- 3s2 3p1 3d1
+   Si   ca
+       <span class="m">0</span>.0
+    <span class="m">3</span>    <span class="m">3</span>
+    <span class="m">3</span>    <span class="m">0</span>      <span class="m">2</span>.00
+    <span class="m">3</span>    <span class="m">1</span>      <span class="m">1</span>.00
+    <span class="m">3</span>    <span class="m">2</span>      <span class="m">1</span>.00
+   ae Si Test -- 3s1 3p3
+   Si   ca
+       <span class="m">0</span>.0
+    <span class="m">3</span>    <span class="m">2</span>
+    <span class="m">3</span>    <span class="m">0</span>      <span class="m">1</span>.00
+    <span class="m">3</span>    <span class="m">1</span>      <span class="m">3</span>.00
+   ae Si Test -- 3s1 3p2 3d1
+   Si   ca
+       <span class="m">0</span>.0
+    <span class="m">3</span>    <span class="m">3</span>
+    <span class="m">3</span>    <span class="m">0</span>      <span class="m">1</span>.00
+    <span class="m">3</span>    <span class="m">1</span>      <span class="m">2</span>.00
+    <span class="m">3</span>    <span class="m">2</span>      <span class="m">1</span>.00
+   ae Si Test -- 3s0 3p3 3d1
+   Si   ca
+       <span class="m">0</span>.0
+    <span class="m">3</span>    <span class="m">3</span>
+    <span class="m">3</span>    <span class="m">0</span>      <span class="m">0</span>.00
+    <span class="m">3</span>    <span class="m">1</span>      <span class="m">3</span>.00
+    <span class="m">3</span>    <span class="m">2</span>      <span class="m">1</span>.00
+
+<span class="c1">#</span>
+<span class="c1"># Pseudopotential test calculations</span>
+<span class="c1">#</span>
+   pt Si Test -- GS 3s2 3p2
+   Si   ca
+       <span class="m">0</span>.0
+    <span class="m">3</span>    <span class="m">2</span>
+    <span class="m">3</span>    <span class="m">0</span>      <span class="m">2</span>.00
+    <span class="m">3</span>    <span class="m">1</span>      <span class="m">2</span>.00
+   pt Si Test -- 3s2 3p1 3d1
+   Si   ca
+       <span class="m">0</span>.0
+    <span class="m">3</span>    <span class="m">3</span>
+    <span class="m">3</span>    <span class="m">0</span>      <span class="m">2</span>.00
+    <span class="m">3</span>    <span class="m">1</span>      <span class="m">1</span>.00
+    <span class="m">3</span>    <span class="m">2</span>      <span class="m">1</span>.00
+   pt Si Test -- 3s1 3p3
+   Si   ca
+       <span class="m">0</span>.0
+    <span class="m">3</span>    <span class="m">2</span>
+    <span class="m">3</span>    <span class="m">0</span>      <span class="m">1</span>.00
+    <span class="m">3</span>    <span class="m">1</span>      <span class="m">3</span>.00
+   pt Si Test -- 3s1 3p2 3d1
+   Si   ca
+       <span class="m">0</span>.0
+    <span class="m">3</span>    <span class="m">3</span>
+    <span class="m">3</span>    <span class="m">0</span>      <span class="m">1</span>.00
+    <span class="m">3</span>    <span class="m">1</span>      <span class="m">2</span>.00
+    <span class="m">3</span>    <span class="m">2</span>      <span class="m">1</span>.00
+   pt Si Test -- 3s0 3p3 3d1
+   Si   ca
+       <span class="m">0</span>.0
+    <span class="m">3</span>    <span class="m">3</span>
+    <span class="m">3</span>    <span class="m">0</span>      <span class="m">0</span>.00
+    <span class="m">3</span>    <span class="m">1</span>      <span class="m">3</span>.00
+    <span class="m">3</span>    <span class="m">2</span>      <span class="m">1</span>.00
+
+<span class="m">12345678901234567890123456789012345678901234567890</span>      Ruler
+</code></pre></div></p>
+<p>위와 같이 <code>Si.test.inp</code> 파일에는 <code>Si</code> 원자에 대한 다양한 전자배치 정보가 들어있다. 코드를 확인하면 동일한 전자배치로 구성된 <code>ae</code>와 <code>pt</code> 계산에 대한 두 영역으로 나눠져 있다. 여기서 <code>pt</code>는 pseudopotential test를 위한 계산 모드이다. <code>pt</code> 계산을 수행하기 위해서는 <code>pt.sh</code> 쉘 스크립트를 이용해야 한다. 여기서 중요한 점은 <code>pt</code> 계산은 <code>Si</code> 원자의 바닥 상태에 대한 <code>pg</code> 계산 결과로 나온 <code>vps</code> 파일을 입력 파일로 받는다는 점이다. 이전 과정에서 이미 <code>pg</code> 계산을 수행했다면, <code>Si.tm2.vps</code> 파일이 같은 위치에 남아있을 것이다 (없다면 <code>pg</code> 계산을 먼저 수행해서 <code>vps</code> 파일을 얻는다).</p>
+<p><div class="highlight"><pre><span></span><code>$ sh ../../Utils/pt.sh Si.test.inp Si.tm2.vps
+</code></pre></div>
+Total energy 비교 :<br />
+<div class="highlight"><pre><span></span><code>$ grep ‘&amp;d’ OUT
+</code></pre></div>
+<img alt="04_05" src="../img/04/04_05.JPG" /></p>
+<p>Eigenstate 비교 :<br />
+<div class="highlight"><pre><span></span><code>$ grep ‘&amp;v’ OUT
+</code></pre></div>
+<img alt="04_06" src="../img/04/04_06.JPG" /></p>
+<p>위 과정을 통해 <code>Si</code> 원자의 all-electron과 pseudopotential에 대한 여러 전자배치의 <code>total energy</code>와 <code>eigenvalue</code>를 비교하여, transferability를 시험할 수 있다.</p>
+<h3 id="practice-fe">Practice : Fe</h3>
+<p>이제 실제 <code>SIESTA</code> 프로그램을 위한 pseudopotential 입력파일을 만들어보자. 위에서 언급했듯 <code>SIESTA</code>는 basis가 되는 오비탈이 (l =3)까지 있어야한다. 이런 점을 만족시키는 pseudopotential generations의 입력파일은 다음 사이트에서 얻을 수 있다. <a href="https://departments.icmab.es/leem/SIESTA_MATERIAL/Databases/Pseudopotentials/periodictable-intro.html">pseudo</a></p>
+<p>위 사이트에 가면 pseudopotential을 만드는 방법으로 <code>LDA</code> (localized density approximation)과 ‘GGA’ (generalized gradient approximation)을 선택할 수 있다. <code>LDA</code> 방법은 <code>Au</code> 원자와 같은 전위금속의 구조를 정확히 예측하지 못한다<a href="https://iopscience.iop.org/article/10.1088/0953-8984/13/42/307/meta">3</a>. 따라서 <code>GGA</code> 방법을 선택하여 <code>Fe</code>의 <code>ATOM</code> 입력파일 (input file for ATOM program)을 설치한다.</p>
+<p><code>Fe.inp</code> :
+<div class="highlight"><pre><span></span><code>pe                 -- file generated from Fe ps file
+        tm2
+   Fe   pb
+     <span class="m">0</span>.000     <span class="m">0</span>.000     <span class="m">0</span>.000     <span class="m">0</span>.000     <span class="m">0</span>.000     <span class="m">0</span>.000
+    <span class="m">5</span>    <span class="m">4</span>
+    <span class="m">4</span>    <span class="m">0</span>     <span class="m">2</span>.000     <span class="m">0</span>.000    <span class="c1">#4s</span>
+    <span class="m">4</span>    <span class="m">1</span>     <span class="m">0</span>.000     <span class="m">0</span>.000    <span class="c1">#4p</span>
+    <span class="m">3</span>    <span class="m">2</span>     <span class="m">6</span>.000     <span class="m">0</span>.000    <span class="c1">#3d</span>
+    <span class="m">4</span>    <span class="m">3</span>     <span class="m">0</span>.000     <span class="m">0</span>.000    <span class="c1">#4f</span>
+   <span class="m">2</span>.41000   <span class="m">2</span>.53000   <span class="m">2</span>.29000   <span class="m">2</span>.29000   <span class="m">0</span>.01000  -1.00000 small core charge
+
+<span class="c1">#23456789012345678901234567890123456789012345678901234567890      Ruler</span>
+</code></pre></div></p>
+<p>입력 파일을 살펴보면 첫번째 줄에 <code>pe</code> 계산모드가 되어있는 것을 확인할 수 있다. 앞서 설명했듯이 이는 pseudopotential generations를 하는데 core correction을 추가한 옵션이다. Core correction를 통해 더욱 안정적으로 pseudopotential을 만들 수 있다.<br />
+두번째 줄의 <code>tm2</code>은 이전에 설명한 transferability를 위해 로그도함수를 시험하기 위한 옵션이다. 또한 세번째 줄에 <code>pb</code> 옵션을 볼 수 있는데, 이는 <code>GGA</code> 방법의 종류로 <code>PBE</code> ((Perdew, Burke, and Ernzerhof) 방법을 의미한다. 다른 방법들은 메뉴얼을 통해서 확인하도록 한다.
+<code>Au</code>와 같이 원자번호가 큰 금속은 상대론적 효과가 나타난다 (원자핵 주변으로 핵 전자들이 더욱 구속되면서 가림 효과 (shielding effect)가 커지고, d나 f 오비탈의 전자들의 구속력이 약해진다)<a href="https://link.springer.com/article/10.1007/BF03215471">4</a>. 따라서 계산에서도 상대론적 효과를 고려하는 것이 좋다. <code>pb</code> 옵션 뒤에 <code>s</code>를 붙여주면 <code>spin-polarized</code>, <code>non-relativistic</code> 계산을 수행할 수 있고, <code>r</code>를 붙여주면 <code>spin-polarized</code>, <code>relativistic</code> 계산을 수행할 수 있다. <code>pb</code>를 <code>pbr</code>로 바꾸어 주어 상대론적 효과를 고려한 pseudopotential을 만들어보자.</p>
+<div class="highlight"><pre><span></span><code>$ &lt;ATOM 프로그램 위치&gt;/Tutorial/Utils/pg.sh Fe.inp
+</code></pre></div>
+<p><code>SIESTA</code> 계산을 위한 <code>Fe.psf</code> 파일이 생성되었다.</p>
+<h2 id="pseudopotential-test">Pseudopotential test</h2>
+<p>pseudopotential을 만든 이유는 보통 계산에 사용하기 위에서이다. 일반적으로는 pseudopotential의 4가지 조건을 확인한 것 만으로 정확한 계산을 할 수 있다. 그러나, Au와 같이 전자수가 많은 경우 그렇지 않다. 이번에는 두가지 Au pseudopotential을 만들어 보고, 만든 pseudopotential이 계산에 적합한지 확인해보겠다.</p>
+<h3 id="pseudopotential">사용할 Pseudopotential</h3>
+<p>위에서 언급했듯이 원자번호가 큰 원자는 상대론적 효과가 나타난다. 원자의 무게가 크면 클수록 상대론적 효과는 더 크게 나타나고, 상대론적 효과가 커질수록 상대론적 효과를 고려한 pseudopotential과 고려하지 않은 pseudopotential의 결과의 차이가 커진다. 이번에는 79번 Au 원소를 사용해 상대론적 효과를 고려한 pseudopotential과 고려하지 않은 pseudopotential을 만들고 계산을 수행한 후 그 결과를 비교해보겠다.</p>
+<h3 id="pseudopotential_1">Pseudopotential 생성</h3>
+<p>우선 atom코드에서 사용할 input 코드를 가져와야 한다. atom에서 사용할 reference 코드는 <a href="https://departments.icmab.es/leem/SIESTA_MATERIAL/Databases/Pseudopotentials/periodictable-intro.html">pseudo</a>에서 가져올 수 있다. 페이지에서 LDA를 선택한 후, Au를 선택하고, "input file for the ATOM program"을 선택한다. 그러면 Au.inp파일을 받을 수 있다.</p>
+<p>Au.inp</p>
+<div class="highlight"><pre><span></span><code>   pg                 -- file generated from Au ps file
+        tm2
+   Au   ca 
+     <span class="m">0</span>.000     <span class="m">0</span>.000     <span class="m">0</span>.000     <span class="m">0</span>.000     <span class="m">0</span>.000     <span class="m">0</span>.000
+   <span class="m">12</span>    <span class="m">4</span>
+    <span class="m">6</span>    <span class="m">0</span>     <span class="m">1</span>.000     <span class="m">0</span>.000    <span class="c1">#6s</span>
+    <span class="m">6</span>    <span class="m">1</span>     <span class="m">0</span>.000     <span class="m">0</span>.000    <span class="c1">#6p</span>
+    <span class="m">5</span>    <span class="m">2</span>    <span class="m">10</span>.000     <span class="m">0</span>.000    <span class="c1">#5d</span>
+    <span class="m">5</span>    <span class="m">3</span>     <span class="m">0</span>.000     <span class="m">0</span>.000    <span class="c1">#5f</span>
+   <span class="m">2</span>.63000   <span class="m">2</span>.77000   <span class="m">2</span>.63000   <span class="m">2</span>.63000   <span class="m">0</span>.00000   <span class="m">0</span>.00000
+
+<span class="c1">#23456789012345678901234567890123456789012345678901234567890      Ruler</span>
+</code></pre></div>
+<p>Au pseudopotential에 상대론적 효과 옵션을 넣기 위해서는 r옵션을 넣어주어야 한다. 이 옵션은 ca오른쪽에 넣어주면 된다. 주의할 점은 위치이다. r옵션은 Ruler의 첫번째 0 위에 반드시 위치해야한다. 만약 이 위치가 다르다면 atom으로 pseudopotential을 생성할 때 에러 메세지가 생길 것이다.</p>
+<p>사용 불가능한 Au.inp</p>
+<div class="highlight"><pre><span></span><code>   pg                 -- file generated from Au ps file
+        tm2    <span class="m">2</span>.63
+   Au    car  <span class="c1">#위치가 잘못됨</span>
+     <span class="m">0</span>.000     <span class="m">0</span>.000     <span class="m">0</span>.000     <span class="m">0</span>.000     <span class="m">0</span>.000     <span class="m">0</span>.000
+   <span class="m">12</span>    <span class="m">4</span>
+    <span class="m">6</span>    <span class="m">0</span>     <span class="m">1</span>.000     <span class="m">0</span>.000    <span class="c1">#6s</span>
+    <span class="m">6</span>    <span class="m">1</span>     <span class="m">0</span>.000     <span class="m">0</span>.000    <span class="c1">#6p</span>
+    <span class="m">5</span>    <span class="m">2</span>    <span class="m">10</span>.000     <span class="m">0</span>.000    <span class="c1">#5d</span>
+    <span class="m">5</span>    <span class="m">3</span>     <span class="m">0</span>.000     <span class="m">0</span>.000    <span class="c1">#5f</span>
+   <span class="m">2</span>.63000   <span class="m">2</span>.77000   <span class="m">2</span>.63000   <span class="m">2</span>.63000   <span class="m">0</span>.00000   <span class="m">0</span>.00000
+
+<span class="c1">#23456789012345678901234567890123456789012345678901234567890      Ruler</span>
+</code></pre></div>
+<p>상대론적 효과 이외에도 계산 과정에서 xc를 바꾸거나 rc를 바꾸거나 해야할 수 있다. 이런 옵션들을 알아보려면 <a href="https://siesta-project.org/SIESTA_MATERIAL/Pseudos/Code/atom-4.2.0.pdf">atom manual</a>을 찾아보면 된다.</p>
+<h3 id="1-lattice-constant">1. lattice constant</h3>
+<p>우선적으로 두가지 Au pseudopotential로 만든 fcc 구조 bulk cell의 lattice constant를 각각 구해볼 것이다. bulk model은 Tutorial 1에서 사용한 fcc모델을 사용할 것이다. Tutorial 1에서 k-point test를 이미 거쳤기 때문에 tutorial 1에서 사용한 k인 k=35를 사용해서 lattice constant를 계산했다.</p>
+<table>
+<thead>
+<tr>
+<th align="center">Basis size</th>
+<th align="center">DZP</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Basis energy shift</td>
+<td align="center">100 [meV]</td>
+</tr>
+<tr>
+<td align="center">XC</td>
+<td align="center">LDA</td>
+</tr>
+<tr>
+<td align="center">DM.tol</td>
+<td align="center"><span class="arithmatex">\(10^{-3}\)</span> [eV]</td>
+</tr>
+</tbody>
+</table>
+<p>lattice constant는 Tutorial 1에서와 마찬가지로 일정한 간격으로 lattice constant를 변화시키면서 에너지가 가장 낮은 lattice constant를 찾으면 된다.계산의 효율을 위해 처음에는 sparse하게 계산한 후 에너지가 가장 낮은 값 근처에서 dense하게 계산하면 좋다. 이후 3d 물질에서 lattice constant를 찾기에 적합한 murnaghan fitting을 통해 에너지가 가장 낮은 lattice constant를 찾았다</p>
+<p><img alt="lattice_compare" src="../img/05/lattice_comp.PNG" /></p>
+<p>relativistic 효과를 킨 경우 최적화된 volume은 69.28785<span class="arithmatex">\(\overset{\circ}{A}^3\)</span>이고, relativistic 효과를 끈 경우 최적화된 volume은 79.22283<span class="arithmatex">\(\overset{\circ}{A}^3\)</span>이다. 이를 통해 lattice constant를 구하려면 부피의 세제곱근을 하면 된다. relativistic 효과를 킨 경우 lattice constant는 4.107<span class="arithmatex">\(\overset{\circ}{A}\)</span>이고, relativistic 효과를 끈 경우 lattice constant는 4.295<span class="arithmatex">\(\overset{\circ}{A}\)</span>이다. <a href="https://www.sciencedirect.com/science/article/pii/S0927025614007940#t0015">reference</a>에서 구한 실험의 lattice constant는 4.080<span class="arithmatex">\(\overset{\circ}{A}\)</span>이므로 relativistic 효과를 킨 경우가 더 정확함을 알 수 있다.</p>
+<h3 id="2-band-structure">2. band structure</h3>
+<p>이번에는 Au bulk의 band를 그려서 두 pseudopotential에 어떤 차이가 있는지 알아보자. band structure를 그릴 때 사용할 <a href="https://www.sciencedirect.com/science/article/pii/S0927025614007940#t0015">reference</a>는 Tutorial 1에서도 사용한 이 band 그래프이다. band path는 모두 <span class="arithmatex">\(\Gamma-X-W-L-\Gamma-K\)</span>로 설정해준다. 보고싶은 에너지 범위는 Fermi energy ±10 eV이다. 이 조건들을 만족시키면서 band 그래프를 그려보면 결과는 다음과 같다.</p>
+<p><img alt="band_result" src="../img/05/band2.PNG" /></p>
+<p>페르미 에너지 위 5eV부분을 보면 relativistic의 band structure은 reference와 비슷하지만, non-relativistic의 band structure은 reference와 상이함을 알 수 있다. 따라서 Au pseudopotential은 relativistic 옵션을 켜야하고, 이를 키지 않을시 문제가 생길 수 있다는 것을 확인할 수 있다.</p>
+<h3 id="3-work-function">3. work function</h3>
+<p>마지막으로 두 경우의 work function을 확인해보자. Work function을 구하기 위해서는 slab 모델을 만들어주어야 한다. Slab 모델은 위에서 구한 최적화된 bulk model을 이용해서 [1, 1, 1]면을 표면으로 설정해줄 것이다. work function의 차이만 비교해보기 위해서 다른 변수들은 전부 고정해주었다.</p>
+<p><img alt="01_010" src="../img/05/slab_model.PNG" /></p>
+<p>Slab 모델을 만든 후에는 basis를 설정해준다. work function을 구할 때는 100meV를 사용하면 reference와의 차이가 매우 크기 때문에 PAO.EnergyShift 항목을 50meV로 바꾸고 계산을 해야 한다.</p>
+<table>
+<thead>
+<tr>
+<th align="center">Basis size</th>
+<th align="center">DZP</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Basis energy shift</td>
+<td align="center">50 [meV]</td>
+</tr>
+<tr>
+<td align="center">XC</td>
+<td align="center">LDA</td>
+</tr>
+<tr>
+<td align="center">DM.tol</td>
+<td align="center"><span class="arithmatex">\(10^{-3}\)</span> [eV]</td>
+</tr>
+</tbody>
+</table>
+<p>slab model을 만들면 bulk model에서 했던 것과 마찬가지로 k-point test를 해야한다. slab model의 경우 z축의 k-point는 1로 고정하고 x, y값만 변화시켜가며 측정하면 된다. tutorial 1에서 slab model에 대한 k-point를 구했기 때문에 구했던 [31,31,1]의 k-point를 그대로 사용하겠다. relativistic 효과를 준 경우와 주지 않은 경우 work function을 측정해보면 결과는 다음과 같다.</p>
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center">Fermi [eV]</th>
+<th align="center">Vacuum [eV]</th>
+<th align="center">Work Function [eV]</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">relativistic</td>
+<td align="center">-4.506018</td>
+<td align="center">0.750869</td>
+<td align="center">5.256887</td>
+</tr>
+<tr>
+<td align="center">non-relativistic</td>
+<td align="center">-4.201008</td>
+<td align="center">0.074519</td>
+<td align="center">4.275527</td>
+</tr>
+</tbody>
+</table>
+<p>Metal work function의 <a href="https://public.wsu.edu/~pchemlab/documents/Work-functionvalues.pdf">reference</a>에서 Au의 111면에서 work function은 5.31eV임을 알 수 있다. Relativistic의 경우 0.06 eV정도 차이가 나지만, non-relativistic의 경우 1.04 eV로 차이가 매우 심하게 나게 됨을 알 수 있다.</p>
+<p>Au Tutorial에서 했던 것처럼 macroave.in을 통해 Wave function을 시각화 해보면 다음과 같은 결과를 얻을 수 있다.</p>
+<p><img alt="work_compare" src="../img/05/work_compare.png" /></p>
+<p>이와 같은 일련의 과정들을 통해 Pseudopotential을 테스트할 수 있다. 테스트 결과 Au같은 원자번호가 큰 원자의 경우 Relativistic 효과를 고려하는 경우 reference와 거의 일치하지만 Relativistic 효과를 고려하지않는 경우는 reference와 큰 차이가 난다. 따라서 Au의 경우 relativistic 효과를 고려해줘야 한다는 것을 알 수 있다.</p>
+<h3 id="_1">참고문헌</h3>
+<p><a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.26.1738">1</a>: S. G. Louie, S. Froyen, and M. L. Cohen, Phys. Rev. B 26, 1738 (1982)<br />
+<a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.43.1494">2</a>: Norm-Conserving Pseudopotentials, D. R. Hamann, M. Schlüter, and C. Chiang PRL (1970)<br />
+<a href="https://iopscience.iop.org/article/10.1088/0953-8984/13/42/307/meta">3</a>: J. Phys.: Condens. Matter13 (2001) 9463–9470<br />
+<a href="https://link.springer.com/article/10.1007/BF03215471">4</a>: Relativistic effects and the chemistry of gold (1998)<br />
+<a href="https://www.sciencedirect.com/science/article/pii/S0927025614007940#t0015">5</a>: P Rivero et al. Comput. Mater. Sci. (2015), 98, 372</p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../atom_all_electron/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                온-전자 계산
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../../siesta/siesta_basic/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                SIESTA 개요
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/vendor.08c56446.min.js"></script>
+      <script src="../../assets/javascripts/bundle.6ced434e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../..",
+          features: ['navigation.tabs', 'navigation.instant', 'navigation.sections'],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.8c7e0a7e.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+        <script src="../../javascripts/config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
