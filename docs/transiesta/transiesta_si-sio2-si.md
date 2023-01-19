@@ -4,6 +4,8 @@ Si-SiO<sub>2</sub>-Si junction model
 1. 수렴성 테스트
 
 
+> Input: [Link](https://1drv.ms/u/s!ArHICXVqPANVuyG8V_dx7W3FLClr?e=lmyFcX)
+
 ## 수렴성 테스트
 
 <center><img src="img/Si_model.png" width="80%" height="80%"></center>

@@ -5,6 +5,7 @@ GNRs-vacuum-GNRs junction model
 2. 수렴성 테스트
 3. 비평형 상태 계산
 
+> Input: [Link](https://1drv.ms/u/s!ArHICXVqPANVuyL_-aoSshJh_vwO?e=guzzZ7)
 
 그동안은 matrix Green's function을 기반으로 평형상태의 양자수송 특성을 계산하는 법에 대해서 다루었었다. 그러나 전압이 인가된 비평형 상황에서의 계산에서는 non-equilibrium Green's function (NEGF)의 도입이 필요하다. 이번 장에서는 graphene nanoribbons (GNRs)-vacuum-GNRs로 이루어진 비균질 모델에 대해서 junction을 정의하고 보다 정확한 계산을 위해서 수렴성 테스트를 진행하는 법을 소개하고 마지막으로 비평형 상태의 양자수송 특성을 계산하는 방법에 대해서 다룬다.
 

@@ -4,6 +4,8 @@ Graphene nanoribbons
 1. Pristine graphene nanoribbons
 2. N-doped graphene nanoribbons
 
+> Input: [Link](https://1drv.ms/u/s!ArHICXVqPANVux-WuG-C7gSa2oeJ?e=0oRfSs)
+
 ## Pristine graphene nanoribbons
 
 <center><img src="img/06/06-007.JPG" width="80%" height="80%"></center>

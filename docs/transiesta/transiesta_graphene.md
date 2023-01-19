@@ -3,6 +3,8 @@ Graphene (2D)
 ## Contents
 1. Graphene의 양자수송 특성 계산
 
+> Input: [Link](https://1drv.ms/u/s!ArHICXVqPANVux6jWW0x2QlTFre0?e=88oKbL)
+
 ## Graphene의 양자수송 특성 계산
 
 <center><img src="img/Gr.png" width="80%" height="80%"></center>
