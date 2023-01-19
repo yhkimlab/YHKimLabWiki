@@ -7,9 +7,7 @@ Junction modeling
 
 ## Jucntion 모델의 특징
 
-<center><img src="img/1.png" width="4%" height="40%"></center>
-
-
+<center><img src="img/1.png" width="40%" height="40%"></center>
 
 Density function theory (DFT)과 Non-equilibrium Green's function (NEGF) 방법론을 결합한 DFT-NEGF 방법론을 통한 양자수송 특성 계산에서는 전통적인 DFT 계산과 근본적으로 모사하고자 시스템의 "경계조건"에 차이가 있다. 위 그림과 같이 전통적인 DFT 계산에서 다루는 분자/고체 시스템은 고립되거나(closed) 주기적인(periodic) 경계 조건을 가지만, DFT-NEGF이 모사하고자 하는 junction 시스템은 양단이 무한한 전극으로 이어진 **열린 경계조건(open boundary condition)**을 가진다. 이러한 경계조건의 차이 때문에 DFT-NEGF이 다루는 junction model은 일반적인 DFT 계산에서의 계산 모델과 구별되는 특징을 가진다.
 

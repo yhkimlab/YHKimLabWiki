@@ -10,6 +10,8 @@ Graphene nanoribbons
 
 이번 장에서는 위와 같은 zigzag graphene nanoribbons (GNRs) 구조에 대해 계산한다.
 
+> Input files: [GNRs.tar.gz](file/GNRs.tar.gz)
+
 ### Step 1. Electrode calculation
 
 <center><img src="img/06/06-011.JPG" width="50%" height="50%"></center>
@@ -106,7 +108,7 @@ $ cp OUT/Si1D_Perf.TSHS input/
 $ qsub slm_transiesta_run_TBT
 ```
 
-### Channel length: 2 vs 6 unit cell  
+### Channel 영역의 길이: 2 vs 6 unit cell  
 
 채널 영역의 길이가 6-unit cell인 경우에 대해서도 TranSIESTA와 TBTrans 계산을 진행한다
 
@@ -183,7 +185,7 @@ $ cp OUT/scat.TSHS input/
 $ qsub slm_siesta_run_tbt
 ```
 
-### Channel length: 2 vs 6 vs 10 unit cell
+### Channel 영역의 길이: 2 vs 6 vs 10 unit cell
 
 GNRs + N-dopant 구조에 대해 채널의 길이가 2, 6, 10 unit cells인 경우의 transmission을 비교해보자.
 ```

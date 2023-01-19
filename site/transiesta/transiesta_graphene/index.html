@@ -396,7 +396,7 @@
 
   <li class="md-nav__item">
     <a href="../../build/build_siesta/" class="md-nav__link">
-      SIESTA 설치
+      (1) SIESTA 설치
     </a>
   </li>
 
@@ -409,7 +409,7 @@
 
   <li class="md-nav__item">
     <a href="../../build/build_atom/" class="md-nav__link">
-      ATOM 설치
+      (2) ATOM 설치
     </a>
   </li>
 
@@ -477,7 +477,7 @@
 
   <li class="md-nav__item">
     <a href="../../atom/atom_all_electron/" class="md-nav__link">
-      온-전자 계산
+      (1) 온-전자 계산
     </a>
   </li>
 
@@ -490,7 +490,7 @@
 
   <li class="md-nav__item">
     <a href="../../atom/atom_pseudopotential/" class="md-nav__link">
-      슈도퍼텐셜 생성
+      (2) 슈도퍼텐셜 생성
     </a>
   </li>
 
@@ -563,7 +563,7 @@
 
   <li class="md-nav__item">
     <a href="../../siesta/siesta_basic/" class="md-nav__link">
-      SIESTA 개요
+      (1) SIESTA 개요
     </a>
   </li>
 
@@ -576,7 +576,7 @@
 
   <li class="md-nav__item">
     <a href="../../siesta/siesta_gold/" class="md-nav__link">
-      Au 벌크/슬랩 구조
+      (2) Au 벌크/슬랩 구조
     </a>
   </li>
 
@@ -589,7 +589,7 @@
 
   <li class="md-nav__item">
     <a href="../../siesta/siesta_graphene/" class="md-nav__link">
-      Graphene
+      (3) Graphene
     </a>
   </li>
 
@@ -797,11 +797,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#transmission-calculation" class="md-nav__link">
-    Transmission calculation
+  <a href="#graphene" class="md-nav__link">
+    Graphene의 양자수송 특성 계산
   </a>
   
-    <nav class="md-nav" aria-label="Transmission calculation">
+    <nav class="md-nav" aria-label="Graphene의 양자수송 특성 계산">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -838,8 +838,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#exercise-2-width-effect" class="md-nav__link">
-    Exercise 2: Width effect
+  <a href="#exercise-2-channel-width-effect" class="md-nav__link">
+    Exercise 2: Channel width effect
   </a>
   
 </li>
@@ -873,6 +873,48 @@
   <li class="md-nav__item">
     <a href="../transiesta_si-sio2-si/" class="md-nav__link">
       (3) Si-SiO2-Si
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-4-2-2" type="checkbox" id="nav-3-4-2-2" >
+    
+    <label class="md-nav__link" for="nav-3-4-2-2">
+      비평형상태 계산
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="비평형상태 계산" data-md-level="4">
+      <label class="md-nav__title" for="nav-3-4-2-2">
+        <span class="md-nav__icon md-icon"></span>
+        비평형상태 계산
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../transiesta_gnr-vacuum-gnr/" class="md-nav__link">
+      (1) GNRs-vacuum-GRNs
     </a>
   </li>
 
@@ -1283,11 +1325,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#transmission-calculation" class="md-nav__link">
-    Transmission calculation
+  <a href="#graphene" class="md-nav__link">
+    Graphene의 양자수송 특성 계산
   </a>
   
-    <nav class="md-nav" aria-label="Transmission calculation">
+    <nav class="md-nav" aria-label="Graphene의 양자수송 특성 계산">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1324,8 +1366,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#exercise-2-width-effect" class="md-nav__link">
-    Exercise 2: Width effect
+  <a href="#exercise-2-channel-width-effect" class="md-nav__link">
+    Exercise 2: Channel width effect
   </a>
   
 </li>
@@ -1346,17 +1388,18 @@
                 <h1 id="graphene-2d">Graphene (2D)</h1>
 <h2 id="contents">Contents</h2>
 <ol>
-<li>Transmission calculation</li>
-<li>Exercise 1: K-point effect</li>
-<li>Exercise 2: Width effect</li>
+<li>Graphene의 양자수송 특성 계산</li>
 </ol>
-<h2 id="transmission-calculation">Transmission calculation</h2>
+<h2 id="graphene">Graphene의 양자수송 특성 계산</h2>
 <p><center><img src="img/Gr.png" width="80%" height="80%"></center></p>
 <p>이번 장에서는 2차원 물질인 그래핀에 대해서 양자수송 특성을 계산한다.</p>
+<blockquote>
+<p>Input files: <a href="../file/Graphene.tar.gz">Graphene.tar.gz</a></p>
+</blockquote>
 <h3 id="step-1-electrode-calculation">Step 1: Electrode calculation</h3>
 <p><center><img src="img/Gr_electrode.png" width="30%" height="30%"></center></p>
-<p>Electrode의 DFT 계산을 통해 <code>elec.TSHS</code> 를 얻는다. 우리의 모델의 경우 x축 방향으로 periodic 구조를 가지지 않는다. 때문에 x방향으로의 k-point를 1로 지정해주었다.
-<div class="highlight"><pre><span></span><code>$ vi KPT.fdf
+<p>Electrode에 대해 DFT 계산을 통해 <code>elec.TSHS</code> 를 얻는다. 우리의 모델의 경우 x축 방향으로 periodic 구조를 가지지 않는다. 때문에 x방향으로의 k-point를 1로 지정해주었다. Eleectrode 계산 시에 사용된 k-point가 추후에 scattering 계산을 통한 양자수속 특성 계산의 정확도 큰 영향을 미치기 때문에 반드시 <strong>k-point에 대해 수렴성 테스트</strong>를 진행해야한다. 특히 양자 수송 방향(z-축)으로 더욱 엄격히 k-point를 주어야 보다 정확한 전극의 self-energy를 얻을 수 있다.</p>
+<p><div class="highlight"><pre><span></span><code>$ vi KPT.fdf
 %block kgrid_Monkhorst_Pack
  1    0    0    0.0
  0   60    0    0.0
@@ -1375,8 +1418,8 @@ $ qsub slm_siesta_run
 <p>앞서 구한 <code>elec.TSHS</code> 파일을 NEGF 계산할 input 폴더로 복사한 후 transiesta를 통해 <code>.TSHS</code> 파일을 구한다.
 <div class="highlight"><pre><span></span><code>$ cp ../1.Electrode_k060/OUT/elec.TSHS input/.
 </code></pre></div>
-Transport 방향인 z축 방향으로의 k-point는 1이어야 한다. 
-<div class="highlight"><pre><span></span><code>$ vi KPT.fdf
+수송 방향인 z축 방향으로의 k-point는 1이어야 한다. 나머지 k-point는 반드시 electrode의 <code>.TSHS</code> 파일을 계산할 때 사용한 k-point와 일치해야한다.</p>
+<p><div class="highlight"><pre><span></span><code>$ vi KPT.fdf
 block kgrid_Monkhorst_Pack
  1    0    0    0.0
  0   60    0    0.0
@@ -1428,7 +1471,7 @@ Tbtrans 계산시, TS.fdf에서 관련 옵션을 조절한다.<br/> DOS과 trans
 </code></pre></div></p>
 <p><center><img src="img/Gr_transmission.png" width="60%" height="60%"></center></p>
 <h2 id="exercise-1-k-point-effect">Exercise 1: K-point effect</h2>
-<p>Transmission 그래프를 "매끄럽게" 하기 위해 <strong>post-processing</strong> 단계에서 tbtrans 계산시 k-point를 바꿔 계산해본다.<br/>
+<p>Post-processing 단계에서 TBtrans 계산을 할때는 electrode나 scattering region에 대한 계산을 할 때 사용한 k-point와 다른 k-point 값을 사용해도 된다. 일반적으로 transmission 그래프을 "매끄럽게" 하기 위해 <strong>post-processing</strong> 단계는  k-point를 scattering 계산보다 더욱 크게 주는 것이 일반 적이다.<br/>
 참고로 tbtrans 계산의 input인 <code>scat.TSHS</code> 파일은 k-point를 1x60x1일때 얻은 결과값이다.
 <div class="highlight"><pre><span></span><code>$ vi KPT.fdf
 %block kgrid_Monkhorst_Pack
@@ -1438,8 +1481,8 @@ Tbtrans 계산시, TS.fdf에서 관련 옵션을 조절한다.<br/> DOS과 trans
 %endblock kgrid_Monkhorst_Pack
 </code></pre></div></p>
 <p><center><img src="img/Gr_kpt_Transmission.png" width="60%" height="60%"></center></p>
-<p>k-point를 증가시키자 transmission 그래프가 매끄러워진 것을 확인할 수 있다.</p>
-<h2 id="exercise-2-width-effect">Exercise 2: Width effect</h2>
+<p>k-point를 증가시키자 transmission 그래프가 매끄러워진 것을 확인할 수 있다. </p>
+<h2 id="exercise-2-channel-width-effect">Exercise 2: Channel width effect</h2>
 <p>폭이 2배 넓은 모델의 T(E) 과 원래 T(E) 그래프를 비교해 보자.</p>
 <p><center><img src="img/Gr_wider.png" width="60%" height="60%"></center></p>
 <p>electrode의 구조가 달라졌으므로, electrode calculation부터 진행해야한다.<br/> STRUCT.fdf 파일을 간략하게 보면, atom 개수와 lattice vector의 y축 길이가 늘어난 것을 확인할 수 있다.
