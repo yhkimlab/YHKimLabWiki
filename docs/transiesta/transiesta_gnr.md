@@ -10,8 +10,6 @@ Graphene nanoribbons
 
 이번 장에서는 위와 같은 zigzag graphene nanoribbons (GNRs) 구조에 대해 계산한다.
 
-> Input files: [GNRs.tar.gz](file/GNRs.tar.gz)
-
 ### Step 1. Electrode calculation
 
 <center><img src="img/06/06-011.JPG" width="50%" height="50%"></center>

@@ -3,8 +3,6 @@ Si-SiO<sub>2</sub>-Si junction model
 ## Contents
 1. 수렴성 테스트
 
-> Input files: [Si-SiO2-Si.tar.gz](file/Si-SiO2-Si.tar.gz)
-
 
 ## 수렴성 테스트
 

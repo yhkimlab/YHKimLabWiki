@@ -8,8 +8,6 @@ Basic TranSIESTA calculation
 
 앞서 개요에서 설명했듯이 SIESTA 및 TranSIESTA 프로그램을 통해서 양자수송 특성을 계산하는 과정을 위와 같다. 이번 장에서 TranSIESTA 프로그램을 통해 Si chain (1D) 모델에 대해 평형상태 및 비평행상태의 전자수송 특성 계산과정을 제시한 단계에 따라서 소개하겠다.
 
-> Input files: [Si1D_chain.tar.gz](file/Si1D_chain.tar.gz)
-
 ## Perfect Si chain
 
 <center><img src="img/06/06-002.JPG" width="90%" height="90%"></center>

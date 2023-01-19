@@ -9,7 +9,6 @@ Graphene (2D)
 
 이번 장에서는 2차원 물질인 그래핀에 대해서 양자수송 특성을 계산한다.
 
-> Input files: [Graphene.tar.gz](file/Graphene.tar.gz)
 
 ### Step 1: Electrode calculation
 

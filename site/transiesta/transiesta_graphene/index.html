@@ -1393,9 +1393,6 @@
 <h2 id="graphene">Graphene의 양자수송 특성 계산</h2>
 <p><center><img src="img/Gr.png" width="80%" height="80%"></center></p>
 <p>이번 장에서는 2차원 물질인 그래핀에 대해서 양자수송 특성을 계산한다.</p>
-<blockquote>
-<p>Input files: <a href="../file/Graphene.tar.gz">Graphene.tar.gz</a></p>
-</blockquote>
 <h3 id="step-1-electrode-calculation">Step 1: Electrode calculation</h3>
 <p><center><img src="img/Gr_electrode.png" width="30%" height="30%"></center></p>
 <p>Electrode에 대해 DFT 계산을 통해 <code>elec.TSHS</code> 를 얻는다. 우리의 모델의 경우 x축 방향으로 periodic 구조를 가지지 않는다. 때문에 x방향으로의 k-point를 1로 지정해주었다. Eleectrode 계산 시에 사용된 k-point가 추후에 scattering 계산을 통한 양자수속 특성 계산의 정확도 큰 영향을 미치기 때문에 반드시 <strong>k-point에 대해 수렴성 테스트</strong>를 진행해야한다. 특히 양자 수송 방향(z-축)으로 더욱 엄격히 k-point를 주어야 보다 정확한 전극의 self-energy를 얻을 수 있다.</p>
