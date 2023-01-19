@@ -5,18 +5,18 @@ GNRs-vacuum-GNRs junction model
 2. 수렴성 테스트
 3. 비평형 상태 계산
 
+<center><img src="img/1.png" width="80%" height="80%"></center>
+
 그동안은 matrix Green's function을 기반으로 평형상태의 양자수송 특성을 계산하는 법에 대해서 다루었었다. 그러나 전압이 인가된 비평형 상황에서의 계산에서는 non-equilibrium Green's function (NEGF)의 도입이 필요하다. 이번 장에서는 위와 같은 graphene nanoribbons (GNRs)-vacuum-GNRs로 이루어진 비균질 모델에 대해서 junction을 정의하고 보다 정확한 계산을 위해서 수렴성 테스트를 진행하는 법을 소개하고 마지막으로 비평형 상태의 양자수송 특성을 계산하는 방법에 대해서 다룬다.
 
 > Input files: [GNRs-vacuum-GNRs.tar.gz](file/GNRs-vacuum-GNRs.tar.gz)
 
 ## Junction 모델링
 
-<center><img src="img/1.png" width="80%" height="80%"></center>
+우리가 다룰 GNRs-vacuum-GNRs 구조는 양쪽으로 반-무한히 이어진 GRNs 전극 영역과 그 사이에 vacuum 영역으로 구분할 수 있다. 계산을 엄밀히 진행하기 위해서는 이전 **Junction modeling** 강의에서 언급했듯이 scattering 영역과 electrode 영역을 구분해야한다. 이를 위해서 다음과 같은 순서로 electrode/scattering 영역을 결정하여 junction 모델을 만들어보자.  
 
-우리가 다룰 GNRs-vacuum-GNRs 구조는 위와 같이 양쪽으로 반-무한히 이어진 GRNs 전극 영역과 그 사이에 vacuum 영역으로 구분할 수 있다. 계산을 엄밀히 진행하기 위해서는 이전 **Junction modeling** 강의에서 언급했듯이 scattering 영역과 electrode 영역을 구분해야한다. 이를 위해서 다음과 같은 순서로 electrode/scattering 영역을 결정하여 junction 모델을 만들어보자.
-
-**Step 1.** Electrode의 principal cell 결정
-**Step 2.** Buffer layer 테스트를 통한 scattering/electrode 영역 결정
+**Step 1:** Electrode의 principal cell 결정  
+**Step 2:** Buffer layer 테스트를 통한 scattering/electrode 영역 결정  
 
 
 ### Step 1: Electrode의 principal cell 결정
@@ -249,8 +249,6 @@ python show_trans.py  5-unit/OUT_tbt/scattering.TBT.AVTRANS_Left-Right 6-unit/OU
 <center><img src="img/8.png" width="70%" height="70%"></center>
 
 위 결과를 확인해보면 `k=15`로 계산한 전극의 self-energy를 사용한 때부터 transmission이 일치하는 것을 확인할 수 있다. 이를 통해서 scattering/electrode 계산에서의 수렴된 k-point의 값을 얻을 수 있다.
-
-
 
 
 ## 비평형 상태 계산
