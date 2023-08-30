@@ -9,8 +9,14 @@
       
       
       
-      <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-6.2.3">
+        <link rel="prev" href="../../transiesta/transiesta_gnr-vacuum-gnr/">
+      
+      
+        <link rel="next" href="../../nanocore/nanocore_kpoint/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.2.5">
     
     
       
@@ -18,39 +24,40 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.3b61ea93.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0e669242.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.39b8e14a.min.css">
-        
-      
-    
-    
-    
-      
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
-        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
     
-    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
+
+    
     
     
   </head>
   
   
-    
-    
-    
-    
-    
-    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
-      
+    <body dir="ltr">
   
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -67,27 +74,29 @@
       
     </div>
     
+    
       
 
 <header class="md-header" data-md-component="header">
-  <nav class="md-header-nav md-grid" aria-label="Header">
-    <a href="../.." title="YHKLAB Wiki" class="md-header-nav__button md-logo" aria-label="YHKLAB Wiki">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="YHKLAB Wiki" class="md-header__button md-logo" aria-label="YHKLAB Wiki" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
 
     </a>
-    <label class="md-header-nav__button md-icon" for="__drawer">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
     </label>
-    <div class="md-header-nav__title" data-md-component="header-title">
-      <div class="md-header-nav__ellipsis">
-        <div class="md-header-nav__topic">
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
           <span class="md-ellipsis">
             YHKLAB Wiki
           </span>
         </div>
-        <div class="md-header-nav__topic">
+        <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
               Machine learning for nudged elastic band
@@ -97,22 +106,31 @@
       </div>
     </div>
     
-      <label class="md-header-nav__button md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
       </label>
-      
-<div class="md-search" data-md-component="search" role="dialog">
+      <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
       </label>
-      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
-      </button>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
@@ -120,7 +138,7 @@
           <div class="md-search-result__meta">
             Initializing search
           </div>
-          <ol class="md-search-result__list"></ol>
+          <ol class="md-search-result__list" role="presentation"></ol>
         </div>
       </div>
     </div>
@@ -129,6 +147,7 @@
     
     
   </nav>
+  
 </header>
     
     <div class="md-container" data-md-component="container">
@@ -136,33 +155,23 @@
       
         
           
+            
 <nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
-  <div class="md-tabs__inner md-grid">
+  <div class="md-grid">
     <ul class="md-tabs__list">
       
         
   
   
-
-
-  <li class="md-tabs__item">
-    <a href="../.." class="md-tabs__link">
-      Home
-    </a>
-  </li>
-
-      
-        
-  
-  
-
-
-  
-  
   
     <li class="md-tabs__item">
-      <a href="../../environment/wsl2/" class="md-tabs__link">
-        Environment Setup
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
       </a>
     </li>
   
@@ -171,23 +180,45 @@
         
   
   
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../environment/python/" class="md-tabs__link">
+          
+  
+  Environment Setup
 
+        </a>
+      </li>
+    
+  
 
+      
+        
   
   
   
     
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../build/build_siesta/" class="md-tabs__link">
+          
+  
+  SIESTA Tutorial
 
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../../build/build_siesta/" class="md-tabs__link">
-        SIESTA Tutorial
-      </a>
-    </li>
+        </a>
+      </li>
+    
   
 
+    
   
 
       
@@ -196,48 +227,64 @@
   
     
   
-
-
   
+    
+    
+      
   
   
     
-
-  
   
   
     
+    
+      
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  Other
 
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="./" class="md-tabs__link md-tabs__link--active">
-        Other
-      </a>
-    </li>
+        </a>
+      </li>
+    
   
 
+    
   
 
+    
   
 
       
         
   
   
+  
+    <li class="md-tabs__item">
+      <a href="../../about/" class="md-tabs__link">
+        
+  
+    
+  
+  About
 
-
-  <li class="md-tabs__item">
-    <a href="../../about/" class="md-tabs__link">
-      About
-    </a>
-  </li>
+      </a>
+    </li>
+  
 
       
     </ul>
   </div>
 </nav>
+          
         
       
       <main class="md-main" data-md-component="main">
@@ -245,11 +292,10 @@
           
             
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation" >
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
-
 
 
   
@@ -257,10 +303,10 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="YHKLAB Wiki" class="md-nav__button md-logo" aria-label="YHKLAB Wiki">
+    <a href="../.." title="YHKLAB Wiki" class="md-nav__button md-logo" aria-label="YHKLAB Wiki" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
 
     </a>
     YHKLAB Wiki
@@ -270,687 +316,1023 @@
     
       
       
-      
-
-
-
-  <li class="md-nav__item">
-    <a href="../.." class="md-nav__link">
-      Home
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-
   
-  <li class="md-nav__item md-nav__item--nested">
-    
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" >
-    
-    <label class="md-nav__link" for="nav-2">
-      Environment Setup
-      <span class="md-nav__icon md-icon"></span>
-    </label>
-    <nav class="md-nav" aria-label="Environment Setup" data-md-level="1">
-      <label class="md-nav__title" for="nav-2">
-        <span class="md-nav__icon md-icon"></span>
-        Environment Setup
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
         
-        
-          
-          
-          
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
 
-
-
-  <li class="md-nav__item">
-    <a href="../../environment/wsl2/" class="md-nav__link">
-      Windows Subsystem for Linux
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../environment/vscode/" class="md-nav__link">
-      VSCode
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
+      </a>
+    </li>
+  
 
     
       
       
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
       
-
-
-
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
   
-  <li class="md-nav__item md-nav__item--nested">
-    
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" >
-    
-    <label class="md-nav__link" for="nav-3">
-      SIESTA Tutorial
-      <span class="md-nav__icon md-icon"></span>
-    </label>
-    <nav class="md-nav" aria-label="SIESTA Tutorial" data-md-level="1">
-      <label class="md-nav__title" for="nav-3">
-        <span class="md-nav__icon md-icon"></span>
-        SIESTA Tutorial
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-
+  <span class="md-ellipsis">
+    Environment Setup
+  </span>
   
-    
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Environment Setup
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
   
-  <li class="md-nav__item md-nav__item--section md-nav__item--nested">
-    
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-1" type="checkbox" id="nav-3-1" >
-    
-    <label class="md-nav__link" for="nav-3-1">
-      0. 준비
-      <span class="md-nav__icon md-icon"></span>
-    </label>
-    <nav class="md-nav" aria-label="0. 준비" data-md-level="2">
-      <label class="md-nav__title" for="nav-3-1">
-        <span class="md-nav__icon md-icon"></span>
-        0. 준비
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../build/build_siesta/" class="md-nav__link">
-      (1) SIESTA 설치
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../build/build_atom/" class="md-nav__link">
-      (2) ATOM 설치
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-
   
-    
   
-  <li class="md-nav__item md-nav__item--section md-nav__item--nested">
-    
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-2" type="checkbox" id="nav-3-2" >
-    
-    <label class="md-nav__link" for="nav-3-2">
-      1. ATOM 계산
-      <span class="md-nav__icon md-icon"></span>
-    </label>
-    <nav class="md-nav" aria-label="1. ATOM 계산" data-md-level="2">
-      <label class="md-nav__title" for="nav-3-2">
-        <span class="md-nav__icon md-icon"></span>
-        1. ATOM 계산
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
+    <li class="md-nav__item">
+      <a href="../../environment/python/" class="md-nav__link">
         
-        
-          
-          
-          
-
-
-
   
-  <li class="md-nav__item md-nav__item--nested">
-    
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-2-1" type="checkbox" id="nav-3-2-1" >
-    
-    <label class="md-nav__link" for="nav-3-2-1">
-      A. 기초 과정
-      <span class="md-nav__icon md-icon"></span>
-    </label>
-    <nav class="md-nav" aria-label="A. 기초 과정" data-md-level="3">
-      <label class="md-nav__title" for="nav-3-2-1">
-        <span class="md-nav__icon md-icon"></span>
-        A. 기초 과정
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../atom/atom_all_electron/" class="md-nav__link">
-      (1) 온-전자 계산
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../atom/atom_pseudopotential/" class="md-nav__link">
-      (2) 슈도퍼텐셜 생성
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-
+  <span class="md-ellipsis">
+    Getting Started with Python
+  </span>
   
-    
+
+      </a>
+    </li>
   
-  <li class="md-nav__item md-nav__item--section md-nav__item--nested">
-    
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3" >
-    
-    <label class="md-nav__link" for="nav-3-3">
-      2. SIESTA 계산
-      <span class="md-nav__icon md-icon"></span>
-    </label>
-    <nav class="md-nav" aria-label="2. SIESTA 계산" data-md-level="2">
-      <label class="md-nav__title" for="nav-3-3">
-        <span class="md-nav__icon md-icon"></span>
-        2. SIESTA 계산
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
 
-
-
+              
+            
+              
+                
   
-  <li class="md-nav__item md-nav__item--nested">
-    
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-3-1" type="checkbox" id="nav-3-3-1" >
-    
-    <label class="md-nav__link" for="nav-3-3-1">
-      A. 기초 과정
-      <span class="md-nav__icon md-icon"></span>
-    </label>
-    <nav class="md-nav" aria-label="A. 기초 과정" data-md-level="3">
-      <label class="md-nav__title" for="nav-3-3-1">
-        <span class="md-nav__icon md-icon"></span>
-        A. 기초 과정
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../siesta/siesta_basic/" class="md-nav__link">
-      (1) SIESTA 개요
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../siesta/siesta_gold/" class="md-nav__link">
-      (2) Au 벌크/슬랩 구조
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../siesta/siesta_graphene/" class="md-nav__link">
-      (3) Graphene
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-
   
-    
   
-  <li class="md-nav__item md-nav__item--section md-nav__item--nested">
-    
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-4" type="checkbox" id="nav-3-4" >
-    
-    <label class="md-nav__link" for="nav-3-4">
-      3. TranSIESTA 계산
-      <span class="md-nav__icon md-icon"></span>
-    </label>
-    <nav class="md-nav" aria-label="3. TranSIESTA 계산" data-md-level="2">
-      <label class="md-nav__title" for="nav-3-4">
-        <span class="md-nav__icon md-icon"></span>
-        3. TranSIESTA 계산
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
+    <li class="md-nav__item">
+      <a href="../../environment/wsl2/" class="md-nav__link">
         
-        
-          
-          
-          
-
-
-
   
-  <li class="md-nav__item md-nav__item--nested">
-    
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-4-1" type="checkbox" id="nav-3-4-1" >
-    
-    <label class="md-nav__link" for="nav-3-4-1">
-      A. 기초 과정
-      <span class="md-nav__icon md-icon"></span>
-    </label>
-    <nav class="md-nav" aria-label="A. 기초 과정" data-md-level="3">
-      <label class="md-nav__title" for="nav-3-4-1">
-        <span class="md-nav__icon md-icon"></span>
-        A. 기초 과정
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../transiesta/transiesta_overview/" class="md-nav__link">
-      (1) TranSIESTA 개요
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../transiesta/transiesta_modeling/" class="md-nav__link">
-      (2) 접합구조 모델링
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../transiesta/transiesta_si1d/" class="md-nav__link">
-      (3) Si chain (1D)
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-
+  <span class="md-ellipsis">
+    Windows Subsystem for Linux
+  </span>
   
-  <li class="md-nav__item md-nav__item--nested">
-    
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-4-2" type="checkbox" id="nav-3-4-2" >
-    
-    <label class="md-nav__link" for="nav-3-4-2">
-      B. 중급/고급 과정
-      <span class="md-nav__icon md-icon"></span>
-    </label>
-    <nav class="md-nav" aria-label="B. 중급/고급 과정" data-md-level="3">
-      <label class="md-nav__title" for="nav-3-4-2">
-        <span class="md-nav__icon md-icon"></span>
-        B. 중급/고급 과정
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
 
-
-
+      </a>
+    </li>
   
-  <li class="md-nav__item md-nav__item--nested">
-    
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-4-2-1" type="checkbox" id="nav-3-4-2-1" >
-    
-    <label class="md-nav__link" for="nav-3-4-2-1">
-      평형상태 계산
-      <span class="md-nav__icon md-icon"></span>
-    </label>
-    <nav class="md-nav" aria-label="평형상태 계산" data-md-level="4">
-      <label class="md-nav__title" for="nav-3-4-2-1">
-        <span class="md-nav__icon md-icon"></span>
-        평형상태 계산
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
 
-
-
-  <li class="md-nav__item">
-    <a href="../../transiesta/transiesta_graphene/" class="md-nav__link">
-      (1) Graphene (2D)
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../transiesta/transiesta_gnr/" class="md-nav__link">
-      (2) Pristine & defective GNRs
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../transiesta/transiesta_si-sio2-si/" class="md-nav__link">
-      (3) Si-SiO2-Si
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-
+              
+            
+              
+                
   
-  <li class="md-nav__item md-nav__item--nested">
-    
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-4-2-2" type="checkbox" id="nav-3-4-2-2" >
-    
-    <label class="md-nav__link" for="nav-3-4-2-2">
-      비평형상태 계산
-      <span class="md-nav__icon md-icon"></span>
-    </label>
-    <nav class="md-nav" aria-label="비평형상태 계산" data-md-level="4">
-      <label class="md-nav__title" for="nav-3-4-2-2">
-        <span class="md-nav__icon md-icon"></span>
-        비평형상태 계산
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
+  
+  
+    <li class="md-nav__item">
+      <a href="../../environment/vscode/" class="md-nav__link">
         
-        
-          
-          
-          
+  
+  <span class="md-ellipsis">
+    VSCode
+  </span>
+  
 
+      </a>
+    </li>
+  
 
-
-  <li class="md-nav__item">
-    <a href="../../transiesta/transiesta_gnr-vacuum-gnr/" class="md-nav__link">
-      (1) GNRs-vacuum-GRNs
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
 
     
       
       
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
       
-
-
-  
-
-
-  
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-    
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
-    
-    <label class="md-nav__link" for="nav-4">
-      Other
-      <span class="md-nav__icon md-icon"></span>
-    </label>
-    <nav class="md-nav" aria-label="Other" data-md-level="1">
-      <label class="md-nav__title" for="nav-4">
-        <span class="md-nav__icon md-icon"></span>
-        Other
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
         
         
-          
-          
-          
-
-
-  
-
-
-  
-    
-  
-  <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-    
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-1" type="checkbox" id="nav-4-1" checked>
-    
-    <label class="md-nav__link" for="nav-4-1">
-      Vasp
-      <span class="md-nav__icon md-icon"></span>
-    </label>
-    <nav class="md-nav" aria-label="Vasp" data-md-level="2">
-      <label class="md-nav__title" for="nav-4-1">
-        <span class="md-nav__icon md-icon"></span>
-        Vasp
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
         
         
-          
-          
-          
-
-
-  
-
-
-  
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-    
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-1-1" type="checkbox" id="nav-4-1-1" checked>
-    
-    <label class="md-nav__link" for="nav-4-1-1">
-      Nudged Elastic Band (NEB)
-      <span class="md-nav__icon md-icon"></span>
-    </label>
-    <nav class="md-nav" aria-label="Nudged Elastic Band (NEB)" data-md-level="3">
-      <label class="md-nav__title" for="nav-4-1-1">
-        <span class="md-nav__icon md-icon"></span>
-        Nudged Elastic Band (NEB)
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
-        
-          
-          
-          
-
-
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    SIESTA Tutorial
+  </span>
   
 
-
-  <li class="md-nav__item md-nav__item--active">
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            SIESTA Tutorial
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
     
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
     
       
     
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    0. 준비
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            0. 준비
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../build/build_siesta/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    (1) SIESTA 설치
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../build/build_atom/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    (2) ATOM 설치
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
     
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Machine learning for nudged elastic band
-        <span class="md-nav__icon md-icon"></span>
-      </label>
     
-    <a href="./" class="md-nav__link md-nav__link--active">
-      Machine learning for nudged elastic band
-    </a>
     
       
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    1. ATOM 계산
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            1. ATOM 계산
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1" >
+        
+          <label class="md-nav__link" for="__nav_3_2_1" id="__nav_3_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    A. 기초 과정
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            A. 기초 과정
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../atom/atom_all_electron/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    (1) 온-전자 계산
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../atom/atom_pseudopotential/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    (2) 슈도퍼텐셜 생성
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    2. SIESTA 계산
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            2. SIESTA 계산
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_1" >
+        
+          <label class="md-nav__link" for="__nav_3_3_1" id="__nav_3_3_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    A. 기초 과정
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            A. 기초 과정
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../siesta/siesta_basic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    (1) SIESTA 개요
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../siesta/siesta_gold/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    (2) Au 벌크/슬랩 구조
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../siesta/siesta_graphene/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    (3) Graphene
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    3. TranSIESTA 계산
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            3. TranSIESTA 계산
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4_1" >
+        
+          <label class="md-nav__link" for="__nav_3_4_1" id="__nav_3_4_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    A. 기초 과정
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            A. 기초 과정
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../transiesta/transiesta_overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    (1) TranSIESTA 개요
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../transiesta/transiesta_modeling/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    (2) 접합구조 모델링
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../transiesta/transiesta_si1d/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    (3) Si chain (1D)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4_2" >
+        
+          <label class="md-nav__link" for="__nav_3_4_2" id="__nav_3_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    B. 중급/고급 과정
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            B. 중급/고급 과정
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4_2_1" >
+        
+          <label class="md-nav__link" for="__nav_3_4_2_1" id="__nav_3_4_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    평형상태 계산
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_4_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            평형상태 계산
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../transiesta/transiesta_graphene/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    (1) Graphene (2D)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../transiesta/transiesta_gnr/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    (2) Pristine & defective GNRs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../transiesta/transiesta_si-sio2-si/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    (3) Si-SiO2-Si
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4_2_2" >
+        
+          <label class="md-nav__link" for="__nav_3_4_2_2" id="__nav_3_4_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    비평형상태 계산
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_4_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            비평형상태 계산
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../transiesta/transiesta_gnr-vacuum-gnr/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    (1) GNRs-vacuum-GRNs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Other
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Other
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" checked>
+        
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Vasp
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            Vasp
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_1" checked>
+        
+          <label class="md-nav__link" for="__nav_4_1_1" id="__nav_4_1_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Nudged Elastic Band (NEB)
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_1_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_1_1">
+            <span class="md-nav__icon md-icon"></span>
+            Nudged Elastic Band (NEB)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Machine learning for nudged elastic band
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Machine learning for nudged elastic band
+  </span>
+  
+
+      </a>
+      
+        
+
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
   
   
     
@@ -960,7 +1342,7 @@
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
-    <ul class="md-nav__list" data-md-scrollfix>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
   <a href="#1-installation" class="md-nav__link">
@@ -1074,275 +1456,406 @@
     </ul>
   
 </nav>
-    
-  </li>
+      
+    </li>
+  
 
-        
-      </ul>
-    </nav>
-  </li>
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
 
-        
-      </ul>
-    </nav>
-  </li>
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
 
-        
-          
-          
-          
-
-
-
+              
+            
+              
+                
+  
+  
   
     
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
   
-  <li class="md-nav__item md-nav__item--section md-nav__item--nested">
-    
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2" >
-    
-    <label class="md-nav__link" for="nav-4-2">
-      NanoCore
-      <span class="md-nav__icon md-icon"></span>
-    </label>
-    <nav class="md-nav" aria-label="NanoCore" data-md-level="2">
-      <label class="md-nav__title" for="nav-4-2">
-        <span class="md-nav__icon md-icon"></span>
-        NanoCore
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../nanocore/nanocore_kpoint/" class="md-nav__link">
-      k-point sampling
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
+  <span class="md-ellipsis">
+    NanoCore
+  </span>
   
-  <li class="md-nav__item md-nav__item--nested">
-    
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-2-2" type="checkbox" id="nav-4-2-2" >
-    
-    <label class="md-nav__link" for="nav-4-2-2">
-      Structure optimization
-      <span class="md-nav__icon md-icon"></span>
-    </label>
-    <nav class="md-nav" aria-label="Structure optimization" data-md-level="3">
-      <label class="md-nav__title" for="nav-4-2-2">
-        <span class="md-nav__icon md-icon"></span>
-        Structure optimization
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
         
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            NanoCore
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nanocore/nanocore_kpoint/" class="md-nav__link">
         
-          
-          
-          
+  
+  <span class="md-ellipsis">
+    k-point sampling
+  </span>
+  
 
+      </a>
+    </li>
+  
 
-
-  <li class="md-nav__item">
-    <a href="../../nanocore/nanocore_eos/" class="md-nav__link">
-      Equation of state (EOS) 
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../nanocore/nanocore_murnaghan/" class="md-nav__link">
-      Murnaghan fitting
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../nanocore/nanocore_geo/" class="md-nav__link">
-      Geometry optimization
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-
+              
+            
+              
+                
+  
+  
   
     
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_2" >
+        
+          <label class="md-nav__link" for="__nav_4_2_2" id="__nav_4_2_2_label" tabindex="0">
+            
   
-  <li class="md-nav__item md-nav__item--section md-nav__item--nested">
-    
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-3" type="checkbox" id="nav-4-3" >
-    
-    <label class="md-nav__link" for="nav-4-3">
-      Git
-      <span class="md-nav__icon md-icon"></span>
-    </label>
-    <nav class="md-nav" aria-label="Git" data-md-level="2">
-      <label class="md-nav__title" for="nav-4-3">
-        <span class="md-nav__icon md-icon"></span>
-        Git
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
+  <span class="md-ellipsis">
+    Structure optimization
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
         
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Structure optimization
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nanocore/nanocore_eos/" class="md-nav__link">
         
-          
-          
-          
+  
+  <span class="md-ellipsis">
+    Equation of state (EOS) 
+  </span>
+  
 
+      </a>
+    </li>
+  
 
-
-  <li class="md-nav__item">
-    <a href="../../github_tutorial/0.github_create_repository/" class="md-nav__link">
-      Create Repository
-    </a>
-  </li>
-
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nanocore/nanocore_murnaghan/" class="md-nav__link">
         
-      </ul>
-    </nav>
-  </li>
+  
+  <span class="md-ellipsis">
+    Murnaghan fitting
+  </span>
+  
 
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nanocore/nanocore_geo/" class="md-nav__link">
         
-          
-          
-          
+  
+  <span class="md-ellipsis">
+    Geometry optimization
+  </span>
+  
 
+      </a>
+    </li>
+  
 
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
 
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
   
     
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
   
-  <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+  <span class="md-ellipsis">
+    Git
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            Git
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../github_tutorial/0.github_create_repository/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Create Repository
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
     
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-4" type="checkbox" id="nav-4-4" >
     
-    <label class="md-nav__link" for="nav-4-4">
-      유용한 명령어
-      <span class="md-nav__icon md-icon"></span>
-    </label>
-    <nav class="md-nav" aria-label="유용한 명령어" data-md-level="2">
-      <label class="md-nav__title" for="nav-4-4">
-        <span class="md-nav__icon md-icon"></span>
-        유용한 명령어
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
         
         
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../other/1.1_LinuxCheatSheet/" class="md-nav__link">
-      Linux
-    </a>
-  </li>
-
         
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../other/1.2_PythonCheatSheet/" class="md-nav__link">
-      Python
-    </a>
-  </li>
-
         
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../other/1.3_EmacsCheatSheet/" class="md-nav__link">
-      Emacs
-    </a>
-  </li>
-
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
         
-          
-          
-          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    유용한 명령어
+  </span>
+  
 
-
-
-  <li class="md-nav__item">
-    <a href="../../other/1.4_AnacondaCheatSheet/" class="md-nav__link">
-      Anaconda
-    </a>
-  </li>
-
+            <span class="md-nav__icon md-icon"></span>
+          </label>
         
-      </ul>
-    </nav>
-  </li>
-
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            유용한 명령어
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../other/1.1_LinuxCheatSheet/" class="md-nav__link">
         
-      </ul>
-    </nav>
-  </li>
+  
+  <span class="md-ellipsis">
+    Linux
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../other/1.2_PythonCheatSheet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../other/1.3_EmacsCheatSheet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Emacs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../other/1.4_AnacondaCheatSheet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Anaconda
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
 
     
       
       
-      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
 
-
-
-  <li class="md-nav__item">
-    <a href="../../about/" class="md-nav__link">
-      About
-    </a>
-  </li>
+      </a>
+    </li>
+  
 
     
   </ul>
@@ -1353,11 +1866,13 @@
             
             
               
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc" >
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
+
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
   
   
     
@@ -1367,7 +1882,7 @@
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
-    <ul class="md-nav__list" data-md-scrollfix>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
   <a href="#1-installation" class="md-nav__link">
@@ -1486,12 +2001,14 @@
               </div>
             
           
-          <div class="md-content">
-            <article class="md-content__inner md-typeset">
-              
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
                 
-                
-                <h1 id="workshop-tutorial-ml-neb">Workshop Tutorial : ML-NEB</h1>
+                  
+
+
+<h1 id="workshop-tutorial-ml-neb">Workshop Tutorial : ML-NEB</h1>
 <p>This is a tutorial on "Nudged Elastic Band" calculations accerelerated by machine learning model (NEB-ML).</p>
 <hr />
 <p>References:</p>
@@ -1502,10 +2019,10 @@
 <hr />
 <p>NEB-ML tutorial consists of the following contents:</p>
 <blockquote>
-<p><strong> 1. Installation </strong></p>
-<p><strong> 2. Classical NEB calculation </strong></p>
-<p><strong> 3. ML based NEB calculation </strong></p>
-<p><strong> 4. Comparison </strong> </p>
+<p>** 1. Installation **</p>
+<p>** 2. Classical NEB calculation **</p>
+<p>** 3. ML based NEB calculation **</p>
+<p>** 4. Comparison ** </p>
 </blockquote>
 <hr />
 <h3 id="1-installation"><strong>1. Installation</strong></h3>
@@ -1529,7 +2046,7 @@ If your <code>pip</code> doesn't work, you can also get the source from a tar-fi
 <p>The following instruction makes it possible to use VASP as a calculator in ASE.</p>
 <p>(See also <a href="https://wiki.fysik.dtu.dk/ase/ase/calculators/vasp.html?highlight=vasp#module-ase.calculators.vasp">VASP ASE interface instruction</a>)</p>
 <p>Set environment variable in your shell(<code>$HOME/.bashrc</code>) configuration file:
-<div class="highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">$ export VASP_PP_PATH=(VASP pseudopotential PATH)</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">$ export VASP_PP_PATH=(VASP pseudopotential PATH)</span>
 </code></pre></div>
 Note that <code>VASP_PP_PATH</code> <strong>must include</strong> directories named <code>potpaw</code>(LDA XC), <code>potpaw_GGA</code>(PW91 XC) and <code>potpaw_PBE</code>(PBE XC).</p>
 <h4 id="1-2-test-calculation">1-2. Test calculation</h4>
@@ -1551,22 +2068,22 @@ Note that <code>VASP_PP_PATH</code> <strong>must include</strong> directories na
 <span class="nb">print</span><span class="p">(</span><span class="n">NaCl</span><span class="o">.</span><span class="n">get_magnetic_moment</span><span class="p">())</span>
 </code></pre></div>
 Example script of jobscheduler for MPI calculation (<code>slurm</code>).</p>
-<div class="highlight"><pre><span></span><code><span class="c1">#!/bin/bash</span><span class="w"></span>
-<span class="c1">#SBATCH -J TEST            # job name</span><span class="w"></span>
-<span class="c1">#SBATCH -o stdout.txt      # output and error file name (%j expands to </span><span class="w"></span>
-<span class="c1">#SBATCH -p X2              # name of cluster group </span><span class="w"></span>
-<span class="c1">#SBATCH -N 1               # total number of nodesmpi tasks requested</span><span class="w"></span>
-<span class="c1">#SBATCH -n 12              # total number of mpi tasks requested</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="c1">#!/bin/bash</span>
+<span class="c1">#SBATCH -J TEST            # job name</span>
+<span class="c1">#SBATCH -o stdout.txt      # output and error file name (%j expands to </span>
+<span class="c1">#SBATCH -p X2              # name of cluster group </span>
+<span class="c1">#SBATCH -N 1               # total number of nodesmpi tasks requested</span>
+<span class="c1">#SBATCH -n 12              # total number of mpi tasks requested</span>
 
-<span class="l l-Scalar l-Scalar-Plain">export VASP_COMMAND=&quot;mpirun -np $SLURM_NTASKS $HOME/bin/vasp_5.4.1_GRP7_NORMAL_p13082016_VTST.x&quot;</span><span class="w"></span>
-<span class="l l-Scalar l-Scalar-Plain">python test_VaspASE.py</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">export VASP_COMMAND=&quot;mpirun -np $SLURM_NTASKS $HOME/bin/vasp_5.4.1_GRP7_NORMAL_p13082016_VTST.x&quot;</span>
+<span class="l l-Scalar l-Scalar-Plain">python test_VaspASE.py</span>
 </code></pre></div>
 <h4 id="1-3-check-the-result">1-3. Check the result</h4>
 <p>The <code>OUTCAR</code> and <code>vasp.out</code> display the normal VASP output and <code>stdout.txt</code> shows the output from the <code>Python</code> command.
-<div class="highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">print(NaCl.get_magnetic_moment())</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">print(NaCl.get_magnetic_moment())</span>
 </code></pre></div>
 Corresponding result in <code>stdout.txt</code> is
-<div class="highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">0.1325833</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">0.1325833</span>
 </code></pre></div></p>
 <hr />
 <h3 id="2-classical-neb-calculation"><strong>2. Classical NEB calculation</strong></h3>
@@ -1577,72 +2094,72 @@ Corresponding result in <code>stdout.txt</code> is
 <ul>
 <li>POSCAR of the initial state (in directory <em>00</em>)
 <div class="highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">Pt</span><span class="w"> </span>
-<span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.0</span><span class="w"></span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">5.620240    0.000000    0.000000</span><span class="w"></span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">0.000000    5.620240    0.000000</span><span class="w"></span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">0.000000    0.000000   16.860720</span><span class="w"></span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">Pt</span><span class="w"></span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">13</span><span class="w"></span>
-<span class="l l-Scalar l-Scalar-Plain">Cartesian</span><span class="w"></span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">1.405060  1.405060  1.987035</span><span class="w"></span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">4.215180  1.405060  1.987035</span><span class="w"></span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">1.405060  4.215180  1.987035</span><span class="w"></span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">4.215180  4.215180  1.987035</span><span class="w"></span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">0.000000  0.000000  3.889464</span><span class="w"></span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">0.000000  2.810120  3.894337</span><span class="w"></span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">2.810120  0.000000  3.958172</span><span class="w"></span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">2.810120  2.810120  3.889464</span><span class="w"></span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">1.440922  1.369197  5.853553</span><span class="w"></span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">4.179317  1.369197  5.853553</span><span class="w"></span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">1.440922  4.251042  5.853553</span><span class="w"></span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">4.179317  4.251042  5.853553</span><span class="w"></span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">0.000000  2.810120  7.491487</span><span class="w"></span>
+<span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.0</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">5.620240    0.000000    0.000000</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">0.000000    5.620240    0.000000</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">0.000000    0.000000   16.860720</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">Pt</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">13</span>
+<span class="l l-Scalar l-Scalar-Plain">Cartesian</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">1.405060  1.405060  1.987035</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">4.215180  1.405060  1.987035</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">1.405060  4.215180  1.987035</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">4.215180  4.215180  1.987035</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">0.000000  0.000000  3.889464</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">0.000000  2.810120  3.894337</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">2.810120  0.000000  3.958172</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">2.810120  2.810120  3.889464</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">1.440922  1.369197  5.853553</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">4.179317  1.369197  5.853553</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">1.440922  4.251042  5.853553</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">4.179317  4.251042  5.853553</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">0.000000  2.810120  7.491487</span>
 </code></pre></div></li>
 <li>
 <p>POSCAR of the final state (in directory <em># of images+1</em>)
 <div class="highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">Pt</span><span class="w"> </span>
-<span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.0</span><span class="w"></span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">5.620240    0.000000    0.000000</span><span class="w"></span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">0.000000    5.620240    0.000000</span><span class="w"></span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">0.000000    0.000000   16.860720</span><span class="w"></span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">Pt</span><span class="w"></span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">13</span><span class="w"></span>
-<span class="l l-Scalar l-Scalar-Plain">Cartesian</span><span class="w"></span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">1.405060  1.405060  1.987035</span><span class="w"></span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">4.215180  1.405060  1.987035</span><span class="w"></span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">1.405060  4.215180  1.987035</span><span class="w"></span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">4.215180  4.215180  1.987035</span><span class="w"></span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">0.000000  0.000000  3.889464</span><span class="w"></span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">0.000000  2.810120  3.894337</span><span class="w"></span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">2.810120  0.000000  3.958172</span><span class="w"></span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">2.810120  2.810120  3.889464</span><span class="w"></span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">2.810120  0.000000  7.491487</span><span class="w"></span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">4.251042  1.440922  5.853553</span><span class="w"></span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">1.369197  4.179317  5.853553</span><span class="w"></span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">4.251042  4.179317  5.853553</span><span class="w"></span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">1.369197  1.440922  5.853553</span><span class="w"></span>
+<span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.0</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">5.620240    0.000000    0.000000</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">0.000000    5.620240    0.000000</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">0.000000    0.000000   16.860720</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">Pt</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">13</span>
+<span class="l l-Scalar l-Scalar-Plain">Cartesian</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">1.405060  1.405060  1.987035</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">4.215180  1.405060  1.987035</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">1.405060  4.215180  1.987035</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">4.215180  4.215180  1.987035</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">0.000000  0.000000  3.889464</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">0.000000  2.810120  3.894337</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">2.810120  0.000000  3.958172</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">2.810120  2.810120  3.889464</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">2.810120  0.000000  7.491487</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">4.251042  1.440922  5.853553</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">1.369197  4.179317  5.853553</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">4.251042  4.179317  5.853553</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">1.369197  1.440922  5.853553</span>
 </code></pre></div>
 In the present exercise, the required precision is reduced to a minimum.</p>
 </li>
 <li>
 <p>KPOINTS
-<div class="highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">K-Points</span><span class="w"></span>
-<span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span><span class="w"></span>
-<span class="l l-Scalar l-Scalar-Plain">Gamma</span><span class="w"></span>
-<span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3  3  1</span><span class="w"></span>
-<span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0  0  0</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">K-Points</span>
+<span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="l l-Scalar l-Scalar-Plain">Gamma</span>
+<span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3  3  1</span>
+<span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0  0  0</span>
 </code></pre></div></p>
 </li>
 <li>
 <p>INCAR
-<div class="highlight"><pre><span></span><code><span class="nt">System</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">fcc Pt (001), 3layers</span><span class="w"></span>
-<span class="l l-Scalar l-Scalar-Plain">ISTART = 0</span><span class="w"></span>
-<span class="l l-Scalar l-Scalar-Plain">EDIFF = 1e-6</span><span class="w">              </span><span class="c1"># electronic convergence</span><span class="w"></span>
-<span class="l l-Scalar l-Scalar-Plain">PREC = Normal</span><span class="w"></span>
-<span class="l l-Scalar l-Scalar-Plain">IBRION = 1</span><span class="w">                </span><span class="c1"># DIIS algorithm</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="nt">System</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">fcc Pt (001), 3layers</span>
+<span class="l l-Scalar l-Scalar-Plain">ISTART = 0</span>
+<span class="l l-Scalar l-Scalar-Plain">EDIFF = 1e-6</span><span class="w">              </span><span class="c1"># electronic convergence</span>
+<span class="l l-Scalar l-Scalar-Plain">PREC = Normal</span>
+<span class="l l-Scalar l-Scalar-Plain">IBRION = 1</span><span class="w">                </span><span class="c1"># DIIS algorithm</span>
 <span class="l l-Scalar l-Scalar-Plain">NSW = 20</span><span class="w"> </span>
-<span class="l l-Scalar l-Scalar-Plain">EDIFFG = -0.01</span><span class="w">            </span><span class="c1"># max forces: 0.1eV/AA</span><span class="w"></span>
-<span class="l l-Scalar l-Scalar-Plain">ELMIN = 5</span><span class="w">                 </span><span class="c1"># at least 5 el. scf steps  for each ionic st</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">EDIFFG = -0.01</span><span class="w">            </span><span class="c1"># max forces: 0.1eV/AA</span>
+<span class="l l-Scalar l-Scalar-Plain">ELMIN = 5</span><span class="w">                 </span><span class="c1"># at least 5 el. scf steps  for each ionic st</span>
 </code></pre></div></p>
 </li>
 </ul>
@@ -1654,26 +2171,26 @@ In the present exercise, the required precision is reduced to a minimum.</p>
 It takes initial and fianl CONTCAR files, and linearly interpolates the specific number of images between them.
 The thrid value must correspond to the value of <code>IMAGES</code> in <code>INCAR</code>.</p>
 <p>Now, add extra commands for NEB calculation in <code>INCAR</code>.
-<div class="highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">IMAGES = 9</span><span class="w">                </span><span class="c1"># 9 intermediate geometries for  the NEB</span><span class="w"></span>
-<span class="l l-Scalar l-Scalar-Plain">SPRING = -5</span><span class="w">               </span><span class="c1"># spring constant</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">IMAGES = 9</span><span class="w">                </span><span class="c1"># 9 intermediate geometries for  the NEB</span>
+<span class="l l-Scalar l-Scalar-Plain">SPRING = -5</span><span class="w">               </span><span class="c1"># spring constant</span>
 </code></pre></div>
 Note that <code>slurm</code>, <code>INCAR</code>, <code>KPOINTS</code>, <code>POTCAR</code> must be in the upper folder after running the <code>nebmake.pl</code>. Run a NEB calculation in order to get energy barrier of transition state.</p>
 <h4 id="2-3-neb-result-visualization">2-3. NEB result visualization</h4>
 <p>When the job is finished, you can use <code>nebbarrier.pl</code> with the VTST-tools to collect energy barriers in a brevity.
-<div class="highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">$ (vtstscript PATH)/nebbarrier.pl</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">$ (vtstscript PATH)/nebbarrier.pl</span>
 </code></pre></div>
 Check the NEB results in <code>neb.dat</code> such as,
-<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">0     0.000000     0.000000     0.000000   0</span><span class="w"></span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">1     0.519335     0.137702    -1.029721   1</span><span class="w"></span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">2     1.037408     0.803577    -1.026118   2</span><span class="w"></span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">3     1.554210     1.061091     0.006324   3</span><span class="w"></span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">4     1.931107     1.015088     0.121788   4</span><span class="w"></span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">5     2.312942     1.002032    -0.069935   5</span><span class="w"></span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">6     2.706219     1.050405    -0.129819   6</span><span class="w"></span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">7     3.115095     0.987022     0.520759   7</span><span class="w"></span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">8     3.541559     0.566806     1.381246   8</span><span class="w"></span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">9     3.985326     0.044625     0.581455   9</span><span class="w"></span>
-<span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10     4.442108    -0.000021     0.000000  10</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">0     0.000000     0.000000     0.000000   0</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">1     0.519335     0.137702    -1.029721   1</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">2     1.037408     0.803577    -1.026118   2</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">3     1.554210     1.061091     0.006324   3</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">4     1.931107     1.015088     0.121788   4</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">5     2.312942     1.002032    -0.069935   5</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">6     2.706219     1.050405    -0.129819   6</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">7     3.115095     0.987022     0.520759   7</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">8     3.541559     0.566806     1.381246   8</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">9     3.985326     0.044625     0.581455   9</span>
+<span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10     4.442108    -0.000021     0.000000  10</span>
 </code></pre></div>
 The output: <code># image</code>, <code>distance</code>, <code>energy</code>, <code>force along the NEB</code> (VASP-vtst ver. works), <code># image</code>. The following python script (<code>plot_neb.py</code>) displays <code>neb.dat</code>  using <code>matplotlib</code>.
 <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
@@ -1739,54 +2256,54 @@ The results are shown as</p>
 <p>A surrogate Gaussian process regression (<code>GPR</code>) <a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.122.156001">[2]</a> atomistic model to greatly acclerate the rate of convergence of classical NEB calculations. The algorithm presented here eliminates <strong>any need for manipulating the number of images to obtain a converged result</strong>.</p>
 <h4 id="3-1-set-up-ml-neb-calculation">3-1. Set up ML-NEB calculation</h4>
 <p>To execute ML-NEB, <code>catlearn</code> and <code>ASE</code> are needed which we mentioned above. The following python script(<code>neb-catlearn.py</code>) gives a basic concept of how it works.</p>
-<div class="highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">import sys, shutil, copy</span><span class="w"></span>
-<span class="l l-Scalar l-Scalar-Plain">from ase.io import read</span><span class="w"></span>
-<span class="l l-Scalar l-Scalar-Plain">from ase.optimize import BFGS</span><span class="w"></span>
-<span class="l l-Scalar l-Scalar-Plain">from ase.calculators.vasp import Vasp</span><span class="w"></span>
-<span class="l l-Scalar l-Scalar-Plain">from catlearn.optimize.mlneb import MLNEB</span><span class="w"></span>
-<span class="l l-Scalar l-Scalar-Plain">from ase.neb import NEBTools</span><span class="w"></span>
-<span class="l l-Scalar l-Scalar-Plain">from catlearn.optimize.tools import plotneb</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">import sys, shutil, copy</span>
+<span class="l l-Scalar l-Scalar-Plain">from ase.io import read</span>
+<span class="l l-Scalar l-Scalar-Plain">from ase.optimize import BFGS</span>
+<span class="l l-Scalar l-Scalar-Plain">from ase.calculators.vasp import Vasp</span>
+<span class="l l-Scalar l-Scalar-Plain">from catlearn.optimize.mlneb import MLNEB</span>
+<span class="l l-Scalar l-Scalar-Plain">from ase.neb import NEBTools</span>
+<span class="l l-Scalar l-Scalar-Plain">from catlearn.optimize.tools import plotneb</span>
 
-<span class="l l-Scalar l-Scalar-Plain">### Read input files</span><span class="w"></span>
-<span class="l l-Scalar l-Scalar-Plain">struct_init = read(&#39;CONTCAR_initial&#39;)</span><span class="w"></span>
-<span class="l l-Scalar l-Scalar-Plain">struct_fin  = read(&#39;CONTCAR_final&#39;)</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">### Read input files</span>
+<span class="l l-Scalar l-Scalar-Plain">struct_init = read(&#39;CONTCAR_initial&#39;)</span>
+<span class="l l-Scalar l-Scalar-Plain">struct_fin  = read(&#39;CONTCAR_final&#39;)</span>
 
-<span class="l l-Scalar l-Scalar-Plain">### Set calculator</span><span class="w"></span>
-<span class="l l-Scalar l-Scalar-Plain">ase_calculator = Vasp(encut=400,</span><span class="w"></span>
-<span class="w">                      </span><span class="l l-Scalar l-Scalar-Plain">xc=&#39;PBE&#39;,</span><span class="w"></span>
-<span class="w">                      </span><span class="l l-Scalar l-Scalar-Plain">gga=&#39;PE&#39;,</span><span class="w"></span>
-<span class="w">                      </span><span class="l l-Scalar l-Scalar-Plain">istart = 0,</span><span class="w"></span>
-<span class="w">                      </span><span class="l l-Scalar l-Scalar-Plain">lwave=False,</span><span class="w"></span>
-<span class="w">                      </span><span class="l l-Scalar l-Scalar-Plain">lcharg=False,</span><span class="w"></span>
-<span class="w">                      </span><span class="l l-Scalar l-Scalar-Plain">kpts = (3, 3, 1),</span><span class="w"></span>
-<span class="w">                      </span><span class="l l-Scalar l-Scalar-Plain">ediffg=-0.01,</span><span class="w"></span>
-<span class="w">                      </span><span class="l l-Scalar l-Scalar-Plain">ediff=1e-6,</span><span class="w"></span>
-<span class="w">                      </span><span class="l l-Scalar l-Scalar-Plain">ibrion=1,</span><span class="w"></span>
-<span class="w">                      </span><span class="l l-Scalar l-Scalar-Plain">nsw=20,</span><span class="w"></span>
-<span class="w">                      </span><span class="l l-Scalar l-Scalar-Plain">ismear=1,</span><span class="w"></span>
-<span class="w">                      </span><span class="l l-Scalar l-Scalar-Plain">sigma=0.20,</span><span class="w"></span>
-<span class="w">                      </span><span class="l l-Scalar l-Scalar-Plain">algo=&#39;Normal&#39;,</span><span class="w"></span>
-<span class="w">                      </span><span class="l l-Scalar l-Scalar-Plain">prec=&#39;Normal&#39;</span><span class="w"></span>
-<span class="w">                      </span><span class="l l-Scalar l-Scalar-Plain">)</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">### Set calculator</span>
+<span class="l l-Scalar l-Scalar-Plain">ase_calculator = Vasp(encut=400,</span>
+<span class="w">                      </span><span class="l l-Scalar l-Scalar-Plain">xc=&#39;PBE&#39;,</span>
+<span class="w">                      </span><span class="l l-Scalar l-Scalar-Plain">gga=&#39;PE&#39;,</span>
+<span class="w">                      </span><span class="l l-Scalar l-Scalar-Plain">istart = 0,</span>
+<span class="w">                      </span><span class="l l-Scalar l-Scalar-Plain">lwave=False,</span>
+<span class="w">                      </span><span class="l l-Scalar l-Scalar-Plain">lcharg=False,</span>
+<span class="w">                      </span><span class="l l-Scalar l-Scalar-Plain">kpts = (3, 3, 1),</span>
+<span class="w">                      </span><span class="l l-Scalar l-Scalar-Plain">ediffg=-0.01,</span>
+<span class="w">                      </span><span class="l l-Scalar l-Scalar-Plain">ediff=1e-6,</span>
+<span class="w">                      </span><span class="l l-Scalar l-Scalar-Plain">ibrion=1,</span>
+<span class="w">                      </span><span class="l l-Scalar l-Scalar-Plain">nsw=20,</span>
+<span class="w">                      </span><span class="l l-Scalar l-Scalar-Plain">ismear=1,</span>
+<span class="w">                      </span><span class="l l-Scalar l-Scalar-Plain">sigma=0.20,</span>
+<span class="w">                      </span><span class="l l-Scalar l-Scalar-Plain">algo=&#39;Normal&#39;,</span>
+<span class="w">                      </span><span class="l l-Scalar l-Scalar-Plain">prec=&#39;Normal&#39;</span>
+<span class="w">                      </span><span class="l l-Scalar l-Scalar-Plain">)</span>
 
-<span class="l l-Scalar l-Scalar-Plain"># Optimize initial state</span><span class="p p-Indicator">:</span><span class="w"></span>
-<span class="l l-Scalar l-Scalar-Plain">struct_init.set_calculator(copy.deepcopy(ase_calculator))</span><span class="w"></span>
-<span class="l l-Scalar l-Scalar-Plain">qn = BFGS(struct_init, trajectory=&#39;initial.traj&#39;)</span><span class="w"></span>
-<span class="l l-Scalar l-Scalar-Plain">qn.run(fmax=0.01)</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain"># Optimize initial state</span><span class="p p-Indicator">:</span>
+<span class="l l-Scalar l-Scalar-Plain">struct_init.set_calculator(copy.deepcopy(ase_calculator))</span>
+<span class="l l-Scalar l-Scalar-Plain">qn = BFGS(struct_init, trajectory=&#39;initial.traj&#39;)</span>
+<span class="l l-Scalar l-Scalar-Plain">qn.run(fmax=0.01)</span>
 
-<span class="c1"># Optimize final state:</span><span class="w"></span>
-<span class="l l-Scalar l-Scalar-Plain">struct_fin.set_calculator(copy.deepcopy(ase_calculator))</span><span class="w"></span>
-<span class="l l-Scalar l-Scalar-Plain">qn = BFGS(struct_fin, trajectory=&#39;final.traj&#39;)</span><span class="w"></span>
-<span class="l l-Scalar l-Scalar-Plain">qn.run(fmax=0.01)</span><span class="w"></span>
+<span class="c1"># Optimize final state:</span>
+<span class="l l-Scalar l-Scalar-Plain">struct_fin.set_calculator(copy.deepcopy(ase_calculator))</span>
+<span class="l l-Scalar l-Scalar-Plain">qn = BFGS(struct_fin, trajectory=&#39;final.traj&#39;)</span>
+<span class="l l-Scalar l-Scalar-Plain">qn.run(fmax=0.01)</span>
 
-<span class="c1"># CatLearn NEB:</span><span class="w"></span>
+<span class="c1"># CatLearn NEB:</span>
 
-<span class="l l-Scalar l-Scalar-Plain">neb_catlearn = MLNEB(start=&#39;initial.traj&#39;, end=&#39;final.traj&#39;,</span><span class="w"></span>
-<span class="w">                    </span><span class="l l-Scalar l-Scalar-Plain">ase_calc=copy.deepcopy(ase_calculator),</span><span class="w"></span>
-<span class="w">                    </span><span class="l l-Scalar l-Scalar-Plain">n_images=11,</span><span class="w"></span>
-<span class="w">                    </span><span class="l l-Scalar l-Scalar-Plain">)</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">neb_catlearn = MLNEB(start=&#39;initial.traj&#39;, end=&#39;final.traj&#39;,</span>
+<span class="w">                    </span><span class="l l-Scalar l-Scalar-Plain">ase_calc=copy.deepcopy(ase_calculator),</span>
+<span class="w">                    </span><span class="l l-Scalar l-Scalar-Plain">n_images=11,</span>
+<span class="w">                    </span><span class="l l-Scalar l-Scalar-Plain">)</span>
 
-<span class="l l-Scalar l-Scalar-Plain">neb_catlearn.run(fmax=0.05, trajectory=&#39;ML-NEB.traj&#39;)</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">neb_catlearn.run(fmax=0.05, trajectory=&#39;ML-NEB.traj&#39;)</span>
 </code></pre></div>
 <h4 id="3-2-check-the-ml-neb-results">3-2. Check the ML-NEB results</h4>
 <p>After the job is finished, you need to check the output: </p>
@@ -1805,10 +2322,10 @@ The results are shown as</p>
 </li>
 </ul>
 <p>The <code>.traj</code> file can be read with <code>ase gui</code>
-<div class="highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">ase gui ML-NEB.traj</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">ase gui ML-NEB.traj</span>
 </code></pre></div></p>
 <p><img alt="Screenshot" src="../img/ML-ase-gui_1.png" /></p>
-<div class="highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">ase gui evaluated_structures.traj</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">ase gui evaluated_structures.traj</span>
 </code></pre></div>
 <p><img alt="Screenshot" src="../img/ML-ase-gui_2.png" /></p>
 <h4 id="3-3-ml-neb-result-visualization">3-3. ML-NEB result visualization</h4>
@@ -1905,84 +2422,47 @@ The results are shown as</p>
 </tr>
 </tbody>
 </table>
-                
-              
-              
-                
 
 
-              
-            </article>
-          </div>
+
+
+
+                
+              </article>
+            </div>
+          
+          
         </div>
+        
       </main>
       
-        
-<footer class="md-footer">
-  
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
-        
-          <a href="../../transiesta/transiesta_gnr-vacuum-gnr/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-            </div>
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                (1) GNRs-vacuum-GRNs
-              </div>
-            </div>
-          </a>
-        
-        
-          <a href="../../nanocore/nanocore_kpoint/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                k-point sampling
-              </div>
-            </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
+        <footer class="md-footer">
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
-      <div class="md-footer-copyright">
-        
-        Made with
-        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-          Material for MkDocs
-        </a>
-      </div>
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
       
     </div>
   </div>
 </footer>
       
     </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
     
-      <script src="../../assets/javascripts/vendor.08c56446.min.js"></script>
-      <script src="../../assets/javascripts/bundle.6ced434e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing"}</script>
-      
-      <script>
-        app = initialize({
-          base: "../..",
-          features: ['navigation.tabs', 'navigation.instant', 'navigation.sections'],
-          search: Object.assign({
-            worker: "../../assets/javascripts/worker/search.8c7e0a7e.min.js"
-          }, typeof search !== "undefined" && search)
-        })
-      </script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.instant", "navigation.sections"], "search": "../../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.78eede0e.min.js"></script>
       
         <script src="../../javascripts/config.js"></script>
       

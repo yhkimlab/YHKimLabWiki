@@ -9,8 +9,14 @@
       
       
       
-      <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-6.2.3">
+        <link rel="prev" href="../../atom/atom_pseudopotential/">
+      
+      
+        <link rel="next" href="../siesta_gold/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.2.5">
     
     
       
@@ -18,39 +24,40 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.3b61ea93.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0e669242.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.39b8e14a.min.css">
-        
-      
-    
-    
-    
-      
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
-        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
     
-    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
+
+    
     
     
   </head>
   
   
-    
-    
-    
-    
-    
-    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
-      
+    <body dir="ltr">
   
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -67,27 +74,29 @@
       
     </div>
     
+    
       
 
 <header class="md-header" data-md-component="header">
-  <nav class="md-header-nav md-grid" aria-label="Header">
-    <a href="../.." title="YHKLAB Wiki" class="md-header-nav__button md-logo" aria-label="YHKLAB Wiki">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="YHKLAB Wiki" class="md-header__button md-logo" aria-label="YHKLAB Wiki" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
 
     </a>
-    <label class="md-header-nav__button md-icon" for="__drawer">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
     </label>
-    <div class="md-header-nav__title" data-md-component="header-title">
-      <div class="md-header-nav__ellipsis">
-        <div class="md-header-nav__topic">
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
           <span class="md-ellipsis">
             YHKLAB Wiki
           </span>
         </div>
-        <div class="md-header-nav__topic">
+        <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
               (1) SIESTA 개요
@@ -97,22 +106,31 @@
       </div>
     </div>
     
-      <label class="md-header-nav__button md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
       </label>
-      
-<div class="md-search" data-md-component="search" role="dialog">
+      <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
       </label>
-      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
-      </button>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
@@ -120,7 +138,7 @@
           <div class="md-search-result__meta">
             Initializing search
           </div>
-          <ol class="md-search-result__list"></ol>
+          <ol class="md-search-result__list" role="presentation"></ol>
         </div>
       </div>
     </div>
@@ -129,6 +147,7 @@
     
     
   </nav>
+  
 </header>
     
     <div class="md-container" data-md-component="container">
@@ -136,33 +155,23 @@
       
         
           
+            
 <nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
-  <div class="md-tabs__inner md-grid">
+  <div class="md-grid">
     <ul class="md-tabs__list">
       
         
   
   
-
-
-  <li class="md-tabs__item">
-    <a href="../.." class="md-tabs__link">
-      Home
-    </a>
-  </li>
-
-      
-        
-  
-  
-
-
-  
-  
   
     <li class="md-tabs__item">
-      <a href="../../environment/wsl2/" class="md-tabs__link">
-        Environment Setup
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
       </a>
     </li>
   
@@ -171,73 +180,109 @@
         
   
   
-    
-  
-
-
-  
-  
   
     
+    
+      <li class="md-tabs__item">
+        <a href="../../environment/python/" class="md-tabs__link">
+          
+  
+  Environment Setup
 
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../../build/build_siesta/" class="md-tabs__link md-tabs__link--active">
-        SIESTA Tutorial
-      </a>
-    </li>
-  
-
+        </a>
+      </li>
+    
   
 
       
         
   
   
-
-
-  
+    
   
   
     
-
-  
+    
+      
   
   
     
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../build/build_siesta/" class="md-tabs__link">
+          
+  
+  SIESTA Tutorial
 
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../../vasp/ml-neb/" class="md-tabs__link">
-        Other
-      </a>
-    </li>
+        </a>
+      </li>
+    
   
 
-  
-
+    
   
 
       
         
   
   
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../vasp/ml-neb/" class="md-tabs__link">
+          
+  
+  Other
 
+        </a>
+      </li>
+    
+  
 
-  <li class="md-tabs__item">
-    <a href="../../about/" class="md-tabs__link">
-      About
-    </a>
-  </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../about/" class="md-tabs__link">
+        
+  
+    
+  
+  About
+
+      </a>
+    </li>
+  
 
       
     </ul>
   </div>
 </nav>
+          
         
       
       <main class="md-main" data-md-component="main">
@@ -245,11 +290,10 @@
           
             
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation" >
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
-
 
 
   
@@ -257,10 +301,10 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="YHKLAB Wiki" class="md-nav__button md-logo" aria-label="YHKLAB Wiki">
+    <a href="../.." title="YHKLAB Wiki" class="md-nav__button md-logo" aria-label="YHKLAB Wiki" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
 
     </a>
     YHKLAB Wiki
@@ -270,321 +314,484 @@
     
       
       
-      
-
-
-
-  <li class="md-nav__item">
-    <a href="../.." class="md-nav__link">
-      Home
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-
   
-  <li class="md-nav__item md-nav__item--nested">
-    
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" >
-    
-    <label class="md-nav__link" for="nav-2">
-      Environment Setup
-      <span class="md-nav__icon md-icon"></span>
-    </label>
-    <nav class="md-nav" aria-label="Environment Setup" data-md-level="1">
-      <label class="md-nav__title" for="nav-2">
-        <span class="md-nav__icon md-icon"></span>
-        Environment Setup
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
         
-        
-          
-          
-          
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
 
-
-
-  <li class="md-nav__item">
-    <a href="../../environment/wsl2/" class="md-nav__link">
-      Windows Subsystem for Linux
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../environment/vscode/" class="md-nav__link">
-      VSCode
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
+      </a>
+    </li>
+  
 
     
       
       
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
       
-
-
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Environment Setup
+  </span>
   
 
-
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Environment Setup
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
   
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-    
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
-    
-    <label class="md-nav__link" for="nav-3">
-      SIESTA Tutorial
-      <span class="md-nav__icon md-icon"></span>
-    </label>
-    <nav class="md-nav" aria-label="SIESTA Tutorial" data-md-level="1">
-      <label class="md-nav__title" for="nav-3">
-        <span class="md-nav__icon md-icon"></span>
-        SIESTA Tutorial
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-
   
-    
   
-  <li class="md-nav__item md-nav__item--section md-nav__item--nested">
-    
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-1" type="checkbox" id="nav-3-1" >
-    
-    <label class="md-nav__link" for="nav-3-1">
-      0. 준비
-      <span class="md-nav__icon md-icon"></span>
-    </label>
-    <nav class="md-nav" aria-label="0. 준비" data-md-level="2">
-      <label class="md-nav__title" for="nav-3-1">
-        <span class="md-nav__icon md-icon"></span>
-        0. 준비
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
+    <li class="md-nav__item">
+      <a href="../../environment/python/" class="md-nav__link">
         
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../build/build_siesta/" class="md-nav__link">
-      (1) SIESTA 설치
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../build/build_atom/" class="md-nav__link">
-      (2) ATOM 설치
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-
   
-    
-  
-  <li class="md-nav__item md-nav__item--section md-nav__item--nested">
-    
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-2" type="checkbox" id="nav-3-2" >
-    
-    <label class="md-nav__link" for="nav-3-2">
-      1. ATOM 계산
-      <span class="md-nav__icon md-icon"></span>
-    </label>
-    <nav class="md-nav" aria-label="1. ATOM 계산" data-md-level="2">
-      <label class="md-nav__title" for="nav-3-2">
-        <span class="md-nav__icon md-icon"></span>
-        1. ATOM 계산
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-
-  
-  <li class="md-nav__item md-nav__item--nested">
-    
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-2-1" type="checkbox" id="nav-3-2-1" >
-    
-    <label class="md-nav__link" for="nav-3-2-1">
-      A. 기초 과정
-      <span class="md-nav__icon md-icon"></span>
-    </label>
-    <nav class="md-nav" aria-label="A. 기초 과정" data-md-level="3">
-      <label class="md-nav__title" for="nav-3-2-1">
-        <span class="md-nav__icon md-icon"></span>
-        A. 기초 과정
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../atom/atom_all_electron/" class="md-nav__link">
-      (1) 온-전자 계산
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../atom/atom_pseudopotential/" class="md-nav__link">
-      (2) 슈도퍼텐셜 생성
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
+  <span class="md-ellipsis">
+    Getting Started with Python
+  </span>
   
 
+      </a>
+    </li>
+  
 
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../environment/wsl2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Windows Subsystem for Linux
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../environment/vscode/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VSCode
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
   
     
   
-  <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+  
     
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3" checked>
     
-    <label class="md-nav__link" for="nav-3-3">
-      2. SIESTA 계산
-      <span class="md-nav__icon md-icon"></span>
-    </label>
-    <nav class="md-nav" aria-label="2. SIESTA 계산" data-md-level="2">
-      <label class="md-nav__title" for="nav-3-3">
-        <span class="md-nav__icon md-icon"></span>
-        2. SIESTA 계산
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
         
         
-          
-          
-          
-
-
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    SIESTA Tutorial
+  </span>
   
 
-
-  
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-    
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-3-1" type="checkbox" id="nav-3-3-1" checked>
-    
-    <label class="md-nav__link" for="nav-3-3-1">
-      A. 기초 과정
-      <span class="md-nav__icon md-icon"></span>
-    </label>
-    <nav class="md-nav" aria-label="A. 기초 과정" data-md-level="3">
-      <label class="md-nav__title" for="nav-3-3-1">
-        <span class="md-nav__icon md-icon"></span>
-        A. 기초 과정
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
+            <span class="md-nav__icon md-icon"></span>
+          </label>
         
-        
-          
-          
-          
-
-
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            SIESTA Tutorial
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
   
-
-
-  <li class="md-nav__item md-nav__item--active">
+  
+  
     
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
     
       
     
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    0. 준비
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            0. 준비
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../build/build_siesta/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    (1) SIESTA 설치
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../build/build_atom/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    (2) ATOM 설치
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
     
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        (1) SIESTA 개요
-        <span class="md-nav__icon md-icon"></span>
-      </label>
     
-    <a href="./" class="md-nav__link md-nav__link--active">
-      (1) SIESTA 개요
-    </a>
     
       
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    1. ATOM 계산
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            1. ATOM 계산
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1" >
+        
+          <label class="md-nav__link" for="__nav_3_2_1" id="__nav_3_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    A. 기초 과정
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            A. 기초 과정
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../atom/atom_all_electron/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    (1) 온-전자 계산
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../atom/atom_pseudopotential/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    (2) 슈도퍼텐셜 생성
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" checked>
+        
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    2. SIESTA 계산
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            2. SIESTA 계산
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_1" checked>
+        
+          <label class="md-nav__link" for="__nav_3_3_1" id="__nav_3_3_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    A. 기초 과정
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            A. 기초 과정
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    (1) SIESTA 개요
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    (1) SIESTA 개요
+  </span>
+  
+
+      </a>
+      
+        
+
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
   
   
     
@@ -594,7 +801,7 @@
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
-    <ul class="md-nav__list" data-md-scrollfix>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
   <a href="#contents" class="md-nav__link">
@@ -681,641 +888,945 @@
     </ul>
   
 </nav>
-    
-  </li>
+      
+    </li>
+  
 
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../siesta_gold/" class="md-nav__link">
         
-          
-          
-          
+  
+  <span class="md-ellipsis">
+    (2) Au 벌크/슬랩 구조
+  </span>
+  
 
+      </a>
+    </li>
+  
 
-
-  <li class="md-nav__item">
-    <a href="../siesta_gold/" class="md-nav__link">
-      (2) Au 벌크/슬랩 구조
-    </a>
-  </li>
-
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../siesta_graphene/" class="md-nav__link">
         
-          
-          
-          
+  
+  <span class="md-ellipsis">
+    (3) Graphene
+  </span>
+  
 
+      </a>
+    </li>
+  
 
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
 
-  <li class="md-nav__item">
-    <a href="../siesta_graphene/" class="md-nav__link">
-      (3) Graphene
-    </a>
-  </li>
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
 
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-
+              
+            
+              
+                
+  
+  
   
     
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
   
-  <li class="md-nav__item md-nav__item--section md-nav__item--nested">
-    
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-4" type="checkbox" id="nav-3-4" >
-    
-    <label class="md-nav__link" for="nav-3-4">
-      3. TranSIESTA 계산
-      <span class="md-nav__icon md-icon"></span>
-    </label>
-    <nav class="md-nav" aria-label="3. TranSIESTA 계산" data-md-level="2">
-      <label class="md-nav__title" for="nav-3-4">
-        <span class="md-nav__icon md-icon"></span>
-        3. TranSIESTA 계산
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-
+  <span class="md-ellipsis">
+    3. TranSIESTA 계산
+  </span>
   
-  <li class="md-nav__item md-nav__item--nested">
-    
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-4-1" type="checkbox" id="nav-3-4-1" >
-    
-    <label class="md-nav__link" for="nav-3-4-1">
-      A. 기초 과정
-      <span class="md-nav__icon md-icon"></span>
-    </label>
-    <nav class="md-nav" aria-label="A. 기초 과정" data-md-level="3">
-      <label class="md-nav__title" for="nav-3-4-1">
-        <span class="md-nav__icon md-icon"></span>
-        A. 기초 과정
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
         
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../transiesta/transiesta_overview/" class="md-nav__link">
-      (1) TranSIESTA 개요
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../transiesta/transiesta_modeling/" class="md-nav__link">
-      (2) 접합구조 모델링
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../transiesta/transiesta_si1d/" class="md-nav__link">
-      (3) Si chain (1D)
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            3. TranSIESTA 계산
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
   
-  <li class="md-nav__item md-nav__item--nested">
-    
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-4-2" type="checkbox" id="nav-3-4-2" >
-    
-    <label class="md-nav__link" for="nav-3-4-2">
-      B. 중급/고급 과정
-      <span class="md-nav__icon md-icon"></span>
-    </label>
-    <nav class="md-nav" aria-label="B. 중급/고급 과정" data-md-level="3">
-      <label class="md-nav__title" for="nav-3-4-2">
-        <span class="md-nav__icon md-icon"></span>
-        B. 중급/고급 과정
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-
   
-  <li class="md-nav__item md-nav__item--nested">
-    
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-4-2-1" type="checkbox" id="nav-3-4-2-1" >
-    
-    <label class="md-nav__link" for="nav-3-4-2-1">
-      평형상태 계산
-      <span class="md-nav__icon md-icon"></span>
-    </label>
-    <nav class="md-nav" aria-label="평형상태 계산" data-md-level="4">
-      <label class="md-nav__title" for="nav-3-4-2-1">
-        <span class="md-nav__icon md-icon"></span>
-        평형상태 계산
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../transiesta/transiesta_graphene/" class="md-nav__link">
-      (1) Graphene (2D)
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../transiesta/transiesta_gnr/" class="md-nav__link">
-      (2) Pristine & defective GNRs
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../transiesta/transiesta_si-sio2-si/" class="md-nav__link">
-      (3) Si-SiO2-Si
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-
   
-  <li class="md-nav__item md-nav__item--nested">
     
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-4-2-2" type="checkbox" id="nav-3-4-2-2" >
     
-    <label class="md-nav__link" for="nav-3-4-2-2">
-      비평형상태 계산
-      <span class="md-nav__icon md-icon"></span>
-    </label>
-    <nav class="md-nav" aria-label="비평형상태 계산" data-md-level="4">
-      <label class="md-nav__title" for="nav-3-4-2-2">
-        <span class="md-nav__icon md-icon"></span>
-        비평형상태 계산
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
+    <li class="md-nav__item md-nav__item--nested">
+      
         
         
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../transiesta/transiesta_gnr-vacuum-gnr/" class="md-nav__link">
-      (1) GNRs-vacuum-GRNs
-    </a>
-  </li>
-
         
-      </ul>
-    </nav>
-  </li>
-
         
-      </ul>
-    </nav>
-  </li>
-
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4_1" >
         
-      </ul>
-    </nav>
-  </li>
+          <label class="md-nav__link" for="__nav_3_4_1" id="__nav_3_4_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    A. 기초 과정
+  </span>
+  
 
+            <span class="md-nav__icon md-icon"></span>
+          </label>
         
-      </ul>
-    </nav>
-  </li>
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            A. 기초 과정
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../transiesta/transiesta_overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    (1) TranSIESTA 개요
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../transiesta/transiesta_modeling/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    (2) 접합구조 모델링
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../transiesta/transiesta_si1d/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    (3) Si chain (1D)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4_2" >
+        
+          <label class="md-nav__link" for="__nav_3_4_2" id="__nav_3_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    B. 중급/고급 과정
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            B. 중급/고급 과정
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4_2_1" >
+        
+          <label class="md-nav__link" for="__nav_3_4_2_1" id="__nav_3_4_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    평형상태 계산
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_4_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            평형상태 계산
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../transiesta/transiesta_graphene/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    (1) Graphene (2D)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../transiesta/transiesta_gnr/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    (2) Pristine & defective GNRs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../transiesta/transiesta_si-sio2-si/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    (3) Si-SiO2-Si
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4_2_2" >
+        
+          <label class="md-nav__link" for="__nav_3_4_2_2" id="__nav_3_4_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    비평형상태 계산
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_4_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            비평형상태 계산
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../transiesta/transiesta_gnr-vacuum-gnr/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    (1) GNRs-vacuum-GRNs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
 
     
       
       
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
       
-
-
-
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
   
-  <li class="md-nav__item md-nav__item--nested">
-    
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" >
-    
-    <label class="md-nav__link" for="nav-4">
-      Other
-      <span class="md-nav__icon md-icon"></span>
-    </label>
-    <nav class="md-nav" aria-label="Other" data-md-level="1">
-      <label class="md-nav__title" for="nav-4">
-        <span class="md-nav__icon md-icon"></span>
-        Other
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-
+  <span class="md-ellipsis">
+    Other
+  </span>
   
-    
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Other
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
   
-  <li class="md-nav__item md-nav__item--section md-nav__item--nested">
-    
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-1" type="checkbox" id="nav-4-1" >
-    
-    <label class="md-nav__link" for="nav-4-1">
-      Vasp
-      <span class="md-nav__icon md-icon"></span>
-    </label>
-    <nav class="md-nav" aria-label="Vasp" data-md-level="2">
-      <label class="md-nav__title" for="nav-4-1">
-        <span class="md-nav__icon md-icon"></span>
-        Vasp
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-
   
-  <li class="md-nav__item md-nav__item--nested">
-    
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-1-1" type="checkbox" id="nav-4-1-1" >
-    
-    <label class="md-nav__link" for="nav-4-1-1">
-      Nudged Elastic Band (NEB)
-      <span class="md-nav__icon md-icon"></span>
-    </label>
-    <nav class="md-nav" aria-label="Nudged Elastic Band (NEB)" data-md-level="3">
-      <label class="md-nav__title" for="nav-4-1-1">
-        <span class="md-nav__icon md-icon"></span>
-        Nudged Elastic Band (NEB)
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../vasp/ml-neb/" class="md-nav__link">
-      Machine learning for nudged elastic band
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-
   
     
-  
-  <li class="md-nav__item md-nav__item--section md-nav__item--nested">
     
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2" >
-    
-    <label class="md-nav__link" for="nav-4-2">
-      NanoCore
-      <span class="md-nav__icon md-icon"></span>
-    </label>
-    <nav class="md-nav" aria-label="NanoCore" data-md-level="2">
-      <label class="md-nav__title" for="nav-4-2">
-        <span class="md-nav__icon md-icon"></span>
-        NanoCore
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../nanocore/nanocore_kpoint/" class="md-nav__link">
-      k-point sampling
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  
-  <li class="md-nav__item md-nav__item--nested">
-    
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-2-2" type="checkbox" id="nav-4-2-2" >
-    
-    <label class="md-nav__link" for="nav-4-2-2">
-      Structure optimization
-      <span class="md-nav__icon md-icon"></span>
-    </label>
-    <nav class="md-nav" aria-label="Structure optimization" data-md-level="3">
-      <label class="md-nav__title" for="nav-4-2-2">
-        <span class="md-nav__icon md-icon"></span>
-        Structure optimization
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../nanocore/nanocore_eos/" class="md-nav__link">
-      Equation of state (EOS) 
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../nanocore/nanocore_murnaghan/" class="md-nav__link">
-      Murnaghan fitting
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../nanocore/nanocore_geo/" class="md-nav__link">
-      Geometry optimization
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  
-    
-  
-  <li class="md-nav__item md-nav__item--section md-nav__item--nested">
-    
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-3" type="checkbox" id="nav-4-3" >
-    
-    <label class="md-nav__link" for="nav-4-3">
-      Git
-      <span class="md-nav__icon md-icon"></span>
-    </label>
-    <nav class="md-nav" aria-label="Git" data-md-level="2">
-      <label class="md-nav__title" for="nav-4-3">
-        <span class="md-nav__icon md-icon"></span>
-        Git
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../github_tutorial/0.github_create_repository/" class="md-nav__link">
-      Create Repository
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  
-    
-  
-  <li class="md-nav__item md-nav__item--section md-nav__item--nested">
-    
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-4" type="checkbox" id="nav-4-4" >
-    
-    <label class="md-nav__link" for="nav-4-4">
-      유용한 명령어
-      <span class="md-nav__icon md-icon"></span>
-    </label>
-    <nav class="md-nav" aria-label="유용한 명령어" data-md-level="2">
-      <label class="md-nav__title" for="nav-4-4">
-        <span class="md-nav__icon md-icon"></span>
-        유용한 명령어
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../other/1.1_LinuxCheatSheet/" class="md-nav__link">
-      Linux
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../other/1.2_PythonCheatSheet/" class="md-nav__link">
-      Python
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../other/1.3_EmacsCheatSheet/" class="md-nav__link">
-      Emacs
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../other/1.4_AnacondaCheatSheet/" class="md-nav__link">
-      Anaconda
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
     
       
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Vasp
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            Vasp
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_1" >
+        
+          <label class="md-nav__link" for="__nav_4_1_1" id="__nav_4_1_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Nudged Elastic Band (NEB)
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_1_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_1">
+            <span class="md-nav__icon md-icon"></span>
+            Nudged Elastic Band (NEB)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vasp/ml-neb/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Machine learning for nudged elastic band
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    NanoCore
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            NanoCore
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nanocore/nanocore_kpoint/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    k-point sampling
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_2" >
+        
+          <label class="md-nav__link" for="__nav_4_2_2" id="__nav_4_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Structure optimization
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Structure optimization
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nanocore/nanocore_eos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Equation of state (EOS) 
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nanocore/nanocore_murnaghan/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Murnaghan fitting
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nanocore/nanocore_geo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Geometry optimization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Git
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            Git
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../github_tutorial/0.github_create_repository/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Create Repository
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    유용한 명령어
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            유용한 명령어
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../other/1.1_LinuxCheatSheet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Linux
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../other/1.2_PythonCheatSheet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../other/1.3_EmacsCheatSheet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Emacs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../other/1.4_AnacondaCheatSheet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Anaconda
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
       
       
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
 
-
-
-  <li class="md-nav__item">
-    <a href="../../about/" class="md-nav__link">
-      About
-    </a>
-  </li>
+      </a>
+    </li>
+  
 
     
   </ul>
@@ -1326,11 +1837,13 @@
             
             
               
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc" >
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
+
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
   
   
     
@@ -1340,7 +1853,7 @@
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
-    <ul class="md-nav__list" data-md-scrollfix>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
   <a href="#contents" class="md-nav__link">
@@ -1432,12 +1945,14 @@
               </div>
             
           
-          <div class="md-content">
-            <article class="md-content__inner md-typeset">
-              
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
                 
-                
-                <h1 id="basic-siesta-calculation">Basic SIESTA Calculation</h1>
+                  
+
+
+<h1 id="basic-siesta-calculation">Basic SIESTA Calculation</h1>
 <h2 id="contents">Contents</h2>
 <ol>
 <li>SIESTA 개요</li>
@@ -1482,88 +1997,88 @@
 </ul>
 <p><img alt="Screenshot" src="../img/0-05.png" /></p>
 <p>계산을 하기위해 위에서 받은 cif파일을 fdf파일로 바꿔줘야한다.</p>
-<div class="highlight"><pre><span></span><code>$ vaspkit
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>vaspkit
 <span class="m">1</span>
 <span class="m">105</span>
-struct.cif // cif 파일의 이름
+struct.cif<span class="w"> </span>//<span class="w"> </span>cif<span class="w"> </span>파일의<span class="w"> </span>이름
 </code></pre></div>
 <p>위 순서대로 입력하고 enter를 치면 cif 파일에서 POSCAR 파일이 생성된다.</p>
-<div class="highlight"><pre><span></span><code>$ poscar2fdf.py POSCAR 
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>poscar2fdf.py<span class="w"> </span>POSCAR<span class="w"> </span>
 </code></pre></div>
 <p>위 명령어를 치면 POSCAR 파일을 fdf 파일로 변환해준다.</p>
 <p>이로서 구조최적화를 하기 전 기본적인 STRUCT.fdf 파일을 만들 수 있다.</p>
-<div class="highlight"><pre><span></span><code>$ vi STRUCT.fdf
-NumberOfAtoms    <span class="m">5</span>           <span class="c1"># Number of atoms</span>
-NumberOfSpecies  <span class="m">2</span>           <span class="c1"># Number of species</span>
-%block ChemicalSpeciesLabel
- <span class="m">1</span> <span class="m">6</span> C
- <span class="m">2</span> <span class="m">1</span> H
-%endblock ChemicalSpeciesLabel
-LatticeConstant      <span class="m">40</span>.000000000 Ang
-%block LatticeVectors
-    <span class="m">1</span>.000000000     <span class="m">0</span>.000000000     <span class="m">0</span>.000000000
-    <span class="m">0</span>.000000000     <span class="m">1</span>.000000000     <span class="m">0</span>.000000000
-    <span class="m">0</span>.000000000     <span class="m">0</span>.000000000     <span class="m">1</span>.000000000
-%endblock LatticeVectors
-AtomicCoordinatesFormat ScaledCartesian
-%block AtomicCoordinatesAndAtomicSpecies
-    -0.000196800    -0.000196800    -0.000178525    <span class="m">1</span>    <span class="m">1</span>
-     <span class="m">0</span>.025718150    -0.006302475    -0.007980825    <span class="m">2</span>    <span class="m">2</span>
-    -0.006302475     <span class="m">0</span>.025718150    -0.007980825    <span class="m">2</span>    <span class="m">3</span>
-    -0.002297125    -0.002297125     <span class="m">0</span>.027402550    <span class="m">2</span>    <span class="m">4</span>
-    -0.017873200    -0.017873200    -0.012210550    <span class="m">2</span>    <span class="m">5</span>
-%endblock AtomicCoordinatesAndAtomicSpecies
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>vi<span class="w"> </span>STRUCT.fdf
+NumberOfAtoms<span class="w">    </span><span class="m">5</span><span class="w">           </span><span class="c1"># Number of atoms</span>
+NumberOfSpecies<span class="w">  </span><span class="m">2</span><span class="w">           </span><span class="c1"># Number of species</span>
+%block<span class="w"> </span>ChemicalSpeciesLabel
+<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">6</span><span class="w"> </span>C
+<span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">1</span><span class="w"> </span>H
+%endblock<span class="w"> </span>ChemicalSpeciesLabel
+LatticeConstant<span class="w">      </span><span class="m">40</span>.000000000<span class="w"> </span>Ang
+%block<span class="w"> </span>LatticeVectors
+<span class="w">    </span><span class="m">1</span>.000000000<span class="w">     </span><span class="m">0</span>.000000000<span class="w">     </span><span class="m">0</span>.000000000
+<span class="w">    </span><span class="m">0</span>.000000000<span class="w">     </span><span class="m">1</span>.000000000<span class="w">     </span><span class="m">0</span>.000000000
+<span class="w">    </span><span class="m">0</span>.000000000<span class="w">     </span><span class="m">0</span>.000000000<span class="w">     </span><span class="m">1</span>.000000000
+%endblock<span class="w"> </span>LatticeVectors
+AtomicCoordinatesFormat<span class="w"> </span>ScaledCartesian
+%block<span class="w"> </span>AtomicCoordinatesAndAtomicSpecies
+<span class="w">    </span>-0.000196800<span class="w">    </span>-0.000196800<span class="w">    </span>-0.000178525<span class="w">    </span><span class="m">1</span><span class="w">    </span><span class="m">1</span>
+<span class="w">     </span><span class="m">0</span>.025718150<span class="w">    </span>-0.006302475<span class="w">    </span>-0.007980825<span class="w">    </span><span class="m">2</span><span class="w">    </span><span class="m">2</span>
+<span class="w">    </span>-0.006302475<span class="w">     </span><span class="m">0</span>.025718150<span class="w">    </span>-0.007980825<span class="w">    </span><span class="m">2</span><span class="w">    </span><span class="m">3</span>
+<span class="w">    </span>-0.002297125<span class="w">    </span>-0.002297125<span class="w">     </span><span class="m">0</span>.027402550<span class="w">    </span><span class="m">2</span><span class="w">    </span><span class="m">4</span>
+<span class="w">    </span>-0.017873200<span class="w">    </span>-0.017873200<span class="w">    </span>-0.012210550<span class="w">    </span><span class="m">2</span><span class="w">    </span><span class="m">5</span>
+%endblock<span class="w"> </span>AtomicCoordinatesAndAtomicSpecies
 </code></pre></div>
 <p>c.pseudopotentil 파일은 default pseudopotential (ChemicalSpeciesLabel.psf) for each atomic species. (<a href="https://departments.icmab.es/leem/siesta/Databases/Pseudopotentials/periodictable-lda-abinit.html">https://departments.icmab.es/leem/siesta/Databases/Pseudopotentials/periodictable-lda-abinit.html</a>) 에서 다운 받거나 직접 만들 수 있다. 계산에 필요한 pseudopotential 파일과 BASIS.fdf, KPT.fdf, slm_siesta_run파일은 폴더에 정리해 두었다.</p>
 <p>d. 계산을 위한 폴더 만들기</p>
 <div class="highlight"><pre><span></span><code>├─CH4
-│  │  slm_siesta_run
-│  └─input
-│       BASIS.fdf
-│       C.psf
-│       H.psf
-│       KPT.fdf
-│       RUN.fdf
-│       STRUCT.fdf
+│<span class="w">  </span>│<span class="w">  </span>slm_siesta_run
+│<span class="w">  </span>└─input
+│<span class="w">       </span>BASIS.fdf
+│<span class="w">       </span>C.psf
+│<span class="w">       </span>H.psf
+│<span class="w">       </span>KPT.fdf
+│<span class="w">       </span>RUN.fdf
+│<span class="w">       </span>STRUCT.fdf
 </code></pre></div>
 <p>계산을 위해 다음과 같은 배치로 파일을 넣어주어야 한다. 이를 수행하기 위한 명령어는 아래와 같다.</p>
-<div class="highlight"><pre><span></span><code>$ mkdir ch4<span class="o">(</span>폴더이름<span class="o">)</span> 
-$ <span class="nb">cd</span> ch4
-slm_siesta_run을 ch4 폴더에 복사
-$ mkdir input<span class="o">(</span>폴더이름<span class="o">)</span>
-$ <span class="nb">cd</span> input 
-C.psf, H.psf, RUN.fdf, STRUCT.fdf, KPT.fdf, BASIS.fdf 파일을 input 폴더에 복사
-$ <span class="nb">cd</span> ..
-$ sbatch slm_siesta_run
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>mkdir<span class="w"> </span>ch4<span class="o">(</span>폴더이름<span class="o">)</span><span class="w"> </span>
+$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>ch4
+slm_siesta_run을<span class="w"> </span>ch4<span class="w"> </span>폴더에<span class="w"> </span>복사
+$<span class="w"> </span>mkdir<span class="w"> </span>input<span class="o">(</span>폴더이름<span class="o">)</span>
+$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>input<span class="w"> </span>
+C.psf,<span class="w"> </span>H.psf,<span class="w"> </span>RUN.fdf,<span class="w"> </span>STRUCT.fdf,<span class="w"> </span>KPT.fdf,<span class="w"> </span>BASIS.fdf<span class="w"> </span>파일을<span class="w"> </span>input<span class="w"> </span>폴더에<span class="w"> </span>복사
+$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>..
+$<span class="w"> </span>sbatch<span class="w"> </span>slm_siesta_run
 </code></pre></div>
 <h3 id="exercise-2-ch4">Exercise 2: CH4 분자 구조 최적화</h3>
 <p>Exercise 1에서 주어진 STRUCT.fdf 파일은 이미 최적화가 완료된 파일이다. 이번에는 CH4의 틀린 구조를 입력으로 넣고 계산을 통해 올바른 구조가 도출되게 됨을 확인해 볼 것이다.<br />
 CH4는 결합의 길이가 모두 같음이 알려져 있다. Exercise 1의 STRUCT.fdf파일도 결합 길이가 모두 같으므로 H 하나의 결합길이를 임의로 늘린 STRUCT.fdf파일을 입력으로 사용할 것이다.</p>
-<div class="highlight"><pre><span></span><code>NumberOfAtoms    <span class="m">5</span>           <span class="c1"># Number of atoms</span>
-NumberOfSpecies  <span class="m">2</span>           <span class="c1"># Number of species</span>
-%block ChemicalSpeciesLabel
- <span class="m">1</span> <span class="m">6</span> C
- <span class="m">2</span> <span class="m">1</span> H
-%endblock ChemicalSpeciesLabel
-LatticeConstant      <span class="m">40</span>.000000000 Ang
-%block LatticeVectors
-    <span class="m">1</span>.000000000     <span class="m">0</span>.000000000     <span class="m">0</span>.000000000
-    <span class="m">0</span>.000000000     <span class="m">1</span>.000000000     <span class="m">0</span>.000000000
-    <span class="m">0</span>.000000000     <span class="m">0</span>.000000000     <span class="m">1</span>.000000000
-%endblock LatticeVectors
-AtomicCoordinatesFormat ScaledCartesian
-%block AtomicCoordinatesAndAtomicSpecies
-    -0.000206800    -0.000206800    -0.000188525    <span class="m">1</span>    <span class="m">1</span>
-     <span class="m">0</span>.025718150    -0.006302475    -0.007980825    <span class="m">2</span>    <span class="m">2</span>
-    -0.006302475     <span class="m">0</span>.025718150    -0.007980825    <span class="m">2</span>    <span class="m">3</span>
-    -0.002297125    -0.002297125     <span class="m">0</span>.027402550    <span class="m">2</span>    <span class="m">4</span>
-    -0.017873200    -0.017873200    -0.012210550    <span class="m">2</span>    <span class="m">5</span>
-%endblock AtomicCoordinatesAndAtomicSpecies
+<div class="highlight"><pre><span></span><code>NumberOfAtoms<span class="w">    </span><span class="m">5</span><span class="w">           </span><span class="c1"># Number of atoms</span>
+NumberOfSpecies<span class="w">  </span><span class="m">2</span><span class="w">           </span><span class="c1"># Number of species</span>
+%block<span class="w"> </span>ChemicalSpeciesLabel
+<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">6</span><span class="w"> </span>C
+<span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">1</span><span class="w"> </span>H
+%endblock<span class="w"> </span>ChemicalSpeciesLabel
+LatticeConstant<span class="w">      </span><span class="m">40</span>.000000000<span class="w"> </span>Ang
+%block<span class="w"> </span>LatticeVectors
+<span class="w">    </span><span class="m">1</span>.000000000<span class="w">     </span><span class="m">0</span>.000000000<span class="w">     </span><span class="m">0</span>.000000000
+<span class="w">    </span><span class="m">0</span>.000000000<span class="w">     </span><span class="m">1</span>.000000000<span class="w">     </span><span class="m">0</span>.000000000
+<span class="w">    </span><span class="m">0</span>.000000000<span class="w">     </span><span class="m">0</span>.000000000<span class="w">     </span><span class="m">1</span>.000000000
+%endblock<span class="w"> </span>LatticeVectors
+AtomicCoordinatesFormat<span class="w"> </span>ScaledCartesian
+%block<span class="w"> </span>AtomicCoordinatesAndAtomicSpecies
+<span class="w">    </span>-0.000206800<span class="w">    </span>-0.000206800<span class="w">    </span>-0.000188525<span class="w">    </span><span class="m">1</span><span class="w">    </span><span class="m">1</span>
+<span class="w">     </span><span class="m">0</span>.025718150<span class="w">    </span>-0.006302475<span class="w">    </span>-0.007980825<span class="w">    </span><span class="m">2</span><span class="w">    </span><span class="m">2</span>
+<span class="w">    </span>-0.006302475<span class="w">     </span><span class="m">0</span>.025718150<span class="w">    </span>-0.007980825<span class="w">    </span><span class="m">2</span><span class="w">    </span><span class="m">3</span>
+<span class="w">    </span>-0.002297125<span class="w">    </span>-0.002297125<span class="w">     </span><span class="m">0</span>.027402550<span class="w">    </span><span class="m">2</span><span class="w">    </span><span class="m">4</span>
+<span class="w">    </span>-0.017873200<span class="w">    </span>-0.017873200<span class="w">    </span>-0.012210550<span class="w">    </span><span class="m">2</span><span class="w">    </span><span class="m">5</span>
+%endblock<span class="w"> </span>AtomicCoordinatesAndAtomicSpecies
 </code></pre></div>
 <p>우선적으로 부정확한 STRUCT.fdf의 구조를 보도록 하자. STRUCT.fdf파일을 바로 볼 수는 없어서 fdf파일을 xyz로 바꾸고 xcrysen을 통해 분자구조를 확인할 것이다.</p>
-<div class="highlight"><pre><span></span><code>$ <span class="nb">cd</span> <span class="o">(</span>input directory<span class="o">)</span>
-$ fdf2xyz.py STRUCT.fdf <span class="o">(</span>STRUCT.fdf 파일을 xyz 파일로 변환<span class="o">)</span> 
-$ xyz2xcrysden.py STRUCT.xyz
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span><span class="o">(</span>input<span class="w"> </span>directory<span class="o">)</span>
+$<span class="w"> </span>fdf2xyz.py<span class="w"> </span>STRUCT.fdf<span class="w"> </span><span class="o">(</span>STRUCT.fdf<span class="w"> </span>파일을<span class="w"> </span>xyz<span class="w"> </span>파일로<span class="w"> </span>변환<span class="o">)</span><span class="w"> </span>
+$<span class="w"> </span>xyz2xcrysden.py<span class="w"> </span>STRUCT.xyz
 </code></pre></div>
 <p><strong>Display-Unit of Repetition-Translational asymmetric unit 선택</strong><br />
 (이를 반드시 해줘야 원자 구조를 알아볼 수 있다.)</p>
@@ -1576,21 +2091,21 @@ $ xyz2xcrysden.py STRUCT.xyz
 <p><img alt="03_010" src="../img/03/03_017.png" /></p>
 <p>그림에서 볼 수 있듯이 CH4 분자의 왼쪽 H가 다른 분자보다 0.001 Ang 더 짧음을 알 수 있다.<br />
 이 STRUCT.fdf파일을 input 폴더에 넣는다. 계산을 위해 RUN.fdf와 BASIS.fdf를 수정해준다.</p>
-<div class="highlight"><pre><span></span><code>$ <span class="nb">cd</span> input
-$ vi RUN.fdf
-MD.NumberCGstep을 300으로 바꾼다.
-$ vi BASIS.fdf
-PAO.BasisSize를 SZ로 바꾼다.
-$ <span class="nb">cd</span> ..
-$ sbatch slm_siesta_run
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>input
+$<span class="w"> </span>vi<span class="w"> </span>RUN.fdf
+MD.NumberCGstep을<span class="w"> </span>300으로<span class="w"> </span>바꾼다.
+$<span class="w"> </span>vi<span class="w"> </span>BASIS.fdf
+PAO.BasisSize를<span class="w"> </span>SZ로<span class="w"> </span>바꾼다.
+$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>..
+$<span class="w"> </span>sbatch<span class="w"> </span>slm_siesta_run
 </code></pre></div>
 <p>MD.NumberCGstep은 계산의 최대 iteration 횟수를 설정해주는 것이다. 300번 계산을 돌려도 값이 수렴하지 않으면 프로그램을 끝낸다. BasisSize는 빠른 구조확인을 위해 정확도는 떨어지지만 빠른 SZ로 설정해준다.
 계산을 완료하면 OUT폴더에 계산이 끝난 파일인 Test.xyz를 확인할 수 있다. 이 파일이 구조 최적화 된 결과이다.<br />
 Test.xyz를 xcrysden으로 계산된 구조를 확인해보도록 하자. 그 전에 Test.xyz에는 Cell정보가 포함되어 있지 않다. 따라서 xcrysden으로 바로 읽어올 수 없다. input에 있는 STRUCT.xyz파일의 Cell정보를 Test.xyz에 복사해준다.</p>
 <p><img alt="03_010" src="../img/03/03_010.jpg" /></p>
 <p>Cell정보 복사가 완료되면 xcrysden으로 Test.xyz의 분자구조를 확인해보자.</p>
-<div class="highlight"><pre><span></span><code>$ <span class="nb">cd</span> <span class="o">(</span>Output directory<span class="o">)</span>
-$ xyz2xcrysden.py Test.xyz
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span><span class="o">(</span>Output<span class="w"> </span>directory<span class="o">)</span>
+$<span class="w"> </span>xyz2xcrysden.py<span class="w"> </span>Test.xyz
 </code></pre></div>
 <p><img alt="03_010" src="../img/03/03_017.png" /></p>
 <p>input의 결합길이가 0.001 Ang 차이났던 것과 달리 계산된 결과는 0.0001 Ang 수준으로 차이가 줄었다. 따라서 최적화된 구조가 형성되었음을 확인해볼 수 있다. C와 H간 분자간 길이가 1.2 Ang으로 Exercise 3의 결과와 거의 일치함도 확인해볼 수 있다.</p>
@@ -1598,20 +2113,20 @@ $ xyz2xcrysden.py Test.xyz
 <p>구조최적화를 위와 같이 진행 한 후에는 Basis 확인를 통해 사용한 Basis가 적절한지 테스트를 한다. Basis 테스트는 구조최적화가 완료된 구조에서 각 Basis 별로 계산을 진행하여 안정된 에너지를 가지는 Basis를 선택하면 된다. </p>
 <ul>
 <li>Siesta code
-<div class="highlight"><pre><span></span><code>$ <span class="nb">cd</span> input
-$ vi BASIS.fdf
-아래 그림의 PAO.BasisSize를 SZ, DZ, TZ, DZDP 등으로 테스트 한다.
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>input
+$<span class="w"> </span>vi<span class="w"> </span>BASIS.fdf
+아래<span class="w"> </span>그림의<span class="w"> </span>PAO.BasisSize를<span class="w"> </span>SZ,<span class="w"> </span>DZ,<span class="w"> </span>TZ,<span class="w"> </span>DZDP<span class="w"> </span>등으로<span class="w"> </span>테스트<span class="w"> </span>한다.
 </code></pre></div></li>
 </ul>
 <p><img alt="03_014" src="../img/03/03_014.jpg" />\</p>
 <ul>
 <li>xyz 파일보기 -Basis 별 bonding length 과 Reference(Handy, Nicholas C., Christopher W. </li>
 </ul>
-<div class="highlight"><pre><span></span><code>$ <span class="nb">cd</span> OUT
-Control + Alt + F
-Test.xyz 파일을 바탕화면에 옮기고 Vesta 툴을 사용하여 xyz 파일을 볼 수 있다.
-또는 xyz2xcrysden.py Test.xyz로 파일을 볼 수 있다. 
-아래 그림의 PAO.BasisSize를 SZ, DZ, TZ, DZDP 등으로 테스트 한다.
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>OUT
+Control<span class="w"> </span>+<span class="w"> </span>Alt<span class="w"> </span>+<span class="w"> </span>F
+Test.xyz<span class="w"> </span>파일을<span class="w"> </span>바탕화면에<span class="w"> </span>옮기고<span class="w"> </span>Vesta<span class="w"> </span>툴을<span class="w"> </span>사용하여<span class="w"> </span>xyz<span class="w"> </span>파일을<span class="w"> </span>볼<span class="w"> </span>수<span class="w"> </span>있다.
+또는<span class="w"> </span>xyz2xcrysden.py<span class="w"> </span>Test.xyz로<span class="w"> </span>파일을<span class="w"> </span>볼<span class="w"> </span>수<span class="w"> </span>있다.<span class="w"> </span>
+아래<span class="w"> </span>그림의<span class="w"> </span>PAO.BasisSize를<span class="w"> </span>SZ,<span class="w"> </span>DZ,<span class="w"> </span>TZ,<span class="w"> </span>DZDP<span class="w"> </span>등으로<span class="w"> </span>테스트<span class="w"> </span>한다.
 </code></pre></div>
 <p>Murray, and Roger D. Amos. "Study of methane, acetylene, ethene, and benzene using Kohn-Sham theory." The Journal of Physical Chemistry 97.17 (1993): 4392-4396.) 와 비교</p>
 <p><img alt="03_015" src="../img/03/03_015.jpg" /></p>
@@ -1619,93 +2134,93 @@ Test.xyz 파일을 바탕화면에 옮기고 Vesta 툴을 사용하여 xyz 파�
 <thead>
 <tr>
 <th></th>
-<th align="center">SZ</th>
-<th align="center">DZ</th>
-<th align="center">TZ</th>
-<th align="center">DZP</th>
-<th align="right">DZDP</th>
+<th style="text-align: center;">SZ</th>
+<th style="text-align: center;">DZ</th>
+<th style="text-align: center;">TZ</th>
+<th style="text-align: center;">DZP</th>
+<th style="text-align: right;">DZDP</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>Bonding length [Ang]</code></td>
-<td align="center">1.20100</td>
-<td align="center">1.10876</td>
-<td align="center">1.11050</td>
-<td align="center">1.10977</td>
-<td align="right">1.10861</td>
+<td style="text-align: center;">1.20100</td>
+<td style="text-align: center;">1.10876</td>
+<td style="text-align: center;">1.11050</td>
+<td style="text-align: center;">1.10977</td>
+<td style="text-align: right;">1.10861</td>
 </tr>
 <tr>
 <td><code>Bonding angle [degree]</code></td>
-<td align="center">109.4398</td>
-<td align="center">109.1358</td>
-<td align="center">109.1567</td>
-<td align="center">109.4914</td>
-<td align="right">109.3702</td>
+<td style="text-align: center;">109.4398</td>
+<td style="text-align: center;">109.1358</td>
+<td style="text-align: center;">109.1567</td>
+<td style="text-align: center;">109.4914</td>
+<td style="text-align: right;">109.3702</td>
 </tr>
 </tbody>
 </table>
 <h3 id="exercise-4-ch3">Exercise 4: CH3 전자밀도</h3>
 <p>a. spin에 따른 전자밀도를 보는 방법은 아래와 같다. Spin 에 따른 전자밀도를 시각화 하기 위해서는 RUN.fdf 에서 아래와 같은 코드를 추가하여야한다</p>
-<div class="highlight"><pre><span></span><code>%include STRUCT.fdf
-%include BASIS.fdf
-%include KPT.fdf
+<div class="highlight"><pre><span></span><code>%include<span class="w"> </span>STRUCT.fdf
+%include<span class="w"> </span>BASIS.fdf
+%include<span class="w"> </span>KPT.fdf
 <span class="c1">#General system specifications</span>
-SystemName          CH3 molecule
-SystemLabel         ch3
+SystemName<span class="w">          </span>CH3<span class="w"> </span>molecule
+SystemLabel<span class="w">         </span>ch3
 <span class="c1">#Density functional</span>
-XC.functional GGA
-XC.authors  PBE
+XC.functional<span class="w"> </span>GGA
+XC.authors<span class="w">  </span>PBE
 <span class="c1">#Real space grid </span>
-MeshCutoff    <span class="m">400</span>.0 Ry
+MeshCutoff<span class="w">    </span><span class="m">400</span>.0<span class="w"> </span>Ry
 <span class="c1"># Convergence of SCF </span>
-MaxSCFIterations   <span class="m">100</span>
-DM.MixingWeight    <span class="m">0</span>.25
-DM.NumberPulay     <span class="m">5</span>
+MaxSCFIterations<span class="w">   </span><span class="m">100</span>
+DM.MixingWeight<span class="w">    </span><span class="m">0</span>.25
+DM.NumberPulay<span class="w">     </span><span class="m">5</span>
 <span class="c1"># Type of solution (diagon is the  default for less than 100 atoms)</span>
-SolutionMethod diagon
+SolutionMethod<span class="w"> </span>diagon
 <span class="c1">#Geometrical optimization</span>
-MD.TypeOfRun         CG
-MD.NumCGsteps        <span class="m">100</span>
-MD.MaxCGDispl         <span class="m">0</span>.1 Bohr
-MD.MaxForceTol        <span class="m">0</span>.02 eV/Ang
+MD.TypeOfRun<span class="w">         </span>CG
+MD.NumCGsteps<span class="w">        </span><span class="m">100</span>
+MD.MaxCGDispl<span class="w">         </span><span class="m">0</span>.1<span class="w"> </span>Bohr
+MD.MaxForceTol<span class="w">        </span><span class="m">0</span>.02<span class="w"> </span>eV/Ang
 
 <span class="c1">#Spin polarization </span>
- SpinPolarized .ture.
+<span class="w"> </span>SpinPolarized<span class="w"> </span>.ture.
 
 <span class="c1">#3DPlos</span>
- SaveRho .true.
-%block LocalDensityOfStates
- -6.00 -3.00 eV
-%endblock LocalDensityOfStates
+<span class="w"> </span>SaveRho<span class="w"> </span>.true.
+%block<span class="w"> </span>LocalDensityOfStates
+<span class="w"> </span>-6.00<span class="w"> </span>-3.00<span class="w"> </span>eV
+%endblock<span class="w"> </span>LocalDensityOfStates
 
-WriteCoorXmol        .true.  <span class="c1"># SystemLavel.xyz </span>
-WriteMDXmol    .true.
+WriteCoorXmol<span class="w">        </span>.true.<span class="w">  </span><span class="c1"># SystemLavel.xyz </span>
+WriteMDXmol<span class="w">    </span>.true.
 </code></pre></div>
 <p>b. siesta code</p>
-<p><div class="highlight"><pre><span></span><code>$ mkdir Ch3 <span class="o">(</span>Ch3폴더 생성<span class="o">)</span>
-slm-siesta_run 파일을 여기에 복사
-$ mkdir input
-$ <span class="nb">cd</span> input 
-ch3input, c.psf, H.psf 파일을 여기에 복사
-$ cp ch3input RUN.fdf
-$ <span class="nb">cd</span> ..
-$ sbatch slm-siesta_run
-<span class="p">&amp;</span> <span class="nb">cd</span> OUT
-rho2xsf 파일을 여기에 복사
-$ rho2xsf
-$ ch3
-$ A
-$ -2 -2 -2
-$ <span class="m">5</span> <span class="m">0</span> <span class="m">0</span>
-$ <span class="m">0</span> <span class="m">5</span> <span class="m">0</span>
-$ <span class="m">0</span> <span class="m">0</span> <span class="m">5</span>
-$ <span class="m">100</span> <span class="m">100</span> <span class="m">100</span>
-$ RHO
-$ BYE
-$ xcrysden –-xsf *.XSF
-입력하면 XCrySDen 창이 열린다.
-ToolData Grid<span class="o">(</span>up, down 선택<span class="o">)</span>Isovalue 범위 설정submit으로 charge density를 아래와 같이 그릴 수 있다.
+<p><div class="highlight"><pre><span></span><code>$<span class="w"> </span>mkdir<span class="w"> </span>Ch3<span class="w"> </span><span class="o">(</span>Ch3폴더<span class="w"> </span>생성<span class="o">)</span>
+slm-siesta_run<span class="w"> </span>파일을<span class="w"> </span>여기에<span class="w"> </span>복사
+$<span class="w"> </span>mkdir<span class="w"> </span>input
+$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>input<span class="w"> </span>
+ch3input,<span class="w"> </span>c.psf,<span class="w"> </span>H.psf<span class="w"> </span>파일을<span class="w"> </span>여기에<span class="w"> </span>복사
+$<span class="w"> </span>cp<span class="w"> </span>ch3input<span class="w"> </span>RUN.fdf
+$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>..
+$<span class="w"> </span>sbatch<span class="w"> </span>slm-siesta_run
+<span class="p">&amp;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span>OUT
+rho2xsf<span class="w"> </span>파일을<span class="w"> </span>여기에<span class="w"> </span>복사
+$<span class="w"> </span>rho2xsf
+$<span class="w"> </span>ch3
+$<span class="w"> </span>A
+$<span class="w"> </span>-2<span class="w"> </span>-2<span class="w"> </span>-2
+$<span class="w"> </span><span class="m">5</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">0</span>
+$<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">5</span><span class="w"> </span><span class="m">0</span>
+$<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">5</span>
+$<span class="w"> </span><span class="m">100</span><span class="w"> </span><span class="m">100</span><span class="w"> </span><span class="m">100</span>
+$<span class="w"> </span>RHO
+$<span class="w"> </span>BYE
+$<span class="w"> </span>xcrysden<span class="w"> </span>–-xsf<span class="w"> </span>*.XSF
+입력하면<span class="w"> </span>XCrySDen<span class="w"> </span>창이<span class="w"> </span>열린다.
+ToolData<span class="w"> </span>Grid<span class="o">(</span>up,<span class="w"> </span>down<span class="w"> </span>선택<span class="o">)</span>Isovalue<span class="w"> </span>범위<span class="w"> </span>설정submit으로<span class="w"> </span>charge<span class="w"> </span>density를<span class="w"> </span>아래와<span class="w"> </span>같이<span class="w"> </span>그릴<span class="w"> </span>수<span class="w"> </span>있다.
 </code></pre></div>
 <img alt="03_016" src="../img/03/03_016.jpg" /></p>
 <p>rho2xsf 에 입력되는 문장의 의미는 다음과 같다.
@@ -1718,84 +2233,47 @@ A : Ang or Bohr
 RHO : 변환되는 grid 파일 </p>
 <h3 id="_2">참고문헌</h3>
 <p>SIESTA homepage (<a href="http://www.icmab.es/siesta/">http://www.icmab.es/siesta/</a>)</p>
-                
-              
-              
-                
 
 
-              
-            </article>
-          </div>
+
+
+
+                
+              </article>
+            </div>
+          
+          
         </div>
+        
       </main>
       
-        
-<footer class="md-footer">
-  
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
-        
-          <a href="../../atom/atom_pseudopotential/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-            </div>
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                (2) 슈도퍼텐셜 생성
-              </div>
-            </div>
-          </a>
-        
-        
-          <a href="../siesta_gold/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                (2) Au 벌크/슬랩 구조
-              </div>
-            </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
+        <footer class="md-footer">
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
-      <div class="md-footer-copyright">
-        
-        Made with
-        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-          Material for MkDocs
-        </a>
-      </div>
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
       
     </div>
   </div>
 </footer>
       
     </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
     
-      <script src="../../assets/javascripts/vendor.08c56446.min.js"></script>
-      <script src="../../assets/javascripts/bundle.6ced434e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing"}</script>
-      
-      <script>
-        app = initialize({
-          base: "../..",
-          features: ['navigation.tabs', 'navigation.instant', 'navigation.sections'],
-          search: Object.assign({
-            worker: "../../assets/javascripts/worker/search.8c7e0a7e.min.js"
-          }, typeof search !== "undefined" && search)
-        })
-      </script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.instant", "navigation.sections"], "search": "../../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.78eede0e.min.js"></script>
       
         <script src="../../javascripts/config.js"></script>
       

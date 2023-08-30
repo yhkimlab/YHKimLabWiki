@@ -26,6 +26,7 @@ markdown_extensions:
 nav:
         - Home: index.md
         - Environment Setup:
+                - 'Getting Started with Python' : environment/python.md
                 - 'Windows Subsystem for Linux' : environment/wsl2.md
                 - 'VSCode' : environment/vscode.md
         - SIESTA Tutorial:
