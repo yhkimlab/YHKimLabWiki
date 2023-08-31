@@ -115,3 +115,5 @@ import this
     If the implementation is easy to explain, it may be a good idea.
     Namespaces are one honking great idea -- let's do more of those!
 ```
+
+출처: [https://pythonnumericalmethods.berkeley.edu/notebooks/Appendix01-Getting-Started-with-Python-Windows.html](https://pythonnumericalmethods.berkeley.edu/notebooks/Appendix01-Getting-Started-with-Python-Windows.html)
