@@ -37,7 +37,7 @@ nav:
                         - 'Python' : other/1.2_PythonCheatSheet.md
                         - 'Emacs' : other/1.3_EmacsCheatSheet.md
                         - 'Anaconda' : other/1.4_AnacondaCheatSheet.md
-        - SIESTA 튜토리얼:
+        - SIESTA:
                 - 0. 준비:
                         - '(1) SIESTA 설치': build/build_siesta.md
                         - '(2) ATOM 설치': build/build_atom.md
@@ -50,7 +50,7 @@ nav:
                                 - '(1) SIESTA 개요': siesta/siesta_basic.md
                                 - '(2) Au 벌크/슬랩 구조': siesta/siesta_gold.md
                                 - '(3) Graphene' : siesta/siesta_graphene.md
-        - TranSIESTA 튜토리얼:
+        - TranSIESTA:
                 - 1. 기초 과정:
                         - '(1) TranSIESTA 개요': transiesta/transiesta_overview.md
                         - '(2) 접합구조 모델링': transiesta/transiesta_modeling.md
