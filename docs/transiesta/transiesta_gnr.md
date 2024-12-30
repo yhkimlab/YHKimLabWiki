@@ -6,6 +6,10 @@ Graphene nanoribbons
 
 > Input: [Link](https://1drv.ms/u/s!ArHICXVqPANVux-WuG-C7gSa2oeJ?e=0oRfSs)
 
+
+<br><br><br>
+
+
 ## Pristine graphene nanoribbons
 
 <center><img src="img/06/06-007.JPG" width="80%" height="80%"></center>
@@ -51,7 +55,9 @@ $ qsub slm_siesta_run
 
 <center><img src="img/06/06-010.JPG" width="80%" height="80%"></center>
 
-Electrode 계산을 끝내고, 위와 같이 채널 영역의 길이가 2-unit cell으로 설정한 scattering 계산하기 위해 2.6unit-GNR_SZ 폴더에 들어간다. 이 다음 1.Electrode 폴더에 생성된 elec.TSHS 파일을 2.6unit-GNR_SZ의 input폴더에 넣어준다. 
+Electrode 계산을 끝내고, 위와 같이 채널 영역의 길이가 2-unit cell으로 설정한 scattering 계산하기 위해 2.6unit-GNR_SZ 폴더에 들어간다. 그 다음 1.Electrode 폴더에 생성된 elec.TSHS 파일을 2.6unit-GNR_SZ의 input폴더에 넣어준다. 
+
+scattering region은 2-unit cell로 구성되어 있으나, Transiesta 계산에서 사용하는 `STRUCT.fdf` 파일에서는 양쪽의 electrode 영역도 포함되어 있다.
 
 ```
  $ cd ../2.6unit-GNR_SZ
@@ -148,6 +154,8 @@ $ python show_trans.py scat.TBT.AVTRANS_6unit scat.TBT.AVTRANS_10unit
 <center><img src="img/06/06-021.JPG" width="60%" height="60%"></center>
 
 먼저 2-unit cell의 채널의 길이를 계산을 진행한다.
+
+※ 예제 파일의 `STRUCT.fdf`에는 19번 atom이 `H`로 되어 있으므로 이를 `C`로 수정한다.
 ```
 $ cd 4.6unit-GNR+N_SZ
 $ cp ../1.Electrode/elec.TSHS input/

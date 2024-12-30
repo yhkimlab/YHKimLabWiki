@@ -22,8 +22,14 @@ Buiding ATOM
 ```bash
 $ wget https://launchpad.net/xmlf90/trunk/1.5/+download/xmlf90-1.5.4.tar.gz // 1.5.4버전
 $ wget https://launchpad.net/libgridxc/trunk/0.7/+download/libgridxc-0.7.6.tgz // 0.7.6버전
-$ tar xvzf xmlf90-1.5.0.tgz
-$ tar xvzf libgridxc-0.7.3.tgz
+$ tar -xvzf xmlf90-1.5.0.tgz
+$ tar -xvzf libgridxc-0.7.3.tgz
+```
+<br>
+
+`tar` 명령어를 사용할 때에 `not in gzip format` 에러가 일어나는 경우 아래 명령어를 통해 `file`이 `tgz`형식인지 확인한다.
+```bash
+$ file (FileName)
 ```
 
 
@@ -40,6 +46,11 @@ $ cd Sys
 $ cp gfortran.make ../Gfortran/fortran.mk
 ```
 
+Gfortran 폴더가 없는 경우 홈페이지에서 다른 버전의 xmlf90을 다운받는다.
+<br><br><br>
+
+
+
 라이브러리를 생성하기 전에 fortran.mk을 다음과 같이 수정해준다.
 
 ```bash  
@@ -54,7 +65,7 @@ $ cd ../Gfortran
 $ sh ../config.sh
 $ make
 ```
-`xmlf90.mk` 생성확인
+-> `xmlf90.mk` 생성확인
 
 `libgridxc` :
 
@@ -76,7 +87,7 @@ LDFLAGS=-mkl=cluster
 AR=/usr/bin/ar
 ```
 
-`gridxc.mk` 생성확인
+-> `gridxc.mk` 생성확인
 
 ## Compiling `ATOM`
 

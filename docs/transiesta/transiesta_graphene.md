@@ -106,6 +106,52 @@ $ qsub slm_siesta_run_tbt
 $ python show_trans_rev.py scat.TBT.AVTRANS_Left-Right
 ```
 
+예제 파일에 포함되어 있는 show_trans.py는 k vector가 단위 벡터인 경우에만 작동하는 코드이므로,
+kgrid에 1이 아닌 값을 준 경우 아래와 같이 함수 부분을 수정해준다.
+
+```python
+#show_trans_minsu.py
+def get_xy_array(filename):
+
+    lines = open(filename).readlines()
+    x = []; y = []; y_temp = []
+    weight = 0
+    firstLoop = 1
+    y_index = 0
+    i = 0
+
+    for line in lines:
+        data=line.split()
+
+    #refresh and continue at  empty line
+        if data == []:
+            firstLoop = firstLoop - 1
+            i = 0
+            continue
+
+    #find weight for each k vector
+        if  (data[0]  == '#') and (len(data) > 3) :
+            weight = data[ len(data) - 1]
+
+    #
+        if firstLoop == 0 :
+            if data[0] != '#':
+                x.append(float(data[0]))
+                y.append(float(data[1]) * float(weight))
+
+        #sum y values with weight for each k vector
+        else :
+            if data[0] != '#':
+                y[i] += ( float(data[1]) * float(weight) )
+                i += 1
+
+    x = np.array(x)
+    y = np.array(y)
+
+    return x, y
+
+```
+
 <center><img src="img/Gr_transmission.png" width="60%" height="60%"></center>
 
 

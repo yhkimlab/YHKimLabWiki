@@ -9,9 +9,12 @@ Au 전자 구조 계산
 
 ## Exercise 1: Structure optimization
 
-올바른 전자구조를 산출하기 위해서는 정해둔 허용 오차(Tolerance) 내의 최적화된 모델을 분석해야 한다. 이를 위해 실질적인 전자 구조 계산에 앞서 k-point sampling과 lattice constant를 찾아 Au bulk에 대한 geometry optimization을 진행해야 한다. SIESTA 계산을 위한 input 파일들은 ‘1.Gold(band, work function)' 폴더 안에 정리해 두었다.
+올바른 전자구조를 산출하기 위해서는 정해둔 허용 오차(Tolerance) 내의 최적화된 모델을 분석해야 한다. 
+이를 위해 실질적인 전자 구조 계산에 앞서 적당한 k-point 값과 lattice constant를 찾아 
+Au bulk에 대한 geometry optimization을 진행해야 한다. 
+SIESTA 계산을 위한 input 파일들은 ‘1.Gold(band, work function)' 폴더 안에 정리해 두었다.
 
-![unit_cell](img/05/lattice.PNG){: align=left style="width:300px"}
+![unit_cell](img/05/lattice.PNG){:align=right style="height:250px"}
 
 |     Basis size     |      DZP       |
 | :----------------: | :------------: |
@@ -21,19 +24,23 @@ Au 전자 구조 계산
 
 ### 1) k-point sampling
 
-첫 번째로 찾아야 할 것은optimal한 k point의 수이다. KPT.fdf 파일에서 k-point 값들을 변경해가며 Total Energy가 converge 하는지 확인한다. Gold bulk 모델은 3차원이므로 kx, ky, kz 모두 동일하게 더한다. 이 때 RUN.fdf의 CG step은 0을 주어 single point 계산을 한다.
+첫 번째로 찾아야 할 것은 optimal한 k point의 수이다. 
+<br>KPT.fdf 파일에서 k-point 값들을 변경해가며 Total Energy가 converge 하는지 확인한다. 
+<br>Gold bulk 모델은 3차원이므로 kx, ky, kz 모두 동일하게 더한다. 
+<br>이 때 RUN.fdf의 `CG step은 0`을 주어 구조가 변하지 않는 single point 계산을 한다.
 
 ```bash
 $ vi RUN.fdf
 MD.NumCGsteps         0
 
 $ vi KPT.fdf
-# 1 x 1 x 1 k-points                  # 5 x 5 x 5 k-points
-%block kgrid_Monkhorst_Pack	    %block kgrid_Monkhorst_Pack
-1   0   0   0.0			     5   0   0   0.0
-0   1   0   0.0			     0   5   0   0.0
-0   0   1   0.0			     0   0   5   0.0
-%endblock kgrid_Monkhorst_Pack	    %endblock kgrid_Monkhorst_Pack
+#아래처럼 kgrid_Monkhorst_Pack 블록의 value를 바꾸어준다.
+# 1 x 1 x 1 k-points              # 5 x 5 x 5 k-points
+%block kgrid_Monkhorst_Pack	      %block kgrid_Monkhorst_Pack
+1   0   0   0.0			              5   0   0   0.0
+0   1   0   0.0			              0   5   0   0.0
+0   0   1   0.0			              0   0   5   0.0
+%endblock kgrid_Monkhorst_Pack	  %endblock kgrid_Monkhorst_Pack
 
 $ qsub slm_siesta_run
 $ grep "Total =" */stdout.txt
@@ -49,20 +56,22 @@ $ grep "Total =" */stdout.txt
 
 ```
 
-![01_001](img/05/kpoint2.PNG)
+![01_001](img/05/kpoint2.PNG){: style="display:block; height:500px; margin-left:auto; margin-right:auto;" }
 
-앞선 계산의 DFT parameter 중 SCF Convergence의 Tolerance를 10-3 eV로 설정하였기 때문에 k-point가 35에서 수렴한다고 판단할 수 있다.
+앞선 계산의 DFT parameter 중 SCF Convergence의 Tolerance를 $10^{-3}$ eV로 설정하였기 때문에 k-point가 35에서 수렴한다고 판단할 수 있다.
 
 
 ### 2) Lattice constant
-다음으로는 최적화된 lattice constant를 구하기 위해서 1)에서 구한 k-point 값(35, 35, 35)으로 고정시킨 뒤 lattice constant를 변화시킴으로써 그 값을 구할 수 있다.  이 때 RUN.fdf의 CG step은 300을 주어 계산한다
+다음으로는 최적화된 lattice constant를 구하기 위해서 
+<br>
+1)에서 구한 k-point 값 `(35, 35, 35)`으로 고정시킨 뒤 lattice constant를 변화시킨다.  
+이 때 구조가 변화해야 하므로 RUN.fdf의 `CG step은 300`을 주어 계산한다
 
 ```bash
 $ vi RUN.fdf
 MD.NumCGsteps         300
 
 $ vi STRUCT.fdf
-# lattice constant = 2.5 Ang
 LatticeConstant	2.7 Ang
 %block LatticeVectors
 0.81649  0.28867   0.50000
@@ -74,7 +83,7 @@ $ qsub slm_siesta_run
 Lattice constant를 0.1Ang 단위로 변화시켜 계산한 결과는 다음과 같다.
 
 ```bash
-$ grep ‘Total =’ */stdout.txt
+$ grep "Total =" */stdout.txt
 2.7/OUT/stdout.txt:siesta:         Total =    -878.864652
 2.8/OUT/stdout.txt:siesta:         Total =    -879.380658
 2.9/OUT/stdout.txt:siesta:         Total =    -879.523113
@@ -97,19 +106,21 @@ $ grep ‘Total =’ */stdout.txt
 3.1/OUT/stdout.txt:siesta:         Total =    -879.217521
 
 ```
-3d 물질에서 lattice constant를 찾기에 적합한 fitting은 murnaghan fitting이다. 계산된 결과를 이용해 에너지가 가장 낮은 lattice constant를 murnaghan fitting을 통해 찾았다. 최적화된 volume은 69.28785$\overset{\circ}{A}^3$이고, 이를 통해 lattice constant를 구하려면 부피의 세제곱근을 하면 된다. 따라서 lattice constant는 4.107$\overset{\circ}{A}$이고,이를 FCC unit cell의 한 변의 길이로 치환하면 2.904$\overset{\circ}{A}$이 된다.
+3D 물질에서 lattice constant를 찾기에 적합한 fitting은 murnaghan fitting이다. 
+<br>계산된 결과를 이용해 에너지가 가장 낮은 lattice constant를 **murnaghan fitting**을 통해 찾았다. 
+<br>최적화된 volume은 69.28785 Å$^3$이고, 이를 통해 lattice constant를 구하려면 부피의 세제곱근을 하면 된다. 따라서 lattice constant는 4.107Å이고,이를 FCC unit cell의 한 변의 길이로 치환하면 2.904Å이 된다.
 
-![01_002](img/05/lattice_const.PNG)
+![01_002](img/05/lattice_const.PNG){: style="display:block; height:350px; margin-left:auto; margin-right:auto;" }
 
-> lattice constant = 2.904 $\overset{\circ}{A}$
+> lattice constant = 2.904 Å
 
 
 ### 3) Optimize
-마지막으로 1)에서 구한 k point (35x35x35)을 KPT.fdf에 입력해주고, 2)에서 찾은 lattice constant(2.904$\overset{\circ}{A}$)를 STRUCT.fdf에 입력해 준 뒤 RUN.fdf에 CG step 값을 300을 주어 최종적으로 구조를 optimize한다.
+마지막으로 1)에서 구한 k point (35x35x35)을 KPT.fdf에 입력해주고, 2)에서 찾은 lattice constant(2.904Å)를 STRUCT.fdf에 입력해 준 뒤 RUN.fdf에 CG step 값을 300을 주어 최종적으로 구조를 optimize한다.
 
 ```bash
 $ vi KPT.fdf
-# 1 x 1 x 1 k-points 
+ 
 %block kgrid_Monkhorst_Pack	
 35   0   0   0.0
 0   35   0   0.0
@@ -133,23 +144,25 @@ $ qsub slm_siesta_run
 
 ## Exercise 2: Electronic structure calculation
 
-Gold Bulk에 대한 geometry optimization은 끝났으므로 지금부터 CG step 값은 0으로 두고 계산한다.
+Gold Bulk에 대한 geometry optimization은 끝났으므로 지금부터 `CG step 값은 0`으로 두고 계산한다. 
+ `structout2fdf.py`을 통해  `input/STRUCT.fdf`를 Opimized 된 구조로 사용해야 한다.
 
 ### 1) Bands
 이번에는 Au의 Band를 한번 그려볼 것이다. Band 계산에서는 path에 따라 band가 다르게 보이므로 high symmetry band point를 우선으로 하되, 계산하는 물성의 특성상 주목해야할 band point가 있는지 확인해야 한다. band structure를 그릴 때 사용할 [reference](https://www.sciencedirect.com/science/article/pii/S0927025614007940#t0015)는 이 band 그래프이다. 우리는 이 band 그래프를 siesta 계산을 통해 동일하게 한번 그려볼 것이다.  
 
-![ref_band](img/05/band_ref.PNG){: style="width:300px"}
+![ref_band](img/05/band_ref.PNG){: style="display:block; height:300px; margin-left:auto; margin-right:auto;" }
 
 위 그래프에서 band path는 $\Gamma-X-W-L-\Gamma-K$순으로 진행되고 있음을 볼 수 있다. 이와 같은 순서로 그리려면 siesta의 옵션을 이용하여 동일한 band path를 잡아줘야 한다. 우선 xcrysden으로 band path를 잡는 방법과 이를 siesta에 적용하는 방법을 소개하도록 하겠다.
 처음으로 model을 xcrysden로 불러온다. 그 다음에 tools의 k-path selection을 선택하면 band path의 좌표를 계산해주는 화면이 나온다.
 
-![kpath](img/05/kpath1.png){: style="width:300px"}
+![kpath](img/05/kpath1.png){: style="display:block; height:300px; margin-left:auto; margin-right:auto;" }
+
 
 그 다음에는 그리려고 하는 물질의 critical point를 골라 band path를 올바르게 선택하면 된다. Au는 FCC구조이므로 아래 그림과 같은 brillouin zone에서 살펴봐야 할 점을 xcrysden으로 선택하면 된다. [brillouin zone](https://wiki.fysik.dtu.dk/ase/ase/dft/bztable.html)
 
-![zone](img/05/fcc.png){: align=left style="height:300px"}
+![zone](img/05/fcc.png){: align=right style="height:300px"}
 
-![band_path](img/05/band_path.PNG){style="height:300px"}
+![band_path](img/05/band_path.PNG){: align=center style="height:300px"}
 
 band path의 좌표를 알아냈다면 xcrysden 창의 오른쪽에 적힌 숫자들을 tutorial 1에서 했던 것처럼 RUN.fdf에 넣으면 된다. RUN.fdf에는 다음의 부분을 추가해주면 된다.
 
@@ -199,15 +212,15 @@ set xrange [0:3.185731] // 위 band file의 G부터 K까지 band path
 set yrange [-13.505839:6.494161] // 분석할 에너지 범위. Fermi level ±10
 set xlabel 'Band Path'
 set ylabel 'Energy [eV]'
-set set arrow from 0, -3.505839, graph 1 to 3.185731, -3.505839 ls 3 // Fermi level plot
+set arrow from 0, -3.505839, graph 1 to 3.185731, -3.505839 ls 3 // Fermi level plot
 ```
 
-![01_003](img/05/band_gnu.PNG)
+![01_003](img/05/band_gnu.PNG){: style="display:block; height:300px; margin-left:auto; margin-right:auto;" }
 
 이와 같이 그리게 되면 reference와 흡사한 band 그림을 만들 수 있다. 그러나, 보통 band 그래프를 그리게 되면 y축은 $E-E_F$을 사용하고, x축은 band path는 숫자가 아닌 $\Gamma-X-W-L-\Gamma-K$와 같은 band point로 표현한다.
 Origin을 사용해서 에너지를 Fermi Energy에 맞춰준 band path를 그려보면 결과는 다음과 같다.
 
-![01_010](img/05/band_rep.PNG)
+![01_010](img/05/band_rep.PNG){: style="display:block; height:300px; margin-left:auto; margin-right:auto;" }
 
 
 ## Exercise 3: Au Slab electronic structure calculation
@@ -220,6 +233,7 @@ slab 모델을 만드는 방법에는 여러가지 방법이 있지만, 이번�
 
 ```bash
 from NanoCore import *
+from NanoCore import siesta as s2
 import os, sys
 
 # Seunghyun Yu, KAIST
@@ -253,11 +267,13 @@ if __name__ == "__main__" :
   $ python make_slab.py 20 //vacuum 길이
 ```
 
-위의 코드를 실행시키면 vacuum의 길이가 20$\overset{\circ}{A}$이고, Au가 5층 으로 쌓인 Au slab모델을 생성할 수 있다.
+위의 코드를 실행시키면 vacuum의 길이가 20Å이고, Au가 5층 으로 쌓인 Au slab모델을 생성할 수 있다.
 
-![01_010](img/05/slab_model.PNG)
+![01_010](img/05/slab_model.PNG){: style="display:block; height:300px; margin-left:auto; margin-right:auto;" }
 
-Slab model을 만들고, 구조 최적화를 진행 할 때 주목해야 할 변경사항은 RUN.fdf에서 constraint를 설정해주는 것이다. Work funciton을 계산하기 위한 Slab model은 surface에서 bulk로 이어지는 부분을 묘사할 수 있어야 하기 때문에, 표면에서 먼 원자들만 위치를 고정하고 최적화를 진행해야 한다. 이와 같은 조건을 추가하고 최적화를 진행하기 위해 RUN.fdf에 다음과 같은 Constraint option을 추가해야 한다.
+Slab model을 만들고, 구조 최적화를 진행 할 때 주목해야 할 변경사항은 RUN.fdf에서 constraint를 설정해주는 것이다. 
+<br>Work funciton을 계산하기 위한 Slab model은 surface에서 bulk로 이어지는 부분을 묘사할 수 있어야 하기 때문에, 표면에서 먼 원자들만 위치를 고정하고 최적화를 진행해야 한다. 
+<br>이와 같은 조건을 추가하고 최적화를 진행하기 위해 RUN.fdf에 다음과 같은 Constraint option을 추가해야 한다.
 
 ```bash
 # Geometry Constraints
@@ -266,9 +282,13 @@ Slab model을 만들고, 구조 최적화를 진행 할 때 주목해야 할 변
 %endblock GeometryConstraint
 ```
 
-위의 코드에서 Position은 STRUCT.fdf 파일에 적힌 atom의 번호를 뜻한다. STRUCT.fdf를 보면 Atom 번호 2번은 [1.442497834, 0.832826513, 2.355589098]에 위치한 Au 원자임을 알 수 있다. 따라서 위 코드는 atom 번호 1, 2, 3번을 고정시키므로 z축 아래 3개는 고정시키고 위에 2개의 원자만 풀어놓은 코드임을 확인할 수 있다. 이제 이 코드를 바탕으로 구조 최적화를 진행해주면 Work function을 구할 수 있다.
+위의 코드에서 Position은 STRUCT.fdf 파일에 적힌 atom의 번호를 뜻한다. 
+<br>STRUCT.fdf를 보면 Atom 번호 2번은 `[1.442497834, 0.832826513, 2.355589098]`에 위치한 Au 원자임을 알 수 있다. 
+<br>따라서 위 코드는 atom 번호 1, 2, 3번을 고정시키므로 z축 아래 3개는 고정시키고 위에 2개의 원자만 풀어놓은 코드임을 확인할 수 있다. 
+<br>이제 이 코드를 바탕으로 구조 최적화를 진행해주면 Work function을 구할 수 있다.
 
 ```bash
+# STRUCT.fdf
 NumberOfAtoms    5           # Number of atoms
 NumberOfSpecies  1           # Number of species
 
@@ -297,7 +317,8 @@ AtomicCoordinatesFormat Ang
 
 ### 2) before work function calculation
 
-Slab 모델을 만든 후에는 basis를 설정해야 한다. 특히 중요하게 봐야할 항목은 PAO.EnergyShift 항목이다. Lattice constant를 구할 때 우리는 이 항목을 100meV를 주고 계산한다. 그러나, work function을 구할 때는 cutoff에 의해 결정되는 basis의 크기가 결과에 큰 영향을 주기 때문에 PAO.EnergyShift 항목을 50meV로 설정하고 계산을 진행하는 것이 좋다.
+Slab 모델을 만든 후에는 basis를 설정해야 한다. 특히 중요하게 봐야할 항목은 PAO.EnergyShift 항목이다. 
+<br>Lattice constant를 구할 때 우리는 이 항목을 100meV를 주고 계산한다. 그러나, work function을 구할 때는 cutoff에 의해 결정되는 basis의 크기가 결과에 큰 영향을 주기 때문에 **PAO.EnergyShift 항목을 50meV로 설정**하고 계산을 진행하는 것이 좋다.
 
 |     Basis size     |      DZP      |
 | :----------------: | :-----------: |
@@ -305,17 +326,19 @@ Slab 모델을 만든 후에는 basis를 설정해야 한다. 특히 중요하�
 |         XC         |      LDA      |
 |       DM.tol       | $10^{-3}$[eV] |
 
-Work function 계산을 위해 RUN.fdf 또한 바꿔줘야 한다. 우선적으로 slab 모델 계산에 필요한 옵션과 work function의 시각화를 위한 옵션을 넣어준다.
+Work function 계산을 위해 RUN.fdf 또한 바꿔줘야 한다. 
+<br>우선적으로 slab 모델 계산에 필요한 옵션과 work function의 시각화를 위한 옵션을 넣어준다.
 
 ```bash
 $ vi RUN.fdf
-SaveElectrostaticPotential T // VH를 뽑아내는 옵션
-SlabDipoleCorrection T // 매 SCF cycle에서 시스템의 dipole moment로 인해 생성된 진공에서의 전기장을 보정해준다.
+SaveElectrostaticPotential T  # VH를 뽑아내는 옵션
+SlabDipoleCorrection T        # 매 SCF cycle에서 시스템의 dipole moment로 인해 생성된 진공에서의 전기장을 보정해준다.
 ```
 
-Work function을 계산하기 전 우선적으로 k-point를 설정해야한다. K-point는 1, 1, 1]부터 시작해서 x, y값은 계속 늘려주고, z값은 1로 고정해둔다. 그리고 수렴하는 지점을 찾을 때까지 x, y값을 늘려간다. K-point를 이런 방식으로 찾아보면 [31, 31, 1]일 때 소수 셋째자리까지 converge하는 것을 확인할 수 있다.
+Work function을 계산하기 전 우선적으로 k-point를 설정해야한다. K-point는 1, 1, 1]부터 시작해서 x, y값은 계속 늘려주고, z값은 1로 고정해둔다. 그리고 수렴하는 지점을 찾을 때까지 x, y값을 늘려간다. 
+<br>K-point를 이런 방식으로 찾아보면 **[35, 35, 1]일 때 소수 셋째자리까지 converge**하는 것을 확인할 수 있다.
 
-![01_010](img/05/k-point3.PNG)
+![01_010](img/05/k-point3.PNG){: style="display:block; height:500px; margin-left:auto; margin-right:auto;" }
 
 
 ###  Work Function 계산 및 Hartree Potential 시각화
@@ -336,7 +359,9 @@ eV$
 
 Metal work function의 [reference](https://public.wsu.edu/~pchemlab/documents/Work-functionvalues.pdf)에서 Au의 111면에서 실험 결과 work function은 5.31eV이다. 계산 결과와 유사함을 알 수 있다.
 
-Output 폴더에 Au_slab 폴더 안에 들어있는 macroave.in 파일을 넣어준다. macroave는 *.VH를 읽는다. VH파일의 이름에 맞게 macroave.in을 수정해준다. 예시로 여기서는 *.VH 파일 이름이 Au_111.VH라고 하겠다.
+Output 폴더에 Au_slab 폴더 안에 들어있는 macroave.in 파일을 넣어준다. 
+<br>macroave는 *.VH를 읽는다. VH파일의 이름에 맞게 macroave.in을 수정해준다. 
+<br>예시로 여기서는 *.VH 파일 이름이 Au_111.VH라고 하겠다.
 
 ```bash
 $ vi macroave.in 
@@ -348,12 +373,12 @@ gnuplot을 이용하여 work function을 시각화해본다.
 
 ```bash
 $ gnuplot
-plot 'Au_111.PAV' using 1:2 w l
+pl 'Au_111.PAV' using 1:2 w l
 set xrange [0 : 55.58547] // Au_111 모델의 z lattice 크기[bohr]
-set xlabel 'z [Ang]'
-set ylabel 'Potential energy [eV]'
-set arrow from 0, -4.592337, graph 1 to 55.58547, -4.592337 ls 3 // Fermi level plot
+set xlabel "z [Bohr]"
+set ylabel "Potential energy [eV]"
+set arrow from 0, -4.592337, graph 1 to 55.58547, -4.592337 ls 3 # Fermi level plot
 replot
 ```
 
-![01_004](img/05/work_in.PNG)
+![01_004](img/05/work_in.PNG){: style="display:block; height:300px; margin-left:auto; margin-right:auto;" }

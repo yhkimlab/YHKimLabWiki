@@ -100,7 +100,8 @@ $ transiesta RUN.fdf
 
 ### Step 2. Scatter region calculation
 
-<center><img src="img/06/scatter.JPG" width="80%" height="80%"></center>
+<center><img src="img/06/06-004.JPG" width="80%" height="80%"></center>
+<center><img src="img/06/06-002.JPG" width="90%" height="80%"></center>
 
 Electrode 계산을 끝내고 scatter region에 대한 계산을 하기 위해 `2.scattering/1.perfect_chain` 폴더에 들어간다. 이 다음 이전 `1.electrode` 폴더에 생성된 `Si1D_Elec.TSHS` 파일을 `2.perfect_chain`의 input폴더에 넣어준다. 
 
@@ -109,7 +110,7 @@ $ cd ../2.perfect_chain/scattering
 $ cp ../../1.electrode/input/Si1D_Elec.TSHS input/
 ```
 
-TranSIESTA 계산에서는 필요한 입력값에 대한 정보는 `input` 폴더의 `TS.fdf` 파일에 명시되어 있다. 여기에는 전극 영역에 대한 지정과 파일 이름에 대한 지정이 필요하다. `TS.fdf`에서 `1.electrode`에서 가져온 파일의 이름을 다음과 같이 `HS Si1D_Elec.TSHS` 로 적고 eletrode의 계산에 쓰인 atom수 2개를 `used-atom 2`로 수정한다.
+TranSIESTA 계산에서는 필요한 입력값에 대한 정보는 `input` 폴더의 `TS.fdf` 파일에 명시되어 있다. 여기에는 전극 영역에 대한 지정과 파일 이름에 대한 지정이 필요하다. `TS.fdf`에서 `1.electrode`에서 가져온 파일의 이름을 다음과 같이 `Si1D_Elec.TSHS` 로 적고 eletrode의 계산에 쓰인 atom수 2개를 `used-atom 2`로 수정한다.
 ```
 $ cd INPUT
 $ vi TS.fdf

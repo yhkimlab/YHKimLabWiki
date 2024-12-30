@@ -111,6 +111,7 @@ sudo chmod +x /usr/bin/siesta
 ```
 
 이제 터미널에서 `siesta` 명령어를 쳐보자. 결과가 아래 사진과 같이 나온다면 SIESTA를 성공적으로 빌드한 것이다.
+<br> 설치 환경에 따라 `siesta-v(version)`의 형식이 될 수 있다.
 
 ![build2.png](img/build/build_2.PNG)
 
@@ -172,7 +173,7 @@ export F90=mpiifort
 export FFLAGS='-fPIC -O3 -xSSE4.2 -ip'
 export CFLAGS='-fPIC -O3 -xSSE4.2 -ip'
 ```
-위에서 새로 추가된 것은 `CC`와 `FC`에 대한 정보이다. **본인의 컴파일러**에 맞게 이 부분을 수정하면 된다. 또한 기본 `install_netcdf4.bash` 기술된 각 라이브러의 버전에 대한 정보 및 다운로드 경로는 실시간으로 수정이 되는 경우가 있어 꼭 확인이 필요하다.
+위에서 새로 추가된 것은 `CC`와 `FC`에 대한 정보이다. **본인의 컴파일러**에 맞게 이 부분을 수정하면 된다. 또한 기본 `install_netcdf4.bash` 기술된 각 라이브러리의 버전에 대한 정보 및 다운로드 경로는 실시간으로 수정이 되는 경우가 있어 꼭 확인이 필요하다. (라이브러리 이름 + compile 의 키워드로 검색)
 
 - 수정이 필요한 내용 (2023.01.18)
 ```
@@ -192,6 +193,8 @@ download_file netcdf-fortran-${nf_v}.tar.gz https://downloads.unidata.ucar.edu/n
 ```bash
 bash install_netcdf4.bash
 ```
+설치가 제대로 진행되지 않는다면 에러 메세지를 보고 각 라이브러리의 버전을 낮춘다.
+<br><br>
 
 설치 진행이 완료되면 SIESTA `arch.make`에 추가해야할 정보가 다음과 같이 제공된다.
 
