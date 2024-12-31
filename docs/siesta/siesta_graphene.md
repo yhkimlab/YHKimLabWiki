@@ -41,7 +41,7 @@ Band 시각화
 ```bash
 $ cd (PATH)/output
 
-$ new.gnubands Graphene.bands > gr_bands.dat
+$ gnubands Graphene.bands > gr_bands.dat
 
 $ gnuplot
 plot "gr_bands.dat" using 1:2 w l

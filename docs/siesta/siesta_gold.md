@@ -108,7 +108,7 @@ $ grep "Total =" */stdout.txt
 ```
 3D 물질에서 lattice constant를 찾기에 적합한 fitting은 murnaghan fitting이다. 
 <br>계산된 결과를 이용해 에너지가 가장 낮은 lattice constant를 **murnaghan fitting**을 통해 찾았다. 
-<br>최적화된 volume은 69.28785 Å$^3$이고, 이를 통해 lattice constant를 구하려면 부피의 세제곱근을 하면 된다. 따라서 lattice constant는 4.107Å이고,이를 FCC unit cell의 한 변의 길이로 치환하면 2.904Å이 된다.
+<br>최적화된 volume은 69.28785 Å $^3$이고, 이를 통해 lattice constant를 구하려면 부피의 세제곱근을 하면 된다. 따라서 lattice constant는 4.107Å이고,이를 FCC unit cell의 한 변의 길이로 치환하면 2.904Å이 된다.
 
 ![01_002](img/05/lattice_const.PNG){: style="display:block; height:350px; margin-left:auto; margin-right:auto;" }
 
