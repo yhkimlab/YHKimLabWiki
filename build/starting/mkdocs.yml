@@ -1,0 +1,81 @@
+site_name: 시작하기
+
+theme:
+    name: 'material'
+    features:
+        - navigation.tabs
+        - navigation.instant
+        - navigation.sections
+        - content.code.copy
+
+plugins:
+    - search
+
+extra_javascript:
+  - javascripts/config.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+markdown_extensions:
+    - attr_list
+    - admonition
+    - pymdownx.details
+    - pymdownx.superfences
+    - pymdownx.mark
+    - pymdownx.arithmatex:
+        generic: true
+    - pymdownx.highlight:
+        anchor_linenums: true
+        line_spans: __span
+        pygments_lang_class: true
+    - pymdownx.inlinehilite
+    - pymdownx.snippets
+nav:
+        - 시작하기:
+                - 프로그래밍 환경설정:
+                        - '파이썬으로 시작하기' : environment/python.md
+                        - 'Linux용 Windows 하위 시스템' : environment/wsl2.md
+                        - 'VSCode' : environment/vscode.md
+                - Git:
+                        - 'Repository 만들기' : github_tutorial/0.github_create_repository.md
+                - 유용한 명령어:
+                        - 'Linux' : other/1.1_LinuxCheatSheet.md
+                        - 'Python' : other/1.2_PythonCheatSheet.md
+                        - 'Emacs' : other/1.3_EmacsCheatSheet.md
+                        - 'Anaconda' : other/1.4_AnacondaCheatSheet.md
+        - SIESTA:
+                - 0. 준비:
+                        - '(1) SIESTA 설치': build/build_siesta.md
+                        - '(2) ATOM 설치': build/build_atom.md
+                - 1. ATOM 계산:
+                        - A. 기초 과정:
+                                - '(1) 모든-전자 계산': atom/atom_all_electron.md
+                                - '(2) 슈도퍼텐셜 생성': atom/atom_pseudopotential.md
+                - 2. SIESTA 계산:
+                        - A. 기초 과정:
+                                - '(1) SIESTA 개요': siesta/siesta_basic.md
+                                - '(2) Au 벌크/슬랩 구조': siesta/siesta_gold.md
+                                - '(3) Graphene' : siesta/siesta_graphene.md
+        - TranSIESTA:
+                - 1. 기초 과정:
+                        - '(1) TranSIESTA 개요': transiesta/transiesta_overview.md
+                        - '(2) 접합구조 모델링': transiesta/transiesta_modeling.md
+                        - '(3) Si chain (1D)': transiesta/transiesta_si1d.md
+                - 2. 중급/고급 과정:
+                        - A. 형상태 계산:
+                                - '(1) 그래핀 (2D)': transiesta/transiesta_graphene.md
+                                - '(2) 깨끗한 or 결함있는 GNRs': transiesta/transiesta_gnr.md
+                                - '(3) Si-SiO2-Si': transiesta/transiesta_si-sio2-si.md
+                        - B. 비평형상태 계산:
+                                - '(1) GNRs-진공-GNRs': transiesta/transiesta_gnr-vacuum-gnr.md
+        - VASP:
+                - Nudged Elastic Band (NEB):
+                        - 'Machine learning for nudged elastic band' : vasp/ml-neb.md
+        - NanoCore:
+                - 'k-point sampling' : nanocore/nanocore_kpoint.md
+                - 'Structure optimization' :
+                        - 'Equation of state (EOS) ' : nanocore/nanocore_eos.md
+                        - 'Murnaghan fitting' : nanocore/nanocore_murnaghan.md
+                        - 'Geometry optimization' : nanocore/nanocore_geo.md
+        - 'Home': 'https://yhkimlab.github.io/YHKimLabWiki/site'
+

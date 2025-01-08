@@ -1,0 +1,19 @@
+site_name: 'YHKLab 위키페이지'
+
+theme:
+    name: 'material'
+    features:
+        - navigation.tabs
+        - navigation.instant
+        - navigation.sections
+
+plugins:
+        - search
+
+nav:
+        - Home: index.md
+        - 시작하기: 'https://yhkimlab.github.io/YHKimLabWiki/site/starting'
+        - 학부생: 'https://yhkimlab.github.io/YHKimLabWiki/site/undergrad'
+        - 대학원생: 'https://yhkimlab.github.io/YHKimLabWiki/site/graduate'
+
+
