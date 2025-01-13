@@ -1,0 +1,52 @@
+site_name: 환경설정 및 과학계산법
+
+theme:
+    name: 'material'
+    features:
+        - navigation.tabs
+        - navigation.instant
+        - navigation.sections
+        - content.code.copy
+
+plugins:
+    - search
+
+extra_javascript:
+  - javascripts/config.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+markdown_extensions:
+    - attr_list
+    - admonition
+    - pymdownx.details
+    - pymdownx.superfences
+    - pymdownx.mark
+    - pymdownx.arithmatex:
+        generic: true
+    - pymdownx.highlight:
+        anchor_linenums: true
+        line_spans: __span
+        pygments_lang_class: true
+    - pymdownx.inlinehilite
+    - pymdownx.snippets
+nav:
+        - 목차: index.md
+        - 환경설정:
+                - 1. 프로그래밍 환경설정:
+                        - 'A. 파이썬으로 시작하기' : environment/python.md
+                        - 'B. Linux용 Windows 하위 시스템' : environment/wsl2.md
+                        - 'C. VSCode' : environment/vscode.md
+                - 2. Git:
+                        - 'A. Repository 만들기' : github_tutorial/0.github_create_repository.md
+                - 3. 유용한 명령어:
+                        - 'A. Linux' : other/1.1_LinuxCheatSheet.md
+                        - 'B. Python' : other/1.2_PythonCheatSheet.md
+                        - 'C. Emacs' : other/1.3_EmacsCheatSheet.md
+                        - 'D. Anaconda' : other/1.4_AnacondaCheatSheet.md
+        - 'SIESTA 설치':
+                - '1. 로컬 컴퓨터에 설치': build/build_siesta_local.md
+                - '2. 클러스터에 설치': build/build_siesta.md
+                - '3. 유틸리티: ATOM 설치': build/build_atom.md
+        - 'Home': 'https://yhkimlab.github.io/YHKimLabWiki/site'
+

@@ -14,7 +14,7 @@ if __name__=='__main__':
     subprocess.run("mkdocs build", shell=True)
     os.chdir('..')
 
-    folders = ['graduate', 'undergrad', 'starting']
+    folders = ['graduate', 'undergrad', 'settings']
     for folder in folders:
         build_and_copy(folder)
 
