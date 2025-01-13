@@ -18,4 +18,5 @@ if __name__=='__main__':
     for folder in folders:
         build_and_copy(folder)
 
+    subprocess.run("rm -r ../site", shell=True)
     copy_tree("start_page/site/", "../site")

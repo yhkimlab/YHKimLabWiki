@@ -2,3 +2,4 @@ build/graduate/site
 build/undergrad/site
 build/starting/site
 build/start_page/site
+*.DS_Store
