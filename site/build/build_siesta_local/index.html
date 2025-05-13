@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../transiesta_graphene/">
+        <link rel="prev" href="../../atom/atom_pseudopotential/">
       
       
-        <link rel="next" href="../transiesta_si-sio2-si/">
+        <link rel="next" href="../build_siesta/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>2) 깨끗한 or 결함있는 GNRs - YHKLAB Wiki</title>
+        <title>A. SIESTA 로컬에서 설치 - YHKLAB Wiki</title>
       
     
     
@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#graphene-nanoribbons" class="md-skip">
+        <a href="#wsl-siseta" class="md-skip">
           Skip to content
         </a>
       
@@ -96,7 +96,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              2) 깨끗한 or 결함있는 GNRs
+              A. SIESTA 로컬에서 설치
             
           </span>
         </div>
@@ -253,7 +253,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../build/build_atom/" class="md-tabs__link">
+        <a href="../build_atom/" class="md-tabs__link">
           
   
   Atom
@@ -284,7 +284,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../build/build_siesta_local/" class="md-tabs__link">
+        <a href="./" class="md-tabs__link">
           
   
   SIESTA
@@ -1088,7 +1088,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../build/build_atom/" class="md-nav__link">
+      <a href="../build_atom/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1304,6 +1304,8 @@
                 
   
   
+    
+  
   
   
     
@@ -1318,11 +1320,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_1" checked>
         
           
           <label class="md-nav__link" for="__nav_6_1" id="__nav_6_1_label" tabindex="">
@@ -1336,7 +1338,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6_1">
             <span class="md-nav__icon md-icon"></span>
             0. 준비
@@ -1347,10 +1349,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../build/build_siesta_local/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    A. SIESTA 로컬에서 설치
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1359,6 +1381,104 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contents
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-wsl" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. WSL 설치하기
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. 빌드 전 필요한 패키지 설치하기
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-siesta" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. SIESTA 빌드하기
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. SIESTA 빌드하기">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      소스 다운로드
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      빌드 설정하기
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#siesta" class="md-nav__link">
+    <span class="md-ellipsis">
+      SIESTA 빌드
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. 테스트 계산 해보기
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1371,7 +1491,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../build/build_siesta/" class="md-nav__link">
+      <a href="../build_siesta/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1559,8 +1679,6 @@
                 
   
   
-    
-  
   
   
     
@@ -1575,11 +1693,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" >
         
           
           <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="">
@@ -1593,7 +1711,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6_3">
             <span class="md-nav__icon md-icon"></span>
             2. TranSIESTA 계산
@@ -1647,7 +1765,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../transiesta_overview/" class="md-nav__link">
+      <a href="../../transiesta/transiesta_overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1668,7 +1786,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../transiesta_modeling/" class="md-nav__link">
+      <a href="../../transiesta/transiesta_modeling/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1689,7 +1807,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../transiesta_si1d/" class="md-nav__link">
+      <a href="../../transiesta/transiesta_si1d/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1715,8 +1833,6 @@
                 
   
   
-    
-  
   
   
     
@@ -1728,11 +1844,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3_2" >
         
           
           <label class="md-nav__link" for="__nav_6_3_2" id="__nav_6_3_2_label" tabindex="0">
@@ -1746,7 +1862,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_3_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_3_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6_3_2">
             <span class="md-nav__icon md-icon"></span>
             B. 중급/고급 과정
@@ -1757,8 +1873,6 @@
                 
   
   
-    
-  
   
   
     
@@ -1770,11 +1884,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3_2_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3_2_1" >
         
           
           <label class="md-nav__link" for="__nav_6_3_2_1" id="__nav_6_3_2_1_label" tabindex="0">
@@ -1788,7 +1902,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_6_3_2_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_6_3_2_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6_3_2_1">
             <span class="md-nav__icon md-icon"></span>
             (1) 평형상태 계산
@@ -1802,7 +1916,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../transiesta_graphene/" class="md-nav__link">
+      <a href="../../transiesta/transiesta_graphene/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1820,30 +1934,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    2) 깨끗한 or 결함있는 GNRs
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../transiesta/transiesta_gnr/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1852,110 +1946,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#contents" class="md-nav__link">
-    <span class="md-ellipsis">
-      Contents
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#pristine-graphene-nanoribbons" class="md-nav__link">
-    <span class="md-ellipsis">
-      Pristine graphene nanoribbons
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Pristine graphene nanoribbons">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#step-1-electrode-calculation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Step 1. Electrode calculation
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#step-2-scatting-region-calculation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Step 2. Scatting region calculation
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#step-3-post-processing" class="md-nav__link">
-    <span class="md-ellipsis">
-      Step 3. Post-processing
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#channel-2-vs-6-unit-cell" class="md-nav__link">
-    <span class="md-ellipsis">
-      Channel 영역의 길이: 2 vs 6 unit cell
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#n-doped-graphene-nanoribbons" class="md-nav__link">
-    <span class="md-ellipsis">
-      N-doped graphene nanoribbons
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="N-doped graphene nanoribbons">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#channel-2-vs-6-vs-10-unit-cell" class="md-nav__link">
-    <span class="md-ellipsis">
-      Channel 영역의 길이: 2 vs 6 vs 10 unit cell
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1968,7 +1958,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../transiesta_si-sio2-si/" class="md-nav__link">
+      <a href="../../transiesta/transiesta_si-sio2-si/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2037,7 +2027,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../transiesta_gnr-vacuum-gnr/" class="md-nav__link">
+      <a href="../../transiesta/transiesta_gnr-vacuum-gnr/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2254,46 +2244,55 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#pristine-graphene-nanoribbons" class="md-nav__link">
+  <a href="#1-wsl" class="md-nav__link">
     <span class="md-ellipsis">
-      Pristine graphene nanoribbons
+      1. WSL 설치하기
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Pristine graphene nanoribbons">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. 빌드 전 필요한 패키지 설치하기
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-siesta" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. SIESTA 빌드하기
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. SIESTA 빌드하기">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#step-1-electrode-calculation" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 1. Electrode calculation
+      소스 다운로드
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-2-scatting-region-calculation" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 2. Scatting region calculation
+      빌드 설정하기
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-3-post-processing" class="md-nav__link">
+  <a href="#siesta" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 3. Post-processing
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#channel-2-vs-6-unit-cell" class="md-nav__link">
-    <span class="md-ellipsis">
-      Channel 영역의 길이: 2 vs 6 unit cell
+      SIESTA 빌드
     </span>
   </a>
   
@@ -2305,26 +2304,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#n-doped-graphene-nanoribbons" class="md-nav__link">
+  <a href="#4" class="md-nav__link">
     <span class="md-ellipsis">
-      N-doped graphene nanoribbons
+      4. 테스트 계산 해보기
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="N-doped graphene nanoribbons">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#channel-2-vs-6-vs-10-unit-cell" class="md-nav__link">
-    <span class="md-ellipsis">
-      Channel 영역의 길이: 2 vs 6 vs 10 unit cell
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -2343,157 +2327,100 @@
                   
 
 
-<h1 id="graphene-nanoribbons">Graphene nanoribbons</h1>
+<h1 id="wsl-siseta">WSL을 이용한 SISETA 빌드하기</h1>
 <h2 id="contents">Contents</h2>
 <ol>
-<li>Pristine graphene nanoribbons</li>
-<li>N-doped graphene nanoribbons</li>
+<li>WSL 설치하기</li>
+<li>빌드 전 필요한 패키지 설치하기</li>
+<li>SIESTA 빌드하기</li>
+<li>테스트 계산 해보기</li>
 </ol>
-<blockquote>
-<p>Input: <a href="https://1drv.ms/u/s!ArHICXVqPANVux-WuG-C7gSa2oeJ?e=0oRfSs">Link</a></p>
-</blockquote>
-<p><br><br><br></p>
-<h2 id="pristine-graphene-nanoribbons">Pristine graphene nanoribbons</h2>
-<p><center><img src="img/06/06-007.JPG" width="80%" height="80%"></center></p>
-<p>이번 장에서는 위와 같은 zigzag graphene nanoribbons (GNRs) 구조에 대해 계산한다.</p>
-<h3 id="step-1-electrode-calculation">Step 1. Electrode calculation</h3>
-<p><center><img src="img/06/06-011.JPG" width="50%" height="50%"></center></p>
-<p>전극은 z축 방향으로 주기적 조건을 만족하는 GNRs의 2개의 unit cell로 구성되어 있다.  </p>
-<div class="highlight"><pre><span></span><code>$ cd 1. Electrode_SZ
-$ cd INPUT 
-$ vi RUN.fdf
+<h2 id="1-wsl">1. WSL 설치하기</h2>
+<p>SIESTA 프로그램은 linux용 프로그램이므로 windows 컴퓨터에 직접 설치가 불가능하다. windows에서 linux를 사용할 수 있게 해주는 WSL을 설치하거나 linux가 깔려있는 컴퓨터가 필요하다. WSL의 설치에 관한 정보는 <a href="https://yhkimlab.github.io/yhkimlabwiki/site/setting/">위키 페이지</a>에 자세히 설명되어있다. </p>
+<p>WSL을 설치한 후 microsoft store에서 ubuntu를 검색해서 우분투를 설치해준다. 이렇게 설치하면 가장 최신 버전인 22.04.1 LTS버전이 설치될 것이다. 원한다면 이전 버전의 우분투를 사용해도 좋다.</p>
+<p><img alt="build.png" src="../img/build/build_1.PNG" /></p>
+<h2 id="2">2. 빌드 전 필요한 패키지 설치하기</h2>
+<p>프로그램을 빌드하려면 컴파일러가 필요하고, 오픈소스 컴파일러중 가장 유명한 컴파일러는 GNU compiler이다. apt-get을 이용해서 GCC를 설치해 줄 것이고, SIESTA가 fortran언어로 구성되어있어 추가적으로 gfortran도 설치해 줄 것이다. 다음 명령어를 이용해서 빌드에 필요한 가장 기초적인 패키지를 설치할 수 있다.</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>build-essential<span class="w"> </span>gfortran
 </code></pre></div>
-<p>RUN.fdf에서 다음과 같이 <code>DM.MixingWeight</code>, <code>DM.NumberPulay</code>를 수정하면 29번내로 SCF convergence한다. </p>
-<ul>
-<li>RUN.fdf</li>
-</ul>
-<div class="highlight"><pre><span></span><code>...
-MaxSCFIterations      500           # Default: 50
-DM.MixingWeight       0.10          # Default: 0.25
-DM.NumberPulay        3             # Default: 0
-DM.PulayOnFile        F             # SystemLabel.P1, SystemLabel.P2
-DM.Tolerance          1.d-4         # Default: 1.d-4
-DM.UseSaveDM          T             # because of the bug
-TS.HS.Save            T
-...
+<p>위 패키지 만으로도 빌드는 가능하나, 코어를 하나만 사용할 수 있어 계산속도가 느리다. 추가적인 계산속도 향상을 위해 병렬화 패키지를 설치해 줄 필요가 있다. 병렬화를 위해 Message Passing Interface(MPI)를 많이 사용하고, 우분투에서는 대표적으로 OpenMPI가 많이 사용된다. OpenMPI를 설치하는 명령어는 다음과 같다.</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>libopenmpi-dev<span class="w"> </span>openmpi-bin
 </code></pre></div>
-<p>slm_siesta_run을 이용해 electrode 계산을 한다.
-<div class="highlight"><pre><span></span><code>$ cd ../
-$ qsub slm_siesta_run
-</code></pre></div></p>
-<h3 id="step-2-scatting-region-calculation">Step 2. Scatting region calculation</h3>
-<p><center><img src="img/06/06-010.JPG" width="80%" height="80%"></center></p>
-<p>Electrode 계산을 끝내고, 위와 같이 채널 영역의 길이가 2-unit cell으로 설정한 scattering 계산하기 위해 2.6unit-GNR_SZ 폴더에 들어간다. 그 다음 1.Electrode 폴더에 생성된 elec.TSHS 파일을 2.6unit-GNR_SZ의 input폴더에 넣어준다. </p>
-<p>scattering region은 2-unit cell로 구성되어 있으나, Transiesta 계산에서 사용하는 <code>STRUCT.fdf</code> 파일에서는 양쪽의 electrode 영역도 포함되어 있다.</p>
-<div class="highlight"><pre><span></span><code> $ cd ../2.6unit-GNR_SZ
- $ cp ../1.Electrode_SZ/OUT/elec.TSHS input/
+<p>SIESTA 4.x 버전에서는 선형 대수학 라이브러리가 기본적으로 제공된다. 그러나, 속도면에서 apt에서 설치가능한 선형 대수학 라이브러리를 사용하는 것이 좋다. apt로 이를 설치하기 위해선 다음의 명령어가 필요하다.</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>libblas-dev<span class="w"> </span>liblapack-dev<span class="w"> </span>libscalapack-mpi-dev
 </code></pre></div>
-<p>INPUT폴더에서 TS.fdf에서 left와 right의 electrode를 다음과 같이 <code>HS elec.TSHS</code> 로 적고 eletrode의 계산에 쓰인 atom수 16개를 <code>used-atom 16</code>로 수정한다.</p>
-<div class="highlight"><pre><span></span><code> $ cd input
- $ vi TS.fdf
+<p>플랫폼에 무관한 입출력과 후처리의 용이성을 위해 NETCDF와 HDF5를 추가로 설치해준다.</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>libhdf5-dev<span class="w"> </span>libhdf5-mpi-dev<span class="w"> </span>libnetcdf-dev<span class="w"> </span>libnetcdff-dev<span class="w"> </span>netcdf-bin
 </code></pre></div>
-<ul>
-<li>TS.fdf
-<div class="highlight"><pre><span></span><code> …
- %block TS.Elecs
-  Left
-  Right
- %endblock TS.Elecs
-
- %block TS.Elec.Left
-  HS elec.TSHS
-  chem-pot Left
-  semi-inf-dir -a3
-  elec-pos begin 1
-  used-atoms 16
- %endblock TS.Elec.Left
-
- %block TS.Elec.Right
-  HS elec.TSHS
-  chem-pot Right
-  semi-inf-dir +a3
-  elec-pos end -1
-  used-atoms 16
- %endblock TS.Elec.Right
- …
-</code></pre></div></li>
-</ul>
-<p>slm_siesta_run을 이용해 TranSIESTA 계산을 한다.
-<div class="highlight"><pre><span></span><code> $ cd ../
- $ qsub slm_siesta_run
-</code></pre></div></p>
-<p>계산에 끝나면 OUT 폴더에 <code>.TSHS</code>와 <code>.TSDE</code>가 생성된 것을 확인할 수 있을 것이다.</p>
-<h3 id="step-3-post-processing">Step 3. Post-processing</h3>
-<p>Transiesta  OUTPUT에서 <code>.TSHS</code>파일을 복사해 INPUT폴더에 넣어준 후 slm_transiesta_run_TBT을 이용해 TBTrans 계산을 해준다</p>
-<div class="highlight"><pre><span></span><code>$ cp OUT/Si1D_Perf.TSHS input/
-$ qsub slm_transiesta_run_TBT
+<h2 id="3-siesta">3. SIESTA 빌드하기</h2>
+<h3 id="_1">소스 다운로드</h3>
+<p>필요한 패키지를 설치했으면 이제 컴퓨터에 SIESTA를 빌드할 수 있다. SIESTA를 빌드하기 위해서는 우선 SIESTA 프로그램들을 다운로드 받아야 한다. SIESTA의 공식 릴리즈판은 <a href="https://gitlab.com/siesta-project/siesta/-/releases">SIESTA Gitlab</a>에서 받을 수 있다. 가장 최신 릴리즈인 4.1.5버전의 소스코드를 받으려면 다음 명령어를 사용하면 된다.</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span>wget<span class="w"> </span>https://gitlab.com/siesta-project/siesta/-/releases/v4.1.5/downloads/siesta-4.1.5.tar.gz
 </code></pre></div>
-<h3 id="channel-2-vs-6-unit-cell">Channel 영역의 길이: 2 vs 6 unit cell</h3>
-<p>채널 영역의 길이가 6-unit cell인 경우에 대해서도 TranSIESTA와 TBTrans 계산을 진행한다</p>
-<p><center><img src="img/06/06-012.JPG" width="80%" height="80%"></center></p>
-<div class="highlight"><pre><span></span><code>$ cd ../3.10unit-GNR_SZ
-$ cp ../1.Electrode_SZ/elec.TSHS input/
-$ qsub slm_siesta_run
-$ cp OUT/scat.TSHS input/
-$ qsub slm_siesta_run_TBT
+<p>소스코드를 받았다면, 다음 명령어로 압축을 풀어준다. 그리고, 압축을 푼 폴더로 이동해준다.</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span>tar<span class="w"> </span>xvzf<span class="w"> </span>siesta-4.1.5.tar.gz
+<span class="w">    </span><span class="nb">cd</span><span class="w"> </span>siesta-4.1.5
 </code></pre></div>
-<p>이제 2-unit 6-unit channel GNRs의 transmission을 비교해보자.</p>
-<div class="highlight"><pre><span></span><code>$ cd ../
-$ cp 2.6unit-GNR_SZ/tbtrans/scat.AVTRANs_Left-Right ./scat.TBT.AVTRANS_6unit
-$ cp 3.10unit-GNR_SZ/tbtrans/scat.AVTRANs_Left-Right ./scat.TBT.AVTRANS_10unit
-$ python show_trans.py scat.TBT.AVTRANS_6unit scat.TBT.AVTRANS_10unit
+<h3 id="_2">빌드 설정하기</h3>
+<p>SIESTA를 빌드하기 전에 몇가지 설정이 필요하다.</p>
+<ol>
+<li>Obj/ 폴더로 이동하거나 빌드할 폴더를 만든다.</li>
+<li>arch.make 파일을 만든다.</li>
+<li>obj_setup.sh 스크립트를 실행시킨다.</li>
+<li>빌드 설정이 잘되어있는지 확인한다.</li>
+</ol>
+<p>arch.make파일은 다른 프로그램 빌드시의 configure에 해당하는 파일로, 컴파일시 환경설정을 해주는 파일이다. 병렬계산, 그리고 netcdf를 포함하려면 arch.make를 수정해서 빌드해야한다. 필자가 수정한 arch.make 파일은 아래에서 다운로드 받을 수 있다. 이 arch.make 파일을 Obj 폴더에 복사해서 넣어준다.</p>
+<p><a class="md-button" href="../img/build/arch.make">arch.make</a></p>
+<p>이후 Obj 폴더에서 obj_setup.sh 스크립트를 실행한다. 이를 통해 모든 소스는 Src 폴더에 있는 상태로 빌드만 Obj 폴더에서 진행된다. Obj 폴더에서 다음과 같은 명령어를 넣어주면 된다.</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span>sh<span class="w"> </span>../Src/obj_setup.sh
 </code></pre></div>
-<p><center><img src="img/06/06-013.JPG" width="50%" height="50%"></center></p>
-<p>그림에서 보면 channel의 unit 개수와 상관없이 trasmission은 동일한 것을 확인할 수 있다.</p>
-<h2 id="n-doped-graphene-nanoribbons">N-doped graphene nanoribbons</h2>
-<p><center><img src="img/06/06-019.JPG" width="80%" heigh   1="80%"></center></p>
-<p>위와 같이 pristine GNRs에 모델에서 채널 영역에 N-dopant를 추가하여 도핑시킨 모델에 대해서 계산을 진행해보자.</p>
-<ul>
-<li>2-unit channel</li>
-</ul>
-<p><center><img src="img/06/06-021.JPG" width="60%" height="60%"></center></p>
-<p>먼저 2-unit cell의 채널의 길이를 계산을 진행한다.</p>
-<p>※ 예제 파일의 <code>STRUCT.fdf</code>에는 19번 atom이 <code>H</code>로 되어 있으므로 이를 <code>C</code>로 수정한다.
-<div class="highlight"><pre><span></span><code>$ cd 4.6unit-GNR+N_SZ
-$ cp ../1.Electrode/elec.TSHS input/
-$ qsub slm_siesta_run
-...
-$ cp OUT/scat_ input/
-$ qsub slm_siesta_run_tbt
-</code></pre></div></p>
-<ul>
-<li>6-unit channel</li>
-</ul>
-<p><center><img src="img/06/06-022.JPG" width="70%" height="70%"></center></p>
-<p>6-unit cell의 채널의 길이를 계산을 진행한다.
-<div class="highlight"><pre><span></span><code>$ cd 5.10unit-GNR+N_SZ
-$ cp ../1.Electrode/elec.TSHS input/
-$ qsub slm_siesta_run
-...
-$ cp OUT/scat. input/
-$ qsub slm_siesta_run_tbt
-</code></pre></div></p>
-<ul>
-<li>10-unit channel</li>
-</ul>
-<p><center><img src="img/06/06-023.JPG" width="80%" height="80%"></center></p>
-<p>10-unit cell의 채널의 길이를 계산을 진행한다.
-<div class="highlight"><pre><span></span><code>$ cd 6.14unit-GNR+N_SZ
-$ cp ../1.Electrode/elec.TSHS input/
-$ qsub slm_siesta_run
-...
-$ cp OUT/scat.TSHS input/
-$ qsub slm_siesta_run_tbt
-</code></pre></div></p>
-<h3 id="channel-2-vs-6-vs-10-unit-cell">Channel 영역의 길이: 2 vs 6 vs 10 unit cell</h3>
-<p>GNRs + N-dopant 구조에 대해 채널의 길이가 2, 6, 10 unit cells인 경우의 transmission을 비교해보자.
-<div class="highlight"><pre><span></span><code>$ cd ../
-$ cp 4.6unit-GNR+N_SZ/TBtrans/scat.TBT.AVTRANS_Left-Right ./scat.TBT.AVTRANS_Ndopant_6unit
-$ cp 5.10unit-GNR+N_SZ/TBtransscat.TBT.AVTRANS_Left-Right ./scat.TBT.AVTRANS_Ndopant_10unit
-$ cp 6.14unit-GNR+N_SZ/TBtrans/scat.TBT.AVTRANS_Left-Right ./scat.TBT.AVTRANS_Ndopant_14unit
-$ python show_trans.py scat.TBT.AVTRANS_Ndopant_6unit scat.TBT.AVTRANS_Ndopant_10unit scat.TBT.AVTRANS_Ndopant_14unit
-</code></pre></div></p>
-<p><center><img src="img/06/06-024.JPG" width="50%" height="50%"></center></p>
+<h3 id="siesta">SIESTA 빌드</h3>
+<p>마지막으로 SIESTA 빌드해준다. 터미널에서 Obj 폴더에서 make라고 쳐주면 된다. 그러면 SIESTA 프로그램이 빌드되어 나오고, 이를 이용해 SIESTA 계산을 진행할 수 있다. make도 병렬화가 되기 때문에 코어 수에 맞춰 -j옵션을 넣어 N개의 코어로 빌드를 더 빠르게 할 수 있다. 예를 들어 <mark>make -j 4</mark> 라는 명령어를 사용하면 cpu에서 4개의 코어로 빌드가 되어 더 빠르게 빌드를 할 수 있다.</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span>make<span class="w"> </span>-j<span class="w"> </span>N<span class="w"> </span><span class="o">(</span>N은<span class="w"> </span>코어의<span class="w"> </span>수<span class="o">)</span>
+</code></pre></div>
+<p>빌드가 되었으면 링크를 생성해 터미널에서도 siesta 명령어를 쳤을 때 동작하게 만들면 편하다. 이를 위해 /usr/bin에 링크를 만들어 줄 것이다. siesta의 절대경로를 pwd 명령어를 통해 안 후, 다음 명령어를 통해 siesta의 링크를 생성한다.</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span>ln<span class="w"> </span>-s<span class="w"> </span><span class="nv">$SIESTA</span><span class="w"> </span>/usr/bin/siesta
+</code></pre></div>
+<p>이때 $SIESTA는 siesta 프로그램의 절대경로를 뜻한다. 추가적으로 siesta 링크에 실행권한을 부여해야 터미널에서 명령어로 사용할 수 있다.</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span>sudo<span class="w"> </span>chmod<span class="w"> </span>+x<span class="w"> </span>/usr/bin/siesta
+</code></pre></div>
+<p>이제 터미널에서 siesta 명령어를 쳐보자. 결과가 아래 사진과 같이 나온다면 SIESTA를 성공적으로 빌드한 것이다.</p>
+<p><img alt="build2.png" src="../img/build/build_2.PNG" /></p>
+<p>추가적으로 TRANSIESTA 계산의 후처리 과정을 위한 TBTRANS등 유틸을 빌드해야한다. 유틸은 Util 폴더에 있고, Util 폴더 안에 있는 build_all.sh 스크립트를 실행시키면 된다.</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span>./build_all.sh
+</code></pre></div>
+<p>빌드가 완료되면 다음과 같이 빌드가 안된 폴더들이 나온다. 이때 TS와 관련된 폴더가 없다면 빌드가 잘 된 것이다.</p>
+<p><img alt="build4.png" src="../img/build/build_4.PNG" /></p>
+<p>마찬가지로 Tbtrans도 /usr/bin/폴더에 링크를 만들어 터미널에서 명령어로 사용하면 좋다. tbtrans는 Utils/TS/TBtrans/tbtrans에 위치해 있고, siesta에서 했던 것과 동일하게 링크를 만들어주면 된다.</p>
+<h2 id="4">4. 테스트 계산 해보기</h2>
+<p>빌드가 다 되었으면 테스트 계산을 해보아 실제로 SIESTA가 잘 동작하는지 확인해보자. Tutorial 예제 중 하나인 gold bulk 계산을 한 경우에 대해 해볼 것이다. 테스트 계산은 아래에서 다운로드 받을 수 있다. 적당한 곳에 이 파일을 복사한 후 다음 명령어로 압축을 풀어준다.</p>
+<p><a class="md-button" href="../img/build/test.tar.gz">예제 파일</a></p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span>tar<span class="w"> </span>-xvzf<span class="w"> </span>test.tar.gz
+</code></pre></div>
+<p>파일의 압축을 풀면 bulk라는 폴더가 나오고, 그 안에 input이라는 폴더가 있을 것이다. input 폴더 안까지 들어간 다음에 다음 명령어를 치면 계산이 진행된다.</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span>siesta<span class="w"> </span>RUN.fdf
+</code></pre></div>
+<p>위 명령어를 실행시키면 터미널에서 계산이 진행되며, 다음 그림과 같이 scf loop가 돌면서 제 1원리 계산이 수행되는 모습을 볼 수 있다.</p>
+<p><img alt="build3.png" src="../img/build/build_3.PNG" /></p>
+<p>다만, 이렇게 진행하면 serial 모드로 동작해서 mpi로 빌드했다 하더라도 코어를 하나밖에 쓰지 못한다. 따라서 병렬계산을 하기 위해 mpirun이라는 명령어를 사용해야한다. mpirun은 프로그램을 병렬로 실행시켜 주는 역할을 한다. 다음과 같은 명령어를 사용하면 코어 4개를 병렬적으로 위 serial 계산과 동일한 계산을 진행하게 된다.</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span>mpirun<span class="w"> </span>-np<span class="w"> </span><span class="m">4</span><span class="w"> </span>siesta<span class="w"> </span>RUN.fdf
+</code></pre></div>
+<p>이때 -np뒤의 숫자는 자신의 cpu 사정에 맞게 코어 수를 조절해서 넣어주면 된다. i5-9500F로 계산시 코어를 하나만 쓴 serial 계산과 코어를 4개 쓴 parallel 계산을 비교하면 결과는 다음과 같다.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Serial</th>
+<th style="text-align: center;">Parallel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">14.99[s]</td>
+<td style="text-align: center;">8.51 [s]</td>
+</tr>
+</tbody>
+</table>
+<p>위 표처럼 parallel 계산시 시간이 더 단축됨을 확인할 수 있다.</p>
 
 
 
