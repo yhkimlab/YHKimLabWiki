@@ -59,8 +59,10 @@ nav:
                 - 1. SIESTA 계산:
                         - A. 기초 과정:
                                 - '(1) SIESTA 개요': siesta/siesta_basic.md
-                                - '(2) Au 벌크/슬랩 구조': siesta/siesta_gold.md
-                                - '(3) Graphene' : siesta/siesta_graphene.md
+                                - '(2) CH4, CH3 분자': siesta/siesta_ch4.md
+                                - '(3) 3D - Au bulk 구조': siesta/siesta_gold_bulk.md
+                                - '(4-1) 2D - Au slab 구조': siesta/siesta_gold_slab.md
+                                - '(4-2) 2D - Graphene' : siesta/siesta_graphene.md
                 - 2. TranSIESTA 계산:
                         - A. 기초 과정:
                                 - '(1) TranSIESTA 개요': transiesta/transiesta_overview.md
