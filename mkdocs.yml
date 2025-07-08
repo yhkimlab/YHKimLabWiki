@@ -26,17 +26,20 @@ markdown_extensions:
 nav:
         - Home: index.md
         - 시작하기:
-                - 1. 프로그래밍 환경설정:
-                        - '• 파이썬 환경/파이썬 노트북' : environment/python.md
+                - 1. 파이썬 환경설정:
+                        - '• Jupyter 노트북' : environment/python.md
+
+                - 2. 프로그래밍 환경설정:
                         - '• VSCode' : environment/vscode.md
-                - 2. Git:
-                        - '• Repository 만들기' : github_tutorial/0.github_create_repository.md
-                - 3. 유용한 명령어:
-                        - '• Linux' : other/1.1_LinuxCheatSheet.md
-                        - '• Python' : other/1.2_PythonCheatSheet.md
-                        - '• Emacs' : other/1.3_EmacsCheatSheet.md
-                        - '• Anaconda' : other/1.4_AnacondaCheatSheet.md
+                        - '• Git' : github_tutorial/0.github_create_repository.md
                         - '• Windows 하위 시스템 Linux' : environment/wsl2.md
+
+                - 3. 유용한 명령어:
+                        - '• Anaconda' : other/1.4_AnacondaCheatSheet.md
+                        - '• Python' : other/1.2_PythonCheatSheet.md
+                        - '• Linux' : other/1.1_LinuxCheatSheet.md
+                        - '• Emacs' : other/1.3_EmacsCheatSheet.md
+
         - 교육용:
                 - dummy: education/DD.md
         - OORINano:

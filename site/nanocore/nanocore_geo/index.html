@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
     
     
       
@@ -489,7 +489,7 @@
   
   
   <span class="md-ellipsis">
-    1. 프로그래밍 환경설정
+    1. 파이썬 환경설정
     
   </span>
   
@@ -500,7 +500,7 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_1">
             <span class="md-nav__icon md-icon"></span>
-            1. 프로그래밍 환경설정
+            1. 파이썬 환경설정
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -516,30 +516,7 @@
   
   
   <span class="md-ellipsis">
-    • 파이썬 환경/파이썬 노트북
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../environment/vscode/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    • VSCode
+    • Jupyter 노트북
     
   </span>
   
@@ -586,7 +563,7 @@
   
   
   <span class="md-ellipsis">
-    2. Git
+    2. 프로그래밍 환경설정
     
   </span>
   
@@ -597,9 +574,32 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_2">
             <span class="md-nav__icon md-icon"></span>
-            2. Git
+            2. 프로그래밍 환경설정
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../environment/vscode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    • VSCode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -613,7 +613,30 @@
   
   
   <span class="md-ellipsis">
-    • Repository 만들기
+    • Git
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../environment/wsl2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    • Windows 하위 시스템 Linux
     
   </span>
   
@@ -682,12 +705,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../other/1.1_LinuxCheatSheet/" class="md-nav__link">
+      <a href="../../other/1.4_AnacondaCheatSheet/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    • Linux
+    • Anaconda
     
   </span>
   
@@ -728,58 +751,35 @@
   
   
     <li class="md-nav__item">
+      <a href="../../other/1.1_LinuxCheatSheet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    • Linux
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../other/1.3_EmacsCheatSheet/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     • Emacs
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../other/1.4_AnacondaCheatSheet/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    • Anaconda
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../environment/wsl2/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    • Windows 하위 시스템 Linux
     
   </span>
   
@@ -2399,7 +2399,7 @@
 <p><code>SIESTA</code> 프로그램은 <strong>켤레기울기법</strong> (conjugate-gradients, <code>CG</code>)을 통해 단위격자 내부에 원자의 위치에 따라 발생하는 힘 또는 응력 (strees)을 최소로 하는 최적화된 구조를 찾는다. <code>NanoCore</code>는 <code>Siesta</code> 클라스에 <code>set_option</code> 함수를 통해 <code>CGsteps</code> 옵션을 변경해주고, 시뮬레이션을 실행하는 <code>run</code> 함수에서 입력 변수를 <code>Optimization</code>으로 바꿔 <code>CG</code>을 통한 <strong>geometry optimization</strong>을 수행할 수 있다.</p>
 <p>이전 장의 이어서 다음 코드을 진행한다.</p>
 <p><div class="highlight"><pre><span></span><code><span class="c1"># Geometry optimizations by CG method</span>
-<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
 
 <span class="c1"># Set options for CG </span>
 <span class="n">nCGstep</span> <span class="o">=</span> <span class="mi">50</span>
@@ -2435,7 +2435,7 @@ C       1.241133    0.716568    0.000000
 </code></pre></div>
 두번째 줄이 격자에 대한 정보가 들어가야할 위치이다. 이 위치에 격자벡터의 성분 길이와 각 성분 간의 각도을 입력하면 된다. <code>NanoCore</code>는 <code>get_cell()</code>과 <code>convert_xyz2abc</code> 함수를 통해 이에 대한 정보를 얻을 수 있다. 다음 과정을 통해 온전한 <code>xyz</code>형식의 출력파일을 얻는다.</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># Get number of lines of cell-undefined xyz_file</span>
-<span class="k">def</span> <span class="nf">file_len</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">file_len</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
     <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
         <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">l</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
             <span class="k">pass</span>
@@ -2480,7 +2480,7 @@ C      -0.015112   -0.008725   -0.000000
 C       1.241133    0.716568    0.000000
 </code></pre></div>
 두번째 줄에 격자정보에 대한 정보가 추가된 것을 확인할 수 있다. <strong>Geometry optimization</strong>을 마친 <code>STRUCT.xyz</code> 파일은 <code>NanoCore</code>의 <code>io.read_xyz</code> 함수를 통해 다음 계산에서 이용할 수 있다.</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">NanoCore</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">NanoCore</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <span class="n">optimized_atom</span> <span class="o">=</span> <span class="n">io</span><span class="o">.</span><span class="n">read_xyz</span><span class="p">(</span><span class="s1">&#39;STRUCT.xyz&#39;</span><span class="p">)</span>
 </code></pre></div>
 
@@ -2534,7 +2534,7 @@ C       1.241133    0.716568    0.000000
       <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.instant", "navigation.sections"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
+      <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
       
         <script src="../../javascripts/config.js"></script>
       

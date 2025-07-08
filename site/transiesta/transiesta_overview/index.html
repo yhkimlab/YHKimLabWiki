@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
     
     
       
@@ -491,7 +491,7 @@
   
   
   <span class="md-ellipsis">
-    1. 프로그래밍 환경설정
+    1. 파이썬 환경설정
     
   </span>
   
@@ -502,7 +502,7 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_1">
             <span class="md-nav__icon md-icon"></span>
-            1. 프로그래밍 환경설정
+            1. 파이썬 환경설정
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -518,30 +518,7 @@
   
   
   <span class="md-ellipsis">
-    • 파이썬 환경/파이썬 노트북
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../environment/vscode/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    • VSCode
+    • Jupyter 노트북
     
   </span>
   
@@ -588,7 +565,7 @@
   
   
   <span class="md-ellipsis">
-    2. Git
+    2. 프로그래밍 환경설정
     
   </span>
   
@@ -599,9 +576,32 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_2">
             <span class="md-nav__icon md-icon"></span>
-            2. Git
+            2. 프로그래밍 환경설정
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../environment/vscode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    • VSCode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -615,7 +615,30 @@
   
   
   <span class="md-ellipsis">
-    • Repository 만들기
+    • Git
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../environment/wsl2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    • Windows 하위 시스템 Linux
     
   </span>
   
@@ -684,12 +707,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../other/1.1_LinuxCheatSheet/" class="md-nav__link">
+      <a href="../../other/1.4_AnacondaCheatSheet/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    • Linux
+    • Anaconda
     
   </span>
   
@@ -730,58 +753,35 @@
   
   
     <li class="md-nav__item">
+      <a href="../../other/1.1_LinuxCheatSheet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    • Linux
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../other/1.3_EmacsCheatSheet/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     • Emacs
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../other/1.4_AnacondaCheatSheet/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    • Anaconda
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../environment/wsl2/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    • Windows 하위 시스템 Linux
     
   </span>
   
@@ -2446,11 +2446,9 @@
 </ol>
 <h2 id="transiesta">TranSIESTA 개요</h2>
 <p>SIESTA 내 구현된 TranSIESTA는 density functional theory (DFT)과 non-equilbrium Green function (NEGF) 방법론을 결합한 DFT-NEGF 방법론 기반으로 양자수송 특성 계산할 수 있는 프로그램이다.<a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.65.165401">1</a> DFT-NEGF의 알고리즘을 먼저 살펴보자.</p>
-<center><img src="img/1.png" width="60%" height="60%"></center>
-
+<p><center><img src="img/1.png" width="60%" height="60%"></center></p>
 <p>TranSIESTA는 위의 DFT-NEGF 알고리즘에 따라서 구현된 코드로 이를 통해 양자수송 특성을 계산하는 과정을 다음과 같다.</p>
-<center><img src="img/2.png" width="80%" height="80%"></center>
-
+<p><center><img src="img/2.png" width="80%" height="80%"></center></p>
 <p>가장 먼저 <strong>junction modeling</strong> 과정은 양자수송 특성 계산의 대상인 junction을 모델링하는 과정이다. 일반적으로 주기적 경계 조건을 가지는 DFT 계산의 모델과 다르게 junction 모델을 몇가지 특징을 가진다. 이에 대해서는 바로 다음장에서 알아본다.<br />
 그 다음로 <strong>electrode calculation</strong> 과정은 DFT-NEGF 계산에서 전극에 해당하는 self-energy를 계산하기 위한 헤밀토니안을 얻는 과정이다. 이때 과정에서는 주기적 경계조건을 가진 벌크 구조의 전극에 대해 평형 상태의 DFT 전자구조 계산 필요한다. 이는 SIESTA 프로그램을 통해 진행한다.<br />
 그 다음으로는 <strong>scattering region calculation</strong>이다. 이 과정에서는 이전 <strong>electrode calculation</strong>에서 얻은 전극의 헤밀토니안 정보를 가지고 self-energy를 계산하고 이를 통해서 NEGF 계산을 수행하는 단계이다. 비평형 상태의 밀도행렬이 수렴할 때까지 반복적인 계산을 수행하여 비평형 상태의 전자구조 특성을 얻을 수 있다. 이에 대한 계산은 TranSIESTA 프로그램으로 진행된다.<br />
@@ -2508,7 +2506,7 @@
       <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.instant", "navigation.sections"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
+      <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
       
         <script src="../../javascripts/config.js"></script>
       
