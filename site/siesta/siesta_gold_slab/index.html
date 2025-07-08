@@ -1,0 +1,2493 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../siesta_gold_bulk/">
+      
+      
+        <link rel="next" href="../siesta_graphene/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
+    
+    
+      
+        <title>(4-1) 2D - Au slab 구조 - YHKLAB Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.50c56a3b.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#au-slab" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="YHKLAB Wiki" class="md-header__button md-logo" aria-label="YHKLAB Wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            YHKLAB Wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              (4-1) 2D - Au slab 구조
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../environment/python/" class="md-tabs__link">
+          
+  
+  시작하기
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../education/DD/" class="md-tabs__link">
+          
+  
+  교육용
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../nanocore/nanocore_kpoint/" class="md-tabs__link">
+          
+  
+  OORINano
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../build/build_atom/" class="md-tabs__link">
+          
+  
+  Atom
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../build/build_siesta_local/" class="md-tabs__link">
+          
+  
+  SIESTA
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../vasp/ml-neb/" class="md-tabs__link">
+          
+  
+  VASP
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../about/" class="md-tabs__link">
+        
+  
+    
+  
+  About
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="YHKLAB Wiki" class="md-nav__button md-logo" aria-label="YHKLAB Wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    YHKLAB Wiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    시작하기
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            시작하기
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    1. 프로그래밍 환경설정
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            1. 프로그래밍 환경설정
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../environment/python/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    • 파이썬으로 시작하기
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../environment/wsl2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    • Linux용 Windows 하위 시스템
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../environment/vscode/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    • VSCode
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    2. Git
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            2. Git
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../github_tutorial/0.github_create_repository/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    • Repository 만들기
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    3. 유용한 명령어
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            3. 유용한 명령어
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../other/1.1_LinuxCheatSheet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    • Linux
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../other/1.2_PythonCheatSheet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    • Python
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../other/1.3_EmacsCheatSheet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    • Emacs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../other/1.4_AnacondaCheatSheet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    • Anaconda
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    교육용
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            교육용
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../education/DD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    dummy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    OORINano
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            OORINano
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nanocore/nanocore_kpoint/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1. k-point sampling
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    2. Structure optimization
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            2. Structure optimization
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nanocore/nanocore_eos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    A. Equation of state (EOS) 
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nanocore/nanocore_murnaghan/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    B. Murnaghan fitting
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nanocore/nanocore_geo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    C. Geometry optimization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Atom
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Atom
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    0. 준비
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1">
+            <span class="md-nav__icon md-icon"></span>
+            0. 준비
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../build/build_atom/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ATOM 설치
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    1. ATOM 계산
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            1. ATOM 계산
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2_1" id="__nav_5_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    A. 기초 과정
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            A. 기초 과정
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../atom/atom_all_electron/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    (1) 모든-전자 계산
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../atom/atom_pseudopotential/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    (2) 슈도퍼텐셜 생성
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    SIESTA
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            SIESTA
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_1" id="__nav_6_1_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    0. 준비
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_1">
+            <span class="md-nav__icon md-icon"></span>
+            0. 준비
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../build/build_siesta_local/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    A. SIESTA 로컬에서 설치
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../build/build_siesta/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    B. SIESTA 클러스터에서 설치
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    1. SIESTA 계산
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            1. SIESTA 계산
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6_2_1" id="__nav_6_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    A. 기초 과정
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_2_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            A. 기초 과정
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../siesta_basic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    (1) SIESTA 개요
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../siesta_ch4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    (2) CH4, CH3 분자
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../siesta_gold_bulk/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    (3) 3D - Au bulk 구조
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    (4-1) 2D - Au slab 구조
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    (4-1) 2D - Au slab 구조
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contents
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise-1-au-slab-electronic-structure-calculation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercise 1: Au Slab electronic structure calculation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exercise 1: Au Slab electronic structure calculation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-slab-model-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      1) slab model design
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-before-work-function-calculation" class="md-nav__link">
+    <span class="md-ellipsis">
+      2) before work function calculation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#work-function-hartree-potential" class="md-nav__link">
+    <span class="md-ellipsis">
+      Work Function 계산 및 Hartree Potential 시각화
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../siesta_graphene/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    (4-2) 2D - Graphene
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    2. TranSIESTA 계산
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            2. TranSIESTA 계산
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_3_1" id="__nav_6_3_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    A. 기초 과정
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            A. 기초 과정
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../transiesta/transiesta_overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    (1) TranSIESTA 개요
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../transiesta/transiesta_modeling/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    (2) 접합구조 모델링
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../transiesta/transiesta_si1d/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    (3) Si chain (1D)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_3_2" id="__nav_6_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    B. 중급/고급 과정
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            B. 중급/고급 과정
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_3_2_1" id="__nav_6_3_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    (1) 평형상태 계산
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_6_3_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_3_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            (1) 평형상태 계산
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../transiesta/transiesta_graphene/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1) 그래핀 (2D)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../transiesta/transiesta_gnr/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2) 깨끗한 or 결함있는 GNRs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../transiesta/transiesta_si-sio2-si/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3) Si-SiO2-Si
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_3_2_2" id="__nav_6_3_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    (2) 비평형상태 계산
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_6_3_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_3_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            (2) 비평형상태 계산
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../transiesta/transiesta_gnr-vacuum-gnr/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1) GNRs-진공-GNRs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    VASP
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            VASP
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_1" id="__nav_7_1_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Nudged Elastic Band (NEB)
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_1">
+            <span class="md-nav__icon md-icon"></span>
+            Nudged Elastic Band (NEB)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vasp/ml-neb/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Machine learning for nudged elastic band
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contents
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise-1-au-slab-electronic-structure-calculation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercise 1: Au Slab electronic structure calculation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exercise 1: Au Slab electronic structure calculation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-slab-model-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      1) slab model design
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-before-work-function-calculation" class="md-nav__link">
+    <span class="md-ellipsis">
+      2) before work function calculation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#work-function-hartree-potential" class="md-nav__link">
+    <span class="md-ellipsis">
+      Work Function 계산 및 Hartree Potential 시각화
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="au-slab">Au slab 전자 구조 계산</h1>
+<h2 id="contents">Contents</h2>
+<ol>
+<li>Exercise : Au Slab electronic structure calculation  </li>
+</ol>
+<h2 id="exercise-1-au-slab-electronic-structure-calculation">Exercise 1: Au Slab electronic structure calculation</h2>
+<p>Exercise 1에서는 Au slab의 work function을 계산하는 방법에 대해 배워 볼 것이다. Slab 모델 생성과 테스트, 그리고 work function을 구하는 방법까지 살펴볼 것이다.</p>
+<h3 id="1-slab-model-design">1) slab model design</h3>
+<p>Work function을 구하기 위해서는 bulk 모델로 바로 구할 수 없고, 금속 표면을 모사한 slab model을 만들어야 한다. Slab 모델은 위에서 구한 최적화된 bulk model을 이용해서 [1, 1, 1]면을 표면으로 설정해줄 것이다.</p>
+<p>slab 모델을 만드는 방법에는 여러가지 방법이 있지만, 이번에는 NanoCore library를 이용해서 slab 모델을 만들어 볼 것이다. NanoCore는 Siesta를 더 편하게 사용하기 위해서 사용하는 패키지로 원자 모델을 수정, 생성하고, siesta를 실행시키는 등 다양한 것을 할 수 있다.</p>
+<div class="highlight"><pre><span></span><code>from<span class="w"> </span>NanoCore<span class="w"> </span>import<span class="w"> </span>*
+from<span class="w"> </span>NanoCore<span class="w"> </span>import<span class="w"> </span>siesta<span class="w"> </span>as<span class="w"> </span>s2
+import<span class="w"> </span>os,<span class="w"> </span>sys
+
+<span class="c1"># Seunghyun Yu, KAIST</span>
+<span class="c1"># Last revision: 2021/4/29</span>
+<span class="c1">#</span>
+<span class="c1">#--REVISION HISTORY--</span>
+<span class="c1">#210429 make slab model from bulk with NanoCore library.</span>
+
+<span class="c1"># command</span>
+<span class="c1"># python make_slab.py {vacuum length}</span>
+<span class="c1"># output</span>
+<span class="c1"># &quot;STRUCT.fdf&quot;, generated slab model</span>
+
+<span class="k">if</span><span class="w"> </span><span class="nv">__name__</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">&quot;__main__&quot;</span><span class="w"> </span>:
+<span class="w">    </span><span class="c1"># input</span>
+<span class="w">    </span><span class="nv">vacuum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>float<span class="o">(</span>sys.argv<span class="o">[</span><span class="m">1</span><span class="o">])</span>
+
+<span class="w">    </span><span class="c1"># make slab model with 5 layers Au atoms in 111 surface.</span>
+<span class="w">    </span><span class="c1"># vacuum is added from input</span>
+<span class="w">    </span><span class="nv">modified</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>surflab.fccsurfaces<span class="o">(</span><span class="s1">&#39;Au&#39;</span><span class="w"> </span>,<span class="w"> </span><span class="s1">&#39;111&#39;</span>,<span class="w"> </span><span class="o">(</span><span class="m">1</span>,<span class="w"> </span><span class="m">1</span>,<span class="w"> </span><span class="m">5</span><span class="o">)</span>,<span class="w"> </span><span class="nv">vac</span><span class="o">=</span>vacuum<span class="w"> </span><span class="o">)</span>
+
+<span class="w">    </span><span class="c1">#generate STRUCT.fdf file</span>
+<span class="w">    </span><span class="nv">sim</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>s2.Siesta<span class="o">(</span>modified<span class="o">)</span>
+<span class="w">    </span>sim.write_struct<span class="o">()</span>
+<span class="w">    </span>print<span class="o">(</span><span class="s2">&quot;STRUCT.fdf generated&quot;</span><span class="o">)</span>
+</code></pre></div>
+<p>위 python 코드를 복사해서 make_slab.py 파일을 만들어준다. 그리고 다음의 명령어를 입력해준다.</p>
+<div class="highlight"><pre><span></span><code><span class="w">  </span>$<span class="w"> </span>python<span class="w"> </span>make_slab.py<span class="w"> </span><span class="m">20</span><span class="w"> </span>//vacuum<span class="w"> </span>길이
+</code></pre></div>
+<p>위의 코드를 실행시키면 vacuum의 길이가 20Å이고, Au가 5층 으로 쌓인 Au slab모델을 생성할 수 있다.</p>
+<p><img alt="01_010" src="../img/05/slab_model.PNG" style="display:block; height:300px; margin-left:auto; margin-right:auto;" /></p>
+<p>Slab model을 만들고, 구조 최적화를 진행 할 때 주목해야 할 변경사항은 RUN.fdf에서 constraint를 설정해주는 것이다. 
+<br>Work funciton을 계산하기 위한 Slab model은 surface에서 bulk로 이어지는 부분을 묘사할 수 있어야 하기 때문에, 표면에서 먼 원자들만 위치를 고정하고 최적화를 진행해야 한다. 
+<br>이와 같은 조건을 추가하고 최적화를 진행하기 위해 RUN.fdf에 다음과 같은 Constraint option을 추가해야 한다.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Geometry Constraints</span>
+%block<span class="w"> </span>GeometryConstraints
+<span class="w">  </span>position<span class="w"> </span>from<span class="w"> </span><span class="m">1</span><span class="w"> </span>to<span class="w"> </span><span class="m">3</span>
+%endblock<span class="w"> </span>GeometryConstraint
+</code></pre></div>
+<p>위의 코드에서 Position은 STRUCT.fdf 파일에 적힌 atom의 번호를 뜻한다. 
+<br>STRUCT.fdf를 보면 Atom 번호 2번은 <code>[1.442497834, 0.832826513, 2.355589098]</code>에 위치한 Au 원자임을 알 수 있다. 
+<br>따라서 위 코드는 atom 번호 1, 2, 3번을 고정시키므로 z축 아래 3개는 고정시키고 위에 2개의 원자만 풀어놓은 코드임을 확인할 수 있다. 
+<br>이제 이 코드를 바탕으로 구조 최적화를 진행해주면 Work function을 구할 수 있다.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># STRUCT.fdf</span>
+NumberOfAtoms<span class="w">    </span><span class="m">5</span><span class="w">           </span><span class="c1"># Number of atoms</span>
+NumberOfSpecies<span class="w">  </span><span class="m">1</span><span class="w">           </span><span class="c1"># Number of species</span>
+
+%block<span class="w"> </span>ChemicalSpeciesLabel
+<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">79</span><span class="w"> </span>Au
+%endblock<span class="w"> </span>ChemicalSpeciesLabel
+
+<span class="c1">#(3) Lattice, coordinates, k-sampling</span>
+
+LatticeConstant<span class="w">       </span><span class="m">1</span>.000000000<span class="w"> </span>Ang
+%block<span class="w"> </span>LatticeVectors
+<span class="w">    </span><span class="m">2</span>.884995667<span class="w">     </span><span class="m">0</span>.000000000<span class="w">     </span><span class="m">0</span>.000000000
+<span class="w">    </span><span class="m">1</span>.442497834<span class="w">     </span><span class="m">2</span>.498479538<span class="w">     </span><span class="m">0</span>.000000000
+<span class="w">    </span><span class="m">0</span>.000000000<span class="w">     </span><span class="m">0</span>.000000000<span class="w">    </span><span class="m">27</span>.066767295
+%endblock<span class="w"> </span>LatticeVectors
+
+AtomicCoordinatesFormat<span class="w"> </span>Ang
+%block<span class="w"> </span>AtomicCoordinatesAndAtomicSpecies
+<span class="w">     </span><span class="m">0</span>.000000000<span class="w">     </span><span class="m">0</span>.000000000<span class="w">     </span><span class="m">0</span>.000000000<span class="w">    </span><span class="m">1</span><span class="w">    </span><span class="m">1</span>
+<span class="w">     </span><span class="m">1</span>.442497834<span class="w">     </span><span class="m">0</span>.832826513<span class="w">     </span><span class="m">2</span>.355589098<span class="w">    </span><span class="m">1</span><span class="w">    </span><span class="m">2</span>
+<span class="w">     </span><span class="m">0</span>.000000000<span class="w">     </span><span class="m">1</span>.665653025<span class="w">     </span><span class="m">4</span>.711178197<span class="w">    </span><span class="m">1</span><span class="w">    </span><span class="m">3</span>
+<span class="w">     </span><span class="m">0</span>.000000000<span class="w">     </span><span class="m">0</span>.000000000<span class="w">     </span><span class="m">7</span>.066767295<span class="w">    </span><span class="m">1</span><span class="w">    </span><span class="m">4</span>
+<span class="w">     </span><span class="m">1</span>.442497834<span class="w">     </span><span class="m">0</span>.832826513<span class="w">     </span><span class="m">9</span>.422356393<span class="w">    </span><span class="m">1</span><span class="w">    </span><span class="m">5</span>
+%endblock<span class="w"> </span>AtomicCoordinatesAndAtomicSpecies
+</code></pre></div>
+<h3 id="2-before-work-function-calculation">2) before work function calculation</h3>
+<p>Slab 모델을 만든 후에는 basis를 설정해야 한다. 특히 중요하게 봐야할 항목은 PAO.EnergyShift 항목이다. 
+<br>Lattice constant를 구할 때 우리는 이 항목을 100meV를 주고 계산한다. 그러나, work function을 구할 때는 cutoff에 의해 결정되는 basis의 크기가 결과에 큰 영향을 주기 때문에 <strong>PAO.EnergyShift 항목을 50meV로 설정</strong>하고 계산을 진행하는 것이 좋다.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Basis size</th>
+<th style="text-align: center;">DZP</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Basis energy shift</td>
+<td style="text-align: center;">50[meV]</td>
+</tr>
+<tr>
+<td style="text-align: center;">XC</td>
+<td style="text-align: center;">LDA</td>
+</tr>
+<tr>
+<td style="text-align: center;">DM.tol</td>
+<td style="text-align: center;"><span class="arithmatex">\(10^{-3}\)</span>[eV]</td>
+</tr>
+</tbody>
+</table>
+<p>Work function 계산을 위해 RUN.fdf 또한 바꿔줘야 한다. 
+<br>우선적으로 slab 모델 계산에 필요한 옵션과 work function의 시각화를 위한 옵션을 넣어준다.</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>vi<span class="w"> </span>RUN.fdf
+SaveElectrostaticPotential<span class="w"> </span>T<span class="w">  </span><span class="c1"># VH를 뽑아내는 옵션</span>
+SlabDipoleCorrection<span class="w"> </span>T<span class="w">        </span><span class="c1"># 매 SCF cycle에서 시스템의 dipole moment로 인해 생성된 진공에서의 전기장을 보정해준다.</span>
+</code></pre></div>
+<p>Work function을 계산하기 전 우선적으로 k-point를 설정해야한다. K-point는 1, 1, 1]부터 시작해서 x, y값은 계속 늘려주고, z값은 1로 고정해둔다. 그리고 수렴하는 지점을 찾을 때까지 x, y값을 늘려간다. 
+<br>K-point를 이런 방식으로 찾아보면 <strong>[35, 35, 1]일 때 소수 셋째자리까지 converge</strong>하는 것을 확인할 수 있다.</p>
+<p><img alt="01_010" src="../img/05/k-point3.PNG" style="display:block; height:500px; margin-left:auto; margin-right:auto;" /></p>
+<h3 id="work-function-hartree-potential">Work Function 계산 및 Hartree Potential 시각화</h3>
+<p>구조 최적화가 완료되면 work function을 구할 수 있다. work function은 <span class="arithmatex">\(Φ= E_{vac}- E_{Fermi}\)</span>로 정의되는데, 두 에너지는 stdout.txt에서 확인할 수 있다.</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>qsub<span class="w"> </span>slm_siesta_run
+
+$<span class="w"> </span>vi<span class="w"> </span>stdout.txt
+siesta:<span class="w">         </span><span class="nv">Fermi</span><span class="w"> </span><span class="o">=</span><span class="w">      </span>-4.506018
+...
+dhscf:<span class="w"> </span>Vacuum<span class="w"> </span>level<span class="w"> </span><span class="o">(</span>max,<span class="w"> </span>mean<span class="o">)</span><span class="w"> </span><span class="o">=</span><span class="w">    </span><span class="m">0</span>.751977<span class="w">    </span><span class="m">0</span>.750869<span class="w"> </span>eV
+</code></pre></div>
+<p><span class="arithmatex">\(Φ= E_{vac}- E_{Fermi}=(0.750869 eV)-(-4.506018 eV)= 5.256887
+eV\)</span></p>
+<p>Metal work function의 <a href="https://public.wsu.edu/~pchemlab/documents/Work-functionvalues.pdf">reference</a>에서 Au의 111면에서 실험 결과 work function은 5.31eV이다. 계산 결과와 유사함을 알 수 있다.</p>
+<p>Output 폴더에 Au_slab 폴더 안에 들어있는 macroave.in 파일을 넣어준다. 
+<br>macroave는 <em>.VH를 읽는다. VH파일의 이름에 맞게 macroave.in을 수정해준다. 
+<br>예시로 여기서는 </em>.VH 파일 이름이 Au_111.VH라고 하겠다.</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>vi<span class="w"> </span>macroave.in<span class="w"> </span>
+<span class="w">  </span>Au_111<span class="w">         </span><span class="c1"># Name of the file where the input data is stored</span>
+$<span class="w"> </span>macroave<span class="w"> </span>macroave.in<span class="w"> </span>//<span class="w"> </span>Au_111.MAV,<span class="w"> </span>Au_111.PAV<span class="w"> </span>생성
+</code></pre></div>
+<p>gnuplot을 이용하여 work function을 시각화해본다.</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>gnuplot
+pl<span class="w"> </span><span class="s1">&#39;Au_111.PAV&#39;</span><span class="w"> </span>using<span class="w"> </span><span class="m">1</span>:2<span class="w"> </span>w<span class="w"> </span>l
+<span class="nb">set</span><span class="w"> </span>xrange<span class="w"> </span><span class="o">[</span><span class="m">0</span><span class="w"> </span>:<span class="w"> </span><span class="m">55</span>.58547<span class="o">]</span><span class="w"> </span>//<span class="w"> </span>Au_111<span class="w"> </span>모델의<span class="w"> </span>z<span class="w"> </span>lattice<span class="w"> </span>크기<span class="o">[</span>bohr<span class="o">]</span>
+<span class="nb">set</span><span class="w"> </span>xlabel<span class="w"> </span><span class="s2">&quot;z [Bohr]&quot;</span>
+<span class="nb">set</span><span class="w"> </span>ylabel<span class="w"> </span><span class="s2">&quot;Potential energy [eV]&quot;</span>
+<span class="nb">set</span><span class="w"> </span>arrow<span class="w"> </span>from<span class="w"> </span><span class="m">0</span>,<span class="w"> </span>-4.592337,<span class="w"> </span>graph<span class="w"> </span><span class="m">1</span><span class="w"> </span>to<span class="w"> </span><span class="m">55</span>.58547,<span class="w"> </span>-4.592337<span class="w"> </span>ls<span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="c1"># Fermi level plot</span>
+replot
+</code></pre></div>
+<p><img alt="01_004" src="../img/05/work_in.PNG" style="display:block; height:300px; margin-left:auto; margin-right:auto;" /></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.instant", "navigation.sections"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      
+        <script src="../../javascripts/config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
