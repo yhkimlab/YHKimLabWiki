@@ -1,15 +1,17 @@
-모든-전자 계산
+온-전자 계산
 ===============================
 ## Contents
-1. 모든-전자 계산
+1. 온-전자 계산
 
-이번 장에서는 원자에 대해 밀도범함수론(density functional theory) 기반의 **모든-전자(all-electron) 계산**을 하는 법을 다룬다. 전반적인 `ATOM`에 프로그램 사용에 대한 자세한 설명 및 메뉴얼은 다음 링크를 참조한다.
+---
+## 1. 온-전자 계산
 
-- `ATOM` user manual: <https://siesta-project.org/SIESTA_MATERIAL/Pseudos/Code/atom-4.2.0.pdf>
-- Wiki webpage: <https://docs.siesta-project.org/projects/atom/en/latest/tutorial/index.html>
+이번 장에서는 원자에 대해 밀도범함수론(density functional theory) 기반의 **온-전자(all-electron) 계산** 방법을 다룬다. 전반적인 `ATOM`에 프로그램 사용에 대한 자세한 설명 및 메뉴얼은 다음 링크를 참조한다.  
 
-## 1. 모든-전자 계산
-
+- `ATOM` user manual: <https://siesta-project.org/SIESTA_MATERIAL/Pseudos/Code/atom-4.2.0.pdf>  
+- Wiki webpage: <https://docs.siesta-project.org/projects/atom/en/latest/tutorial/index.html>  
+- 
+- 
 우선, `ATOM`이 설치된 위치에서 `/Tutorial/All_electron/`에 위치한 다음 파일을 살펴보자:
 
 `Si.ae.inp`:  
@@ -32,30 +34,18 @@ $ sh ../Utils/ae.sh si.ae.inp
 => si.ae 폴더 생성
 ```
 
-생성된 `si.ae` 위치에 가면 다음과 같은 결과 파일들이 생성되어 있다:
+생성된 `si.ae` 위치에 가면 다음과 같은 결과 파일들이 생성되어 있다:  
 
-- `INP`: 계산에 사용된 입력 파일 사본
-
-- `OUT`: 계산 결과 정보를 담은 출력 파일
-
-- `AECHARGE`: 전자 밀도(**4πr²**를 곱한 형태)
-  - 1열: 반지름 `r`  
-  - 2/3열: total charge의 up/down 성분  
-  - 4열: core charge의 총합 (**4πr²**를 곱한 형태)
-
-- `CHARGE`: `AECHARGE`와 동일
-
-- `RHO`: 전자 밀도(**4πr²**를 곱셈 X)
-
-- `AEWFNR0` ~ `AEWFNR3`  
-  - 원자가 전자에 대한 온전자 파동함수
-  - `AEWFNR0`: s 오비탈  
-  - `AEWFNR1`: p 오비탈  
-  - `AEWFNR2`: d 오비탈  
-  - `AEWFNR3`: f 오비탈  
+• `INP`: 계산에 사용된 입력 파일 사본  
+• `OUT`: 계산 결과 정보를 담은 출력 파일  
+• `AECHARGE`: 전자 밀도(multiplied by 4πr²)  
+• `CHARGE`: `AECHARGE`와 동일  
+• `RHO`: 전자 밀도
+• `AEWFNR0` ~ `AEWFNR3`: 원자가 전자에 대한 온전자 파동함수(s, p, d, f 오비탈 순)
+  
 
 
-`OUTPUT` 파일을 살펴보면 다음과 같은 계산 결과 정보를 알수 있다:
+`OUTPUT` 파일을 살펴보면 다음과 같은 계산 결과 정보를 알수 있다:  
 
 
 **오비탈 고유값**:  
@@ -90,14 +80,16 @@ $ sh ../Utils/ae.sh si.ae.inp
  total energy              =     -153.15704500
 ```
 
-또한 `gnuplot`를 사용하여 계산 결과를 시각할 수 있다. `.gplot`, `.gps` 형식 파일은 이를 위한 파일들이다. 해당 명령어를 통해서 원자가 전자의 파동함수를 시각화해보자:
+또한 `gnuplot`를 사용하여 계산 결과를 시각할 수 있다. `.gplot`, `.gps` 형식 파일은 이를 위한 파일들이다. 해당 명령어를 통해서 원자가 전자의 파동함수를 시각화해보자:  
 
 ```bash
 $ gnuplot -persist ae.gplot //gplot 파일들을 불러오면 다양한 그래프들을 볼 수 있다.
 ```
 
-> 오비탈 파동함수의 노드(node) 수가 n-l-1를 만족하는지 확인해보자
+> 오비탈 파동함수의 노드(node) 수가 n-l-1를 만족하는지 확인해보자  
 
-- `charge`: Charge density (separated core and valence contributions)
-- `vcharge`: Valence charge density (same normalization).
-- `ae`: Orbital valence wavefunctions (radial part multiplied by r)
+
+다른 결과 파일들:  
+• `charge`: Charge density (separated core and valence contributions)  
+• `vcharge`: Valence charge density (same normalization)  
+• `ae`: Orbital valence wavefunctions (radial part multiplied by r)  

@@ -32,7 +32,7 @@ nav:
                 - 2. 프로그래밍 환경설정:
                         - '• VSCode' : environment/vscode.md
                         - '• Git' : github_tutorial/0.github_create_repository.md
-                        - '• Windows 하위 시스템 Linux' : environment/wsl2.md
+                        - '• Linux' : environment/wsl2.md
 
                 - 3. 유용한 명령어:
                         - '• Anaconda' : other/1.4_AnacondaCheatSheet.md
@@ -53,7 +53,7 @@ nav:
                         - 'ATOM 설치': build/build_atom.md
                 - 1. ATOM 계산:
                         - A. 기초 과정:
-                                - '(1) 모든-전자 계산': atom/atom_all_electron.md
+                                - '(1) 온-전자 계산': atom/atom_all_electron.md
                                 - '(2) 슈도퍼텐셜 생성': atom/atom_pseudopotential.md
         - SIESTA:
                 - 0. 준비:

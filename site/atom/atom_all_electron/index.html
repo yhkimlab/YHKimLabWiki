@@ -20,7 +20,7 @@
     
     
       
-        <title>(1) 모든-전자 계산 - YHKLAB Wiki</title>
+        <title>(1) 온-전자 계산 - YHKLAB Wiki</title>
       
     
     
@@ -96,7 +96,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              (1) 모든-전자 계산
+              (1) 온-전자 계산
             
           </span>
         </div>
@@ -638,7 +638,7 @@
   
   
   <span class="md-ellipsis">
-    • Windows 하위 시스템 Linux
+    • Linux
     
   </span>
   
@@ -1312,7 +1312,7 @@
   
   
   <span class="md-ellipsis">
-    (1) 모든-전자 계산
+    (1) 온-전자 계산
     
   </span>
   
@@ -1325,7 +1325,7 @@
   
   
   <span class="md-ellipsis">
-    (1) 모든-전자 계산
+    (1) 온-전자 계산
     
   </span>
   
@@ -1359,7 +1359,7 @@
         <li class="md-nav__item">
   <a href="#1-" class="md-nav__link">
     <span class="md-ellipsis">
-      1. 모든-전자 계산
+      1. 온-전자 계산
     </span>
   </a>
   
@@ -2384,7 +2384,7 @@
         <li class="md-nav__item">
   <a href="#1-" class="md-nav__link">
     <span class="md-ellipsis">
-      1. 모든-전자 계산
+      1. 온-전자 계산
     </span>
   </a>
   
@@ -2406,18 +2406,20 @@
 
 
 
-<h1 id="-">모든-전자 계산</h1>
+<h1 id="-">온-전자 계산</h1>
 <h2 id="contents">Contents</h2>
 <ol>
-<li>모든-전자 계산</li>
+<li>온-전자 계산</li>
 </ol>
-<p>이번 장에서는 원자에 대해 밀도범함수론(density functional theory) 기반의 <strong>모든-전자(all-electron) 계산</strong>을 하는 법을 다룬다. 전반적인 <code>ATOM</code>에 프로그램 사용에 대한 자세한 설명 및 메뉴얼은 다음 링크를 참조한다.</p>
+<hr />
+<h2 id="1-">1. 온-전자 계산</h2>
+<p>이번 장에서는 원자에 대해 밀도범함수론(density functional theory) 기반의 <strong>온-전자(all-electron) 계산</strong> 방법을 다룬다. 전반적인 <code>ATOM</code>에 프로그램 사용에 대한 자세한 설명 및 메뉴얼은 다음 링크를 참조한다.  </p>
 <ul>
-<li><code>ATOM</code> user manual: <a href="https://siesta-project.org/SIESTA_MATERIAL/Pseudos/Code/atom-4.2.0.pdf">https://siesta-project.org/SIESTA_MATERIAL/Pseudos/Code/atom-4.2.0.pdf</a></li>
-<li>Wiki webpage: <a href="https://docs.siesta-project.org/projects/atom/en/latest/tutorial/index.html">https://docs.siesta-project.org/projects/atom/en/latest/tutorial/index.html</a></li>
+<li><code>ATOM</code> user manual: <a href="https://siesta-project.org/SIESTA_MATERIAL/Pseudos/Code/atom-4.2.0.pdf">https://siesta-project.org/SIESTA_MATERIAL/Pseudos/Code/atom-4.2.0.pdf</a>  </li>
+<li>Wiki webpage: <a href="https://docs.siesta-project.org/projects/atom/en/latest/tutorial/index.html">https://docs.siesta-project.org/projects/atom/en/latest/tutorial/index.html</a>  </li>
+<li></li>
+<li>우선, <code>ATOM</code>이 설치된 위치에서 <code>/Tutorial/All_electron/</code>에 위치한 다음 파일을 살펴보자:</li>
 </ul>
-<h2 id="1-">1. 모든-전자 계산</h2>
-<p>우선, <code>ATOM</code>이 설치된 위치에서 <code>/Tutorial/All_electron/</code>에 위치한 다음 파일을 살펴보자:</p>
 <p><code>Si.ae.inp</code>:  </p>
 <div class="highlight"><pre><span></span><code>ae<span class="w"> </span>Si<span class="w"> </span>Ground<span class="w"> </span>state<span class="w"> </span>all-electron<span class="w"> </span><span class="c1"># 계산 종류 (ae : All-electron) / 시스템 이름</span>
 <span class="w">   </span>Si<span class="w">   </span>ca<span class="w">                      </span><span class="c1"># 원소기호 / Exchange correlation 종류 (ca : non-realistic)</span>
@@ -2432,38 +2434,14 @@
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span>sh<span class="w"> </span>../Utils/ae.sh<span class="w"> </span>si.ae.inp
 <span class="o">=</span>&gt;<span class="w"> </span>si.ae<span class="w"> </span>폴더<span class="w"> </span>생성
 </code></pre></div>
-<p>생성된 <code>si.ae</code> 위치에 가면 다음과 같은 결과 파일들이 생성되어 있다:</p>
-<ul>
-<li>
-<p><code>INP</code>: 계산에 사용된 입력 파일 사본</p>
-</li>
-<li>
-<p><code>OUT</code>: 계산 결과 정보를 담은 출력 파일</p>
-</li>
-<li>
-<p><code>AECHARGE</code>: 전자 밀도(<strong>4πr²</strong>를 곱한 형태)</p>
-</li>
-<li>1열: 반지름 <code>r</code>  </li>
-<li>2/3열: total charge의 up/down 성분  </li>
-<li>
-<p>4열: core charge의 총합 (<strong>4πr²</strong>를 곱한 형태)</p>
-</li>
-<li>
-<p><code>CHARGE</code>: <code>AECHARGE</code>와 동일</p>
-</li>
-<li>
-<p><code>RHO</code>: 전자 밀도(<strong>4πr²</strong>를 곱셈 X)</p>
-</li>
-<li>
-<p><code>AEWFNR0</code> ~ <code>AEWFNR3</code>  </p>
-</li>
-<li>원자가 전자에 대한 온전자 파동함수</li>
-<li><code>AEWFNR0</code>: s 오비탈  </li>
-<li><code>AEWFNR1</code>: p 오비탈  </li>
-<li><code>AEWFNR2</code>: d 오비탈  </li>
-<li><code>AEWFNR3</code>: f 오비탈  </li>
-</ul>
-<p><code>OUTPUT</code> 파일을 살펴보면 다음과 같은 계산 결과 정보를 알수 있다:</p>
+<p>생성된 <code>si.ae</code> 위치에 가면 다음과 같은 결과 파일들이 생성되어 있다:  </p>
+<p>• <code>INP</code>: 계산에 사용된 입력 파일 사본<br />
+• <code>OUT</code>: 계산 결과 정보를 담은 출력 파일<br />
+• <code>AECHARGE</code>: 전자 밀도(multiplied by 4πr²)<br />
+• <code>CHARGE</code>: <code>AECHARGE</code>와 동일<br />
+• <code>RHO</code>: 전자 밀도
+• <code>AEWFNR0</code> ~ <code>AEWFNR3</code>: 원자가 전자에 대한 온전자 파동함수(s, p, d, f 오비탈 순)</p>
+<p><code>OUTPUT</code> 파일을 살펴보면 다음과 같은 계산 결과 정보를 알수 있다:  </p>
 <p><strong>오비탈 고유값</strong>:<br />
 <div class="highlight"><pre><span></span><code> O  output data for orbitals
  ----------------------------
@@ -2492,17 +2470,16 @@
  ---------------------------------------------
  total energy              =     -153.15704500
 </code></pre></div></p>
-<p>또한 <code>gnuplot</code>를 사용하여 계산 결과를 시각할 수 있다. <code>.gplot</code>, <code>.gps</code> 형식 파일은 이를 위한 파일들이다. 해당 명령어를 통해서 원자가 전자의 파동함수를 시각화해보자:</p>
+<p>또한 <code>gnuplot</code>를 사용하여 계산 결과를 시각할 수 있다. <code>.gplot</code>, <code>.gps</code> 형식 파일은 이를 위한 파일들이다. 해당 명령어를 통해서 원자가 전자의 파동함수를 시각화해보자:  </p>
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span>gnuplot<span class="w"> </span>-persist<span class="w"> </span>ae.gplot<span class="w"> </span>//gplot<span class="w"> </span>파일들을<span class="w"> </span>불러오면<span class="w"> </span>다양한<span class="w"> </span>그래프들을<span class="w"> </span>볼<span class="w"> </span>수<span class="w"> </span>있다.
 </code></pre></div>
 <blockquote>
-<p>오비탈 파동함수의 노드(node) 수가 n-l-1를 만족하는지 확인해보자</p>
+<p>오비탈 파동함수의 노드(node) 수가 n-l-1를 만족하는지 확인해보자  </p>
 </blockquote>
-<ul>
-<li><code>charge</code>: Charge density (separated core and valence contributions)</li>
-<li><code>vcharge</code>: Valence charge density (same normalization).</li>
-<li><code>ae</code>: Orbital valence wavefunctions (radial part multiplied by r)</li>
-</ul>
+<p>다른 결과 파일들:<br />
+• <code>charge</code>: Charge density (separated core and valence contributions)<br />
+• <code>vcharge</code>: Valence charge density (same normalization)<br />
+• <code>ae</code>: Orbital valence wavefunctions (radial part multiplied by r)  </p>
 
 
 

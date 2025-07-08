@@ -3,13 +3,13 @@
 ## Contents
 1. 슈도포텐셜 생성
 2. 슈도포텐셜 테스트
-3. (심화) 상대론적 효과
+3. 심화과정  
 
-이번 장에서는 **모든-전자(all-electron) 계산** 강의에 이어 **슈도포텐셜(pseudopotential) 생성** 방법을 다룬다.  
-
+ 
+---
 ## 1. 슈도포텐셜 생성
 
-우리는 Si 원자를 예시로 살펴볼 것이다. 우선, `/Tutorial` 위치로 돌아가서 `/PS_Generation`에 들어가본다. Pseudopotential를 만들기 위한 예시 파일들이 있다. 이중에서 `Si` 폴더로 들어가서 `Si.tm2.inp` 파일을 살펴본다.  
+이번 장에서는 **온-전자(all-electron) 계산** 강의에 이어 **슈도포텐셜(pseudopotential) 생성** 방법을 다룬다. 우리는 Si 원자를 예시로 살펴볼 것이다. 우선, `/Tutorial` 위치로 돌아가서 `/PS_Generation`에 들어가본다. Pseudopotential를 만들기 위한 예시 파일들이 있다. 이중에서 `Si` 폴더로 들어가서 `Si.tm2.inp` 파일을 살펴본다.  
 
 `Si.tm2.inp`:  
 
@@ -35,54 +35,49 @@
 #2345678901234567890123456789012345678901234567890123456789
 ```  
 
----
+### 1-1. 입력값 설명
 
-#### 입력값 설명:
+**첫번째 줄**:  
+• 계산 종류(1열):  
+- `ae`: All-electron calculation  
+- `pg`: Pseudopotential generation  
+- `pe`: Pseudopotential generation (core correction)  
 
-**첫번째 줄**:
-- 계산 모드:
-   - `ae`: All-electron calculation
-   - `pg`: Pseudopotential generation
-   - `pe`: Pseudopotential generation (core correction)
+**두번째 줄**:  
+• 슈도포텐셜 생성 방법(1열):  
+- `tm2`: Improved Troullier-Martins  
+- `ker`: Kerker  
+  
+• 로그도함수 테스트(2열)  
 
-**두번째 줄**:
-- Pseudopotential 생성 방법(1열)
-   - `tm2`: Improved Troullier-Martins
-   - `ker`: Kerker
-- 로그도함수 테스트(2열)
+**세번째 줄**:  
 
-**세번째 줄**:
-- 원소 기호(1열)
-- 교환-상관(exchange-correlation) 범함수 종류(2열)
-  - `ca`: Ceperley-Alder(LDA)
-  - `pb`: Perdew, Burke, and Ernzerhof(GGA)
-  - (참고) `xc` 옵션 뒤에 `s`를 붙여주면 `spin-polarized`, `non-relativistic` 계산을 수행할 수 있고, `r`를 붙여주면 `spin-polarized`, `relativistic` 계산을 수행할 수 있다.
+• 원소 기호(1열)  
+• 교환-상관(exchange-correlation) 범함수 종류(2열):  
+- `ca`: Ceperley-Alder(LDA)  
+- `pb`: Perdew, Burke, and Ernzerhof(GGA)  
+> `xc` 옵션 뒤에 `s`를 붙여주면 `spin-polarized`, `non-relativistic` 계산을 수행할 수 있고, `r`를 붙여주면 `spin-polarized`, `relativistic` 계산을 수행할 수 있다.
 
-**네번째 줄**:
-- 대부분의 계산에서 사용되지 않는 옵션이다
+네번째 줄:  
+• 대부분의 계산에서 사용되지 않는 옵션이다  
 
-**다섯번째 줄**:
-- 코어 오비탈 수(1열)
-- 원자가 오비탈 수(2열)
+**다섯번째 줄**:  
+• 코어 오비탈 수(1열)  
+• 원자가 오비탈 수(2열)  
 
-**여섯번째~아홉번째 줄**:
-- 원자가 오비탈 정보(다섯번째 줄에서 지정한 수만큼)
-- `n` 양자수 (1열)
-- `l` 양자수 (2열)
-- 전자 점유도 (3,4열)
+**여섯번째~아홉번째 줄**:  
+• 원자가 오비탈 정보(다섯번째 줄에서 지정한 수만큼)  
+- `n` 양자수 (1열)  
+- `l` 양자수 (2열)   
+- 전자 점유도 (3,4열)  
 
-**마지막 줄의 구성 요소**:
-- s 오비탈의 cutoff 반지름 (1열)
-- p 오비탈의 cutoff 반지름 (2열)
-- d 오비탈의 cutoff 반지름 (3열)
-- f 오비탈의 cutoff 반지름 (4열)
-- Core correction 사용 여부 (0 또는 1) (5열)
-- Core correction에 사용될 반지름 값 (6열)
-
----
+*마지막 줄*:   
+• s, p, d, f 오비탈에 대한 슈도포텐셜 cutoff 반경 (1~4열)  
+• Core correction 사용 여부 (0 또는 1) (5열)  
+• Core correction 기준 반경 값 (6열)   
 
 
-`All_electron` 입력 파일과 다른 점은 우선 상단 왼쪽에 위치한 계산 모드가 `ae`가 아닌 `pg`로 되어있다는 것이다. **이를 꼭 `pg`로 수정해야 pseudopotential을 위한 계산을 할 수 있다.** All-electron과 마찬가지로 쉘 스크립트로 계산을 수행할 수 있는데, Pseudopotential을 만들기 위한 쉘 스크립트는 `ae.sh`가 아닌 `pg.sh`이다.  
+온-전자 계산의 입력 파일과 다른 점은 우선 상단 왼쪽에 위치한 계산 모드가 `ae`가 아닌 `pg`로 되어있다는 것이다. **이를 꼭 `pg`로 수정해야 슈도포텐셜을 위한 계산을 할 수 있다.** 온-전자 계산과 마찬가지로 쉘 스크립트로 계산을 수행할 수 있는데, 슈도포텐셜 계산을 위한 쉘 스크립트는 `ae.sh`가 아닌 `pg.sh`이다.  
 
 ``` bash
 $ sh ../../Utils/pg.sh Si.tm2.inp
@@ -91,7 +86,7 @@ $ sh ../../Utils/pg.sh Si.tm2.inp
 <br>여기서 주의할 점은 `SIESTA`에서는 basis가 되는 오비탈이 (l =3)까지 있어야한다. 
 <br>따라서 실제 원자의 원자가 오비탈이 l = 3 까지 차 있지 않더라도 전자가 차 있지 않은 가상의 오비탈을 넣고 계산을 돌려야 한다. (위의 경우 3d, 4f)
 
-### Core correction
+### 1-2. Core correction  
 
 `ATOM` 프로그램은 **non-linear exchange-correlation correction** [1](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.26.1738) 계산을 수행할 수 있다.  
 *Pseudo core의 전하밀도가 특정한 pseudo radius 밖에서 전하밀도도가 일치하고 경계부에서 매끈한 형태를 가지게 맞추어 주는 일련의 과정*이 `core correction`이다. Pseudopotential를 만드는 계산에서 *이 계산*을 포함시키기 위해서 앞서 실행한 입력 파일에서 `pg` 옵션을 `pe`로 바꾸어 주면 된다. 또한 마지막 줄에서 6번째 해당하는 값인 pseudo radius을 넣어준다. 
@@ -99,14 +94,21 @@ $ sh ../../Utils/pg.sh Si.tm2.inp
 
 ## 2. 슈도포텐셜 테스트
 
-**Norm-Conserving Pseudopotentials, D. R. Hamann, M. Schlüter, and C. Chiang PRL (1979) ** [2](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.43.1494) 논문에서 제시한 pseudopotential의 조건은 다음과 같다.  
-> 조건 1. Pseudo와 real의 원자가 고유함수 (valence eigenvalue)가 일치한다
-> 조건 2. Pseudo와 real의 파동함수 (wavefunction)가 rc (core radius) 이후로 일치한다
-> 조건 3. Pseudo와 real의 전하 밀도 (charge density)를 0에서 r까지 적분한 값이, r이 rc보다 클 때 일치한다 (norm conserving)
-> 조건 4. Pseudo와 real의 파동함수에 대한 로그도함수 (logarithmic derivatives)가 rc 이후로 일치한다
-`ATOM`을 통해 위 조건들을 확인하는 방법을 소개한다.
 
-### 조건 1. 원자가 고유함수 (valence eigenvalue)
+### 2-1. Norm-conserving pseudopotentials  
+
+**Norm-Conserving Pseudopotentials, D. R. Hamann, M. Schlüter, and C. Chiang PRL (1979)** [2](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.43.1494) 논문에서 제시한 pseudopotential의 조건은 다음과 같다.  
+
+
+> 조건 1. Pseudo와 real의 원자가 고유함수 (valence eigenvalue)가 일치한다  
+> 조건 2. Pseudo와 real의 파동함수 (wavefunction)가 rc (core radius) 이후로 일치한다  
+> 조건 3. Pseudo와 real의 전하 밀도 (charge density)를 0에서 r까지 적분한 값이, r이 rc보다 클 때 일치한다 (norm conserving)  
+> 조건 4. Pseudo와 real의 파동함수에 대한 로그도함수 (logarithmic derivatives)가 rc 이후로 일치한다  
+
+
+`ATOM` 프로그램을 통해 위 조건들을 확인하는 방법을 소개한다.  
+
+**조건 1. 원자가 고유함수 (valence eigenvalue)**  
 
 Pseudo와 real의 원자가 고유값이 일치하는지 확인하기 위해 all-electron과 pseudopotenial generations에 대한 계산 결과를 비교하면 된다. `pg` 계산에서는 `OUT` 파일에 이 두가지 정보를 모두 담고 있다. 따라서 두 고유값을 비교하기 위해서 `pg` 계산 결과가 나온 `OUT` 파일이 포함된 폴더에서 다음과 같은 명령어를 수행한다.
 
@@ -119,7 +121,7 @@ $ grep ‘&v’ OUT
 
 명령어를 통해 보여지는 결과, all-electron과 pseudopotential generations에 대한 오비탈 정보가 두 영역으로 나타난다. 이에 해당하는 영역은 `vi` 명령어를 통해 직접 `OUT` 파일을 직접 열어본 위 사진을 통해 확인할 수 있다. 오른쪽 `&v` 라벨이 valenace 오비탈을 지칭하고, 4번째 행이 그 고유값이다. 이를 통해 pseudo와 real의 원자가 고유값이 일치하는 것을 확인할 수 있다.
 
-### 조건 2. 파동함수 (Wavefunctions)
+**조건 2. 파동함수 (Wavefunctions)**  
 
 `pg` 계산에서 `AEWFNR0` `R1` `R2` `R3` 파일은 s, p, d, f 오비탈에 대한 all-electron 원자가 파동함수 결과이다. `PSFNR0` `R1` `R2` `R3` 파일은 s, p, d, f 오비탈에 대한 pseudo 원자가 파동함수 결과이다. `gnuplot`을 이용하여 두 결과가 rc 이후에서 일치하는 것을 확인할 수 있다. 아래는 바닥 상태의 `Si` 원자에 대한 예시이다.
 
@@ -130,7 +132,7 @@ gnuplot > plot 'AEWFNR1' w l, 'PSWFNR1' w l
 ```
 ![04_02](img/04/04_02.JPG)
 
-### 조건 3. 전하 밀도 (Charge density)
+**조건 3. 전하 밀도 (Charge density)**  
 
 `pg` 계산에서 `AECHARGE`는 `all-electron`의 전자밀도이다. 첫번째 열은 반경 (r), 두번째, 세번째 열은 각각 스핀에 해당하는 전체 전자밀도, 마지막 열은 핵 (core) 전자밀도이다. `PSCHARGE`는 ‘pseudopotential’에 대한 원자가 (valence) 전자밀도이다. 마찬가지로 첫번째 열은 반경 (r), 두번째, 세번째 열은 각각 스핀에 해당하는 전자밀도이다. 따라서 두 계산의 원자가 전자밀도를 비교하기 위해서는 다음과 같은 과정을 따른다.
 
@@ -143,7 +145,7 @@ gnuplot >replot 'AECHARGE' u 1:($2+$3-$4) w l    ($4 : 핵 전자밀도)
 
 ![04_03](img/04/04_03.JPG)
 
-### 조건 4: 로그도함수 (Logarithmic derivatives of wavefunctions)
+**조건 4: 로그도함수 (Logarithmic derivatives of wavefunctions)**  
 
 위 `pg` 모드 계산 코드를 보면 두번째 줄에 `tm2`와 `3.0` 옵션을 볼 수 있다. 이에 해당하는 옵션이 로그도함수 계산을 위한 종류와 반경이다. 메뉴얼을 참고하여 다른 옵션을 줄 수 있다.
 `pg` 계산에서 `AELOGD0` `D1` `D2` `D3` 파일이 s, p, d, f 오비탈에 대한 all-electron 파동함수의 로그도함수이다. 또한 `PSLOGD0` `D1` `D2` `D3` 파일이 s, p, d, f 오비탈에 대한 pseuodopotential 파동함수의 로그도함수이다. 위 과정들과 마찬가지로 `gnuplot`을 통해 비교한다.
@@ -156,7 +158,7 @@ gnuplot >replot ' PSLOGD1' w l
 
 ![04_04](img/04/04_04.JPG)
 
-### Delta-SCF 방법: Transferability test
+### 2-2. Transferability test  
 
 여기서 (3), (4) 조건은 transferability와 관련한 조건이다. Transferability는 외부 화학반응에 있어 중요한 부분인 만큼 pseudopotential generations에 핵심 조건 중 하나가 된다. 이를 `ATOM` 프로그램을 통해 직접 확인하는 방법은 전자의 구성을 바꾸어 계산을 수행하여 전체-전자 계산과 슈도포텐셜 계산의 결과를 비교하는 것이다. 이를 위한 과정은 다음 절차를 따른다. `Tutorial/Si` 위치에 있는 `Si.test.inp` 파일을 확인해본다.
 
@@ -244,7 +246,8 @@ gnuplot >replot ' PSLOGD1' w l
 ```bash
 $ sh ../../Utils/pt.sh Si.test.inp Si.tm2.vps
 ```
-Total energy 비교 :  
+
+Total energy 비교:  
 ```
 $ grep ‘&d’ OUT
 ```
@@ -252,7 +255,7 @@ $ grep ‘&d’ OUT
  
 
 
-Eigenstate 비교 :  
+Eigenstate 비교:  
 ```
 $ grep ‘&v’ OUT
 ```
@@ -262,7 +265,9 @@ $ grep ‘&v’ OUT
 
 위 과정을 통해 `Si` 원자의 all-electron과 pseudopotential에 대한 여러 전자배치의 `total energy`와 `eigenvalue`를 비교하여, transferability를 시험할 수 있다.
 
-### 예제: Fe 원자
+## 3. 심화과정
+
+### 3-1. Fe 원자
 
 이제 실제 `SIESTA` 프로그램을 위한 pseudopotential 입력파일을 만들어보자. 위에서 언급했듯 `SIESTA`는 basis가 되는 오비탈이 (l =3)까지 있어야한다. 이런 점을 만족시키는 pseudopotential generations의 입력파일은 다음 사이트에서 얻을 수 있다. [pseudo](https://departments.icmab.es/leem/SIESTA_MATERIAL/Databases/Pseudopotentials/periodictable-intro.html) (현재는 사용불가).
 
@@ -294,13 +299,13 @@ $ <ATOM 프로그램 위치>/Tutorial/Utils/pg.sh Fe.inp
 
 `SIESTA` 계산을 위한 `Fe.psf` 파일이 생성되었다.
 
-## 3. (심화) 상대론적 효과
+### 3-2. 상대론적 효과
 
 > 해당 강의를 수행하기 앞서 기본적인 [SIESTA 사용법]<https://yhkimlab.github.io/YHKimLabWiki/site/siesta/siesta_basic/>에 대해서 숙지한다.
 
 Pseudopotential을 만든 이유는 보통 계산에 사용하기 위에서이다. 일반적으로는 pseudopotential의 4가지 조건을 확인한 것 만으로 정확한 계산을 할 수 있다. 그러나, Au와 같이 전자수가 많은 경우 그렇지 않다. 이번에는 두가지 Au pseudopotential을 만들어 보고, 만든 pseudopotential이 계산에 적합한지 확인해보겠다.
 
-### 슈도포텐셜 생성
+### (1) 슈도포텐셜 생성  
 
 위에서 언급했듯이 원자번호가 큰 원자는 상대론적 효과가 나타난다. 원자의 무게가 크면 클수록 상대론적 효과는 더 크게 나타나고, 상대론적 효과가 커질수록 상대론적 효과를 고려한 pseudopotential과 고려하지 않은 pseudopotential의 결과의 차이가 커진다. 이번에는 79번 Au 원소를 사용해 상대론적 효과를 고려한 pseudopotential과 고려하지 않은 pseudopotential을 만들고 계산을 수행한 후 그 결과를 비교해보겠다.  
 
@@ -345,7 +350,7 @@ Au pseudopotential에 상대론적 효과 옵션을 넣기 위해서는 r옵션�
 
 상대론적 효과 이외에도 계산 과정에서 xc를 바꾸거나 rc를 바꾸거나 해야할 수 있다. 이런 옵션들을 알아보려면 [atom manual](https://siesta-project.org/SIESTA_MATERIAL/Pseudos/Code/atom-4.2.0.pdf)을 찾아보면 된다.
 
-### SIESTA 계산
+### (2) 고체 계산(SIESTA) 
 
 #### 1. Lattice constant
 

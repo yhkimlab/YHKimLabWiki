@@ -1,16 +1,13 @@
 ATOM 설치
 ===============================
 ## Contents
-1. 준비 과정
-2. `xmlf90`와 `libGridXC` 설치
-3. `ATOM` 설치
+1. `xmlf90`와 `libGridXC` 설치
+2. `ATOM` 설치
 
-## 1. 준비 과정
+## 1. `xmlf90`와 `libGridXC` 설치
 
-`ATOM` 프로그램을 통해 `SIESTA`에 이용되는 원자의 `psf` 파일을 만들 수 있다. 그 외에도 `ATOM`은 다음과 같은 목적에 이용된다.  
-- 특정 전자 배치에 대한 All-electron DFT (density functional theory) 계산 수행  
-- ab-initio pseudopotentials 생성  
-- 만들어진 pseudopotential를 통해 원자핵이 미치는 효과 계산  
+`ATOM` 프로그램은 밀도범함수론 코드 `SIESTA`, `abinit`, 또는 `Quantum Esspresso`에 활용할 수 있는 다양한 형식(`psf`,`vps`, `psml`)의 원자 슈도포텐셜(pseudopential) 파일 만들 수 있다. 그 외에도 `ATOM`을 통해 온-전자(all-electron) 계산, 슈도포텐셜 테스트 등 다양한 계산을 수행할 수 있다.  
+
 `ATOM`를 설치하기 앞서 다음과 같은 패키지를 준비해야한다.  
 
 `xmlf90`: <https://launchpad.net/xmlf90/+download> (1.5.0. 버전)
@@ -29,10 +26,7 @@ $ tar -xvzf libgridxc-0.8.5.tgz
 `tar` 명령어를 사용할 때에 `not in gzip format` 에러가 일어나는 경우 아래 명령어를 통해 `file`이 `tgz`형식인지 확인한다.
 ```bash
 $ file (FileName)
-```
-
-
-## 2. `xmlf90`와 `libGridXC` 설치
+```  
 
 압축을 풀어준 위치에서 다음과 같은 과정을 통해 컴파일을 진행한다.
 

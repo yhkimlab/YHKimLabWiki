@@ -638,7 +638,7 @@
   
   
   <span class="md-ellipsis">
-    • Windows 하위 시스템 Linux
+    • Linux
     
   </span>
   
@@ -1235,18 +1235,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
+  <a href="#1-xmlf90-libgridxc" class="md-nav__link">
     <span class="md-ellipsis">
-      1. 준비 과정
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-xmlf90-libgridxc" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. xmlf90와 libGridXC 설치
+      1. xmlf90와 libGridXC 설치
     </span>
   </a>
   
@@ -1379,7 +1370,7 @@
   
   
   <span class="md-ellipsis">
-    (1) 모든-전자 계산
+    (1) 온-전자 계산
     
   </span>
   
@@ -2398,18 +2389,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
+  <a href="#1-xmlf90-libgridxc" class="md-nav__link">
     <span class="md-ellipsis">
-      1. 준비 과정
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-xmlf90-libgridxc" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. xmlf90와 libGridXC 설치
+      1. xmlf90와 libGridXC 설치
     </span>
   </a>
   
@@ -2443,16 +2425,12 @@
 <h1 id="atom">ATOM 설치</h1>
 <h2 id="contents">Contents</h2>
 <ol>
-<li>준비 과정</li>
 <li><code>xmlf90</code>와 <code>libGridXC</code> 설치</li>
 <li><code>ATOM</code> 설치</li>
 </ol>
-<h2 id="1">1. 준비 과정</h2>
-<p><code>ATOM</code> 프로그램을 통해 <code>SIESTA</code>에 이용되는 원자의 <code>psf</code> 파일을 만들 수 있다. 그 외에도 <code>ATOM</code>은 다음과 같은 목적에 이용된다.<br />
-- 특정 전자 배치에 대한 All-electron DFT (density functional theory) 계산 수행<br />
-- ab-initio pseudopotentials 생성<br />
-- 만들어진 pseudopotential를 통해 원자핵이 미치는 효과 계산<br />
-<code>ATOM</code>를 설치하기 앞서 다음과 같은 패키지를 준비해야한다.  </p>
+<h2 id="1-xmlf90-libgridxc">1. <code>xmlf90</code>와 <code>libGridXC</code> 설치</h2>
+<p><code>ATOM</code> 프로그램은 밀도범함수론 코드 <code>SIESTA</code>, <code>abinit</code>, 또는 <code>Quantum Esspresso</code>에 활용할 수 있는 다양한 형식(<code>psf</code>,<code>vps</code>, <code>psml</code>)의 원자 슈도포텐셜(pseudopential) 파일 만들 수 있다. 그 외에도 <code>ATOM</code>을 통해 온-전자(all-electron) 계산, 슈도포텐셜 테스트 등 다양한 계산을 수행할 수 있다.  </p>
+<p><code>ATOM</code>를 설치하기 앞서 다음과 같은 패키지를 준비해야한다.  </p>
 <p><code>xmlf90</code>: <a href="https://launchpad.net/xmlf90/+download">https://launchpad.net/xmlf90/+download</a> (1.5.0. 버전)</p>
 <p><code>libGridXC</code>: <a href="https://launchpad.net/libgridxc/+download">https://launchpad.net/libgridxc/+download</a> (0.8.5 버전)</p>
 <p>리눅스 환경에 다운로드한 후 압축을 풀어주는 명령어는 다음과 같다.</p>
@@ -2464,7 +2442,6 @@ $<span class="w"> </span>tar<span class="w"> </span>-xvzf<span class="w"> </span
 <p><code>tar</code> 명령어를 사용할 때에 <code>not in gzip format</code> 에러가 일어나는 경우 아래 명령어를 통해 <code>file</code>이 <code>tgz</code>형식인지 확인한다.
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span>file<span class="w"> </span><span class="o">(</span>FileName<span class="o">)</span>
 </code></pre></div></p>
-<h2 id="2-xmlf90-libgridxc">2. <code>xmlf90</code>와 <code>libGridXC</code> 설치</h2>
 <p>압축을 풀어준 위치에서 다음과 같은 과정을 통해 컴파일을 진행한다.</p>
 <p><code>xmlf90</code> 설치:</p>
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>xmlf90-1.5.0
