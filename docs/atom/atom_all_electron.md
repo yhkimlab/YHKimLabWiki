@@ -3,10 +3,14 @@
 ## Contents
 1. 모든-전자 계산
 
+이번 장에서는 원자에 대해 밀도범함수론(density functional theory) 기반의 **모든-전자(all-electron) 계산**을 하는 법을 다룬다. 전반적인 `ATOM`에 프로그램 사용에 대한 자세한 설명 및 메뉴얼은 다음 링크를 참조한다.
+
+- `ATOM` user manual: <https://siesta-project.org/SIESTA_MATERIAL/Pseudos/Code/atom-4.2.0.pdf>
+- Wiki webpage: <https://docs.siesta-project.org/projects/atom/en/latest/tutorial/index.html>
+
 ## 1. 모든-전자 계산
 
-
-이번 장에서는 원자에 대해 밀도범함수론(density functional theory) 기반의 **모든-전자(all-electron) 계산**을 하는 법을 다룬다. 우선, `ATOM`이 설치된 위치에서 `/Tutorial/All_electron/`에 위치한 다음 파일을 살펴보자:
+우선, `ATOM`이 설치된 위치에서 `/Tutorial/All_electron/`에 위치한 다음 파일을 살펴보자:
 
 `Si.ae.inp`:  
 

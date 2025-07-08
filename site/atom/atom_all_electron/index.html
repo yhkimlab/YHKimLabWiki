@@ -2411,8 +2411,13 @@
 <ol>
 <li>모든-전자 계산</li>
 </ol>
+<p>이번 장에서는 원자에 대해 밀도범함수론(density functional theory) 기반의 <strong>모든-전자(all-electron) 계산</strong>을 하는 법을 다룬다. 전반적인 <code>ATOM</code>에 프로그램 사용에 대한 자세한 설명 및 메뉴얼은 다음 링크를 참조한다.</p>
+<ul>
+<li><code>ATOM</code> user manual: <a href="https://siesta-project.org/SIESTA_MATERIAL/Pseudos/Code/atom-4.2.0.pdf">https://siesta-project.org/SIESTA_MATERIAL/Pseudos/Code/atom-4.2.0.pdf</a></li>
+<li>Wiki webpage: <a href="https://docs.siesta-project.org/projects/atom/en/latest/tutorial/index.html">https://docs.siesta-project.org/projects/atom/en/latest/tutorial/index.html</a></li>
+</ul>
 <h2 id="1-">1. 모든-전자 계산</h2>
-<p>이번 장에서는 원자에 대해 밀도범함수론(density functional theory) 기반의 <strong>모든-전자(all-electron) 계산</strong>을 하는 법을 다룬다. 우선, <code>ATOM</code>이 설치된 위치에서 <code>/Tutorial/All_electron/</code>에 위치한 다음 파일을 살펴보자:</p>
+<p>우선, <code>ATOM</code>이 설치된 위치에서 <code>/Tutorial/All_electron/</code>에 위치한 다음 파일을 살펴보자:</p>
 <p><code>Si.ae.inp</code>:  </p>
 <div class="highlight"><pre><span></span><code>ae<span class="w"> </span>Si<span class="w"> </span>Ground<span class="w"> </span>state<span class="w"> </span>all-electron<span class="w"> </span><span class="c1"># 계산 종류 (ae : All-electron) / 시스템 이름</span>
 <span class="w">   </span>Si<span class="w">   </span>ca<span class="w">                      </span><span class="c1"># 원소기호 / Exchange correlation 종류 (ca : non-realistic)</span>

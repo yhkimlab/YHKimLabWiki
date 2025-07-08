@@ -5,10 +5,7 @@
 2. 슈도포텐셜 테스트
 3. (심화) 상대론적 효과
 
-이번 장에서는 **모든-전자(all-electron) 계산** 강의에 이어 **슈도포텐셜(pseudopotential) 생성** 방법을 다룬다. 해당 강의에 대한 자세한 설명 및 메뉴얼은 다음 링크를 참조한다.
-
-- `ATOM` user manual: <https://siesta-project.org/SIESTA_MATERIAL/Pseudos/Code/atom-4.2.0.pdf>
-- Wiki webpage: <https://docs.siesta-project.org/projects/atom/en/latest/tutorial/index.html>
+이번 장에서는 **모든-전자(all-electron) 계산** 강의에 이어 **슈도포텐셜(pseudopotential) 생성** 방법을 다룬다.  
 
 ## 1. 슈도포텐셜 생성
 
