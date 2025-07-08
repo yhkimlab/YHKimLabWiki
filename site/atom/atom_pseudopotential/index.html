@@ -1399,9 +1399,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#1-2-core-correction" class="md-nav__link">
+  <a href="#1-2" class="md-nav__link">
     <span class="md-ellipsis">
-      1-2. Core correction
+      1-2. 계산 및 결과 설명
     </span>
   </a>
   
@@ -1465,9 +1465,18 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#3-2" class="md-nav__link">
+  <a href="#3-2-core-correction" class="md-nav__link">
     <span class="md-ellipsis">
-      3-2. 상대론적 효과
+      3-2. Core correction
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3-3. 상대론적 효과
     </span>
   </a>
   
@@ -2551,9 +2560,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#1-2-core-correction" class="md-nav__link">
+  <a href="#1-2" class="md-nav__link">
     <span class="md-ellipsis">
-      1-2. Core correction
+      1-2. 계산 및 결과 설명
     </span>
   </a>
   
@@ -2617,9 +2626,18 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#3-2" class="md-nav__link">
+  <a href="#3-2-core-correction" class="md-nav__link">
     <span class="md-ellipsis">
-      3-2. 상대론적 효과
+      3-2. Core correction
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3-3. 상대론적 효과
     </span>
   </a>
   
@@ -2715,7 +2733,8 @@
 </ol>
 <hr />
 <h2 id="1">1. 슈도포텐셜 생성</h2>
-<p>이번 장에서는 <strong>온-전자(all-electron) 계산</strong> 강의에 이어 <strong>슈도포텐셜(pseudopotential) 생성</strong> 방법을 다룬다. 우리는 Si 원자를 예시로 살펴볼 것이다. 우선, <code>/Tutorial</code> 위치로 돌아가서 <code>/PS_Generation</code>에 들어가본다. Pseudopotential를 만들기 위한 예시 파일들이 있다. 이중에서 <code>Si</code> 폴더로 들어가서 <code>Si.tm2.inp</code> 파일을 살펴본다.  </p>
+<p>이번 장에서는 <strong>온-전자(all-electron) 계산</strong> 강의에 이어 <strong>슈도포텐셜(pseudopotential) 생성</strong> 방법을 다룬다. 우리는 Si 원자를 예시로 살펴볼 것이다. 우선, <code>/Tutorial</code> 위치로 돌아가서 <code>/PS_Generation</code>에 들어가본다. Pseudopotential를 만들기 위한 예시 파일들이 있다. 이중에서 <code>Si/Si.tm2.inp</code> 파일을 살펴본다.  </p>
+<h3 id="1-1">1-1. 입력값 설명</h3>
 <p><code>Si.tm2.inp</code>:  </p>
 <div class="highlight"><pre><span></span><code><span class="c1">#</span>
 <span class="c1">#  Pseudopotential generation for Silicon</span>
@@ -2737,7 +2756,6 @@
 <span class="c1">#</span>
 <span class="c1">#2345678901234567890123456789012345678901234567890123456789</span>
 </code></pre></div>
-<h3 id="1-1">1-1. 입력값 설명</h3>
 <p><strong>첫번째 줄</strong>:<br />
 • 계산 종류(1열):<br />
 - <code>ae</code>: All-electron calculation<br />
@@ -2766,20 +2784,30 @@
 - <code>n</code> 양자수 (1열)<br />
 - <code>l</code> 양자수 (2열) <br />
 - 전자 점유도 (3,4열)  </p>
-<p><em>마지막 줄</em>: <br />
+<p><strong>마지막 줄</strong>: <br />
 • s, p, d, f 오비탈에 대한 슈도포텐셜 cutoff 반경 (1~4열)<br />
 • Core correction 사용 여부 (0 또는 1) (5열)<br />
 • Core correction 기준 반경 값 (6열)   </p>
+<h3 id="1-2">1-2. 계산 및 결과 설명</h3>
 <p>온-전자 계산의 입력 파일과 다른 점은 우선 상단 왼쪽에 위치한 계산 모드가 <code>ae</code>가 아닌 <code>pg</code>로 되어있다는 것이다. <strong>이를 꼭 <code>pg</code>로 수정해야 슈도포텐셜을 위한 계산을 할 수 있다.</strong> 온-전자 계산과 마찬가지로 쉘 스크립트로 계산을 수행할 수 있는데, 슈도포텐셜 계산을 위한 쉘 스크립트는 <code>ae.sh</code>가 아닌 <code>pg.sh</code>이다.  </p>
-<p><div class="highlight"><pre><span></span><code>$<span class="w"> </span>sh<span class="w"> </span>../../Utils/pg.sh<span class="w"> </span>Si.tm2.inp
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>sh<span class="w"> </span>../../Utils/pg.sh<span class="w"> </span>Si.tm2.inp
 </code></pre></div>
-<code>SIESTA</code> 프로그램이 입력 파일로 이용할 수 있는 <code>Si.psf</code> 파일이 생성되었다. 
-<br>여기서 주의할 점은 <code>SIESTA</code>에서는 basis가 되는 오비탈이 (l =3)까지 있어야한다. 
-<br>따라서 실제 원자의 원자가 오비탈이 l = 3 까지 차 있지 않더라도 전자가 차 있지 않은 가상의 오비탈을 넣고 계산을 돌려야 한다. (위의 경우 3d, 4f)</p>
-<h3 id="1-2-core-correction">1-2. Core correction</h3>
-<p><code>ATOM</code> 프로그램은 <strong>non-linear exchange-correlation correction</strong> <a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.26.1738">1</a> 계산을 수행할 수 있다.<br />
-<em>Pseudo core의 전하밀도가 특정한 pseudo radius 밖에서 전하밀도도가 일치하고 경계부에서 매끈한 형태를 가지게 맞추어 주는 일련의 과정</em>이 <code>core correction</code>이다. Pseudopotential를 만드는 계산에서 <em>이 계산</em>을 포함시키기 위해서 앞서 실행한 입력 파일에서 <code>pg</code> 옵션을 <code>pe</code>로 바꾸어 주면 된다. 또한 마지막 줄에서 6번째 해당하는 값인 pseudo radius을 넣어준다. 
-<br>만약 이 값이 음수이거나 0이면 5번째 값인 valence charge density를 통해 이 반경을 직접 계산하게 되는데, 이 값 역시 음수이면 전체 핵 전하를 기준으로, 0이면 1 값을 기준으로 계산하도록 되어있다. 따라서 pseudo radius을 실험적으로 얻은 외부 참조 값을 이용하여 넣어주는 것을 강력히 추천한다.</p>
+<p><code>SIESTA</code> 프로그램이 입력 파일로 이용할 수 있는 <code>Si.tm2.psf</code> 파일이 생성되었다. 슈도포텐셜 계산에 대한 결과는 <code>Si.tm2</code> 폴더에 저장되어있다. 생성된 <code>Si.tm2</code> 위치에 가면 다음과 같은 결과 파일들이 생성되어 있다:  </p>
+<p>• <code>INP</code>: 계산에 사용된 입력 파일 사본<br />
+• <code>OUT</code>: 계산 결과 정보를 담은 출력 파일<br />
+• <code>PSCHARGE</code>: 전자 밀도(multiplied by 4πr²) <br />
+• <code>PSPOTR0</code> ~ <code>PSPOTR3</code>: 슈도포텐셜(s, p, d, f 오비탈 순)<br />
+• <code>PSPOTQ0</code> ~ <code>PSPOTQ3</code>: 퓨리에 변환된 슈도포텐셜(s, p, d, f 오비탈 순)<br />
+• <code>PSPOTR0</code> ~ <code>PSPOTR3</code>: 슈도포텐셜(s, p, d, f 오비탈 순)<br />
+• <code>PSWFNR0</code> ~ <code>PSWFNR3</code>: 원자가 전자에 대한 슈도 파동함수(s, p, d, f 오비탈 순)<br />
+• <code>PSWFNQ0</code> ~ <code>PSWFNQ3</code>: 퓨리에 변환된 원자가 전자에 대한 슈도 파동함수(s, p, d, f 오비탈 순)  </p>
+<p>또한 <code>gnuplot</code>를 사용하여 계산 결과를 시각할 수 있다. <code>.gplot</code>, <code>.gps</code> 형식 파일은 이를 위한 파일들이다. 해당 명령어를 통해서 슈도포텐셜을 시각화해보자:  </p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>gnuplot<span class="w"> </span>-perist<span class="w"> </span>pots.gplot
+</code></pre></div>
+<p><img alt="04_00" src="../img/04/04_00.JPG" /></p>
+<p>시각화 가능한 다른 결과 파일들:<br />
+• <code>pseudo</code>: Norm-Conserving Pseudopotentials 조건 확인<br />
+• <code>charge</code>: 온-전자 vs 슈도포텐셜 전자밀도 비교  </p>
 <h2 id="2">2. 슈도포텐셜 테스트</h2>
 <h3 id="2-1-norm-conserving-pseudopotentials">2-1. Norm-conserving pseudopotentials</h3>
 <p><strong>Norm-Conserving Pseudopotentials, D. R. Hamann, M. Schlüter, and C. Chiang PRL (1979)</strong> <a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.43.1494">2</a> 논문에서 제시한 pseudopotential의 조건은 다음과 같다.  </p>
@@ -2902,11 +2930,11 @@ gnuplot<span class="w"> </span>&gt;replot<span class="w"> </span><span class="s1
 <p>위와 같이 <code>Si.test.inp</code> 파일에는 <code>Si</code> 원자에 대한 다양한 전자배치 정보가 들어있다. 코드를 확인하면 동일한 전자배치로 구성된 <code>ae</code>와 <code>pt</code> 계산에 대한 두 영역으로 나눠져 있다. 여기서 <code>pt</code>는 <strong>transferability test</strong>를 위한 계산 모드이다. <code>pt</code> 계산을 수행하기 위해서는 <code>pt.sh</code> 쉘 스크립트를 이용해야 한다. 여기서 중요한 점은 <code>pt</code> 계산은 <code>Si</code> 원자의 바닥 상태에 대한 <code>pg</code> 계산 결과로 나온 <code>vps</code> 파일을 입력 파일로 받는다는 점이다. 이전 과정에서 이미 <code>pg</code> 계산을 수행했다면, <code>Si.tm2.vps</code> 파일이 같은 위치에 남아있을 것이다 (없다면 <code>pg</code> 계산을 먼저 수행해서 <code>vps</code> 파일을 얻는다).</p>
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span>sh<span class="w"> </span>../../Utils/pt.sh<span class="w"> </span>Si.test.inp<span class="w"> </span>Si.tm2.vps
 </code></pre></div>
-<p>Total energy 비교:<br />
+<p><strong>Total energy 비교</strong>:<br />
 <div class="highlight"><pre><span></span><code>$ grep ‘&amp;d’ OUT
 </code></pre></div>
 <img alt="04_05" src="../img/04/04_05.JPG" /></p>
-<p>Eigenstate 비교:<br />
+<p><strong>Eigenstate 비교</strong>:<br />
 <div class="highlight"><pre><span></span><code>$ grep ‘&amp;v’ OUT
 </code></pre></div>
 <img alt="04_06" src="../img/04/04_06.JPG" /></p>
@@ -2935,7 +2963,11 @@ gnuplot<span class="w"> </span>&gt;replot<span class="w"> </span><span class="s1
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span>&lt;ATOM<span class="w"> </span>프로그램<span class="w"> </span>위치&gt;/Tutorial/Utils/pg.sh<span class="w"> </span>Fe.inp
 </code></pre></div>
 <p><code>SIESTA</code> 계산을 위한 <code>Fe.psf</code> 파일이 생성되었다.</p>
-<h3 id="3-2">3-2. 상대론적 효과</h3>
+<h3 id="3-2-core-correction">3-2. Core correction</h3>
+<p><code>ATOM</code> 프로그램은 <strong>non-linear exchange-correlation correction</strong> <a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.26.1738">1</a> 계산을 수행할 수 있다.<br />
+<em>Pseudo core의 전하밀도가 특정한 pseudo radius 밖에서 전하밀도도가 일치하고 경계부에서 매끈한 형태를 가지게 맞추어 주는 일련의 과정</em>이 <code>core correction</code>이다. Pseudopotential를 만드는 계산에서 <em>이 계산</em>을 포함시키기 위해서 앞서 실행한 입력 파일에서 <code>pg</code> 옵션을 <code>pe</code>로 바꾸어 주면 된다. 또한 마지막 줄에서 6번째 해당하는 값인 pseudo radius을 넣어준다. 
+<br>만약 이 값이 음수이거나 0이면 5번째 값인 valence charge density를 통해 이 반경을 직접 계산하게 되는데, 이 값 역시 음수이면 전체 핵 전하를 기준으로, 0이면 1 값을 기준으로 계산하도록 되어있다. 따라서 pseudo radius을 실험적으로 얻은 외부 참조 값을 이용하여 넣어주는 것을 강력히 추천한다.</p>
+<h3 id="3-3">3-3. 상대론적 효과</h3>
 <blockquote>
 <p>해당 강의를 수행하기 앞서 기본적인 [SIESTA 사용법]<a href="https://yhkimlab.github.io/YHKimLabWiki/site/siesta/siesta_basic/">https://yhkimlab.github.io/YHKimLabWiki/site/siesta/siesta_basic/</a>에 대해서 숙지한다.</p>
 </blockquote>

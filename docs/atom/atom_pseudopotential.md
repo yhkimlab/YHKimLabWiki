@@ -9,7 +9,9 @@
 ---
 ## 1. 슈도포텐셜 생성
 
-이번 장에서는 **온-전자(all-electron) 계산** 강의에 이어 **슈도포텐셜(pseudopotential) 생성** 방법을 다룬다. 우리는 Si 원자를 예시로 살펴볼 것이다. 우선, `/Tutorial` 위치로 돌아가서 `/PS_Generation`에 들어가본다. Pseudopotential를 만들기 위한 예시 파일들이 있다. 이중에서 `Si` 폴더로 들어가서 `Si.tm2.inp` 파일을 살펴본다.  
+이번 장에서는 **온-전자(all-electron) 계산** 강의에 이어 **슈도포텐셜(pseudopotential) 생성** 방법을 다룬다. 우리는 Si 원자를 예시로 살펴볼 것이다. 우선, `/Tutorial` 위치로 돌아가서 `/PS_Generation`에 들어가본다. Pseudopotential를 만들기 위한 예시 파일들이 있다. 이중에서 `Si/Si.tm2.inp` 파일을 살펴본다.  
+
+### 1-1. 입력값 설명
 
 `Si.tm2.inp`:  
 
@@ -34,8 +36,6 @@
 #
 #2345678901234567890123456789012345678901234567890123456789
 ```  
-
-### 1-1. 입력값 설명
 
 **첫번째 줄**:  
 • 계산 종류(1열):  
@@ -71,26 +71,45 @@
 - `l` 양자수 (2열)   
 - 전자 점유도 (3,4열)  
 
-*마지막 줄*:   
+**마지막 줄**:   
 • s, p, d, f 오비탈에 대한 슈도포텐셜 cutoff 반경 (1~4열)  
 • Core correction 사용 여부 (0 또는 1) (5열)  
 • Core correction 기준 반경 값 (6열)   
 
+
+### 1-2. 계산 및 결과 설명  
 
 온-전자 계산의 입력 파일과 다른 점은 우선 상단 왼쪽에 위치한 계산 모드가 `ae`가 아닌 `pg`로 되어있다는 것이다. **이를 꼭 `pg`로 수정해야 슈도포텐셜을 위한 계산을 할 수 있다.** 온-전자 계산과 마찬가지로 쉘 스크립트로 계산을 수행할 수 있는데, 슈도포텐셜 계산을 위한 쉘 스크립트는 `ae.sh`가 아닌 `pg.sh`이다.  
 
 ``` bash
 $ sh ../../Utils/pg.sh Si.tm2.inp
 ```
-`SIESTA` 프로그램이 입력 파일로 이용할 수 있는 `Si.psf` 파일이 생성되었다. 
-<br>여기서 주의할 점은 `SIESTA`에서는 basis가 되는 오비탈이 (l =3)까지 있어야한다. 
-<br>따라서 실제 원자의 원자가 오비탈이 l = 3 까지 차 있지 않더라도 전자가 차 있지 않은 가상의 오비탈을 넣고 계산을 돌려야 한다. (위의 경우 3d, 4f)
+  
+`SIESTA` 프로그램이 입력 파일로 이용할 수 있는 `Si.tm2.psf` 파일이 생성되었다. 슈도포텐셜 계산에 대한 결과는 `Si.tm2` 폴더에 저장되어있다. 생성된 `Si.tm2` 위치에 가면 다음과 같은 결과 파일들이 생성되어 있다:  
 
-### 1-2. Core correction  
+• `INP`: 계산에 사용된 입력 파일 사본  
+• `OUT`: 계산 결과 정보를 담은 출력 파일  
+• `PSCHARGE`: 전자 밀도(multiplied by 4πr²)   
+• `PSPOTR0` ~ `PSPOTR3`: 슈도포텐셜(s, p, d, f 오비탈 순)  
+• `PSPOTQ0` ~ `PSPOTQ3`: 퓨리에 변환된 슈도포텐셜(s, p, d, f 오비탈 순)  
+• `PSPOTR0` ~ `PSPOTR3`: 슈도포텐셜(s, p, d, f 오비탈 순)  
+• `PSWFNR0` ~ `PSWFNR3`: 원자가 전자에 대한 슈도 파동함수(s, p, d, f 오비탈 순)  
+• `PSWFNQ0` ~ `PSWFNQ3`: 퓨리에 변환된 원자가 전자에 대한 슈도 파동함수(s, p, d, f 오비탈 순)  
 
-`ATOM` 프로그램은 **non-linear exchange-correlation correction** [1](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.26.1738) 계산을 수행할 수 있다.  
-*Pseudo core의 전하밀도가 특정한 pseudo radius 밖에서 전하밀도도가 일치하고 경계부에서 매끈한 형태를 가지게 맞추어 주는 일련의 과정*이 `core correction`이다. Pseudopotential를 만드는 계산에서 *이 계산*을 포함시키기 위해서 앞서 실행한 입력 파일에서 `pg` 옵션을 `pe`로 바꾸어 주면 된다. 또한 마지막 줄에서 6번째 해당하는 값인 pseudo radius을 넣어준다. 
-<br>만약 이 값이 음수이거나 0이면 5번째 값인 valence charge density를 통해 이 반경을 직접 계산하게 되는데, 이 값 역시 음수이면 전체 핵 전하를 기준으로, 0이면 1 값을 기준으로 계산하도록 되어있다. 따라서 pseudo radius을 실험적으로 얻은 외부 참조 값을 이용하여 넣어주는 것을 강력히 추천한다.
+
+또한 `gnuplot`를 사용하여 계산 결과를 시각할 수 있다. `.gplot`, `.gps` 형식 파일은 이를 위한 파일들이다. 해당 명령어를 통해서 슈도포텐셜을 시각화해보자:  
+
+```bash
+$ gnuplot -perist pots.gplot
+```
+
+![04_00](img/04/04_00.JPG)
+
+
+시각화 가능한 다른 결과 파일들:  
+• `pseudo`: Norm-Conserving Pseudopotentials 조건 확인  
+• `charge`: 온-전자 vs 슈도포텐셜 전자밀도 비교  
+
 
 ## 2. 슈도포텐셜 테스트
 
@@ -157,6 +176,8 @@ gnuplot >replot ' PSLOGD1' w l
 ```
 
 ![04_04](img/04/04_04.JPG)
+
+
 
 ### 2-2. Transferability test  
 
@@ -247,7 +268,7 @@ gnuplot >replot ' PSLOGD1' w l
 $ sh ../../Utils/pt.sh Si.test.inp Si.tm2.vps
 ```
 
-Total energy 비교:  
+**Total energy 비교**:  
 ```
 $ grep ‘&d’ OUT
 ```
@@ -255,7 +276,7 @@ $ grep ‘&d’ OUT
  
 
 
-Eigenstate 비교:  
+**Eigenstate 비교**:  
 ```
 $ grep ‘&v’ OUT
 ```
@@ -299,7 +320,13 @@ $ <ATOM 프로그램 위치>/Tutorial/Utils/pg.sh Fe.inp
 
 `SIESTA` 계산을 위한 `Fe.psf` 파일이 생성되었다.
 
-### 3-2. 상대론적 효과
+### 3-2. Core correction
+
+`ATOM` 프로그램은 **non-linear exchange-correlation correction** [1](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.26.1738) 계산을 수행할 수 있다.  
+*Pseudo core의 전하밀도가 특정한 pseudo radius 밖에서 전하밀도도가 일치하고 경계부에서 매끈한 형태를 가지게 맞추어 주는 일련의 과정*이 `core correction`이다. Pseudopotential를 만드는 계산에서 *이 계산*을 포함시키기 위해서 앞서 실행한 입력 파일에서 `pg` 옵션을 `pe`로 바꾸어 주면 된다. 또한 마지막 줄에서 6번째 해당하는 값인 pseudo radius을 넣어준다. 
+<br>만약 이 값이 음수이거나 0이면 5번째 값인 valence charge density를 통해 이 반경을 직접 계산하게 되는데, 이 값 역시 음수이면 전체 핵 전하를 기준으로, 0이면 1 값을 기준으로 계산하도록 되어있다. 따라서 pseudo radius을 실험적으로 얻은 외부 참조 값을 이용하여 넣어주는 것을 강력히 추천한다.
+
+### 3-3. 상대론적 효과
 
 > 해당 강의를 수행하기 앞서 기본적인 [SIESTA 사용법]<https://yhkimlab.github.io/YHKimLabWiki/site/siesta/siesta_basic/>에 대해서 숙지한다.
 

@@ -89,7 +89,7 @@ $ gnuplot -persist ae.gplot //gplot 파일들을 불러오면 다양한 그래�
 > 오비탈 파동함수의 노드(node) 수가 n-l-1를 만족하는지 확인해보자  
 
 
-다른 결과 파일들:  
+시각화 가능한 다른 결과 파일들:  
 • `charge`: Charge density (separated core and valence contributions)  
 • `vcharge`: Valence charge density (same normalization)  
 • `ae`: Orbital valence wavefunctions (radial part multiplied by r)  
