@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
     
     
       
@@ -1370,7 +1370,7 @@
   
   
   <span class="md-ellipsis">
-    (1) 온-전자 계산
+    (1) 전(全)전자 계산
     
   </span>
   
@@ -2450,7 +2450,7 @@ $<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>Sys
 $<span class="w"> </span>cp<span class="w"> </span>gfortran.make<span class="w"> </span>../Gfortran/fortran.mk
 </code></pre></div>
 <p><code>gfortran.make</code> 파일이 없는 경우 홈페이지에서 다른 버전의 xmlf90을 다운받는다.</p>
-<p>라이브러리를 생성하기 전에 fortran.mk을 다음과 같이 수정해준다.</p>
+<p>라이브러리를 생성하기 전에 fortran.mk을 (intel의 경우) 다음과 같이 수정해준다.</p>
 <div class="highlight"><pre><span></span><code><span class="nv">LDFLAGS</span><span class="o">=</span>-mkl<span class="o">=</span>cluster
 <span class="nv">AR</span><span class="o">=</span>/usr/bin/ar
 </code></pre></div>
@@ -2479,7 +2479,7 @@ $<span class="w"> </span>make
 <p><code>ATOM</code>를 위한 라이브러리가 준비되었으니 이제 <code>ATOM</code>을 설치한다.<br />
 <code>ATOM</code>: <a href="https://siesta-project.org/SIESTA_MATERIAL/Pseudos/Code/downloads.html">https://siesta-project.org/SIESTA_MATERIAL/Pseudos/Code/downloads.html</a> (4.2.7 버전)</p>
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span>wget<span class="w"> </span>https://siesta-project.org/SIESTA_MATERIAL/Pseudos/Code/atom-4.2.7-100.tgz<span class="w"> </span>//<span class="w"> </span><span class="m">4</span>.2.7버전
-$<span class="w"> </span>tar<span class="w"> </span>xvzf<span class="w"> </span>atom-4.2.7-100.gz
+$<span class="w"> </span>tar<span class="w"> </span>xvzf<span class="w"> </span>atom-4.2.7-100.tgz
 </code></pre></div>
 <p><code>ATOM</code>도 마찬가지로 컴파일을 해야 한다. 압축을 풀어준 위치에서 컴파일을 진행한다.</p>
 <p><code>ATOM</code> 설치:
@@ -2487,7 +2487,7 @@ $<span class="w"> </span>tar<span class="w"> </span>xvzf<span class="w"> </span>
 $<span class="w"> </span>cp<span class="w"> </span>arch.make.sample<span class="w"> </span>arch.make
 $<span class="w"> </span>vi<span class="w"> </span>arch.make
 </code></pre></div>
-<code>arch.make</code> 파일이 열리면 아래 부분에 ROOT를 수정한다.</p>
+<code>arch.make</code> 파일이 열리면 아래 부분에 ROOT를 수정한다. path는 '/' root 부터 절대 경로를 쓰고, 리눅스 명령어 <em>$ pwd</em> 로 절대경로를 확인할 수 있다.</p>
 <p><div class="highlight"><pre><span></span><code><span class="nv">XMLF90_ROOT</span><span class="o">=</span><span class="w"> </span>&lt;설치한<span class="w"> </span>xmlf90<span class="w"> </span>위치&gt;/xmlf90-1.5.0/Gfortran
 <span class="nv">GRIDXC_ROOT</span><span class="o">=</span><span class="w"> </span>&lt;설치한<span class="w"> </span>libgridxc<span class="w"> </span>위치&gt;/libgridxc-0.8.5/Gfortran
 include<span class="w"> </span><span class="k">$(</span>XMLF90_ROOT<span class="k">)</span>/xmlf90.mk
@@ -2546,7 +2546,7 @@ $<span class="w"> </span>make
       <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.instant", "navigation.sections"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
       
         <script src="../../javascripts/config.js"></script>
       

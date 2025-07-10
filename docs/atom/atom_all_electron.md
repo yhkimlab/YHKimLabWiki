@@ -1,12 +1,12 @@
-온-전자 계산
+전(全)전자 계산
 ===============================
 ## Contents
-1. 온-전자 계산
+1. 전(全)전자 계산
 
 ---
-## 1. 온-전자 계산
+## 1. 전전자 계산
 
-이번 장에서는 원자에 대해 밀도범함수론(density functional theory) 기반의 **온-전자(all-electron) 계산** 방법을 다룬다. 전반적인 `ATOM`에 프로그램 사용에 대한 자세한 설명 및 메뉴얼은 다음 링크를 참조한다.  
+이번 장에서는 원자에 대해 밀도범함수론(density functional theory) 기반의 **전전자(all-electron) 계산** 방법을 다룬다. 전반적인 `ATOM`에 프로그램 사용에 대한 자세한 설명 및 메뉴얼은 다음 링크를 참조한다.  
 
 - `ATOM` user manual: <https://siesta-project.org/SIESTA_MATERIAL/Pseudos/Code/atom-4.2.0.pdf>  
 - Wiki webpage: <https://docs.siesta-project.org/projects/atom/en/latest/tutorial/index.html>  
@@ -45,21 +45,22 @@ $ sh ../Utils/ae.sh si.ae.inp
   
 
 
-`OUTPUT` 파일을 살펴보면 다음과 같은 계산 결과 정보를 알수 있다:  
+`OUT` 파일을 살펴보면 다음과 같은 계산 결과 정보를 알수 있다:  
 
 
 **오비탈 고유값**:  
 ```
- O  output data for orbitals
+Si output data for orbitals
  ----------------------------
 
  nl    s      occ         eigenvalue    kinetic energy      pot energy
 
- 1s   0.5    2.0000     -37.38043698       0.00000000    -121.94707005
- 2s   0.5    2.0000      -1.22878700       0.00000000     -19.62006430  &v
- 2p  -0.5    1.6667      -0.19348921       0.00000000     -15.84881200  &v
- 2p   0.5    3.3333      -0.19126456       0.00000000     -15.80651303  &v
----------------------------- &v
+ 1s   0.0    2.0000    -130.36911240     183.01377616    -378.73491463
+ 2s   0.0    2.0000     -10.14892694      25.89954259     -71.62102169
+ 2p   0.0    6.0000      -7.02876268      24.42537874     -68.74331203
+ 3s   0.0    2.0000      -0.79662742       3.23745215     -17.68692611  &v
+ 3p   0.0    2.0000      -0.30705179       2.06135782     -13.62572515  &v
+ ---------------------------- &v
 ```
 
 **전체 에너지**:  
@@ -67,17 +68,17 @@ $ sh ../Utils/ae.sh si.ae.inp
  total energies
  --------------
 
- sum of eigenvalues        =      -78.17847848
- kinetic energy from ek    =        0.00000000
- el-ion interaction energy =     -362.23733215
- el-el  interaction energy =       80.06698735
- vxc    correction         =      -21.19720455
- virial correction         =        0.84352124
- exchange + corr energy    =      -16.10878372
- kinetic energy from ev    =      145.12208352
- potential energy          =     -298.27912853
+ sum of eigenvalues        =     -325.41601319
+ kinetic energy from ek    =      574.97652987
+ el-ion interaction energy =    -1375.79704736
+ el-el  interaction energy =      263.53000478
+ vxc    correction         =      -51.65548902
+ virial correction         =        1.40722950
+ exchange + corr energy    =      -39.09342414
+ kinetic energy from ev    =      574.97651364
+ potential energy          =    -1151.36046672
  ---------------------------------------------
- total energy              =     -153.15704500
+ total energy              =     -576.38395308
 ```
 
 또한 `gnuplot`를 사용하여 계산 결과를 시각할 수 있다. `.gplot`, `.gps` 형식 파일은 이를 위한 파일들이다. 해당 명령어를 통해서 원자가 전자의 파동함수를 시각화해보자:  

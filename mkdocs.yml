@@ -53,7 +53,7 @@ nav:
                         - 'ATOM 설치': build/build_atom.md
                 - 1. ATOM 계산:
                         - A. 기초 과정:
-                                - '(1) 온-전자 계산': atom/atom_all_electron.md
+                                - '(1) 전(全)전자 계산': atom/atom_all_electron.md
                                 - '(2) 슈도퍼텐셜 생성': atom/atom_pseudopotential.md
         - SIESTA:
                 - 0. 준비:

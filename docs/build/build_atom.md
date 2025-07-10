@@ -42,7 +42,7 @@ $ cp gfortran.make ../Gfortran/fortran.mk
 `gfortran.make` 파일이 없는 경우 홈페이지에서 다른 버전의 xmlf90을 다운받는다.
 
 
-라이브러리를 생성하기 전에 fortran.mk을 다음과 같이 수정해준다.
+라이브러리를 생성하기 전에 fortran.mk을 (intel의 경우) 다음과 같이 수정해준다.
 
 ```bash  
 LDFLAGS=-mkl=cluster
@@ -87,7 +87,7 @@ AR=/usr/bin/ar
 
 ```bash
 $ wget https://siesta-project.org/SIESTA_MATERIAL/Pseudos/Code/atom-4.2.7-100.tgz // 4.2.7버전
-$ tar xvzf atom-4.2.7-100.gz
+$ tar xvzf atom-4.2.7-100.tgz
 ```
 
 `ATOM`도 마찬가지로 컴파일을 해야 한다. 압축을 풀어준 위치에서 컴파일을 진행한다.
@@ -98,7 +98,7 @@ $ cd atom-4.2.7-100
 $ cp arch.make.sample arch.make
 $ vi arch.make
 ```
-`arch.make` 파일이 열리면 아래 부분에 ROOT를 수정한다.
+`arch.make` 파일이 열리면 아래 부분에 ROOT를 수정한다. path는 '/' root 부터 절대 경로를 쓰고, 리눅스 명령어 *$ pwd* 로 절대경로를 확인할 수 있다.
 
 ```bash
 XMLF90_ROOT= <설치한 xmlf90 위치>/xmlf90-1.5.0/Gfortran

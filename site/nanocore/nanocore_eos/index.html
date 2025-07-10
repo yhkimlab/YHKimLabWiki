@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
     
     
       
@@ -1361,7 +1361,7 @@
   
   
   <span class="md-ellipsis">
-    (1) 온-전자 계산
+    (1) 전(全)전자 계산
     
   </span>
   
@@ -2416,8 +2416,8 @@
 <h3 id="equation-of-state">상태방정식 (Equation of state)을 통한 격자상수 찾기</h3>
 <p>지금까지 <code>NanoCore</code>를 이용해 그래핀 모델을 생성하고, <strong>k-point sampling</strong> 과정을 통해 전체 에너지가 수렴하는 k-point 임계점을 구했다. DFT 계산을 통해 얻은 전체 에너지는 압력, 격자상수, 부피 탄성계수 등에 영향을 받으며, 에너지가 최소가 되는 지점에서 안정화된 구조를 가진다. 이번 장에서는 이차원 물질인 그래핀의 격자상수에 변화를 주며 전체 에너지가 최소가 되는 지점을 구할 것이다.</p>
 <p>우선 저번 장과 동일한 그래핀 모델과 <strong>k-point sampling</strong>을 통해 얻은 k-point 값을 이용한다.</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">NanoCore</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">NanoCore</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="c1"># Modeling</span>
 <span class="n">atoms</span> <span class="o">=</span> <span class="n">carbonlab</span><span class="o">.</span><span class="n">grp</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
@@ -2433,9 +2433,9 @@
 <span class="n">sim</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">&#39;kgrid&#39;</span><span class="p">,</span> <span class="p">[</span><span class="n">converged_kpt</span><span class="p">,</span> <span class="n">converged_kpt</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
 </code></pre></div>
 <p><code>atoms</code>는 <code>carbonlab</code> 모듈에 종속된 <code>Atom</code> 클래스이다. <code>Atom</code> 클래스에 <code>_cell</code> 함수를 이용하면 <code>Atom</code>의 격자벡터 (lattice vector)에 대한 배열을 얻을 수 있다. 이 격자벡터를 여러 비율로 바꿔가며 전체 에너지를 계산한다.</p>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">copy</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">copy</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="c1"># Initial values for lattice vectors</span>
 <span class="n">init_latticevectors</span> <span class="o">=</span> <span class="n">copy</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">atoms</span><span class="o">.</span><span class="n">_cell</span><span class="p">)</span>
@@ -2475,13 +2475,13 @@
 </code></pre></div>
 <h3 id="polynomial-fitting">다항식 곡선 피팅 (Polynomial fitting)</h3>
 <p>계산을 통해 <code>Latticeconsts</code> (격자상수)와 <code>Etot</code> (전체 에너지) 배열을 얻었다. 이 값을 <code>matplotlib</code>과 <code>scipy</code> 라이브러리를 이용해, <strong>다항식 곡선 피팅</strong>을 하여 극소값을 찾을 것이다.</p>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pylab</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plb</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">scipy.optimize</span><span class="w"> </span><span class="kn">import</span> <span class="n">fminbound</span>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">matplotlib.pylab</span> <span class="k">as</span> <span class="nn">plb</span>
+<span class="kn">from</span> <span class="nn">scipy.optimize</span> <span class="kn">import</span> <span class="n">fminbound</span>
 
 <span class="c1"># Get polynomial equations</span>
 <span class="n">para_init</span> <span class="o">=</span> <span class="n">plb</span><span class="o">.</span><span class="n">polyfit</span><span class="p">(</span><span class="n">Latticeconsts</span><span class="p">,</span> <span class="n">Etot</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
 
-<span class="k">def</span><span class="w"> </span><span class="nf">Polynomial</span><span class="p">(</span><span class="n">parameters</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">Polynomial</span><span class="p">(</span><span class="n">parameters</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
     <span class="n">A</span> <span class="o">=</span> <span class="n">parameters</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
     <span class="n">B</span> <span class="o">=</span> <span class="n">parameters</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
     <span class="n">C</span> <span class="o">=</span> <span class="n">parameters</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
@@ -2582,7 +2582,7 @@
       <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.instant", "navigation.sections"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
       
         <script src="../../javascripts/config.js"></script>
       

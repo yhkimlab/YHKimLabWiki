@@ -16,11 +16,11 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
     
     
       
-        <title>(1) 온-전자 계산 - YHKLAB Wiki</title>
+        <title>(1) 전(全)전자 계산 - YHKLAB Wiki</title>
       
     
     
@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#-" class="md-skip">
+        <a href="#_1" class="md-skip">
           Skip to content
         </a>
       
@@ -96,7 +96,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              (1) 온-전자 계산
+              (1) 전(全)전자 계산
             
           </span>
         </div>
@@ -1312,7 +1312,7 @@
   
   
   <span class="md-ellipsis">
-    (1) 온-전자 계산
+    (1) 전(全)전자 계산
     
   </span>
   
@@ -1325,7 +1325,7 @@
   
   
   <span class="md-ellipsis">
-    (1) 온-전자 계산
+    (1) 전(全)전자 계산
     
   </span>
   
@@ -1357,9 +1357,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#1-" class="md-nav__link">
+  <a href="#1" class="md-nav__link">
     <span class="md-ellipsis">
-      1. 온-전자 계산
+      1. 전전자 계산
     </span>
   </a>
   
@@ -2382,9 +2382,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#1-" class="md-nav__link">
+  <a href="#1" class="md-nav__link">
     <span class="md-ellipsis">
-      1. 온-전자 계산
+      1. 전전자 계산
     </span>
   </a>
   
@@ -2406,14 +2406,14 @@
 
 
 
-<h1 id="-">온-전자 계산</h1>
+<h1 id="_1">전(全)전자 계산</h1>
 <h2 id="contents">Contents</h2>
 <ol>
-<li>온-전자 계산</li>
+<li>전(全)전자 계산</li>
 </ol>
 <hr />
-<h2 id="1-">1. 온-전자 계산</h2>
-<p>이번 장에서는 원자에 대해 밀도범함수론(density functional theory) 기반의 <strong>온-전자(all-electron) 계산</strong> 방법을 다룬다. 전반적인 <code>ATOM</code>에 프로그램 사용에 대한 자세한 설명 및 메뉴얼은 다음 링크를 참조한다.  </p>
+<h2 id="1">1. 전전자 계산</h2>
+<p>이번 장에서는 원자에 대해 밀도범함수론(density functional theory) 기반의 <strong>전전자(all-electron) 계산</strong> 방법을 다룬다. 전반적인 <code>ATOM</code>에 프로그램 사용에 대한 자세한 설명 및 메뉴얼은 다음 링크를 참조한다.  </p>
 <ul>
 <li><code>ATOM</code> user manual: <a href="https://siesta-project.org/SIESTA_MATERIAL/Pseudos/Code/atom-4.2.0.pdf">https://siesta-project.org/SIESTA_MATERIAL/Pseudos/Code/atom-4.2.0.pdf</a>  </li>
 <li>Wiki webpage: <a href="https://docs.siesta-project.org/projects/atom/en/latest/tutorial/index.html">https://docs.siesta-project.org/projects/atom/en/latest/tutorial/index.html</a>  </li>
@@ -2441,34 +2441,35 @@
 • <code>CHARGE</code>: <code>AECHARGE</code>와 동일<br />
 • <code>RHO</code>: 전자 밀도
 • <code>AEWFNR0</code> ~ <code>AEWFNR3</code>: 원자가 전자에 대한 온전자 파동함수(s, p, d, f 오비탈 순)</p>
-<p><code>OUTPUT</code> 파일을 살펴보면 다음과 같은 계산 결과 정보를 알수 있다:  </p>
+<p><code>OUT</code> 파일을 살펴보면 다음과 같은 계산 결과 정보를 알수 있다:  </p>
 <p><strong>오비탈 고유값</strong>:<br />
-<div class="highlight"><pre><span></span><code> O  output data for orbitals
+<div class="highlight"><pre><span></span><code>Si output data for orbitals
  ----------------------------
 
  nl    s      occ         eigenvalue    kinetic energy      pot energy
 
- 1s   0.5    2.0000     -37.38043698       0.00000000    -121.94707005
- 2s   0.5    2.0000      -1.22878700       0.00000000     -19.62006430  &amp;v
- 2p  -0.5    1.6667      -0.19348921       0.00000000     -15.84881200  &amp;v
- 2p   0.5    3.3333      -0.19126456       0.00000000     -15.80651303  &amp;v
----------------------------- &amp;v
+ 1s   0.0    2.0000    -130.36911240     183.01377616    -378.73491463
+ 2s   0.0    2.0000     -10.14892694      25.89954259     -71.62102169
+ 2p   0.0    6.0000      -7.02876268      24.42537874     -68.74331203
+ 3s   0.0    2.0000      -0.79662742       3.23745215     -17.68692611  &amp;v
+ 3p   0.0    2.0000      -0.30705179       2.06135782     -13.62572515  &amp;v
+ ---------------------------- &amp;v
 </code></pre></div></p>
 <p><strong>전체 에너지</strong>:<br />
 <div class="highlight"><pre><span></span><code> total energies
  --------------
 
- sum of eigenvalues        =      -78.17847848
- kinetic energy from ek    =        0.00000000
- el-ion interaction energy =     -362.23733215
- el-el  interaction energy =       80.06698735
- vxc    correction         =      -21.19720455
- virial correction         =        0.84352124
- exchange + corr energy    =      -16.10878372
- kinetic energy from ev    =      145.12208352
- potential energy          =     -298.27912853
+ sum of eigenvalues        =     -325.41601319
+ kinetic energy from ek    =      574.97652987
+ el-ion interaction energy =    -1375.79704736
+ el-el  interaction energy =      263.53000478
+ vxc    correction         =      -51.65548902
+ virial correction         =        1.40722950
+ exchange + corr energy    =      -39.09342414
+ kinetic energy from ev    =      574.97651364
+ potential energy          =    -1151.36046672
  ---------------------------------------------
- total energy              =     -153.15704500
+ total energy              =     -576.38395308
 </code></pre></div></p>
 <p>또한 <code>gnuplot</code>를 사용하여 계산 결과를 시각할 수 있다. <code>.gplot</code>, <code>.gps</code> 형식 파일은 이를 위한 파일들이다. 해당 명령어를 통해서 원자가 전자의 파동함수를 시각화해보자:  </p>
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span>gnuplot<span class="w"> </span>-persist<span class="w"> </span>ae.gplot<span class="w"> </span>//gplot<span class="w"> </span>파일들을<span class="w"> </span>불러오면<span class="w"> </span>다양한<span class="w"> </span>그래프들을<span class="w"> </span>볼<span class="w"> </span>수<span class="w"> </span>있다.
@@ -2531,7 +2532,7 @@
       <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.instant", "navigation.sections"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
       
         <script src="../../javascripts/config.js"></script>
       
