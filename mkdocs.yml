@@ -32,7 +32,7 @@ nav:
                 - 2. 프로그래밍 환경설정:
                         - '• VSCode' : environment/vscode.md
                         - '• Git' : github_tutorial/0.github_create_repository.md
-                        - '• Linux' : environment/wsl2.md
+                        - '• WSL' : environment/wsl2.md
 
                 - 3. 유용한 명령어:
                         - '• Anaconda' : other/1.4_AnacondaCheatSheet.md
@@ -41,7 +41,7 @@ nav:
                         - '• Emacs' : other/1.3_EmacsCheatSheet.md
 
         - 교육용:
-                - dummy: education/DD.md
+                - '• Hartree-Fock calculations' : education/atom_hartree_fock.md
         - OORINano:
                 - '1. k-point sampling' : nanocore/nanocore_kpoint.md
                 - '2. Structure optimization' :

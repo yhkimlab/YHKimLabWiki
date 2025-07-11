@@ -80,7 +80,7 @@ AR=/usr/bin/ar
 
 -> `gridxc.mk` 생성확인
 
-## 3. `ATOM` 설치
+## 2. `ATOM` 설치
 
 `ATOM`를 위한 라이브러리가 준비되었으니 이제 `ATOM`을 설치한다.  
 `ATOM`: <https://siesta-project.org/SIESTA_MATERIAL/Pseudos/Code/downloads.html> (4.2.7 버전)

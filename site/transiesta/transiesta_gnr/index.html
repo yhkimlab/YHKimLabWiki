@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
     
     
       
@@ -220,7 +220,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../education/DD/" class="md-tabs__link">
+        <a href="../../education/atom_hartree_fock/" class="md-tabs__link">
           
   
   
@@ -638,7 +638,7 @@
   
   
   <span class="md-ellipsis">
-    • Linux
+    • WSL
     
   </span>
   
@@ -857,12 +857,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../education/DD/" class="md-nav__link">
+      <a href="../../education/atom_hartree_fock/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    dummy
+    • Hartree-Fock calculations
     
   </span>
   
@@ -2554,12 +2554,10 @@
 </blockquote>
 <p><br><br><br></p>
 <h2 id="pristine-graphene-nanoribbons">Pristine graphene nanoribbons</h2>
-<center><img src="img/06/06-007.JPG" width="80%" height="80%"></center>
-
+<p><center><img src="img/06/06-007.JPG" width="80%" height="80%"></center></p>
 <p>이번 장에서는 위와 같은 zigzag graphene nanoribbons (GNRs) 구조에 대해 계산한다.</p>
 <h3 id="step-1-electrode-calculation">Step 1. Electrode calculation</h3>
-<center><img src="img/06/06-011.JPG" width="50%" height="50%"></center>
-
+<p><center><img src="img/06/06-011.JPG" width="50%" height="50%"></center></p>
 <p>전극은 z축 방향으로 주기적 조건을 만족하는 GNRs의 2개의 unit cell로 구성되어 있다.  </p>
 <div class="highlight"><pre><span></span><code>$ cd 1. Electrode_SZ
 $ cd INPUT 
@@ -2584,8 +2582,7 @@ TS.HS.Save            T
 $ qsub slm_siesta_run
 </code></pre></div></p>
 <h3 id="step-2-scatting-region-calculation">Step 2. Scatting region calculation</h3>
-<center><img src="img/06/06-010.JPG" width="80%" height="80%"></center>
-
+<p><center><img src="img/06/06-010.JPG" width="80%" height="80%"></center></p>
 <p>Electrode 계산을 끝내고, 위와 같이 채널 영역의 길이가 2-unit cell으로 설정한 scattering 계산하기 위해 2.6unit-GNR_SZ 폴더에 들어간다. 그 다음 1.Electrode 폴더에 생성된 elec.TSHS 파일을 2.6unit-GNR_SZ의 input폴더에 넣어준다. </p>
 <p>scattering region은 2-unit cell로 구성되어 있으나, Transiesta 계산에서 사용하는 <code>STRUCT.fdf</code> 파일에서는 양쪽의 electrode 영역도 포함되어 있다.</p>
 <div class="highlight"><pre><span></span><code> $ cd ../2.6unit-GNR_SZ
@@ -2633,8 +2630,7 @@ $ qsub slm_transiesta_run_TBT
 </code></pre></div>
 <h3 id="channel-2-vs-6-unit-cell">Channel 영역의 길이: 2 vs 6 unit cell</h3>
 <p>채널 영역의 길이가 6-unit cell인 경우에 대해서도 TranSIESTA와 TBTrans 계산을 진행한다</p>
-<center><img src="img/06/06-012.JPG" width="80%" height="80%"></center>
-
+<p><center><img src="img/06/06-012.JPG" width="80%" height="80%"></center></p>
 <div class="highlight"><pre><span></span><code>$ cd ../3.10unit-GNR_SZ
 $ cp ../1.Electrode_SZ/elec.TSHS input/
 $ qsub slm_siesta_run
@@ -2647,18 +2643,15 @@ $ cp 2.6unit-GNR_SZ/tbtrans/scat.AVTRANs_Left-Right ./scat.TBT.AVTRANS_6unit
 $ cp 3.10unit-GNR_SZ/tbtrans/scat.AVTRANs_Left-Right ./scat.TBT.AVTRANS_10unit
 $ python show_trans.py scat.TBT.AVTRANS_6unit scat.TBT.AVTRANS_10unit
 </code></pre></div>
-<center><img src="img/06/06-013.JPG" width="50%" height="50%"></center>
-
+<p><center><img src="img/06/06-013.JPG" width="50%" height="50%"></center></p>
 <p>그림에서 보면 channel의 unit 개수와 상관없이 trasmission은 동일한 것을 확인할 수 있다.</p>
 <h2 id="n-doped-graphene-nanoribbons">N-doped graphene nanoribbons</h2>
-<center><img src="img/06/06-019.JPG" width="80%" heigh   1="80%"></center>
-
+<p><center><img src="img/06/06-019.JPG" width="80%" heigh   1="80%"></center></p>
 <p>위와 같이 pristine GNRs에 모델에서 채널 영역에 N-dopant를 추가하여 도핑시킨 모델에 대해서 계산을 진행해보자.</p>
 <ul>
 <li>2-unit channel</li>
 </ul>
-<center><img src="img/06/06-021.JPG" width="60%" height="60%"></center>
-
+<p><center><img src="img/06/06-021.JPG" width="60%" height="60%"></center></p>
 <p>먼저 2-unit cell의 채널의 길이를 계산을 진행한다.</p>
 <p>※ 예제 파일의 <code>STRUCT.fdf</code>에는 19번 atom이 <code>H</code>로 되어 있으므로 이를 <code>C</code>로 수정한다.
 <div class="highlight"><pre><span></span><code>$ cd 4.6unit-GNR+N_SZ
@@ -2671,8 +2664,7 @@ $ qsub slm_siesta_run_tbt
 <ul>
 <li>6-unit channel</li>
 </ul>
-<center><img src="img/06/06-022.JPG" width="70%" height="70%"></center>
-
+<p><center><img src="img/06/06-022.JPG" width="70%" height="70%"></center></p>
 <p>6-unit cell의 채널의 길이를 계산을 진행한다.
 <div class="highlight"><pre><span></span><code>$ cd 5.10unit-GNR+N_SZ
 $ cp ../1.Electrode/elec.TSHS input/
@@ -2684,8 +2676,7 @@ $ qsub slm_siesta_run_tbt
 <ul>
 <li>10-unit channel</li>
 </ul>
-<center><img src="img/06/06-023.JPG" width="80%" height="80%"></center>
-
+<p><center><img src="img/06/06-023.JPG" width="80%" height="80%"></center></p>
 <p>10-unit cell의 채널의 길이를 계산을 진행한다.
 <div class="highlight"><pre><span></span><code>$ cd 6.14unit-GNR+N_SZ
 $ cp ../1.Electrode/elec.TSHS input/
@@ -2702,7 +2693,7 @@ $ cp 5.10unit-GNR+N_SZ/TBtransscat.TBT.AVTRANS_Left-Right ./scat.TBT.AVTRANS_Ndo
 $ cp 6.14unit-GNR+N_SZ/TBtrans/scat.TBT.AVTRANS_Left-Right ./scat.TBT.AVTRANS_Ndopant_14unit
 $ python show_trans.py scat.TBT.AVTRANS_Ndopant_6unit scat.TBT.AVTRANS_Ndopant_10unit scat.TBT.AVTRANS_Ndopant_14unit
 </code></pre></div></p>
-<center><img src="img/06/06-024.JPG" width="50%" height="50%"></center>
+<p><center><img src="img/06/06-024.JPG" width="50%" height="50%"></center></p>
 
 
 
@@ -2754,7 +2745,7 @@ $ python show_trans.py scat.TBT.AVTRANS_Ndopant_6unit scat.TBT.AVTRANS_Ndopant_1
       <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.instant", "navigation.sections"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
+      <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
       
         <script src="../../javascripts/config.js"></script>
       

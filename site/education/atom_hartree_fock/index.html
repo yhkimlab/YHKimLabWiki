@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../transiesta_si1d/">
+        <link rel="prev" href="../../other/1.3_EmacsCheatSheet/">
       
       
-        <link rel="next" href="../transiesta_gnr/">
+        <link rel="next" href="../../nanocore/nanocore_kpoint/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>1) 그래핀 (2D) - YHKLAB Wiki</title>
+        <title>• Hartree-Fock calculations - YHKLAB Wiki</title>
       
     
     
@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#graphene-2d" class="md-skip">
+        <a href="#-hartree-fock" class="md-skip">
           Skip to content
         </a>
       
@@ -96,7 +96,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              1) 그래핀 (2D)
+              • Hartree-Fock calculations
             
           </span>
         </div>
@@ -216,11 +216,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../education/atom_hartree_fock/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
           
   
   
@@ -286,8 +288,6 @@
   
   
   
-    
-  
   
     
     
@@ -295,12 +295,10 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
+      <li class="md-tabs__item">
         <a href="../../build/build_siesta_local/" class="md-tabs__link">
           
   
@@ -811,26 +809,31 @@
       
   
   
+    
   
   
+  
     
     
     
     
+      
+        
+        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
             
   
   
@@ -843,7 +846,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             교육용
@@ -854,10 +857,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../education/atom_hartree_fock/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    • Hartree-Fock calculations
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -868,6 +893,167 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contents
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. 준비하기
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. 프로그램 설명
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. 실습예제
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. 실습예제">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#3-1-single-electron" class="md-nav__link">
+    <span class="md-ellipsis">
+      3-1. 단전자(Single-electron) 시스템: 수소 원자
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3-1. 단전자(Single-electron) 시스템: 수소 원자">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      (1) 전자간 상호작용을 고려하지 않는 경우
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      (2) 전자간 상호작용을 고려하는 경우(하트리폭 계산)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      3-2 다전자 시스템: 베릴륨
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3-2 다전자 시스템: 베릴륨">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      (1) 베릴륨 이온(+3)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      (2) 베릴륨 중성 원자
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-3-" class="md-nav__link">
+    <span class="md-ellipsis">
+      3-3. 교환-상관 에너지 범함수
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3-3. 교환-상관 에너지 범함수">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-lda-vs-hartree-fock" class="md-nav__link">
+    <span class="md-ellipsis">
+      (1) 단전자 시스템: LDA vs Hartree-Fock
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-two-electron-" class="md-nav__link">
+    <span class="md-ellipsis">
+      (2) 두-전자(two-electron) 시스템: 수소원자 이온(-)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1349,31 +1535,26 @@
       
   
   
-    
   
   
-  
     
     
     
     
-      
-        
-        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
         
           
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
             
   
   
@@ -1386,7 +1567,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             SIESTA
@@ -1406,20 +1587,17 @@
       
       
         
-          
-          
-        
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_1" >
         
           
-          <label class="md-nav__link" for="__nav_6_1" id="__nav_6_1_label" tabindex="">
+          <label class="md-nav__link" for="__nav_6_1" id="__nav_6_1_label" tabindex="0">
             
   
   
@@ -1506,20 +1684,17 @@
       
       
         
-          
-          
-        
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" >
         
           
-          <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="">
+          <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
             
   
   
@@ -1717,31 +1892,26 @@
                 
   
   
-    
   
   
-  
     
     
     
     
       
       
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" >
         
           
-          
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" checked>
-        
-          
-          <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="">
+          <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
             
   
   
@@ -1754,7 +1924,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6_3">
             <span class="md-nav__icon md-icon"></span>
             2. TranSIESTA 계산
@@ -1811,7 +1981,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../transiesta_overview/" class="md-nav__link">
+      <a href="../../transiesta/transiesta_overview/" class="md-nav__link">
         
   
   
@@ -1834,7 +2004,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../transiesta_modeling/" class="md-nav__link">
+      <a href="../../transiesta/transiesta_modeling/" class="md-nav__link">
         
   
   
@@ -1857,7 +2027,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../transiesta_si1d/" class="md-nav__link">
+      <a href="../../transiesta/transiesta_si1d/" class="md-nav__link">
         
   
   
@@ -1885,8 +2055,6 @@
                 
   
   
-    
-  
   
   
     
@@ -1899,11 +2067,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3_2" >
         
           
           <label class="md-nav__link" for="__nav_6_3_2" id="__nav_6_3_2_label" tabindex="0">
@@ -1919,7 +2087,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_3_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_3_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6_3_2">
             <span class="md-nav__icon md-icon"></span>
             B. 중급/고급 과정
@@ -1930,8 +2098,6 @@
                 
   
   
-    
-  
   
   
     
@@ -1944,11 +2110,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3_2_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3_2_1" >
         
           
           <label class="md-nav__link" for="__nav_6_3_2_1" id="__nav_6_3_2_1_label" tabindex="0">
@@ -1964,7 +2130,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_6_3_2_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_6_3_2_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6_3_2_1">
             <span class="md-nav__icon md-icon"></span>
             (1) 평형상태 계산
@@ -1975,32 +2141,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    1) 그래핀 (2D)
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../transiesta/transiesta_graphene/" class="md-nav__link">
         
   
   
@@ -2011,95 +2155,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#contents" class="md-nav__link">
-    <span class="md-ellipsis">
-      Contents
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#graphene" class="md-nav__link">
-    <span class="md-ellipsis">
-      Graphene의 양자수송 특성 계산
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Graphene의 양자수송 특성 계산">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#step-1-electrode-calculation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Step 1: Electrode calculation
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#step-2-scattering-region-calculation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Step 2: Scattering region calculation
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#step-3-post-processing" class="md-nav__link">
-    <span class="md-ellipsis">
-      Step 3: Post-processing
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#exercise-1-k-point-effect" class="md-nav__link">
-    <span class="md-ellipsis">
-      Exercise 1: K-point effect
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#exercise-2-channel-width-effect" class="md-nav__link">
-    <span class="md-ellipsis">
-      Exercise 2: Channel width effect
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -2112,7 +2167,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../transiesta_gnr/" class="md-nav__link">
+      <a href="../../transiesta/transiesta_gnr/" class="md-nav__link">
         
   
   
@@ -2135,7 +2190,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../transiesta_si-sio2-si/" class="md-nav__link">
+      <a href="../../transiesta/transiesta_si-sio2-si/" class="md-nav__link">
         
   
   
@@ -2209,7 +2264,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../transiesta_gnr-vacuum-gnr/" class="md-nav__link">
+      <a href="../../transiesta/transiesta_gnr-vacuum-gnr/" class="md-nav__link">
         
   
   
@@ -2438,37 +2493,94 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#graphene" class="md-nav__link">
+  <a href="#1" class="md-nav__link">
     <span class="md-ellipsis">
-      Graphene의 양자수송 특성 계산
+      1. 준비하기
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Graphene의 양자수송 특성 계산">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. 프로그램 설명
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. 실습예제
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. 실습예제">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#step-1-electrode-calculation" class="md-nav__link">
+  <a href="#3-1-single-electron" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 1: Electrode calculation
+      3-1. 단전자(Single-electron) 시스템: 수소 원자
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3-1. 단전자(Single-electron) 시스템: 수소 원자">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      (1) 전자간 상호작용을 고려하지 않는 경우
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-2-scattering-region-calculation" class="md-nav__link">
+  <a href="#2_1" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 2: Scattering region calculation
+      (2) 전자간 상호작용을 고려하는 경우(하트리폭 계산)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      3-2 다전자 시스템: 베릴륨
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3-2 다전자 시스템: 베릴륨">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      (1) 베릴륨 이온(+3)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-3-post-processing" class="md-nav__link">
+  <a href="#2_2" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 3: Post-processing
+      (2) 베릴륨 중성 원자
     </span>
   </a>
   
@@ -2480,20 +2592,35 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#exercise-1-k-point-effect" class="md-nav__link">
+  <a href="#3-3-" class="md-nav__link">
     <span class="md-ellipsis">
-      Exercise 1: K-point effect
+      3-3. 교환-상관 에너지 범함수
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3-3. 교환-상관 에너지 범함수">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-lda-vs-hartree-fock" class="md-nav__link">
+    <span class="md-ellipsis">
+      (1) 단전자 시스템: LDA vs Hartree-Fock
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#exercise-2-channel-width-effect" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#2-two-electron-" class="md-nav__link">
     <span class="md-ellipsis">
-      Exercise 2: Channel width effect
+      (2) 두-전자(two-electron) 시스템: 수소원자 이온(-)
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2513,188 +2640,157 @@
 
 
 
-<h1 id="graphene-2d">Graphene (2D)</h1>
+<h1 id="-hartree-fock">하트리-폭(Hartree-Fock) 계산</h1>
 <h2 id="contents">Contents</h2>
 <ol>
-<li>Graphene의 양자수송 특성 계산</li>
+<li>준비하기</li>
+<li>프로그램 설명</li>
+<li>실습예제</li>
 </ol>
+<hr />
+<h2 id="1">1. 준비하기</h2>
+<p>이번 장에서는 <strong>Hartree-Fock (HF)</strong> 방법을 통해 다양한 원자의 전자구조를 계산하는 방법에 대해서 설명한다. 이를 위해서 사용자는 다음의 코드를 자유롭게 활용할 수 있다:</p>
+<ul>
+<li><strong>Edison Platform</strong>: <a href="https://nanornd.edison.re.kr/">https://nanornd.edison.re.kr/</a> [<em>Curriculum/MSDP/Hartree-Fock Solutions of Small Atomic Systems (Central-Field Approximation)</em>]</li>
+<li><strong>Google Colab</strong>: <a href="https://colab.research.google.com/github/yhkimlab/Class-NanoPhysics/blob/master/2025-Spring/HartreeFock.ipynb">https://colab.research.google.com/github/yhkimlab/Class-NanoPhysics/blob/master/2025-Spring/HartreeFock.ipynb</a></li>
+</ul>
 <blockquote>
-<p>Input: <a href="https://1drv.ms/u/s!ArHICXVqPANVux6jWW0x2QlTFre0?e=88oKbL">Link</a></p>
+<p><strong>Edison Platform</strong>을 사용하기 위해서는 해당 사이트에 로그인이 필요하다.</p>
 </blockquote>
-<h2 id="graphene">Graphene의 양자수송 특성 계산</h2>
-<p><center><img src="img/Gr.png" width="80%" height="80%"></center></p>
-<p>이번 장에서는 2차원 물질인 그래핀에 대해서 양자수송 특성을 계산한다.</p>
-<h3 id="step-1-electrode-calculation">Step 1: Electrode calculation</h3>
-<p><center><img src="img/Gr_electrode.png" width="30%" height="30%"></center></p>
-<p>Electrode에 대해 DFT 계산을 통해 <code>elec.TSHS</code> 를 얻는다. 우리의 모델의 경우 x축 방향으로 periodic 구조를 가지지 않는다. 때문에 x방향으로의 k-point를 1로 지정해주었다. Eleectrode 계산 시에 사용된 k-point가 추후에 scattering 계산을 통한 양자수속 특성 계산의 정확도 큰 영향을 미치기 때문에 반드시 <strong>k-point에 대해 수렴성 테스트</strong>를 진행해야한다. 특히 양자 수송 방향(z-축)으로 더욱 엄격히 k-point를 주어야 보다 정확한 전극의 self-energy를 얻을 수 있다.</p>
-<p><div class="highlight"><pre><span></span><code>$ vi KPT.fdf
-%block kgrid_Monkhorst_Pack
- 1    0    0    0.0
- 0   60    0    0.0
- 0    0   35    0.0
-%endblock kgrid_Monkhorst_Pack
+<h2 id="2">2. 프로그램 설명</h2>
+<p>HF 방법은 다전자계의 파동함수를 단일 Slater 행렬식으로 근사하고, 전자 간 상호작용을 평균장(mean-field) 방식으로 다루는 ab-initio 계산 방법이다. 이 방법은 자기일관장(self-consistent field, SCF) 알고리즘을 통해 반복적으로 수렴 계산을 수행한다. 대략적인 알고리즘 과정은 다음과 같다: </p>
+<p><img alt="Hartree-Fock Flow" src="../img/1.PNG" /></p>
+<h2 id="3">3. 실습예제</h2>
+<h3 id="3-1-single-electron">3-1. 단전자(Single-electron) 시스템: 수소 원자</h3>
+<p>수소 원자는 하트리-폭 등 수치적인 방법의 도입 없이 이론적으로 해를 정확히 풀수 있는 쉬운 시스템의 예이다. 이번 실습에서는 (1) 전자간 상호작용(하트리 및 교환항)을 고려하지 않는 경우와, (2) 하트리-폭을 통해 고려한 두 경우에 있어서 수소원자의 전자구조를 계산해본다.  </p>
+<h4 id="1_1">(1) 전자간 상호작용을 고려하지 않는 경우</h4>
+<p>전자간 상호작용을 고려하지 않는 경우에는 다음과 같은 방정식을 따른다:</p>
+<p><span class="arithmatex">\(\left(-\frac{\hbar^2}{2 m} \frac{d^2}{d r^2}+\frac{l(l+1) \hbar^2}{2 m r^2}-\frac{e^2}{r}-\epsilon_{n l}\right) R_{n l}(r)=0\)</span>  </p>
+<p>수소 원자에 대해 해당 방정식을 풀이하기 위해서 프로그램에 다음과 같은 입력값을 사용해본다:</p>
+<p><strong>입력값:</strong> <br />
+- <code>Spin Polarized = True</code><br />
+- <code>Coulomb = None</code><br />
+- <code>Num Band = 12</code><br />
+- <code>SCF Iter = 0</code><br />
+- <code>Rmax = 20.0 Å</code>  </p>
+<p><code>Coulomb = None</code>을 통해서 전자간 상호작용이 없는 상황을 기술할 수 있다. 이 상황에서는 자기일관장 방법의 반복적인 계산이 필요하지 않으므로 <code>SCF Iter</code>은 <code>0</code>으로 설정하였다. Unoccupied 준위의 고유값을 확인하기 위해서 <code>Num Band</code>를 <code>12</code>로 설정하였다. 이제 결과를 살펴보자.</p>
+<p><strong>결과:</strong></p>
+<p><strong>수소 원자의 에너지 준위:</strong>  </p>
+<p><img alt="수소원자에너지" src="../img/2.PNG" /></p>
+<blockquote>
+<p>수소 원자의 에너지 준위가 이론값과 일치하는지 확인해본다 <span class="arithmatex">\(E_n = -\frac{m_e e^4}{2 (4\pi \varepsilon_0)^2 \hbar^2} \cdot \frac{1}{n^2} = 13.6\ \text{eV} \cdot \frac{1}{n^2}\)</span></p>
+</blockquote>
+<p><strong>수소 원자의 파동 함수:</strong>    </p>
+<p><img alt="수소원자에너지" src="../img/3.PNG" /></p>
+<blockquote>
+<p>수소 원자의 방사(radial) 파동함수의 노드 수가 다음 관계를 만족하는지 확인해본다. <span class="arithmatex">\(nodes = n - l - 1\)</span>  </p>
+</blockquote>
+<h4 id="2_1">(2) 전자간 상호작용을 고려하는 경우(하트리폭 계산)</h4>
+<p>엄밀히 말해서 단전자의 경우 전자 간 상호작용은 존재하지 않지만, 임의의 단전자의 시스템에 대해서도 하트리-폭 계산을 수행 할 수 있다. 이를 위해서 다음과 같이 입력값을 설정해본다.</p>
+<p><strong>입력값:</strong> <br />
+- <code>Spin Polarized = True</code><br />
+- <code>Coulomb = Poisson</code><br />
+- <code>Exchange = HF</code><br />
+- <code>Num Band = 1</code>  </p>
+<p>그 결과로 나온 에너지 중에서 전자간 반발에 의한 하트리 에너지 <code>VEETOT</code>와 교환 효과에 의한 교환 에너지 <code>VXCTOT</code>를 비교해본다. </p>
+<div class="highlight"><pre><span></span><code>TOTALS
+NE : 1.0
+KTOT : 13.560381028126724 eV
+VENTOT : -27.150347845570842 eV
+VEETOT : 8.491855443685635 eV
+VXCTOT : -8.492660406217787 eV
+VENTOT + VEETOT + VEXTOT : -27.151152808102992 eV
+Total Energy : -13.590771779976269 eV
 </code></pre></div>
-electrode 계산시, <code>SolutionMethod</code>는 <code>diagon</code>으로 설정되어야 하며, <code>RUN.fdf</code>에 <code>TSHS</code>파일을 저장하기 위한 옵션을 추가하였다.
-<div class="highlight"><pre><span></span><code>$ vi RUN.fdf
-SolutionMethod      diagon
-TS.HS.Save .true.
-
-$ qsub slm_siesta_run
+<blockquote>
+<p>하트리-폭 방법은 단전자에서 두 에너지가 정확히 상쇄되어 보통 single-electron self-interaction free하다고 한다.</p>
+</blockquote>
+<h2 id="3-2">3-2 다전자 시스템: 베릴륨</h2>
+<h3 id="1-3">(1) 베릴륨 이온(+3)</h3>
+<p>우선, 수소 원자와 마찬가지로 전자간 상호작용을 고려하지 않았을때의 결과를 살펴보자:</p>
+<blockquote>
+<p>Repeat <em>Exercise 3-1</em> for Be atom, using same input</p>
+</blockquote>
+<p><strong>결과:</strong>  </p>
+<p><strong>베릴륨(+3) 원자의 에너지 준위:</strong> </p>
+<p><img alt="베릴림이온에너지" src="../img/5.PNG" /></p>
+<blockquote>
+<p>수소 원자와 마찬가지로 베릴륨 이온(+3)은 전자가 없으므로 에너지 준의는 다음과 같은 분석적 해를 통해 구할 수 있다:<br />
+<span class="arithmatex">\(E_n = -\frac{m_e e^4}{2(4\pi \varepsilon_0)^2 \hbar^2} \cdot \frac{Z^2}{n^2}= 217.6\ \text{eV} \cdot \frac{1}{n^2}\)</span></p>
+</blockquote>
+<p><strong>베릴륨(+3) 원자의 파동 함수:</strong>  <br />
+<img alt="베릴륨이온파동함수" src="../img/6.PNG" /></p>
+<blockquote>
+<p>수소 원자와 비교했을때 파동 함수의 모양이 어떻게 바뀌었는지 확인해보자</p>
+</blockquote>
+<h3 id="2_2">(2) 베릴륨 중성 원자</h3>
+<p>이제 전자 효과를 포함한 베릴륨 중성 원자에 대해서 계산을 수행해보자.  </p>
+<p><strong>입력값:</strong> <br />
+- <code>Spin Polarized = True</code><br />
+- <code>Coulomb = Poisson</code><br />
+- <code>Exchange = HF</code><br />
+- <code>Num Band = 1</code><br />
+- <code>Rmax = 10A</code></p>
+<p><strong>결과:</strong>  </p>
+<p><strong>베릴륨 원자의 파동함수:</strong>  <br />
+<img alt="베릴륨파동함수" src="../img/7.PNG" /></p>
+<blockquote>
+<p>베릴륨 이온과 비교했을때 파동함수가 어떻게 변화했는지 확인해보자</p>
+</blockquote>
+<h2 id="3-3-">3-3. 교환-상관 에너지 범함수</h2>
+<p>하트리-폭과 비슷한 대표적인 제1원리 전자구조 계산 방법론으로 밀도범함수론(density functional theory, DFT)가 있다. 밀도범함수론은 핵심적으로 전자의 교환과 (하트리-폭에서 고려되지 않았던) 상관 효과를 밀도에 대한 범함수로 근사하여 더욱 적은 계산량으로 계산을 수행 할 수 있다. </p>
+<h3 id="1-lda-vs-hartree-fock">(1) 단전자 시스템: LDA vs Hartree-Fock</h3>
+<p>이전 하트리-폭에서 계산하였던 수소 원자에 대해서 다음 입력값으로 밀도범함수론 계산을 수행해보자:  </p>
+<p><strong>입력값:</strong> <br />
+- <code>Exchange = LDA</code><br />
+- <code>Correlation = None</code>  </p>
+<blockquote>
+<p>이번 강의에서는 상관 효과는 고려하지 않는다.</p>
+</blockquote>
+<p><strong>결과:</strong>  </p>
+<p><strong>전체 에너지:</strong>  <br />
+<div class="highlight"><pre><span></span><code>TOTALS
+NE : 1.0
+KTOT : 12.390759695635145 eV
+VENTOT : -25.937189833082538 eV
+VEETOT : 8.004617751605624 eV
+VXCTOT : -6.886537202933416 eV
+VENTOT + VEETOT + VEXTOT : -24.81910928441033 eV
+Total Energy : -12.428349588775186 eV
 </code></pre></div></p>
-<p>계산이 완료되면 output 폴더에서 <code>elec.TSHS</code> 파일을 확인할 수 있다.</p>
-<h3 id="step-2-scattering-region-calculation">Step 2: Scattering region calculation</h3>
-<p>앞서 구한 <code>elec.TSHS</code> 파일을 NEGF 계산할 input 폴더로 복사한 후 transiesta를 통해 <code>.TSHS</code> 파일을 구한다.
-<div class="highlight"><pre><span></span><code>$ cp ../1.Electrode_k060/OUT/elec.TSHS input/.
+<blockquote>
+<p>해당 결과를 하트리-폭 계산 결과와 비교해보자. 보통 밀도범함수론의 교환-상관 에너지 범함수는 두 에너지가 정확히 상쇄되는 조건을 만족하지 않는데, 이를 만족하게 보정하는 self-interaction correction (SIC) 방법이 있다.  </p>
+</blockquote>
+<h3 id="2-two-electron-">(2) 두-전자(two-electron) 시스템: 수소원자 이온(-)</h3>
+<p>다전자 효과를 확인하기 위한 대표적인 시스템이 두-전자 시스템이다. 우리는 이를 계산하기 위해서 수소 음이온(-) 고려할 것이다. 우선, 비교를 위한 하트리-폭 계산을 수행한다. 이를 위한 입력값은 다음과 같다:</p>
+<p><strong>입력값:</strong><br />
+- <code>Exchange = Hartree–Fock</code><br />
+- <code>Element = H</code><br />
+- <code>Num Elec = 2.0</code><br />
+- <code>Rmax = 20</code>  </p>
+<p><strong>결과:</strong>  </p>
+<p><strong>전체 에너지:</strong>  </p>
+<div class="highlight"><pre><span></span><code>TOTALS
+NE : 2.0
+KTOT : 13.231036809428883 eV
+VENTOT : -37.239430446769695 eV
+VEETOT : 21.49449040071572 eV
+VXCTOT : -10.747770295510863 eV
+VENTOT + VEETOT + VEXTOT : -26.492710341564838 eV
+Total Energy : -13.261673532135955 eV
+Results Plot
 </code></pre></div>
-수송 방향인 z축 방향으로의 k-point는 1이어야 한다. 나머지 k-point는 반드시 electrode의 <code>.TSHS</code> 파일을 계산할 때 사용한 k-point와 일치해야한다.</p>
-<p><div class="highlight"><pre><span></span><code>$ vi KPT.fdf
-block kgrid_Monkhorst_Pack
- 1    0    0    0.0
- 0   60    0    0.0
- 0    0    1    0.0
-%endblock kgrid_Monkhorst_Pack
-</code></pre></div>
-Electrode 계산과 다르게, Scattering 영역 계산 시 NEGF를 이용하기 때문에, SolutionMethod는 diagon이 아닌 transiesta이어야 한다. 계산 과정에서, SIESTA SCF cycle이 먼저 수행되고 난 뒤 TS SCF cycle이 수행되어 SCF DM을 얻을 수 있다.
-<div class="highlight"><pre><span></span><code>$ vi RUN.fdf
-SolutionMethod      transiesta
-</code></pre></div>
-NEGF 계산에서는 electrode 영역과 voltage에 대한 정보를 담고 있는 <code>TS.fdf</code>로 옵션을 조절한다.
-<div class="highlight"><pre><span></span><code>$ vi TS.fdf
-TS.Voltage    0.00000 eV
-%block TS.Elec.Left
-  HS elec.TSHS
-  chem-pot Left
-  semi-inf-dir -a3
-  elec-pos begin 1
-  used-atoms 4
-%endblock TS.Elec.Left
-%block TS.Elec.Right
-  HS elec.TSHS
-  chem-pot Right
-  semi-inf-dir +a3
-  elec-pos end -1
-  used-atoms 4
-%endblock TS.Elec.Right
-</code></pre></div>
-TranSIESTA를 실행하여 scattering 영역에 대한 <code>.TSHS</code> 파일을 얻는다. 
-<div class="highlight"><pre><span></span><code>$ qsub slm_siesta_run
-</code></pre></div></p>
-<h3 id="step-3-post-processing">Step 3: Post-processing</h3>
-<p>TBTrans를 이용하여 transmission function을 구한다.<br/>앞서 구한 <code>scat.TSHS</code> 파일이 input으로 필요하며, 그 외 모든 input은 Step 2와 동일하다. 이때 실행 파일은 transiesta가 아닌 tbtrans이다.
-<div class="highlight"><pre><span></span><code>$ cp ../2.Graphene_k060/OUT/scat.TSHS input/.
-</code></pre></div>
-Tbtrans 계산시, TS.fdf에서 관련 옵션을 조절한다.<br/> DOS과 transmission 분석을 위한 에너지 범위를 지정할 수 있다. 
-<div class="highlight"><pre><span></span><code>$ vi TS.fdf
-%block TBT.Contour.neq
-  part line
-   from  -5.00000 eV to    5.00000 eV
-    points    501
-     method mid-rule
-%endblock TBT.Contour.neq
-</code></pre></div></p>
-<p><div class="highlight"><pre><span></span><code>$ qsub slm_siesta_run_tbt
-</code></pre></div>
-파이썬 코드를 이용하여 transmission function을 시각화해본다.
-<div class="highlight"><pre><span></span><code>$ python show_trans_rev.py scat.TBT.AVTRANS_Left-Right
-</code></pre></div></p>
-<p>예제 파일에 포함되어 있는 show_trans.py는 k vector가 단위 벡터인 경우에만 작동하는 코드이므로,
-kgrid에 1이 아닌 값을 준 경우 아래와 같이 함수 부분을 수정해준다.</p>
-<div class="highlight"><pre><span></span><code><span class="c1">#show_trans_minsu.py</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">get_xy_array</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
-
-    <span class="n">lines</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
-    <span class="n">x</span> <span class="o">=</span> <span class="p">[];</span> <span class="n">y</span> <span class="o">=</span> <span class="p">[];</span> <span class="n">y_temp</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="n">weight</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="n">firstLoop</span> <span class="o">=</span> <span class="mi">1</span>
-    <span class="n">y_index</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
-
-    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">:</span>
-        <span class="n">data</span><span class="o">=</span><span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
-
-    <span class="c1">#refresh and continue at  empty line</span>
-        <span class="k">if</span> <span class="n">data</span> <span class="o">==</span> <span class="p">[]:</span>
-            <span class="n">firstLoop</span> <span class="o">=</span> <span class="n">firstLoop</span> <span class="o">-</span> <span class="mi">1</span>
-            <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
-            <span class="k">continue</span>
-
-    <span class="c1">#find weight for each k vector</span>
-        <span class="k">if</span>  <span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>  <span class="o">==</span> <span class="s1">&#39;#&#39;</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">3</span><span class="p">)</span> <span class="p">:</span>
-            <span class="n">weight</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span>
-
-    <span class="c1">#</span>
-        <span class="k">if</span> <span class="n">firstLoop</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">:</span>
-            <span class="k">if</span> <span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">&#39;#&#39;</span><span class="p">:</span>
-                <span class="n">x</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
-                <span class="n">y</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">*</span> <span class="nb">float</span><span class="p">(</span><span class="n">weight</span><span class="p">))</span>
-
-        <span class="c1">#sum y values with weight for each k vector</span>
-        <span class="k">else</span> <span class="p">:</span>
-            <span class="k">if</span> <span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">&#39;#&#39;</span><span class="p">:</span>
-                <span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+=</span> <span class="p">(</span> <span class="nb">float</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">*</span> <span class="nb">float</span><span class="p">(</span><span class="n">weight</span><span class="p">)</span> <span class="p">)</span>
-                <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
-
-    <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-    <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
-
-    <span class="k">return</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span>
-</code></pre></div>
-<p><center><img src="img/Gr_transmission.png" width="60%" height="60%"></center></p>
-<h2 id="exercise-1-k-point-effect">Exercise 1: K-point effect</h2>
-<p>Post-processing 단계에서 TBtrans 계산을 할때는 electrode나 scattering region에 대한 계산을 할 때 사용한 k-point와 다른 k-point 값을 사용해도 된다. 일반적으로 transmission 그래프을 "매끄럽게" 하기 위해 <strong>post-processing</strong> 단계는  k-point를 scattering 계산보다 더욱 크게 주는 것이 일반 적이다.<br/>
-참고로 tbtrans 계산의 input인 <code>scat.TSHS</code> 파일은 k-point를 1x60x1일때 얻은 결과값이다.
-<div class="highlight"><pre><span></span><code>$ vi KPT.fdf
-%block kgrid_Monkhorst_Pack
- 1    0    0    0.0
- 0   240    0    0.0
- 0    0    1    0.0
-%endblock kgrid_Monkhorst_Pack
-</code></pre></div></p>
-<p><center><img src="img/Gr_kpt_Transmission.png" width="60%" height="60%"></center></p>
-<p>k-point를 증가시키자 transmission 그래프가 매끄러워진 것을 확인할 수 있다. </p>
-<h2 id="exercise-2-channel-width-effect">Exercise 2: Channel width effect</h2>
-<p>폭이 2배 넓은 모델의 T(E) 과 원래 T(E) 그래프를 비교해 보자.</p>
-<p><center><img src="img/Gr_wider.png" width="60%" height="60%"></center></p>
-<p>electrode의 구조가 달라졌으므로, electrode calculation부터 진행해야한다.<br/> STRUCT.fdf 파일을 간략하게 보면, atom 개수와 lattice vector의 y축 길이가 늘어난 것을 확인할 수 있다.
-<div class="highlight"><pre><span></span><code>$ vi 3.Electrode_wider_k30/input/STRUCT.fdf
-NumberOfAtoms    8           # Number of atoms
-NumberOfSpecies  1           # Number of species
-LatticeConstant       1.000000000 Ang
-%block LatticeVectors
-   20.000000000     0.000000000     0.000000000
-    0.000000000     4.901704000     0.000000000
-    0.000000000     0.000000000     4.245000000
-%endblock LatticeVectors
-...
-
-$ vi 4.Graphene_wider_k30/input/STRUCT.fdf
-NumberOfAtoms    48           # Number of atoms
-NumberOfSpecies  1           # Number of species
-LatticeConstant       1.000000000 Ang
-%block LatticeVectors
-   20.000000000     0.000000000     0.000000000
-    0.000000000     4.901704000     0.000000000
-    0.000000000     0.000000000    25.470000000
-%endblock LatticeVectors
-...
-</code></pre></div>
-또한 real space 상에서 unit cell이 y축 방향으로 2배 늘어났으므로, y축의 k-point를 바꿔주었다.
-<div class="highlight"><pre><span></span><code>$ vi 3.Electrode_wider_k30/input/KPT.fdf
-%block kgrid_Monkhorst_Pack
- 1    0    0    0.0
- 0   30    0    0.0
- 0    0   35    0.0
-%endblock kgrid_Monkhorst_Pack
-
-$ vi 4.Graphene_wider_k30/input/KPT.fdf
-%block kgrid_Monkhorst_Pack
- 1    0    0    0.0
- 0   30    0    0.0
- 0    0    1    0.0
-%endblock kgrid_Monkhorst_Pack
-</code></pre></div>
-<center><img src="img/Gr_wider_Transmission.png" width="60%" height="60%"></center></p>
-<p>위와 같이 transmission 값이 두배가 되는 것을 확인할 수 있다.</p>
+<blockquote>
+<p>단전자 경우와 마찬 가지로 <code>VEETOT</code>과 <code>VXCTOT</code>의 관계를 살펴본다.  </p>
+</blockquote>
+<p>그 다음으로 LDA를 통한 밀도범함수론 계산을 수행해본다:</p>
+<p><strong>입력값:</strong><br />
+- <code>Exchange = LDA</code><br />
+- <code>Element = H</code><br />
+- <code>Correlation = None</code><br />
+- <code>Num Elec = 2.0</code><br />
+- <code>Rmax = 20</code>  </p>
+<p>결과를 살펴보면, 교환 에너지가 충분히 크지 않아서 계산이 제대로 이뤄지지 않는 것을 확인할 수 있다. 이는 근본적으로 LDA 교환 포텐셜이 진공상에서 하트리-폭에 비해 급격히(exponential) 감소하는 효과 때문이다. 이에 대한 정확한 조건은 r이 증가할 수록 포텐셜이 1/r의 점근적인 개형(asymptotic behavior)을 따라가는 것이다. 이러한 조건은 밀도범함수론 교환 포텐셜을 설계하는데 토대가 되는 중요한 지표가 된다. H- 이온의 대안으로, 두-전자 시스템에 대해서 하트리-폭 방법과 LDA 밀도범함수론을 비교하기 위해서는 중성 He 원자를 계산할 수 있다.</p>
 
 
 

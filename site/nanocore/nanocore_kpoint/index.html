@@ -9,14 +9,14 @@
       
       
       
-        <link rel="prev" href="../../education/DD/">
+        <link rel="prev" href="../../education/atom_hartree_fock/">
       
       
         <link rel="next" href="../nanocore_eos/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
     
     
       
@@ -220,7 +220,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../education/DD/" class="md-tabs__link">
+        <a href="../../education/atom_hartree_fock/" class="md-tabs__link">
           
   
   
@@ -636,7 +636,7 @@
   
   
   <span class="md-ellipsis">
-    • Linux
+    • WSL
     
   </span>
   
@@ -855,12 +855,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../education/DD/" class="md-nav__link">
+      <a href="../../education/atom_hartree_fock/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    dummy
+    • Hartree-Fock calculations
     
   </span>
   
@@ -2395,8 +2395,8 @@
 
 <h3 id="k-point-sampling">K-point sampling</h3>
 <p>이번장에서는 <code>NanoCore</code>를 이용해 그래핀 모델을 생성하고, <strong>k-point sampling</strong> 과정을 통해 전체 에너지가 수렴하는 k-point를 구할 것이다. </p>
-<p><div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">NanoCore</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<p><div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">NanoCore</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 
  <span class="c1"># Modeling</span>
 <span class="n">atoms</span> <span class="o">=</span> <span class="n">carbonlab</span><span class="o">.</span><span class="n">grp</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
@@ -2452,9 +2452,9 @@ k-points : 23 23 01, Energy = -322.32530, Ediff=  0.00024
 k-points : 25 25 01, Energy = -322.32526, Ediff=  0.00005
 over
 </code></pre></div></p>
-<p><div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">sys</span> 
+<p><div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">os</span><span class="o">,</span><span class="w"> </span><span class="nn">sys</span> 
 
-<span class="k">def</span> <span class="nf">file_len</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">file_len</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
     <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
         <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">l</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
             <span class="k">pass</span>
@@ -2594,7 +2594,7 @@ Converge kpoint = 25
       <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.instant", "navigation.sections"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
+      <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
       
         <script src="../../javascripts/config.js"></script>
       
