@@ -9,7 +9,7 @@
 
 ## 1. 준비하기 
 
-이번 장에서는 **Hartree-Fock (HF)** 방법을 통해 다양한 원자의 전자구조를 계산하는 방법에 대해서 설명한다. 이를 위해서 사용자는 다음의 코드를 자유롭게 활용할 수 있다:
+이번 장에서는 **하트리-폭(Hartree-Fock)** 방법을 통해 다양한 원자의 전자구조를 계산하는 방법에 대해서 설명한다. 이를 위해서 사용자는 다음의 코드를 자유롭게 활용할 수 있다:
 
 - **Edison Platform**: <https://nanornd.edison.re.kr/> [*Curriculum/MSDP/Hartree-Fock Solutions of Small Atomic Systems (Central-Field Approximation)*]
 - **Google Colab**: <https://colab.research.google.com/github/yhkimlab/Class-NanoPhysics/blob/master/2025-Spring/HartreeFock.ipynb>
@@ -20,7 +20,11 @@
 
 ## 2. 프로그램 설명 
 
-HF 방법은 다전자계의 파동함수를 단일 Slater 행렬식으로 근사하고, 전자 간 상호작용을 평균장(mean-field) 방식으로 다루는 ab-initio 계산 방법이다. 이 방법은 자기일관장(self-consistent field, SCF) 알고리즘을 통해 반복적으로 수렴 계산을 수행한다. 대략적인 알고리즘 과정은 다음과 같다: 
+해당 프로그램은 **Steven E. Koonin & Dawn C. Meredith, Computational Physics: Fortran Version (Addison-Wesley, 1990)** 책의 *Project III: Atomic structure in the Hartree-Fock* 장의 **Fortran** 코드를 기반으로 작성되어있다. 하트리-폭 방법은 다전자계의 파동함수를 단일 슬레이터(Slater) 행렬식으로 근사하고, 전자 간 상호작용을 평균장(mean-field) 방식으로 다루는 ab-initio 계산 방법이다. 해당 코드는 다음과 같은 원자 반경 r에 대한 1차원 방사(radial) 상에서의 **하트리-폭 방정식**을 다룬다:  
+
+$$\left(-\frac{\hbar^2}{2 m} \frac{d^2}{d r^2}+\frac{l(l+1) \hbar^2}{2 m r^2}-\frac{Z e^2}{r}+\Phi(r)-\epsilon_{n l}\right) R_{n l}(r)=-F_{n l}(r)$$  
+
+해당 방정식을 자기일관장(self-consistent field, SCF) 알고리즘을 통해 반복적으로 풀이하여 수렴된 해를 얻을 수 있다. 이에 대한 대략적인 알고리즘 과정은 다음과 같다: 
   
 ![Hartree-Fock Flow](img/1.PNG)
 
@@ -42,6 +46,7 @@ $\left(-\frac{\hbar^2}{2 m} \frac{d^2}{d r^2}+\frac{l(l+1) \hbar^2}{2 m r^2}-\fr
 수소 원자에 대해 해당 방정식을 풀이하기 위해서 프로그램에 다음과 같은 입력값을 사용해본다:
 
 **입력값:**   
+- `Element = H`  
 - `Spin Polarized = True`  
 - `Coulomb = None`  
 - `Num Band = 12`  
@@ -71,6 +76,7 @@ $\left(-\frac{\hbar^2}{2 m} \frac{d^2}{d r^2}+\frac{l(l+1) \hbar^2}{2 m r^2}-\fr
 엄밀히 말해서 단전자의 경우 전자 간 상호작용은 존재하지 않지만, 임의의 단전자의 시스템에 대해서도 하트리-폭 계산을 수행 할 수 있다. 이를 위해서 다음과 같이 입력값을 설정해본다.
 
 **입력값:**   
+- `Element = H`  
 - `Spin Polarized = True`  
 - `Coulomb = Poisson`  
 - `Exchange = HF`  
@@ -96,7 +102,7 @@ Total Energy : -13.590771779976269 eV
 
 ## 3-2 다전자 시스템: 베릴륨
 
-### (1) 베릴륨 이온(+3)
+### (1) 베릴륨 이온(Be+3)
 
 우선, 수소 원자와 마찬가지로 전자간 상호작용을 고려하지 않았을때의 결과를 살펴보자:
 
@@ -124,10 +130,10 @@ Total Energy : -13.590771779976269 eV
 이제 전자 효과를 포함한 베릴륨 중성 원자에 대해서 계산을 수행해보자.  
 
 **입력값:**   
+- `Element = Be`  
 - `Spin Polarized = True`  
 - `Coulomb = Poisson`  
-- `Exchange = HF`  
-- `Num Band = 1`  
+- `Exchange = HF`    
 - `Rmax = 10A`
 
 **결과:**  
@@ -169,13 +175,13 @@ Total Energy : -12.428349588775186 eV
 ```
 > 해당 결과를 하트리-폭 계산 결과와 비교해보자. 보통 밀도범함수론의 교환-상관 에너지 범함수는 두 에너지가 정확히 상쇄되는 조건을 만족하지 않는데, 이를 만족하게 보정하는 self-interaction correction (SIC) 방법이 있다.  
 
-### (2) 두-전자(two-electron) 시스템: 수소원자 이온(-)
+### (2) 두-전자(two-electron) 시스템: 수소원자 이온(H-)
 
 다전자 효과를 확인하기 위한 대표적인 시스템이 두-전자 시스템이다. 우리는 이를 계산하기 위해서 수소 음이온(-) 고려할 것이다. 우선, 비교를 위한 하트리-폭 계산을 수행한다. 이를 위한 입력값은 다음과 같다:
 
 **입력값:**  
-- `Exchange = Hartree–Fock`  
 - `Element = H`  
+- `Exchange = Hartree–Fock`  
 - `Num Elec = 2.0`  
 - `Rmax = 20`  
 
@@ -202,11 +208,20 @@ Results Plot
 
 
 **입력값:**  
-- `Exchange = LDA`  
 - `Element = H`  
+- `Exchange = LDA`  
 - `Correlation = None`  
 - `Num Elec = 2.0`  
 - `Rmax = 20`  
 
 
-결과를 살펴보면, 교환 에너지가 충분히 크지 않아서 계산이 제대로 이뤄지지 않는 것을 확인할 수 있다. 이는 근본적으로 LDA 교환 포텐셜이 진공상에서 하트리-폭에 비해 급격히(exponential) 감소하는 효과 때문이다. 이에 대한 정확한 조건은 r이 증가할 수록 포텐셜이 1/r의 점근적인 개형(asymptotic behavior)을 따라가는 것이다. 이러한 조건은 밀도범함수론 교환 포텐셜을 설계하는데 토대가 되는 중요한 지표가 된다. H- 이온의 대안으로, 두-전자 시스템에 대해서 하트리-폭 방법과 LDA 밀도범함수론을 비교하기 위해서는 중성 He 원자를 계산할 수 있다.
+결과를 살펴보면, 교환 에너지가 충분히 크지 않아서 계산이 제대로 이뤄지지 않는 것을 확인할 수 있다. 이는 근본적으로 LDA 교환 포텐셜이 진공상에서 하트리-폭에 비해 급격히(exponential) 감소하는 효과 때문이다. 이에 대한 정확한 조건은 r이 증가할 수록 포텐셜이 1/r의 점근적인 개형(asymptotic behavior)을 따라가는 것이다. 이러한 조건은 밀도범함수론 교환 포텐셜을 설계하는데 토대가 되는 중요한 지표가 된다.  
+
+두-전자 시스템에 대해서 하트리-폭 방법과 LDA 밀도범함수론을 비교하기 위해서 LDA에서 수렴이 되지 않는 H- 이온 경우 대신, 중성 He 원자를 계산할 수 있다.  
+
+**입력값:**  
+- `Element = He`  
+- `Exchange = LDA`   
+- `Correlation = None`  
+- `Num Elec = 2.0`  
+- `Rmax = 20`  
