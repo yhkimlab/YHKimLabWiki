@@ -1,7 +1,4 @@
-
-<!doctype html>
-<html lang="en" class="no-js">
-  <head>
+<!DOCTYPE html><html lang="en" class="no-js"><head>
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -9,22 +6,25 @@
       
       
       
-        <link rel="prev" href="../..">
+        <link rel="prev" href="../wsl2/">
       
       
-        <link rel="next" href="../vscode/">
+        <link rel="next" href="../../github_tutorial/0.github_create_repository/">
+      
+      
+        
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.4">
     
     
       
-        <title>• Jupyter 노트북 - YHKLAB Wiki</title>
+        <title>• 파이썬으로 시작하기 - YHKLAB Wiki</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
       
       
 
@@ -37,8 +37,8 @@
       
         
         
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
@@ -49,8 +49,17 @@
 
     
     
-    
-  </head>
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
   
   
     <body dir="ltr">
@@ -79,12 +88,12 @@
     <a href="../.." title="YHKLAB Wiki" class="md-header__button md-logo" aria-label="YHKLAB Wiki" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -96,7 +105,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              • Jupyter 노트북
+              • 파이썬으로 시작하기
             
           </span>
         </div>
@@ -112,30 +121,30 @@
       
         <label class="md-header__button md-icon" for="__search">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
         </label>
         <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
       <label class="md-search__icon md-icon" for="__search">
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
       </label>
       <nav class="md-search__options" aria-label="Search">
         
         <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
         </button>
       </nav>
       
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix="">
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             Initializing search
@@ -201,7 +210,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
+        <a href="../YHK_cluster/" class="md-tabs__link">
           
   
   
@@ -224,7 +233,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../education/atom_hartree_fock/" class="md-tabs__link">
+        <a href="../../education/DD/" class="md-tabs__link">
           
   
   
@@ -263,13 +272,6 @@
   
     
     
-      
-  
-  
-  
-  
-    
-    
       <li class="md-tabs__item">
         <a href="../../build/build_atom/" class="md-tabs__link">
           
@@ -279,9 +281,6 @@
 
         </a>
       </li>
-    
-  
-
     
   
 
@@ -376,7 +375,7 @@
           
             
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -390,13 +389,13 @@
     <a href="../.." title="YHKLAB Wiki" class="md-nav__button md-logo" aria-label="YHKLAB Wiki" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
 
     </a>
     YHKLAB Wiki
   </label>
   
-  <ul class="md-nav__list" data-md-scrollfix>
+  <ul class="md-nav__list" data-md-scrollfix="">
     
       
       
@@ -410,9 +409,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Home
+  
+
     
   </span>
+  
   
 
       </a>
@@ -445,7 +449,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked="">
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
@@ -453,9 +457,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     시작하기
+  
+
     
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -464,9 +473,13 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
-            시작하기
+            
+  
+    시작하기
+  
+
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
+          <ul class="md-nav__list" data-md-scrollfix="">
             
               
                 
@@ -493,7 +506,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked="">
         
           
           <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="">
@@ -501,9 +514,14 @@
   
   
   <span class="md-ellipsis">
-    1. 파이썬 환경설정
+    
+  
+    1. 원격 개발 환경 구축
+  
+
     
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -512,9 +530,151 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_1">
             <span class="md-nav__icon md-icon"></span>
-            1. 파이썬 환경설정
+            
+  
+    1. 원격 개발 환경 구축
+  
+
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../YHK_cluster/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A. 연구실 클러스터 (HPC)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../education/DD/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    B. Edison (KISTI) Jupyter server
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_3" checked="">
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_3" id="__nav_2_1_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C. 로컬
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_1_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    C. 로컬
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wsl2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    • Linux용 Windows 하위 시스템
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -537,9 +697,14 @@
   
   
   <span class="md-ellipsis">
-    • Jupyter 노트북
+    
+  
+    • 파이썬으로 시작하기
+  
+
     
   </span>
+  
   
 
           <span class="md-nav__icon md-icon"></span>
@@ -550,9 +715,14 @@
   
   
   <span class="md-ellipsis">
-    • Jupyter 노트북
+    
+  
+    • 파이썬으로 시작하기
+  
+
     
   </span>
+  
   
 
       </a>
@@ -570,12 +740,14 @@
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
   <a href="#contents" class="md-nav__link">
     <span class="md-ellipsis">
-      Contents
+      
+        Contents
+      
     </span>
   </a>
   
@@ -584,7 +756,9 @@
         <li class="md-nav__item">
   <a href="#python-4" class="md-nav__link">
     <span class="md-ellipsis">
-      Python 작업 환경 4 가지
+      
+        Python 작업 환경 4 가지
+      
     </span>
   </a>
   
@@ -594,7 +768,9 @@
           <li class="md-nav__item">
   <a href="#1-command-line-interface-cli" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Command line interface (CLI)
+      
+        1. Command line interface (CLI)
+      
     </span>
   </a>
   
@@ -603,7 +779,9 @@
           <li class="md-nav__item">
   <a href="#2-interactive-python" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Interactive python
+      
+        2. Interactive python
+      
     </span>
   </a>
   
@@ -612,7 +790,9 @@
           <li class="md-nav__item">
   <a href="#3-python-notebook" class="md-nav__link">
     <span class="md-ellipsis">
-      3. Python notebook
+      
+        3. Python notebook
+      
     </span>
   </a>
   
@@ -621,7 +801,9 @@
           <li class="md-nav__item">
   <a href="#4-python-ide" class="md-nav__link">
     <span class="md-ellipsis">
-      4. Python IDE
+      
+        4. Python IDE
+      
     </span>
   </a>
   
@@ -635,7 +817,9 @@
         <li class="md-nav__item">
   <a href="#jupyter-notebook" class="md-nav__link">
     <span class="md-ellipsis">
-      Jupyter Notebook 설치 및 사용법
+      
+        Jupyter Notebook 설치 및 사용법
+      
     </span>
   </a>
   
@@ -645,7 +829,9 @@
           <li class="md-nav__item">
   <a href="#1-windows-miniconda" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Windows에 Miniconda 설치
+      
+        1. Windows에 Miniconda 설치
+      
     </span>
   </a>
   
@@ -654,7 +840,9 @@
           <li class="md-nav__item">
   <a href="#2-miniconda-jupyter-notebook" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Miniconda에서 Jupyter Notebook 실행 및 사용하기
+      
+        2. Miniconda에서 Jupyter Notebook 실행 및 사용하기
+      
     </span>
   </a>
   
@@ -682,6 +870,14 @@
 
               
             
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
               
                 
   
@@ -705,7 +901,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2">
         
           
           <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="">
@@ -713,9 +909,14 @@
   
   
   <span class="md-ellipsis">
-    2. 프로그래밍 환경설정
+    
+  
+    2. 버전관리
+  
+
     
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -724,32 +925,13 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_2">
             <span class="md-nav__icon md-icon"></span>
-            2. 프로그래밍 환경설정
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
             
-              
-                
   
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../vscode/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    • VSCode
-    
-  </span>
+    2. 버전관리
   
 
-      </a>
-    </li>
-  
-
-              
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
             
               
                 
@@ -763,32 +945,14 @@
   
   
   <span class="md-ellipsis">
-    • Git
+    
+  
+    A. Git
+  
+
     
   </span>
   
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../wsl2/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    • WSL
-    
-  </span>
   
 
       </a>
@@ -828,7 +992,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3">
         
           
           <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="">
@@ -836,9 +1000,14 @@
   
   
   <span class="md-ellipsis">
-    3. 유용한 명령어
+    
+  
+    3. 명령어
+  
+
     
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -847,32 +1016,13 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_3">
             <span class="md-nav__icon md-icon"></span>
-            3. 유용한 명령어
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
             
-              
-                
   
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../other/1.4_AnacondaCheatSheet/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    • Anaconda
-    
-  </span>
+    3. 명령어
   
 
-      </a>
-    </li>
-  
-
-              
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
             
               
                 
@@ -886,9 +1036,14 @@
   
   
   <span class="md-ellipsis">
-    • Python
+    
+  
+    A. Python
+  
+
     
   </span>
+  
   
 
       </a>
@@ -909,9 +1064,42 @@
   
   
   <span class="md-ellipsis">
-    • Linux
+    
+  
+    B. Linux
+  
+
     
   </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../other/1.4_AnacondaCheatSheet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C. Anaconda
+  
+
+    
+  </span>
+  
   
 
       </a>
@@ -932,9 +1120,14 @@
   
   
   <span class="md-ellipsis">
-    • Emacs
+    
+  
+    D. Emacs
+  
+
     
   </span>
+  
   
 
       </a>
@@ -978,7 +1171,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3">
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -986,9 +1179,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     교육용
+  
+
     
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -997,9 +1195,13 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
-            교육용
+            
+  
+    교육용
+  
+
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
+          <ul class="md-nav__list" data-md-scrollfix="">
             
               
                 
@@ -1008,14 +1210,19 @@
   
   
     <li class="md-nav__item">
-      <a href="../../education/atom_hartree_fock/" class="md-nav__link">
+      <a href="../../education/DD/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    • Hartree-Fock calculations
+    
+  
+    B. Edison (KISTI) Jupyter server
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1051,7 +1258,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4">
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
@@ -1059,9 +1266,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     OORINano
+  
+
     
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -1070,9 +1282,13 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
-            OORINano
+            
+  
+    OORINano
+  
+
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
+          <ul class="md-nav__list" data-md-scrollfix="">
             
               
                 
@@ -1086,9 +1302,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     1. k-point sampling
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1117,7 +1338,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2">
         
           
           <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
@@ -1125,9 +1346,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     2. Structure optimization
+  
+
     
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -1136,9 +1362,13 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_2">
             <span class="md-nav__icon md-icon"></span>
-            2. Structure optimization
+            
+  
+    2. Structure optimization
+  
+
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
+          <ul class="md-nav__list" data-md-scrollfix="">
             
               
                 
@@ -1152,9 +1382,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     A. Equation of state (EOS) 
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1175,9 +1410,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     B. Murnaghan fitting
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1198,9 +1438,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     C. Geometry optimization
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1244,7 +1489,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5">
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
@@ -1252,9 +1497,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Atom
+  
+
     
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -1263,52 +1513,13 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
-            Atom
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    
-    
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" >
-        
-          
-          <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
             
   
-  
-  <span class="md-ellipsis">
-    0. 준비
-    
-  </span>
+    Atom
   
 
-            <span class="md-nav__icon md-icon"></span>
           </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5_1">
-            <span class="md-nav__icon md-icon"></span>
-            0. 준비
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
+          <ul class="md-nav__list" data-md-scrollfix="">
             
               
                 
@@ -1322,9 +1533,14 @@
   
   
   <span class="md-ellipsis">
-    ATOM 설치
+    
+  
+    1. 설치
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1333,14 +1549,6 @@
 
               
             
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
               
                 
   
@@ -1361,7 +1569,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2">
         
           
           <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
@@ -1369,9 +1577,14 @@
   
   
   <span class="md-ellipsis">
-    1. ATOM 계산
+    
+  
+    2. ATOM 계산
+  
+
     
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -1380,9 +1593,13 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5_2">
             <span class="md-nav__icon md-icon"></span>
-            1. ATOM 계산
+            
+  
+    2. ATOM 계산
+  
+
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
+          <ul class="md-nav__list" data-md-scrollfix="">
             
               
                 
@@ -1404,7 +1621,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_1">
         
           
           <label class="md-nav__link" for="__nav_5_2_1" id="__nav_5_2_1_label" tabindex="0">
@@ -1412,9 +1629,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     A. 기초 과정
+  
+
     
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -1423,9 +1645,13 @@
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_2_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5_2_1">
             <span class="md-nav__icon md-icon"></span>
-            A. 기초 과정
+            
+  
+    A. 기초 과정
+  
+
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
+          <ul class="md-nav__list" data-md-scrollfix="">
             
               
                 
@@ -1439,9 +1665,14 @@
   
   
   <span class="md-ellipsis">
-    (1) 전(全)전자 계산
+    
+  
+    (1) 모든-전자 계산
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1462,9 +1693,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     (2) 슈도퍼텐셜 생성
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1516,7 +1752,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6">
         
           
           <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
@@ -1524,9 +1760,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     SIESTA
+  
+
     
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -1535,9 +1776,13 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
-            SIESTA
+            
+  
+    SIESTA
+  
+
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
+          <ul class="md-nav__list" data-md-scrollfix="">
             
               
                 
@@ -1559,7 +1804,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_1">
         
           
           <label class="md-nav__link" for="__nav_6_1" id="__nav_6_1_label" tabindex="0">
@@ -1567,9 +1812,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     0. 준비
+  
+
     
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -1578,9 +1828,13 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6_1">
             <span class="md-nav__icon md-icon"></span>
-            0. 준비
+            
+  
+    0. 준비
+  
+
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
+          <ul class="md-nav__list" data-md-scrollfix="">
             
               
                 
@@ -1594,9 +1848,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     A. SIESTA 로컬에서 설치
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1617,9 +1876,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     B. SIESTA 클러스터에서 설치
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1656,7 +1920,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2">
         
           
           <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
@@ -1664,9 +1928,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     1. SIESTA 계산
+  
+
     
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -1675,9 +1944,13 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6_2">
             <span class="md-nav__icon md-icon"></span>
-            1. SIESTA 계산
+            
+  
+    1. SIESTA 계산
+  
+
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
+          <ul class="md-nav__list" data-md-scrollfix="">
             
               
                 
@@ -1699,7 +1972,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2_1">
         
           
           <label class="md-nav__link" for="__nav_6_2_1" id="__nav_6_2_1_label" tabindex="0">
@@ -1707,9 +1980,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     A. 기초 과정
+  
+
     
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -1718,9 +1996,13 @@
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_2_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6_2_1">
             <span class="md-nav__icon md-icon"></span>
-            A. 기초 과정
+            
+  
+    A. 기초 과정
+  
+
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
+          <ul class="md-nav__list" data-md-scrollfix="">
             
               
                 
@@ -1734,9 +2016,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     (1) SIESTA 개요
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1757,9 +2044,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     (2) CH4, CH3 분자
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1780,9 +2072,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     (3) 3D - Au bulk 구조
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1803,9 +2100,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     (4-1) 2D - Au slab 구조
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1826,9 +2128,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     (4-2) 2D - Graphene
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1873,7 +2180,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3">
         
           
           <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
@@ -1881,9 +2188,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     2. TranSIESTA 계산
+  
+
     
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -1892,9 +2204,13 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6_3">
             <span class="md-nav__icon md-icon"></span>
-            2. TranSIESTA 계산
+            
+  
+    2. TranSIESTA 계산
+  
+
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
+          <ul class="md-nav__list" data-md-scrollfix="">
             
               
                 
@@ -1916,7 +2232,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3_1">
         
           
           <label class="md-nav__link" for="__nav_6_3_1" id="__nav_6_3_1_label" tabindex="0">
@@ -1924,9 +2240,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     A. 기초 과정
+  
+
     
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -1935,9 +2256,13 @@
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_3_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6_3_1">
             <span class="md-nav__icon md-icon"></span>
-            A. 기초 과정
+            
+  
+    A. 기초 과정
+  
+
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
+          <ul class="md-nav__list" data-md-scrollfix="">
             
               
                 
@@ -1951,9 +2276,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     (1) TranSIESTA 개요
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1974,9 +2304,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     (2) 접합구조 모델링
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1997,9 +2332,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     (3) Si chain (1D)
+  
+
     
   </span>
+  
   
 
       </a>
@@ -2036,7 +2376,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3_2">
         
           
           <label class="md-nav__link" for="__nav_6_3_2" id="__nav_6_3_2_label" tabindex="0">
@@ -2044,9 +2384,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     B. 중급/고급 과정
+  
+
     
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -2055,9 +2400,13 @@
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_3_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6_3_2">
             <span class="md-nav__icon md-icon"></span>
-            B. 중급/고급 과정
+            
+  
+    B. 중급/고급 과정
+  
+
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
+          <ul class="md-nav__list" data-md-scrollfix="">
             
               
                 
@@ -2079,7 +2428,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3_2_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3_2_1">
         
           
           <label class="md-nav__link" for="__nav_6_3_2_1" id="__nav_6_3_2_1_label" tabindex="0">
@@ -2087,9 +2436,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     (1) 평형상태 계산
+  
+
     
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -2098,9 +2452,13 @@
         <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_6_3_2_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6_3_2_1">
             <span class="md-nav__icon md-icon"></span>
-            (1) 평형상태 계산
+            
+  
+    (1) 평형상태 계산
+  
+
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
+          <ul class="md-nav__list" data-md-scrollfix="">
             
               
                 
@@ -2114,9 +2472,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     1) 그래핀 (2D)
+  
+
     
   </span>
+  
   
 
       </a>
@@ -2137,9 +2500,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     2) 깨끗한 or 결함있는 GNRs
+  
+
     
   </span>
+  
   
 
       </a>
@@ -2160,9 +2528,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     3) Si-SiO2-Si
+  
+
     
   </span>
+  
   
 
       </a>
@@ -2199,7 +2572,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3_2_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3_2_2">
         
           
           <label class="md-nav__link" for="__nav_6_3_2_2" id="__nav_6_3_2_2_label" tabindex="0">
@@ -2207,9 +2580,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     (2) 비평형상태 계산
+  
+
     
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -2218,9 +2596,13 @@
         <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_6_3_2_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6_3_2_2">
             <span class="md-nav__icon md-icon"></span>
-            (2) 비평형상태 계산
+            
+  
+    (2) 비평형상태 계산
+  
+
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
+          <ul class="md-nav__list" data-md-scrollfix="">
             
               
                 
@@ -2234,9 +2616,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     1) GNRs-진공-GNRs
+  
+
     
   </span>
+  
   
 
       </a>
@@ -2296,7 +2683,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7">
         
           
           <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
@@ -2304,9 +2691,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     VASP
+  
+
     
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -2315,9 +2707,13 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
-            VASP
+            
+  
+    VASP
+  
+
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
+          <ul class="md-nav__list" data-md-scrollfix="">
             
               
                 
@@ -2339,7 +2735,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1">
         
           
           <label class="md-nav__link" for="__nav_7_1" id="__nav_7_1_label" tabindex="0">
@@ -2347,9 +2743,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Nudged Elastic Band (NEB)
+  
+
     
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -2358,9 +2759,13 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_7_1">
             <span class="md-nav__icon md-icon"></span>
-            Nudged Elastic Band (NEB)
+            
+  
+    Nudged Elastic Band (NEB)
+  
+
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
+          <ul class="md-nav__list" data-md-scrollfix="">
             
               
                 
@@ -2374,9 +2779,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Machine learning for nudged elastic band
+  
+
     
   </span>
+  
   
 
       </a>
@@ -2412,9 +2822,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     About
+  
+
     
   </span>
+  
   
 
       </a>
@@ -2430,7 +2845,7 @@
             
             
               
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -2446,12 +2861,14 @@
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
   <a href="#contents" class="md-nav__link">
     <span class="md-ellipsis">
-      Contents
+      
+        Contents
+      
     </span>
   </a>
   
@@ -2460,7 +2877,9 @@
         <li class="md-nav__item">
   <a href="#python-4" class="md-nav__link">
     <span class="md-ellipsis">
-      Python 작업 환경 4 가지
+      
+        Python 작업 환경 4 가지
+      
     </span>
   </a>
   
@@ -2470,7 +2889,9 @@
           <li class="md-nav__item">
   <a href="#1-command-line-interface-cli" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Command line interface (CLI)
+      
+        1. Command line interface (CLI)
+      
     </span>
   </a>
   
@@ -2479,7 +2900,9 @@
           <li class="md-nav__item">
   <a href="#2-interactive-python" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Interactive python
+      
+        2. Interactive python
+      
     </span>
   </a>
   
@@ -2488,7 +2911,9 @@
           <li class="md-nav__item">
   <a href="#3-python-notebook" class="md-nav__link">
     <span class="md-ellipsis">
-      3. Python notebook
+      
+        3. Python notebook
+      
     </span>
   </a>
   
@@ -2497,7 +2922,9 @@
           <li class="md-nav__item">
   <a href="#4-python-ide" class="md-nav__link">
     <span class="md-ellipsis">
-      4. Python IDE
+      
+        4. Python IDE
+      
     </span>
   </a>
   
@@ -2511,7 +2938,9 @@
         <li class="md-nav__item">
   <a href="#jupyter-notebook" class="md-nav__link">
     <span class="md-ellipsis">
-      Jupyter Notebook 설치 및 사용법
+      
+        Jupyter Notebook 설치 및 사용법
+      
     </span>
   </a>
   
@@ -2521,7 +2950,9 @@
           <li class="md-nav__item">
   <a href="#1-windows-miniconda" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Windows에 Miniconda 설치
+      
+        1. Windows에 Miniconda 설치
+      
     </span>
   </a>
   
@@ -2530,7 +2961,9 @@
           <li class="md-nav__item">
   <a href="#2-miniconda-jupyter-notebook" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Miniconda에서 Jupyter Notebook 실행 및 사용하기
+      
+        2. Miniconda에서 Jupyter Notebook 실행 및 사용하기
+      
     </span>
   </a>
   
@@ -2551,6 +2984,7 @@
           
           
             <div class="md-content" data-md-component="content">
+              
               <article class="md-content__inner md-typeset">
                 
                   
@@ -2570,13 +3004,13 @@
 <p>Python과 같은 프로그래밍 언어들은 Linux 환경에서 개발되어 왔으므로 Linux에서 제공하는 terminal 창을 통해 작업이 이루어집니다. Terminal 창에서는 text (keyboard typing) 로만 작업이 이루어지기 때문에 Python 언어로 된 파일을 만들기 위해서는 vi와 같은 Linux용 editor를 사용해야 합니다. Python 언어로 만들어진 파일을 terminal의 command line에서 python interpreter (python)로 실행할 수 있습니다. python은 linux 환경에서 root에 설치되어 있으며 사용자들이 이용할 수 있습니다.</p>
 <p>장점: 실행이 간단하고, 빠르며, 모든 Linux 환경의 server가 기본적으로 python interpreter를 제공 </p>
 <p>단점: script가 실행이 되면 user-interaction이 불가능하며, debug, inspection 등이 어려움</p>
-<p><img alt="Py_001" src="../img/python/image01.png" /></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/python/image01.png" data-desc-position="bottom"><img alt="Py_001" src="../img/python/image01.png"></a></p>
 <p>N.B.: Python 파일들은 .py 확장자를 가져야 합니다. </p>
 <h3 id="2-interactive-python">2. Interactive python</h3>
 <p>Linux 환경에서 interactive python (python or ipython)을 제공합니다. ipython을 실행하면 줄 단위로 입력이 가능하며 입력이 끝날 때 마다 (enter key) 그 결과를 출력해 줍니다. 이 전 명령줄을 편집할 수 없으며, 방향키로 이 전 명령을 불러올 수 있고, 새로운 명령을 항상 입력하게 됩니다. 간단한 코딩으로 Python syntax를 실험하기 좋습니다.</p>
 <p>장점: 빠른고 편리한 테스터, history와 auto-completion 기능을 제공</p>
 <p>단점: exit (ctrl^D)하면 기록이 없어짐. 저장하여 사용하기가 불편함. visualization도 불편함</p>
-<p><img alt="Py_002" src="../img/python/image02.png" /></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/python/image02.png" data-desc-position="bottom"><img alt="Py_002" src="../img/python/image02.png"></a></p>
 <h3 id="3-python-notebook">3. <a href="#2-miniconda에서-jupyter-notebook-실행-및-사용하기">Python notebook </a></h3>
 <p>Jupyter notebook과 같은 Python notebook은 Windows의 한글이나 MSword와 같은 마우스를 이용한 편집이 가능하며, text를 별도로 처리할 수 있는 markdown을 제공하여 사용자가 편리하게 사용할 수 있는 환경을 제공합니다. 편집, 저장, 실행 등이 notebook 안에서 다 이루어집니다. 다양한 노트북 중에서 (Google Colab, VSCode Notebook 등) Jupyter notebook이 가장 보편적으로 사용되고 있으며 이를 포함한 다양한 패키지를 함께 가지고 있는 Anaconda (가벼운 버전의 Miniconda)를 설치하면 그 안에 있는 Jupyter notebook을 사용할 수 있습니다. Anaconda는 다양한 운영체제에 맞는 버전을 제공하고 있기 때문에, Linux, Windows, MacOS 등에서 OS에 맞는 패키지를 다운로드 받을 수 있으며, 1. Download, 2. Installation, 3. Running 등의 공통된 과정을 진행해야 합니다. 여기서는 Windows에서 Anaconda를 설치하여 Jupyter notebook을 실행하여 사용하는 방법에 대해서 설명합니다. 노트북에서 보이는 내용들은 Python file (.py)와 동일하지만, 실제 파일은 text 파일이지만 Json format으로 복잡하게 쓰여져 있으며, .ipynb (interactived python notebook) 형태로 저장됩니다.</p>
 <p>장점: 다른 Windows 프로그램처럼 마우스를 사용할 수 있어 편집이 용이하고, 여러 셀로 분리시켜 각 셀만을 실행할 수 있고, code 뿐만 아니라, text (markdown)을 사용할 수 있고, input, output이 편리하다</p>
@@ -2596,21 +3030,21 @@
 <p><strong>Step 1: Download Miniconda</strong></p>
 <p>Googling을 통해서 쉽게 <a href="https://www.anaconda.com/download">Miniconda Download</a> site 로 접근할 수 있습니다.
 여기에 메일 주소를 입력하면, e-mail을 통해서 <a href="https://www.anaconda.com/download/success">download 사이트</a> 를 받을 수 있습니다. 여기에서, 자신이 사용하는 OS (Windows [32|64 bit], Mac OS X, 또는 Linux)에 맞는 installer를 선택할 수 있습니다. 현재 최신 버전으로 windows/Python 3.13을 선택하여 다운로드 받습니다.</p>
-<p><img alt="Py_001" src="../img/python/img1.png" />
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/python/img1.png" data-desc-position="bottom"><img alt="Py_001" src="../img/python/img1.png"></a>
 아래 그림에서 왼쪽은 Anaconda, 오른쪽은 Miniconda 입니다.
-<img alt="Py_002" src="../img/python/img1-1.png" /></p>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/python/img1-1.png" data-desc-position="bottom"><img alt="Py_002" src="../img/python/img1-1.png"></a></p>
 <p><strong>Step 2: Install Miniconda</strong></p>
 <p>다운로드 받은 installer를 실행시키면 (double click), Graphic guide를 따라서 설치하면 됩니다.</p>
-<p><img alt="Py_002" src="../img/python/img2.png" /></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/python/img2.png" data-desc-position="bottom"><img alt="Py_002" src="../img/python/img2.png"></a></p>
 <ul>
 <li>설치경로 변경</li>
 </ul>
 <p>여기서는 설치 경로를 변경할 수 있습니다. 기본 경로는 C:\Users\username\miniconda3 입니다. </p>
 <p>주의 : 그 다음 설치 option에서 check 했을 때 설명글이 빨간색으로 바뀌며 경고를 하는 것은 check 하지 마십시오. PATH 설정 등은 같은 Windows 시스템의 다른 패키지가 python을 설치했거나 사용하면 충돌이 발생할 수 있습니다. conda는 자기만의 환경에서 python을 설치할 수 있기 때문에 다른 패키지에 영향을 주지 않게 할 수 있습니다.</p>
-<p><img alt="Py_003" src="../img/python/img3.png" /></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/python/img3.png" data-desc-position="bottom"><img alt="Py_003" src="../img/python/img3.png"></a></p>
 <p><strong>Step 3: Run Miniconda</strong></p>
 <p>설치 후에는 시작 메뉴에서 "anaconda prompt"가 설치된 것을 확인할 수 있습니다. 이것을 실행하면 anaconda prompt가 terminal로 열립니다. </p>
-<p><img alt="Py_004" src="../img/python/img4.png" /></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/python/img4.png" data-desc-position="bottom"><img alt="Py_004" src="../img/python/img4.png"></a></p>
 <p>anaconda prompt는 linux 혹은 MacOS의 terminal과 같으며 terminal은 command line에서 text로만 명령을 내릴 수 있습니다. 그리고 이 terminal은 (base)라는 가상환경 이름을 보여주며 현재 anaconda가 "base"라는 이름의 가상환경으로 실행중임을 나타냅니다. conda는 다양한 버전의 python이 서로 독립적인 공간에서 돌아가도록 여러 가상환경을 만들어 줄 수 있습니다. "where (linux의 which)" 라는 명령어를 통해서 conda, pip 등이 검색이 되는 것을 확인할 수 있습니다. 이것은 conda, pip 등의 명령어를 사용할 수 있다는 것을 나타냅니다. </p>
 <ul>
 <li>conda 사용법: miniconda 설치가 완료되었을 때 띄워주는 <a href="https://docs.conda.io/projects/conda/en/latest/user-guide/getting-started.html">사이트</a> 를 참조<ul>
@@ -2621,13 +3055,13 @@
 </li>
 </ul>
 <p>conda는 다양한 Python 가상환경을 만들 수 있으며 각 가상환경의 python, pip 등은 독립된 공간에서 존재하기 때문에 서로 영향을 주지 않습니다. </p>
-<p><img alt="Py_005" src="../img/python/img5.png" /></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/python/img5.png" data-desc-position="bottom"><img alt="Py_005" src="../img/python/img5.png"></a></p>
 <p><strong>Step 4: Miniconda에 Python Package (Jupyter) 설치</strong></p>
 <p>miniconda를 설치하였기 때문에 기본으로 conda, pip 등만 존재합니다. pip (package installer for Python 또는 Pip installs Package)은 표준 Python package manager로서 package를 설치하거나 (install), 지우거나 (uninstall), 현재 설치된 패키지를 검색하거나 (show) 등의 관리를 할 수 있습니다. 그러면 pip을 이용하여 자신이 주로 사용하는 Python package들을 설치해 보세요. 예를 들어 ipython, numpy, scipy, pandas, matplotlib 등을 설치하고 jupyter 를 설치하십시오. </p>
-<p><img alt="Py_006" src="../img/python/img6.png" /></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/python/img6.png" data-desc-position="bottom"><img alt="Py_006" src="../img/python/img6.png"></a></p>
 <p>N.B.: Jupyter가 실행되는 가상환경은 같은 가상환경에서 설치된 pathon package만을 인식할 수 있습니다. 그러면 Python script에서 <strong><em>import packagename</em></strong> 을 통해서 불러올 수 있습니다.</p>
 <p>위 그림과 같이 Python package들을 설치했다면 다음 명령어를 통해서 numpy가 제대로 설치되었는지 확인할 수 있습니다. <em>ModuleNotFoundError</em> 가 발생하지 않으면 Python이 설치된 패키지들을 제대로 인식하고 있는 것입니다.
-<img alt="Py_0061" src="../img/python/img6-1.png" /></p>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/python/img6-1.png" data-desc-position="bottom"><img alt="Py_0061" src="../img/python/img6-1.png"></a></p>
 <h3 id="2-miniconda-jupyter-notebook">2. Miniconda에서 Jupyter Notebook 실행 및 사용하기</h3>
 <p><strong>Step 1: Jupyter notebook 실행</strong></p>
 <p>Jupyter notebook은 굉장히 강력한 웹브라우저 기반 Python 실행환경입니다. Jupyter Notebook을 사용하기 위해서는 terminal (anaconda prompt)을 열고 자신이 사용하는 가상환경 (기본 - base)에서 pip을 통해 jupyter가 설치되어 있어야 합니다. 그러면 terminal의 command line에서 아래와 같이 명령어를 실행시키면 jupyter notebook이 웹 브라우저를 통해서 열립니다. </p>
@@ -2647,9 +3081,9 @@
 <p>Python coding 및 실행 예:</p>
 </blockquote>
 <p>오른쪽 위의 New/Notebook을 눌러 새로운 Python3 notebook을 만드세요:
-<img alt="Py_010" src="../img/python/img10.png" /></p>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/python/img10.png" data-desc-position="bottom"><img alt="Py_010" src="../img/python/img10.png"></a></p>
 <p>Jupyter notebook에서 코드를 실행시키는 것은 쉽습니다. cell에 코드를 적고, shift + enter를 누르시면 결과가 코드 밑에 나오게 됩니다.
-<img alt="Py_011" src="../img/python/img11.png" /></p>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/python/img11.png" data-desc-position="bottom"><img alt="Py_011" src="../img/python/img11.png"></a></p>
 <p>```</p>
 
 
@@ -2658,6 +3092,27 @@
 
 
 
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 7, 2025 09:04:54 UTC">July 7, 2025</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
 
 
 
@@ -2670,6 +3125,12 @@
           
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden="">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Back to top
+</button>
         
       </main>
       
@@ -2699,10 +3160,11 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.instant", "navigation.sections"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.instant", "navigation.sections", "navigation.top"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
         <script src="../../javascripts/config.js"></script>
       
@@ -2711,5 +3173,7 @@
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
-  </body>
-</html>
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

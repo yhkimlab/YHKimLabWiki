@@ -6,9 +6,14 @@ theme:
         - navigation.tabs
         - navigation.instant
         - navigation.sections
+        - navigation.top
 
 plugins:
-    - search
+        - search
+        - mermaid2
+        - glightbox
+        - git-revision-date-localized
+        - mkdocs-jupyter
 
 extra_javascript:
   - javascripts/config.js
@@ -26,22 +31,22 @@ markdown_extensions:
 nav:
         - Home: index.md
         - 시작하기:
-                - 1. 파이썬 환경설정:
-                        - '• Jupyter 노트북' : environment/python.md
-
-                - 2. 프로그래밍 환경설정:
-                        - '• VSCode' : environment/vscode.md
-                        - '• Git' : github_tutorial/0.github_create_repository.md
-                        - '• WSL' : environment/wsl2.md
-
-                - 3. 유용한 명령어:
-                        - '• Anaconda' : other/1.4_AnacondaCheatSheet.md
-                        - '• Python' : other/1.2_PythonCheatSheet.md
-                        - '• Linux' : other/1.1_LinuxCheatSheet.md
-                        - '• Emacs' : other/1.3_EmacsCheatSheet.md
-
+                - 1. 원격 개발 환경 구축:
+                        - A. 연구실 클러스터 (HPC): environment/YHK_cluster.md
+                        - B. Edison (KISTI) Jupyter server: education/DD.md
+                        - C. 로컬:
+                                - '• Linux용 Windows 하위 시스템' : environment/wsl2.md
+                                - '• 파이썬으로 시작하기' : environment/python.md
+                                # - '• VSCode' : environment/vscode.md
+                - 2. 버전관리:
+                        - 'A. Git' : github_tutorial/0.github_create_repository.md
+                - 3. 명령어:
+                        - 'A. Python' : other/1.2_PythonCheatSheet.md
+                        - 'B. Linux' : other/1.1_LinuxCheatSheet.md
+                        - 'C. Anaconda' : other/1.4_AnacondaCheatSheet.md
+                        - 'D. Emacs' : other/1.3_EmacsCheatSheet.md
         - 교육용:
-                - '• Hartree-Fock calculations' : education/atom_hartree_fock.md
+                - dummy: education/DD.md
         - OORINano:
                 - '1. k-point sampling' : nanocore/nanocore_kpoint.md
                 - '2. Structure optimization' :
@@ -49,11 +54,10 @@ nav:
                         - 'B. Murnaghan fitting' : nanocore/nanocore_murnaghan.md
                         - 'C. Geometry optimization' : nanocore/nanocore_geo.md
         - Atom:
-                - 0. 준비:
-                        - 'ATOM 설치': build/build_atom.md
-                - 1. ATOM 계산:
+                - 1. 설치: build/build_atom.md
+                - 2. ATOM 계산:
                         - A. 기초 과정:
-                                - '(1) 전(全)전자 계산': atom/atom_all_electron.md
+                                - '(1) 모든-전자 계산': atom/atom_all_electron.md
                                 - '(2) 슈도퍼텐셜 생성': atom/atom_pseudopotential.md
         - SIESTA:
                 - 0. 준비:
