@@ -1,0 +1,4328 @@
+<!DOCTYPE html><html lang="en" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../..">
+      
+      
+        <link rel="next" href="../../education/DD/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.4">
+    
+    
+      
+        <title>A. 연구실 클러스터 (HPC) - YHKLAB Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#hpc-yhklab" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="YHKLAB Wiki" class="md-header__button md-logo" aria-label="YHKLAB Wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            YHKLAB Wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              A. 연구실 클러스터 (HPC)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix="">
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+  시작하기
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../education/DD/" class="md-tabs__link">
+          
+  
+  
+  교육용
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../nanocore/nanocore_kpoint/" class="md-tabs__link">
+          
+  
+  
+  OORINano
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../build/build_atom/" class="md-tabs__link">
+          
+  
+  
+  Atom
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../build/build_siesta_local/" class="md-tabs__link">
+          
+  
+  
+  SIESTA
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../vasp/ml-neb/" class="md-tabs__link">
+          
+  
+  
+  VASP
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../about/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  About
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="YHKLAB Wiki" class="md-nav__button md-logo" aria-label="YHKLAB Wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    YHKLAB Wiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix="">
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked="">
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    시작하기
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    시작하기
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked="">
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. 원격 개발 환경 구축
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    1. 원격 개발 환경 구축
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A. 연구실 클러스터 (HPC)
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A. 연구실 클러스터 (HPC)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#hpc-yhklab" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HPC 클러스터 (YHKlab) 사용하기
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        목차
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 개요
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. 개요">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-1-hpc-hpc-vs-pc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1-1. 왜 HPC를 쓰는가: HPC vs PC
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1-1. 왜 HPC를 쓰는가: HPC vs PC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        개인 PC의 장점과 한계
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hpc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HPC의 장점
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#asdslab-yhklab-260307" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ASDSLab (YHKlab) 클러스터 구성 (26.03.07)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-2-linux-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1-2. 왜 Linux를 배우는가: Linux 소개
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1-2. 왜 Linux를 배우는가: Linux 소개">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Linux의 특징
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1-3. 전체 구조 한눈에 보기
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1-4. 환경설정 순서
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 클러스터 연결
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. 클러스터 연결">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#2-1-vs-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2-1. VS Code
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2-1. VS Code">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vs-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VS Code의 특징
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-2-vs-code-remote-ssh" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2-2. VS Code Remote - SSH로 접속하기
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2-2. VS Code Remote - SSH로 접속하기">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#windows-0" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        (Windows) 0. 환경변수 추가
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 확장 설치
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 원격 호스트 정보 등록
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 서버에 접속하기
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-3-vs-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2-3. VS Code의 원격 파일 탐색기
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2-3. VS Code의 원격 파일 탐색기">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        원격 폴더 열기
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-4-hello-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2-4. Hello Linux 예제
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2-4. Hello Linux 예제">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-pc-hellosh" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 로컬 PC에 hello.sh 준비하기
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 원격 작업 폴더 열기
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-hellosh-explorer-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 로컬 hello.sh를 원격 Explorer로 드래그-드롭하기
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 원격 터미널에서 위치와 파일 확인하기
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 실행 권한 부여 후 실행하기
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-vs-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. VS Code에서 내용을 수정한 뒤 다시 실행하기
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-5-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2-5. 기초 Linux 명령어
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2-5. 기초 Linux 명령어">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        예제 1: 현재 위치와 파일 확인
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        예제 2: 실습 폴더 만들고 이동하기
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        예제 3: 파일 복사와 이름 바꾸기
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        예제 4: 파일 내용 확인과 실행
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-tab" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        예제 5: Tab 자동완성
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-6-x11-forwarding-gui" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2-6. X11 forwarding으로 GUI 프로그램 실행하기
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2-6. X11 forwarding으로 GUI 프로그램 실행하기">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#x11-forwarding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        X11 forwarding이 필요한 이유
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ssh" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SSH 설정 예시
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        실행 예시
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 자주 생기는 문제
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. 자주 생기는 문제">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vs-code_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VS Code가 서버에 연결되지 않는다
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        원격 폴더는 열렸는데 명령 실행이 이상하다
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        드래그-드롭한 파일이 보이지 않는다
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gui" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GUI 창이 뜨지 않는다
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 참고 자료
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../education/DD/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    B. Edison (KISTI) Jupyter server
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_3">
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_3" id="__nav_2_1_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C. 로컬
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    C. 로컬
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wsl2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    • Linux용 Windows 하위 시스템
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    • 파이썬으로 시작하기
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2">
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. 버전관리
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    2. 버전관리
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../github_tutorial/0.github_create_repository/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A. Git
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3">
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. 명령어
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    3. 명령어
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../other/1.2_PythonCheatSheet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A. Python
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../other/1.1_LinuxCheatSheet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    B. Linux
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../other/1.4_AnacondaCheatSheet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C. Anaconda
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../other/1.3_EmacsCheatSheet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    D. Emacs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3">
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    교육용
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    교육용
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../education/DD/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    B. Edison (KISTI) Jupyter server
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4">
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OORINano
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    OORINano
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nanocore/nanocore_kpoint/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. k-point sampling
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2">
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Structure optimization
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    2. Structure optimization
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nanocore/nanocore_eos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A. Equation of state (EOS) 
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nanocore/nanocore_murnaghan/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    B. Murnaghan fitting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nanocore/nanocore_geo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C. Geometry optimization
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5">
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Atom
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Atom
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../build/build_atom/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. 설치
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2">
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. ATOM 계산
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    2. ATOM 계산
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_1">
+        
+          
+          <label class="md-nav__link" for="__nav_5_2_1" id="__nav_5_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A. 기초 과정
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    A. 기초 과정
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../atom/atom_all_electron/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    (1) 모든-전자 계산
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../atom/atom_pseudopotential/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    (2) 슈도퍼텐셜 생성
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6">
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SIESTA
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    SIESTA
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_1">
+        
+          
+          <label class="md-nav__link" for="__nav_6_1" id="__nav_6_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    0. 준비
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    0. 준비
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../build/build_siesta_local/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A. SIESTA 로컬에서 설치
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../build/build_siesta/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    B. SIESTA 클러스터에서 설치
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2">
+        
+          
+          <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. SIESTA 계산
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    1. SIESTA 계산
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2_1">
+        
+          
+          <label class="md-nav__link" for="__nav_6_2_1" id="__nav_6_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A. 기초 과정
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    A. 기초 과정
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../siesta/siesta_basic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    (1) SIESTA 개요
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../siesta/siesta_ch4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    (2) CH4, CH3 분자
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../siesta/siesta_gold_bulk/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    (3) 3D - Au bulk 구조
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../siesta/siesta_gold_slab/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    (4-1) 2D - Au slab 구조
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../siesta/siesta_graphene/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    (4-2) 2D - Graphene
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3">
+        
+          
+          <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. TranSIESTA 계산
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    2. TranSIESTA 계산
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3_1">
+        
+          
+          <label class="md-nav__link" for="__nav_6_3_1" id="__nav_6_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A. 기초 과정
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    A. 기초 과정
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../transiesta/transiesta_overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    (1) TranSIESTA 개요
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../transiesta/transiesta_modeling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    (2) 접합구조 모델링
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../transiesta/transiesta_si1d/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    (3) Si chain (1D)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3_2">
+        
+          
+          <label class="md-nav__link" for="__nav_6_3_2" id="__nav_6_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    B. 중급/고급 과정
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    B. 중급/고급 과정
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3_2_1">
+        
+          
+          <label class="md-nav__link" for="__nav_6_3_2_1" id="__nav_6_3_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    (1) 평형상태 계산
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_6_3_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_3_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    (1) 평형상태 계산
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../transiesta/transiesta_graphene/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1) 그래핀 (2D)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../transiesta/transiesta_gnr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2) 깨끗한 or 결함있는 GNRs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../transiesta/transiesta_si-sio2-si/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3) Si-SiO2-Si
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3_2_2">
+        
+          
+          <label class="md-nav__link" for="__nav_6_3_2_2" id="__nav_6_3_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    (2) 비평형상태 계산
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_6_3_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_3_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    (2) 비평형상태 계산
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../transiesta/transiesta_gnr-vacuum-gnr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1) GNRs-진공-GNRs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7">
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VASP
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    VASP
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1">
+        
+          
+          <label class="md-nav__link" for="__nav_7_1" id="__nav_7_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Nudged Elastic Band (NEB)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Nudged Elastic Band (NEB)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vasp/ml-neb/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Machine learning for nudged elastic band
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#hpc-yhklab" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HPC 클러스터 (YHKlab) 사용하기
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        목차
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 개요
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. 개요">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-1-hpc-hpc-vs-pc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1-1. 왜 HPC를 쓰는가: HPC vs PC
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1-1. 왜 HPC를 쓰는가: HPC vs PC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        개인 PC의 장점과 한계
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hpc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HPC의 장점
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#asdslab-yhklab-260307" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ASDSLab (YHKlab) 클러스터 구성 (26.03.07)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-2-linux-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1-2. 왜 Linux를 배우는가: Linux 소개
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1-2. 왜 Linux를 배우는가: Linux 소개">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Linux의 특징
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1-3. 전체 구조 한눈에 보기
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1-4. 환경설정 순서
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 클러스터 연결
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. 클러스터 연결">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#2-1-vs-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2-1. VS Code
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2-1. VS Code">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vs-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VS Code의 특징
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-2-vs-code-remote-ssh" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2-2. VS Code Remote - SSH로 접속하기
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2-2. VS Code Remote - SSH로 접속하기">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#windows-0" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        (Windows) 0. 환경변수 추가
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 확장 설치
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 원격 호스트 정보 등록
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 서버에 접속하기
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-3-vs-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2-3. VS Code의 원격 파일 탐색기
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2-3. VS Code의 원격 파일 탐색기">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        원격 폴더 열기
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-4-hello-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2-4. Hello Linux 예제
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2-4. Hello Linux 예제">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-pc-hellosh" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 로컬 PC에 hello.sh 준비하기
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 원격 작업 폴더 열기
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-hellosh-explorer-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 로컬 hello.sh를 원격 Explorer로 드래그-드롭하기
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 원격 터미널에서 위치와 파일 확인하기
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 실행 권한 부여 후 실행하기
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-vs-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. VS Code에서 내용을 수정한 뒤 다시 실행하기
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-5-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2-5. 기초 Linux 명령어
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2-5. 기초 Linux 명령어">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        예제 1: 현재 위치와 파일 확인
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        예제 2: 실습 폴더 만들고 이동하기
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        예제 3: 파일 복사와 이름 바꾸기
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        예제 4: 파일 내용 확인과 실행
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-tab" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        예제 5: Tab 자동완성
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-6-x11-forwarding-gui" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2-6. X11 forwarding으로 GUI 프로그램 실행하기
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2-6. X11 forwarding으로 GUI 프로그램 실행하기">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#x11-forwarding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        X11 forwarding이 필요한 이유
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ssh" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SSH 설정 예시
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        실행 예시
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 자주 생기는 문제
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. 자주 생기는 문제">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vs-code_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VS Code가 서버에 연결되지 않는다
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        원격 폴더는 열렸는데 명령 실행이 이상하다
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        드래그-드롭한 파일이 보이지 않는다
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gui" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GUI 창이 뜨지 않는다
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 참고 자료
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h2 id="hpc-yhklab">HPC 클러스터 (YHKlab) 사용하기</h2>
+<p>이 문서는 Linux HPC 서버를 처음 사용하는 학생을 위한 입문 가이드이다.</p>
+<p>HPC 실습에 필요한 수준에서 다음을 익히는 데 초점을 둔다.</p>
+<ul>
+<li>원격 Linux 서버에 접속하기</li>
+<li>원격 파일을 다루기</li>
+<li>셸 스크립트를 실행하기</li>
+<li>기본 명령어를 사용해 현재 위치와 파일 상태를 확인하기</li>
+<li>필요할 때 GUI 프로그램을 띄우기</li>
+</ul>
+<hr>
+<h2 id="_1">목차</h2>
+<ul>
+<li><a href="#1-개요">1. 개요</a></li>
+<li><a href="#1-1-왜-hpc를-쓰는가-hpc-vs-pc">1-1. 왜 HPC를 쓰는가: HPC vs PC</a><ul>
+<li><a href="#개인-pc의-장점과-한계">개인 PC의 장점과 한계</a></li>
+<li><a href="#hpc의-장점">HPC의 장점</a></li>
+<li><a href="#asdslab-yhklab-클러스터-구성-260307">ASDSLab (YHKlab) 클러스터 구성 (26.03.07)</a></li>
+</ul>
+</li>
+<li><a href="#1-2-왜-linux를-배우는가-linux-소개">1-2. 왜 Linux를 배우는가: Linux 소개</a><ul>
+<li><a href="#linux의-특징">Linux의 특징</a></li>
+</ul>
+</li>
+<li><a href="#1-3-전체-구조-한눈에-보기">1-3. 전체 구조 한눈에 보기</a></li>
+<li><a href="#1-4-환경설정-순서">1-4. 환경설정 순서</a></li>
+<li><a href="#2-클러스터-연결">2. 클러스터 연결</a></li>
+<li><a href="#2-1-vs-code">2-1. VS Code</a><ul>
+<li><a href="#vs-code의-특징">VS Code의 특징</a></li>
+</ul>
+</li>
+<li><a href="#2-2-vs-code-remote---ssh로-접속하기">2-2. VS Code Remote - SSH로 접속하기</a><ul>
+<li><a href="#windows-0-환경변수-추가">(Windows) 0. 환경변수 추가</a></li>
+<li><a href="#1-확장-설치">1. 확장 설치</a></li>
+<li><a href="#2-원격-호스트-정보-등록">2. 원격 호스트 정보 등록</a></li>
+<li><a href="#3-서버에-접속하기">3. 서버에 접속하기</a></li>
+</ul>
+</li>
+<li><a href="#2-3-vs-code의-원격-파일-탐색기">2-3. VS Code의 원격 파일 탐색기</a><ul>
+<li><a href="#원격-폴더-열기">원격 폴더 열기</a></li>
+</ul>
+</li>
+<li><a href="#2-4-hello-linux-예제">2-4. Hello Linux 예제</a><ul>
+<li><a href="#1-로컬-pc에-hellosh-준비하기">1. 로컬 PC에 <code>hello.sh</code> 준비하기</a></li>
+<li><a href="#2-원격-작업-폴더-열기">2. 원격 작업 폴더 열기</a></li>
+<li><a href="#3-로컬-hellosh를-원격-explorer로-드래그-드롭하기">3. 로컬 <code>hello.sh</code>를 원격 Explorer로 드래그-드롭하기</a></li>
+<li><a href="#4-원격-터미널에서-위치와-파일-확인하기">4. 원격 터미널에서 위치와 파일 확인하기</a></li>
+<li><a href="#5-실행-권한-부여-후-실행하기">5. 실행 권한 부여 후 실행하기</a></li>
+<li><a href="#6-vs-code에서-내용을-수정한-뒤-다시-실행하기">6. VS Code에서 내용을 수정한 뒤 다시 실행하기</a></li>
+</ul>
+</li>
+<li><a href="#2-5-기초-linux-명령어">2-5. 기초 Linux 명령어</a><ul>
+<li><a href="#예제-1-현재-위치와-파일-확인">예제 1: 현재 위치와 파일 확인</a></li>
+<li><a href="#예제-2-실습-폴더-만들고-이동하기">예제 2: 실습 폴더 만들고 이동하기</a></li>
+<li><a href="#예제-3-파일-복사와-이름-바꾸기">예제 3: 파일 복사와 이름 바꾸기</a></li>
+<li><a href="#예제-4-파일-내용-확인과-실행">예제 4: 파일 내용 확인과 실행</a></li>
+<li><a href="#예제-5-tab-자동완성">예제 5: Tab 자동완성</a></li>
+</ul>
+</li>
+<li><a href="#2-6-x11-forwarding으로-gui-프로그램-실행하기">2-6. X11 forwarding으로 GUI 프로그램 실행하기</a><ul>
+<li><a href="#x11-forwarding이-필요한-이유">X11 forwarding이 필요한 이유</a></li>
+<li><a href="#ssh-설정-예시">SSH 설정 예시</a></li>
+<li><a href="#실행-예시">실행 예시</a></li>
+</ul>
+</li>
+<li><a href="#3-자주-생기는-문제">3. 자주 생기는 문제</a><ul>
+<li><a href="#vs-code가-서버에-연결되지-않는다">VS Code가 서버에 연결되지 않는다</a></li>
+<li><a href="#원격-폴더는-열렸는데-명령-실행이-이상하다">원격 폴더는 열렸는데 명령 실행이 이상하다</a></li>
+<li><a href="#드래그-드롭한-파일이-보이지-않는다">드래그-드롭한 파일이 보이지 않는다</a></li>
+<li><a href="#gui-창이-뜨지-않는다">GUI 창이 뜨지 않는다</a></li>
+</ul>
+</li>
+<li><a href="#4-참고-자료">4. 참고 자료</a></li>
+</ul>
+<hr>
+<h1 id="1">1. 개요</h1>
+<h2 id="1-1-hpc-hpc-vs-pc">1-1. 왜 HPC를 쓰는가: HPC vs PC</h2>
+<p>연구실 실습이나 계산 과제에서는 개인 PC만으로는 불편하거나 비효율적인 경우가 많다. 특히 계산 시간이 길거나, 메모리를 많이 쓰거나, 여러 학생이 같은 환경에서 실습해야 할 때 차이가 크게 드러난다.</p>
+<h3 id="pc">개인 PC의 장점과 한계</h3>
+<ul>
+<li>개인 PC는 바로 켜서 쓸 수 있고, 익숙한 환경에서 가볍게 실습하기 좋다.</li>
+<li>하지만 CPU 코어 수, 메모리, 저장 공간, 장시간 계산 안정성에는 한계가 있다.</li>
+<li>소프트웨어 설치 상태가 사람마다 달라 실습 환경이 쉽게 어긋난다.</li>
+</ul>
+<h3 id="hpc">HPC의 장점</h3>
+<ul>
+<li>더 큰 계산 자원을 쓸 수 있다. CPU, 메모리, 저장 공간이 개인 노트북보다 일반적으로 크다.</li>
+<li>공용 연구 환경을 쓸 수 있다. 실습 참가자가 비슷한 패키지와 설정을 공유하기 쉽다.</li>
+<li>계산을 서버에 맡길 수 있다. 내 PC는 문서 작성이나 브라우징을 하면서도 계산은 서버에서 계속 돌릴 수 있다.</li>
+<li>연구용 소프트웨어가 Linux 중심으로 배포되는 경우가 많아 실습 자료와 실제 연구 환경의 차이가 줄어든다.</li>
+</ul>
+<p>정리하면, HPC는 단순히 "더 좋은 컴퓨터"가 아니라 연구용 계산과 공용 실습 환경을 안정적으로 제공하는 작업 기반이다.</p>
+<h3 id="asdslab-yhklab-260307">ASDSLab (YHKlab) 클러스터 구성 (26.03.07)</h3>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../YHK_cluster_img/hpc-cluster-architecture.jpeg" data-desc-position="bottom"><img alt="YHKlab 클러스터 구성" src="../YHK_cluster_img/hpc-cluster-architecture.jpeg"></a></p>
+<h2 id="1-2-linux-linux">1-2. 왜 Linux를 배우는가: Linux 소개</h2>
+<p>HPC를 쓴다는 것은 대부분 Linux 서버를 사용한다는 뜻이기도 하다. Linux는 서버와 연구 계산 환경에서 매우 널리 쓰이며, 많은 과학 계산 도구가 Linux를 기준으로 설명된다.</p>
+<h3 id="linux">Linux의 특징</h3>
+<ul>
+<li>명령줄 인터페이스(CLI)를 사용하여 가볍고 빠르다. 반복 작업, 자동화, 배치(batch) 실행에 유리하다.</li>
+<li>원격 접속과 서버 운영에 적합하다. SSH를 통한 접속이 표준처럼 쓰인다.</li>
+<li>Python, 컴파일러, 수치 계산 도구, 시각화 도구가 Linux 환경에서 자연스럽게 연결된다.</li>
+</ul>
+<h2 id="1-3">1-3. 전체 구조 한눈에 보기</h2>
+<p>로컬 PC와 원격 Linux HPC 서버의 관계를 먼저 머릿속에 넣어두면 이후 설정이 훨씬 쉬워진다.</p>
+<div class="highlight"><pre><span></span><code>+---------------------------+                     +---------------------------+
+| 내 PC                     |                     | Linux HPC 서버            |
+|                           |                     |                           |
+| VS Code                   | -- SSH -----------&gt; | shell, compiler, Python   |
+| Explorer / Editor         | &lt;------------------ | VS Code Server            |
+| Terminal                  |                     |                           |
+|                           | -- 파일 전송 ------&gt; | home directory, project   |
+| local file drag &amp; drop    | &lt;------------------ | remote files              |
+|                           |                     |                           |
+| X server                  | &lt;- X11 forwarding - | GUI app                   |
+| (Xming / XQuartz)         | ------------------&gt; | ase gui 등                |
++---------------------------+                     +---------------------------+
+</code></pre></div>
+<p>핵심은 다음과 같다.</p>
+<ul>
+<li><code>SSH</code>는 원격 Linux 서버에 접속하고 명령을 실행하는 통로이다.</li>
+<li><code>파일 전송</code>은 별도 FTP 프로그램을 쓸 수도 있지만, 이번 문서에서는 VS Code로 원격 폴더를 열고 로컬 파일을 드래그-드롭하는 흐름까지 포함해 설명한다.</li>
+<li><code>X11 forwarding</code>은 서버에서 실행한 GUI 프로그램의 창을 내 PC에 표시하는 통로이다.</li>
+</ul>
+<h2 id="1-4">1-4. 환경설정 순서</h2>
+<ol>
+<li><strong>(Windows 운영체제인 경우)</strong> 시스템 환경 변수 <code>Path</code>에 X11 forwarding을 위한 변수를 추가한다.</li>
+<li>VS Code를 설치한다.</li>
+<li>VS Code에서 <code>Remote - SSH</code> 확장을 설치한다.</li>
+<li>GUI 프로그램까지 쓸 계획이면 <code>Xming (Windows)</code> 또는 <code>XQuartz (Mac)</code>를 설치하고 실행한다.</li>
+<li>서버 주소, 계정, 비밀번호 또는 SSH 키를 입력한다.</li>
+</ol>
+<hr>
+<h1 id="2">2. 클러스터 연결</h1>
+<h2 id="2-1-vs-code">2-1. VS Code</h2>
+<p>Visual Studio Code는 단순한 텍스트 편집기라기보다, 코드 편집, 파일 탐색, 터미널, 확장 기능, 원격 접속을 하나의 창에 모아 주는 종합 작업 플랫폼에 가깝다. HPC 실습에서는 이 점이 특히 중요하다.</p>
+<h3 id="vs-code">VS Code의 특징</h3>
+<ul>
+<li>파일 탐색기에서 원격 폴더 구조를 바로 볼 수 있다.</li>
+<li>편집기에서 셸 스크립트, Python 코드, 입력 파일을 바로 수정할 수 있다.</li>
+<li>터미널을 같은 화면 안에서 열어 명령을 실행할 수 있다.</li>
+<li><code>Remote - SSH</code> 같은 확장을 붙이면 로컬 UI 그대로 원격 Linux 서버 작업이 가능하다.</li>
+</ul>
+<p>VS Code는 "문서를 여는 프로그램"이 아니라, 원격 서버 접속과 파일 편집과 실행을 이어 주는 통합 작업 창이다.</p>
+<h2 id="2-2-vs-code-remote-ssh">2-2. VS Code Remote - SSH로 접속하기</h2>
+<h3 id="windows-0">(Windows) 0. 환경변수 추가</h3>
+<p>Windows 운영체제의 경우 <code>Remote - SSH</code> 확장이 X11 forwarding 된 로컬 디스플레이를 자동으로 찾지 못하기 때문에 환경 변수 설정이 필요하다.</p>
+<ol>
+<li><code>Windows + R</code> 키 입력 이후 <code>cmd</code> 입력</li>
+<li>환경변수 설정 커맨드 입력
+<div class="highlight"><pre><span></span><code>&gt; setx DISPLAY "127.0.0.1:0.0"
+</code></pre></div></li>
+</ol>
+<p>이후 <code>시스템 환경 변수 편집 - 환경변수 - 사용자 환경변수</code> 에서 추가된 것을 확인할 수 있다.</p>
+<h3 id="1_1">1. 확장 설치</h3>
+<p>VS Code 왼쪽의 Extensions 뷰에서 <code>Remote - SSH</code>를 검색해 설치한다.</p>
+<h3 id="2_1">2. 원격 호스트 정보 등록</h3>
+<p>명령 팔레트 또는 Remote Explorer에서 SSH 호스트를 등록한다. 일반적으로 다음 형태로 접속한다.</p>
+<div class="highlight"><pre><span></span><code>ssh<span class="w"> </span>gold@kaist.ac.kr
+</code></pre></div>
+<p>등록이 끝나면 SSH 설정 파일에는 대체로 다음과 비슷한 정보가 들어간다.</p>
+<div class="highlight"><pre><span></span><code>Host gold.kaist.ac.kr
+    HostName gold.kaist.ac.kr
+    User class
+</code></pre></div>
+<p>비밀번호를 저장하려면 SSH key를 직접 발급받아야 한다.</p>
+<h3 id="3">3. 서버에 접속하기</h3>
+<p>호스트를 선택하면 VS Code가 새 창을 열고 원격 서버에 접속한다. 처음 접속할 때는 다음 일이 일어날 수 있다.</p>
+<ul>
+<li>호스트 운영체제 선택 &gt;&gt; <code>Linux</code> 선택</li>
+<li>호스트 신뢰 여부 &gt;&gt; <code>yes</code></li>
+<li>계정 비밀번호 입력</li>
+<li>원격 서버 쪽에 VS Code Server가 설치</li>
+</ul>
+<p>접속이 성공하면 좌측 하단 상태 표시줄에 현재 연결된 호스트 이름이 표시된다.</p>
+<h2 id="2-3-vs-code">2-3. VS Code의 원격 파일 탐색기</h2>
+<p>전통적인 FTP 클라이언트를 따로 쓰는 방법도 있지만, 이 문서에서는 VS Code 중심의 더 단순한 흐름을 사용한다.</p>
+<p>Remote - SSH로 원격 폴더를 열면 VS Code 안에서 이미 서버의 파일 시스템을 보고 있는 상태가 된다. 즉, 파일을 만들고 저장하는 행위 자체가 원격 파일 작업이다.</p>
+<div class="highlight"><pre><span></span><code>로컬 키보드로 편집
+        |
+        v
+VS Code 창에서 저장
+        |
+        v
+원격 서버의 파일이 바로 갱신됨
+</code></pre></div>
+<p>또한 로컬 PC에 있는 파일을 원격 Explorer로 드래그-드롭하면, 파일 업로드처럼 이해할 수 있다.</p>
+<div class="highlight"><pre><span></span><code>내 PC의 파일
+        |
+        v
+VS Code Explorer로 드래그-드롭
+        |
+        v
+원격 폴더에 업로드됨
+</code></pre></div>
+<p>이 방식은 사용자가 느끼기에는 FTP와 비슷하지만, 실제로는 VS Code와 SSH 기반 원격 파일 작업이다.</p>
+<p>반대로, 원격 서버의 파일을 다운받으려면 원하는 파일에 <code>우클릭-다운로드</code>를 클릭한다.</p>
+<h3 id="_2">원격 폴더 열기</h3>
+<p>원격 서버에 연결된 뒤에는 <code>File &gt; Open Folder</code>로 서버의 작업 디렉터리를 열 수 있고, 명령 팔레트로도 같은 작업을 할 수 있다.</p>
+<p>명령 팔레트 기준 순서는 다음과 같다.</p>
+<ol>
+<li><code>Ctrl + Shift + P</code> (<code>macOS</code>는 <code>Cmd + Shift + P</code>)로 명령 팔레트를 연다.</li>
+<li><code>Remote-SSH: Open Folder in Current Window...</code>를 입력해 선택한다.</li>
+<li>폴더 경로 입력창이 뜨면 개인 작업 폴더 경로를 넣는다.</li>
+<li>예를 들어 <code>/home/class/...</code>, <code>/home2/class/...</code>, <code>/home/class/2026_EE545/2026xxxx_jeongwon/</code> 같은 경로를 입력한 뒤 <code>확인</code>을 누른다.</li>
+<li>Explorer가 해당 폴더 기준으로 다시 열리면, 그 안에서 파일을 만들고 편집하고 실행한다.</li>
+</ol>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../YHK_cluster_img/remote-open-folder.png" data-desc-position="bottom"><img alt="원격 폴더 열기 화면" src="../YHK_cluster_img/remote-open-folder.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../YHK_cluster_img/remote-folder-path-input.png" data-desc-position="bottom"><img alt="명령 팔레트 이후 원격 폴더 경로를 직접 입력하는 예시" src="../YHK_cluster_img/remote-folder-path-input.png"></a></p>
+<p>예를 들면 <code>/home/class/...</code> 아래의 개인 실습 폴더를 열 수 있다. 이렇게 <strong><em>폴더를 열어 작업 공간을 한정해야 클러스터 호스트 서버의 부하를 줄일 수 있다.</em></strong> </p>
+<p>탐색기에서 파일을 만들고, 내용을 수정하고, 저장하는 모든 동작이 원격 서버 쪽에 반영된다.</p>
+<h2 id="2-4-hello-linux">2-4. Hello Linux 예제</h2>
+<p>이번 예제는 "로컬에 있는 파일을 원격 서버로 가져와 실행하고, VS Code에서 편집한 뒤 다시 실행"하는 방법을 익히기 위한 것이다.</p>
+<div class="highlight"><pre><span></span><code>로컬 hello.sh 준비
+        |
+        v
+VS Code 원격 폴더로 드래그-드롭
+        |
+        v
+서버에서 ./hello.sh 실행
+        |
+        v
+VS Code를 통해 내용 수정
+</code></pre></div>
+<h3 id="1-pc-hellosh">1. 로컬 PC에 <code>hello.sh</code> 준비하기</h3>
+<p>먼저 내 PC의 적당한 폴더에 메모장으로 <code>hello.sh</code> 파일을 하나 만든다.</p>
+<p>파일 내용은 아래와 같다</p>
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">"Hello Linux"</span>
+</code></pre></div>
+<h3 id="2_2">2. 원격 작업 폴더 열기</h3>
+<p>원격 서버의 개인 작업 폴더를 연다. 예시는 다음과 같은 형태라고 가정한다.</p>
+<div class="highlight"><pre><span></span><code>/home/class/2026_EE545/2026xxxx_name/
+</code></pre></div>
+<h3 id="3-hellosh-explorer-">3. 로컬 <code>hello.sh</code>를 원격 Explorer로 드래그-드롭하기</h3>
+<p>파일 탐색기에서 로컬 <code>hello.sh</code>를 VS Code의 원격 파일 탐색기(Explorer)로 끌어다 놓는다. </p>
+<p>드래그-드롭이 끝나면 <code>hello.sh</code>가 원격 폴더에 나타난다.</p>
+<h3 id="4">4. 원격 터미널에서 위치와 파일 확인하기</h3>
+<p>VS Code에서 터미널을 열면, 원격 서버의  <code>bash</code> 셸이 열린다.</p>
+<p>다음 명령으로 현재 위치 (<code>pwd</code>)와 파일 존재 여부(<code>ls</code>)를 확인한다.</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span><span class="nb">pwd</span>
+$<span class="w"> </span>ls
+</code></pre></div>
+<h3 id="5">5. 실행 권한 부여 후 실행하기</h3>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>chmod<span class="w"> </span>+x<span class="w"> </span>hello.sh
+$<span class="w"> </span>./hello.sh
+</code></pre></div>
+<p>정상적으로 동작하면 아래와 같이 출력된다.</p>
+<div class="highlight"><pre><span></span><code>Hello Linux
+</code></pre></div>
+<h3 id="6-vs-code">6. VS Code에서 내용을 수정한 뒤 다시 실행하기</h3>
+<p>이제 VS Code 편집기에서 <code>hello.sh</code>를 열고 다음처럼 한 줄을 더 추가한다.</p>
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">"Hello Linux"</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">"Hello World"</span><span class="w">      </span><span class="c1"># 추가된 부분</span>
+</code></pre></div>
+<p>저장한 뒤 다시 실행한다.</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>./hello.sh
+</code></pre></div>
+<p>예상 출력은 다음과 같다.</p>
+<div class="highlight"><pre><span></span><code>Hello Linux
+Hello World
+</code></pre></div>
+<h2 id="2-5-linux">2-5. 기초 Linux 명령어</h2>
+<p>처음에는 명령어를 따로 외우기보다, 직접 한 번씩 써 보는 편이 더 좋다.</p>
+<h3 id="1_2">예제 1: 현재 위치와 파일 확인</h3>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span><span class="nb">pwd</span>
+$<span class="w"> </span>ls
+$<span class="w"> </span>ls<span class="w"> </span>-l
+</code></pre></div>
+<ul>
+<li><code>pwd</code>: 현재 작업 디렉터리를 보여 준다.</li>
+<li><code>ls</code>: 현재 폴더의 파일과 디렉터리를 보여 준다.</li>
+<li><code>ls -l</code>: 파일 권한과 크기까지 조금 더 자세히 보여 준다.</li>
+</ul>
+<h3 id="2_3">예제 2: 실습 폴더 만들고 이동하기</h3>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>mkdir<span class="w"> </span>practice
+$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>practice
+$<span class="w"> </span><span class="nb">pwd</span>
+</code></pre></div>
+<p>이 예제는 새 폴더를 만들고 그 폴더로 이동하는 가장 기본적인 흐름이다.</p>
+<h3 id="3_1">예제 3: 파일 복사와 이름 바꾸기</h3>
+<p>원격 폴더에 <code>hello.sh</code>가 이미 있다고 가정하면 다음처럼 연습할 수 있다.</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>cp<span class="w"> </span>hello.sh<span class="w"> </span>hello_copy.sh
+$<span class="w"> </span>ls
+hello.sh<span class="w"> </span>hello_copy.sh
+
+$<span class="w"> </span>mv<span class="w"> </span>hello_copy.sh<span class="w"> </span>hello_linux.sh
+$<span class="w"> </span>ls
+hello.sh<span class="w"> </span>hello_linux.sh
+</code></pre></div>
+<ul>
+<li><code>cp</code>: 파일을 복사한다.</li>
+<li><code>mv</code>: 파일 이름을 바꾸거나 위치를 옮긴다.</li>
+</ul>
+<h3 id="4_1">예제 4: 파일 내용 확인과 실행</h3>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>cat<span class="w"> </span>hello.sh
+$<span class="w"> </span>chmod<span class="w"> </span>+x<span class="w"> </span>hello.sh
+$<span class="w"> </span>./hello.sh
+</code></pre></div>
+<ul>
+<li><code>cat</code>: 파일 내용을 터미널에서 보여 준다.</li>
+<li><code>chmod +x</code>: 실행 권한을 부여한다.</li>
+<li><code>./hello.sh</code>: 현재 폴더의 스크립트를 실행한다.</li>
+</ul>
+<h3 id="5-tab">예제 5: Tab 자동완성</h3>
+<p>긴 경로나 파일 이름은 일부만 입력한 뒤 <code>Tab</code> 키를 눌러 자동완성할 수 있다. Linux 서버 작업에서 매우 자주 쓰이는 기본 습관이다.</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>ls<span class="w"> </span>./h<span class="w">   </span><span class="c1"># 이후 Tab 두 번 누르면 자동완성 가능한 파일 목록이 프린트된다.</span>
+</code></pre></div>
+<h2 id="2-6-x11-forwarding-gui">2-6. X11 forwarding으로 GUI 프로그램 실행하기</h2>
+<p>CLI만으로 충분한 작업도 많지만, 어떤 도구는 GUI 창이 있으면 훨씬 편하다. 예를 들어 구조 시각화나 간단한 인터랙티브 확인 작업은 GUI 기반 프로그램이 더 직관적이다.</p>
+<h3 id="x11-forwarding">X11 forwarding이 필요한 이유</h3>
+<p>원격 서버에서 <code>ase gui</code> 같은 명령을 실행하면 프로그램은 서버에서 시작된다. 하지만 사용자는 자신의 PC 화면에서 창을 봐야 한다. X11 forwarding은 바로 이 창 전달 역할을 한다.</p>
+<div class="highlight"><pre><span></span><code>원격 서버에서 GUI 앱 실행
+        |
+        v
+X11 forwarding으로 화면 정보 전달
+        |
+        v
+내 PC의 X server(Xming/XQuartz)가 창 표시
+</code></pre></div>
+<h3 id="ssh">SSH 설정 예시</h3>
+<p>X11 forwarding을 쓰려면 SSH 설정에 관련 옵션이 들어갈 수 있다.</p>
+<div class="highlight"><pre><span></span><code>Host<span class="w"> </span>my-hpc
+<span class="w">    </span>HostName<span class="w"> </span>gold.kaist.ac.kr
+<span class="w">    </span>User<span class="w"> </span>class
+<span class="w">    </span>ForwardX11<span class="w"> </span>yes
+<span class="w">    </span>ForwardAgent<span class="w"> </span>yes
+<span class="w">    </span>ForwardX11Trusted<span class="w"> </span>yes
+</code></pre></div>
+<h3 id="_3">실행 예시</h3>
+<p>X server를 실행한 상태에서 원격 터미널에 접속해 다음처럼 GUI 프로그램을 띄운다.</p>
+<div class="highlight"><pre><span></span><code>ase<span class="w"> </span>gui
+</code></pre></div>
+<p>정상적으로 연결되면 다음과 같이 로컬 화면에 창이 뜬다.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../YHK_cluster_img/ase-gui-window.png" data-desc-position="bottom"><img alt="ASE GUI 예시 창" src="../YHK_cluster_img/ase-gui-window.png"></a></p>
+<hr>
+<h1 id="3_2">3. 자주 생기는 문제</h1>
+<h3 id="vs-code_1">VS Code가 서버에 연결되지 않는다</h3>
+<ul>
+<li>호스트 이름과 사용자 이름이 맞는지 확인한다.</li>
+<li>터미널에서 <code>ssh username@hostname</code> 접속이 되는지 먼저 확인한다.</li>
+<li>학교 VPN (KVPN) 이나 내부망 접속이 필요한 환경인지 확인한다.</li>
+<li>Windows에서는 필요한 경로가 <code>Path</code>에 들어갔는지 확인한다.</li>
+<li><code>Could not establish connection to "ip"</code> 오류: </li>
+<li>
+<p>C:/Users/User Name/.ssh/ 경로에서 known_hosts 파일을 메모장으로 열기</p>
+</li>
+<li>
+<p>연결된 여러 원격 서버 중 연결이 되지 않는 IP 주소의 행을 지우고 저장</p>
+</li>
+</ul>
+<h3 id="_4">원격 폴더는 열렸는데 명령 실행이 이상하다</h3>
+<ul>
+<li>현재 열린 터미널이 원격 터미널인지 확인한다.</li>
+<li><code>pwd</code>, <code>hostname</code>으로 실제 위치를 확인한다.</li>
+<li><code>conda env list</code>로 현재 가상환경을 확인한다.</li>
+</ul>
+<h3 id="-">드래그-드롭한 파일이 보이지 않는다</h3>
+<ul>
+<li>정말 원격 폴더를 연 상태인지 확인한다.</li>
+<li>내 로컬 컴퓨터의 파일 탐색기가 아니라 VS code의 원격 파일 탐색기 창인지  확인한다.</li>
+<li><code>ls</code>로 서버 쪽 파일 목록을 확인한다.</li>
+</ul>
+<h3 id="gui">GUI 창이 뜨지 않는다</h3>
+<ul>
+<li>X server를 먼저 실행했는지 확인한다.</li>
+<li>SSH 설정 (config 파일) 의 X11 옵션을 다시 본다.</li>
+</ul>
+<hr>
+<h1 id="4_2">4. 참고 자료</h1>
+<ul>
+<li>VS Code on Linux: <a href="https://code.visualstudio.com/docs/remote/linux">https://code.visualstudio.com/docs/remote/linux</a></li>
+</ul>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 7, 2026 09:04:20 UTC">March 7, 2026</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden="">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.instant", "navigation.sections", "navigation.top"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../javascripts/config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

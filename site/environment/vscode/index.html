@@ -1,7 +1,4 @@
-
-<!doctype html>
-<html lang="en" class="no-js">
-  <head>
+<!DOCTYPE html><html lang="en" class="no-js"><head>
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -9,22 +6,21 @@
       
       
       
-        <link rel="prev" href="../wsl2/">
       
       
-        <link rel="next" href="../../github_tutorial/0.github_create_repository/">
+        
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.4">
     
     
       
-        <title>• VSCode - YHKLAB Wiki</title>
+        <title>Editor : VsCode - YHKLAB Wiki</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.50c56a3b.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
       
       
 
@@ -37,20 +33,29 @@
       
         
         
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
-    
-  </head>
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
   
   
     <body dir="ltr">
@@ -79,12 +84,12 @@
     <a href="../.." title="YHKLAB Wiki" class="md-header__button md-logo" aria-label="YHKLAB Wiki" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -96,7 +101,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              • VSCode
+              Editor : VsCode
             
           </span>
         </div>
@@ -104,36 +109,38 @@
     </div>
     
     
-      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
     
-      <label class="md-header__button md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
-      </label>
-      <div class="md-search" data-md-component="search" role="dialog">
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
       <label class="md-search__icon md-icon" for="__search">
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
       </label>
       <nav class="md-search__options" aria-label="Search">
         
         <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
         </button>
       </nav>
       
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix="">
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             Initializing search
@@ -144,6 +151,7 @@
     </div>
   </div>
 </div>
+      
     
     
   </nav>
@@ -164,9 +172,11 @@
   
   
   
+  
     <li class="md-tabs__item">
       <a href="../.." class="md-tabs__link">
         
+  
   
     
   
@@ -180,7 +190,6 @@
         
   
   
-    
   
   
     
@@ -188,14 +197,14 @@
       
   
   
-    
   
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../python/" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../YHK_cluster/" class="md-tabs__link">
           
+  
   
   시작하기
 
@@ -212,11 +221,13 @@
   
   
   
+  
     
     
       <li class="md-tabs__item">
         <a href="../../education/DD/" class="md-tabs__link">
           
+  
   
   교육용
 
@@ -230,11 +241,13 @@
   
   
   
+  
     
     
       <li class="md-tabs__item">
         <a href="../../nanocore/nanocore_kpoint/" class="md-tabs__link">
           
+  
   
   OORINano
 
@@ -248,17 +261,13 @@
   
   
   
-    
-    
-      
-  
-  
   
     
     
       <li class="md-tabs__item">
         <a href="../../build/build_atom/" class="md-tabs__link">
           
+  
   
   Atom
 
@@ -267,17 +276,16 @@
     
   
 
-    
-  
-
       
         
   
   
   
+  
     
     
       
+  
   
   
   
@@ -286,6 +294,7 @@
       <li class="md-tabs__item">
         <a href="../../build/build_siesta_local/" class="md-tabs__link">
           
+  
   
   SIESTA
 
@@ -302,9 +311,11 @@
   
   
   
+  
     
     
       
+  
   
   
   
@@ -313,6 +324,7 @@
       <li class="md-tabs__item">
         <a href="../../vasp/ml-neb/" class="md-tabs__link">
           
+  
   
   VASP
 
@@ -329,9 +341,11 @@
   
   
   
+  
     <li class="md-tabs__item">
       <a href="../../about/" class="md-tabs__link">
         
+  
   
     
   
@@ -353,7 +367,7 @@
           
             
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -367,13 +381,13 @@
     <a href="../.." title="YHKLAB Wiki" class="md-nav__button md-logo" aria-label="YHKLAB Wiki" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
 
     </a>
     YHKLAB Wiki
   </label>
   
-  <ul class="md-nav__list" data-md-scrollfix>
+  <ul class="md-nav__list" data-md-scrollfix="">
     
       
       
@@ -385,9 +399,16 @@
       <a href="../.." class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Home
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -399,85 +420,105 @@
       
   
   
-    
   
   
-  
-    
     
     
     
     
       
       
+        
+      
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2">
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
+    
+  
     시작하기
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
-            시작하기
+            
+  
+    시작하기
+  
+
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
+          <ul class="md-nav__list" data-md-scrollfix="">
             
               
                 
   
   
-    
   
   
-  
-    
     
     
     
     
       
       
+        
+      
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1">
         
           
-          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="">
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
-    1. 프로그래밍 환경설정
+    
+  
+    1. 원격 개발 환경 구축
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_1">
             <span class="md-nav__icon md-icon"></span>
-            1. 프로그래밍 환경설정
+            
+  
+    1. 원격 개발 환경 구축
+  
+
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
+          <ul class="md-nav__list" data-md-scrollfix="">
             
               
                 
@@ -486,12 +527,19 @@
   
   
     <li class="md-nav__item">
-      <a href="../python/" class="md-nav__link">
+      <a href="../YHK_cluster/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    • 파이썬으로 시작하기
+    
+  
+    A. 연구실 클러스터 (HPC)
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -499,6 +547,86 @@
   
 
               
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../education/DD/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    B. Edison (KISTI) Jupyter server
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_3">
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_3" id="__nav_2_1_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C. 로컬
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    C. 로컬
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
             
               
                 
@@ -510,9 +638,16 @@
       <a href="../wsl2/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     • Linux용 Windows 하위 시스템
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -525,249 +660,32 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../python/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
     
   
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    • VSCode
-  </span>
+    • 파이썬으로 시작하기
   
 
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  <span class="md-ellipsis">
-    • VSCode
+    
   </span>
+  
   
 
       </a>
-      
-        
+    </li>
+  
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#vscode" class="md-nav__link">
-    <span class="md-ellipsis">
-      VsCode란?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#vscode_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      VsCode의 설치
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#vscode_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      VsCode 화면 구성
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="VsCode 화면 구성">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      탐색기
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      검색
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      소스 제어
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      실행 및 디버깅
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      원격 탐색기
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    <span class="md-ellipsis">
-      확장
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    <span class="md-ellipsis">
-      서버와 연결
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="서버와 연결">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#x11-forwarding" class="md-nav__link">
-    <span class="md-ellipsis">
-      X11 Forwarding
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    <span class="md-ellipsis">
-      필수 확장 프로그램
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="필수 확장 프로그램">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#python-python" class="md-nav__link">
-    <span class="md-ellipsis">
-      Python : python
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Python : python">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
-    <span class="md-ellipsis">
-      설정
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
-    <span class="md-ellipsis">
-      기능
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#fortran-modern-fortran-fortran-intellisense" class="md-nav__link">
-    <span class="md-ellipsis">
-      fortran : modern fortran, fortran intellisense
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="fortran : modern fortran, fortran intellisense">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_11" class="md-nav__link">
-    <span class="md-ellipsis">
-      설정
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_12" class="md-nav__link">
-    <span class="md-ellipsis">
-      기능
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -792,24 +710,32 @@
     
     
     
+      
+      
+        
+      
     
-      
-      
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2">
         
           
-          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="">
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
-    2. Git
+    
+  
+    2. 버전관리
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -818,9 +744,13 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_2">
             <span class="md-nav__icon md-icon"></span>
-            2. Git
+            
+  
+    2. 버전관리
+  
+
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
+          <ul class="md-nav__list" data-md-scrollfix="">
             
               
                 
@@ -832,9 +762,16 @@
       <a href="../../github_tutorial/0.github_create_repository/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    • Repository 만들기
+    
+  
+    A. Git
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -861,24 +798,32 @@
     
     
     
+      
+      
+        
+      
     
-      
-      
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3">
         
           
-          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="">
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
-    3. 유용한 명령어
+    
+  
+    3. 명령어
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -887,30 +832,13 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_3">
             <span class="md-nav__icon md-icon"></span>
-            3. 유용한 명령어
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
             
-              
-                
   
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../other/1.1_LinuxCheatSheet/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    • Linux
-  </span>
+    3. 명령어
   
 
-      </a>
-    </li>
-  
-
-              
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
             
               
                 
@@ -922,9 +850,16 @@
       <a href="../../other/1.2_PythonCheatSheet/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    • Python
+    
+  
+    A. Python
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -940,12 +875,19 @@
   
   
     <li class="md-nav__item">
-      <a href="../../other/1.3_EmacsCheatSheet/" class="md-nav__link">
+      <a href="../../other/1.1_LinuxCheatSheet/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    • Emacs
+    
+  
+    B. Linux
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -964,9 +906,44 @@
       <a href="../../other/1.4_AnacondaCheatSheet/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    • Anaconda
+    
+  
+    C. Anaconda
+  
+
+    
   </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../other/1.3_EmacsCheatSheet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    D. Emacs
+  
+
+    
+  </span>
+  
   
 
       </a>
@@ -1000,24 +977,32 @@
     
     
     
+      
+      
+        
+      
     
-      
-      
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3">
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
+    
+  
     교육용
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -1026,9 +1011,13 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
-            교육용
+            
+  
+    교육용
+  
+
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
+          <ul class="md-nav__list" data-md-scrollfix="">
             
               
                 
@@ -1040,9 +1029,16 @@
       <a href="../../education/DD/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    dummy
+    
+  
+    B. Edison (KISTI) Jupyter server
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1068,24 +1064,32 @@
     
     
     
+      
+      
+        
+      
     
-      
-      
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4">
         
           
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
+    
+  
     OORINano
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -1094,9 +1098,13 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
-            OORINano
+            
+  
+    OORINano
+  
+
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
+          <ul class="md-nav__list" data-md-scrollfix="">
             
               
                 
@@ -1108,9 +1116,16 @@
       <a href="../../nanocore/nanocore_kpoint/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     1. k-point sampling
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1129,24 +1144,32 @@
     
     
     
+      
+      
+        
+      
     
-      
-      
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2">
         
           
-          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="">
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
+    
+  
     2. Structure optimization
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -1155,9 +1178,13 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_2">
             <span class="md-nav__icon md-icon"></span>
-            2. Structure optimization
+            
+  
+    2. Structure optimization
+  
+
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
+          <ul class="md-nav__list" data-md-scrollfix="">
             
               
                 
@@ -1169,9 +1196,16 @@
       <a href="../../nanocore/nanocore_eos/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     A. Equation of state (EOS) 
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1190,9 +1224,16 @@
       <a href="../../nanocore/nanocore_murnaghan/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     B. Murnaghan fitting
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1211,9 +1252,16 @@
       <a href="../../nanocore/nanocore_geo/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     C. Geometry optimization
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1247,24 +1295,32 @@
     
     
     
+      
+      
+        
+      
     
-      
-      
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5">
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
+    
+  
     Atom
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -1273,49 +1329,13 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
-            Atom
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" >
-        
-          
-          <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="">
             
   
-  <span class="md-ellipsis">
-    0. 준비
-  </span>
+    Atom
   
 
-            <span class="md-nav__icon md-icon"></span>
           </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5_1">
-            <span class="md-nav__icon md-icon"></span>
-            0. 준비
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
+          <ul class="md-nav__list" data-md-scrollfix="">
             
               
                 
@@ -1327,9 +1347,16 @@
       <a href="../../build/build_atom/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    ATOM 설치
+    
+  
+    1. 설치
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1338,14 +1365,6 @@
 
               
             
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
               
                 
   
@@ -1356,24 +1375,32 @@
     
     
     
+      
+      
+        
+      
     
-      
-      
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2">
         
           
-          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="">
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
-    1. ATOM 계산
+    
+  
+    2. ATOM 계산
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -1382,9 +1409,13 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5_2">
             <span class="md-nav__icon md-icon"></span>
-            1. ATOM 계산
+            
+  
+    2. ATOM 계산
+  
+
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
+          <ul class="md-nav__list" data-md-scrollfix="">
             
               
                 
@@ -1396,21 +1427,32 @@
     
     
     
+      
+      
+        
+      
+    
     
     <li class="md-nav__item md-nav__item--nested">
       
         
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_1">
         
           
           <label class="md-nav__link" for="__nav_5_2_1" id="__nav_5_2_1_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
+    
+  
     A. 기초 과정
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -1419,9 +1461,13 @@
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_2_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5_2_1">
             <span class="md-nav__icon md-icon"></span>
-            A. 기초 과정
+            
+  
+    A. 기초 과정
+  
+
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
+          <ul class="md-nav__list" data-md-scrollfix="">
             
               
                 
@@ -1433,9 +1479,16 @@
       <a href="../../atom/atom_all_electron/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     (1) 모든-전자 계산
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1454,9 +1507,16 @@
       <a href="../../atom/atom_pseudopotential/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     (2) 슈도퍼텐셜 생성
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1498,24 +1558,32 @@
     
     
     
+      
+      
+        
+      
     
-      
-      
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6">
         
           
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
+    
+  
     SIESTA
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -1524,9 +1592,13 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
-            SIESTA
+            
+  
+    SIESTA
+  
+
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
+          <ul class="md-nav__list" data-md-scrollfix="">
             
               
                 
@@ -1538,24 +1610,32 @@
     
     
     
+      
+      
+        
+      
     
-      
-      
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_1">
         
           
-          <label class="md-nav__link" for="__nav_6_1" id="__nav_6_1_label" tabindex="">
+          <label class="md-nav__link" for="__nav_6_1" id="__nav_6_1_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
+    
+  
     0. 준비
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -1564,9 +1644,13 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6_1">
             <span class="md-nav__icon md-icon"></span>
-            0. 준비
+            
+  
+    0. 준비
+  
+
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
+          <ul class="md-nav__list" data-md-scrollfix="">
             
               
                 
@@ -1578,9 +1662,16 @@
       <a href="../../build/build_siesta_local/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     A. SIESTA 로컬에서 설치
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1599,9 +1690,16 @@
       <a href="../../build/build_siesta/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     B. SIESTA 클러스터에서 설치
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1628,24 +1726,32 @@
     
     
     
+      
+      
+        
+      
     
-      
-      
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2">
         
           
-          <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="">
+          <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
+    
+  
     1. SIESTA 계산
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -1654,9 +1760,13 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6_2">
             <span class="md-nav__icon md-icon"></span>
-            1. SIESTA 계산
+            
+  
+    1. SIESTA 계산
+  
+
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
+          <ul class="md-nav__list" data-md-scrollfix="">
             
               
                 
@@ -1668,21 +1778,32 @@
     
     
     
+      
+      
+        
+      
+    
     
     <li class="md-nav__item md-nav__item--nested">
       
         
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2_1">
         
           
           <label class="md-nav__link" for="__nav_6_2_1" id="__nav_6_2_1_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
+    
+  
     A. 기초 과정
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -1691,9 +1812,13 @@
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_2_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6_2_1">
             <span class="md-nav__icon md-icon"></span>
-            A. 기초 과정
+            
+  
+    A. 기초 과정
+  
+
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
+          <ul class="md-nav__list" data-md-scrollfix="">
             
               
                 
@@ -1705,9 +1830,16 @@
       <a href="../../siesta/siesta_basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     (1) SIESTA 개요
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1726,9 +1858,16 @@
       <a href="../../siesta/siesta_ch4/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     (2) CH4, CH3 분자
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1747,9 +1886,16 @@
       <a href="../../siesta/siesta_gold_bulk/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     (3) 3D - Au bulk 구조
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1768,9 +1914,16 @@
       <a href="../../siesta/siesta_gold_slab/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     (4-1) 2D - Au slab 구조
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1789,9 +1942,16 @@
       <a href="../../siesta/siesta_graphene/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     (4-2) 2D - Graphene
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1826,24 +1986,32 @@
     
     
     
+      
+      
+        
+      
     
-      
-      
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3">
         
           
-          <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="">
+          <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
+    
+  
     2. TranSIESTA 계산
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -1852,9 +2020,13 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6_3">
             <span class="md-nav__icon md-icon"></span>
-            2. TranSIESTA 계산
+            
+  
+    2. TranSIESTA 계산
+  
+
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
+          <ul class="md-nav__list" data-md-scrollfix="">
             
               
                 
@@ -1866,21 +2038,32 @@
     
     
     
+      
+      
+        
+      
+    
     
     <li class="md-nav__item md-nav__item--nested">
       
         
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3_1">
         
           
           <label class="md-nav__link" for="__nav_6_3_1" id="__nav_6_3_1_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
+    
+  
     A. 기초 과정
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -1889,9 +2072,13 @@
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_3_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6_3_1">
             <span class="md-nav__icon md-icon"></span>
-            A. 기초 과정
+            
+  
+    A. 기초 과정
+  
+
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
+          <ul class="md-nav__list" data-md-scrollfix="">
             
               
                 
@@ -1903,9 +2090,16 @@
       <a href="../../transiesta/transiesta_overview/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     (1) TranSIESTA 개요
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1924,9 +2118,16 @@
       <a href="../../transiesta/transiesta_modeling/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     (2) 접합구조 모델링
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1945,9 +2146,16 @@
       <a href="../../transiesta/transiesta_si1d/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     (3) Si chain (1D)
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1974,21 +2182,32 @@
     
     
     
+      
+      
+        
+      
+    
     
     <li class="md-nav__item md-nav__item--nested">
       
         
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3_2">
         
           
           <label class="md-nav__link" for="__nav_6_3_2" id="__nav_6_3_2_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
+    
+  
     B. 중급/고급 과정
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -1997,9 +2216,13 @@
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_3_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6_3_2">
             <span class="md-nav__icon md-icon"></span>
-            B. 중급/고급 과정
+            
+  
+    B. 중급/고급 과정
+  
+
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
+          <ul class="md-nav__list" data-md-scrollfix="">
             
               
                 
@@ -2011,21 +2234,32 @@
     
     
     
+      
+      
+        
+      
+    
     
     <li class="md-nav__item md-nav__item--nested">
       
         
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3_2_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3_2_1">
         
           
           <label class="md-nav__link" for="__nav_6_3_2_1" id="__nav_6_3_2_1_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
+    
+  
     (1) 평형상태 계산
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -2034,9 +2268,13 @@
         <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_6_3_2_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6_3_2_1">
             <span class="md-nav__icon md-icon"></span>
-            (1) 평형상태 계산
+            
+  
+    (1) 평형상태 계산
+  
+
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
+          <ul class="md-nav__list" data-md-scrollfix="">
             
               
                 
@@ -2048,9 +2286,16 @@
       <a href="../../transiesta/transiesta_graphene/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     1) 그래핀 (2D)
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2069,9 +2314,16 @@
       <a href="../../transiesta/transiesta_gnr/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     2) 깨끗한 or 결함있는 GNRs
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2090,9 +2342,16 @@
       <a href="../../transiesta/transiesta_si-sio2-si/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     3) Si-SiO2-Si
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2119,21 +2378,32 @@
     
     
     
+      
+      
+        
+      
+    
     
     <li class="md-nav__item md-nav__item--nested">
       
         
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3_2_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3_2_2">
         
           
           <label class="md-nav__link" for="__nav_6_3_2_2" id="__nav_6_3_2_2_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
+    
+  
     (2) 비평형상태 계산
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -2142,9 +2412,13 @@
         <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_6_3_2_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6_3_2_2">
             <span class="md-nav__icon md-icon"></span>
-            (2) 비평형상태 계산
+            
+  
+    (2) 비평형상태 계산
+  
+
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
+          <ul class="md-nav__list" data-md-scrollfix="">
             
               
                 
@@ -2156,9 +2430,16 @@
       <a href="../../transiesta/transiesta_gnr-vacuum-gnr/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     1) GNRs-진공-GNRs
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2208,24 +2489,32 @@
     
     
     
+      
+      
+        
+      
     
-      
-      
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7">
         
           
-          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
+    
+  
     VASP
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -2234,9 +2523,13 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
-            VASP
+            
+  
+    VASP
+  
+
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
+          <ul class="md-nav__list" data-md-scrollfix="">
             
               
                 
@@ -2248,24 +2541,32 @@
     
     
     
+      
+      
+        
+      
     
-      
-      
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1">
         
           
-          <label class="md-nav__link" for="__nav_7_1" id="__nav_7_1_label" tabindex="">
+          <label class="md-nav__link" for="__nav_7_1" id="__nav_7_1_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
+    
+  
     Nudged Elastic Band (NEB)
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -2274,9 +2575,13 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_7_1">
             <span class="md-nav__icon md-icon"></span>
-            Nudged Elastic Band (NEB)
+            
+  
+    Nudged Elastic Band (NEB)
+  
+
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
+          <ul class="md-nav__list" data-md-scrollfix="">
             
               
                 
@@ -2288,9 +2593,16 @@
       <a href="../../vasp/ml-neb/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Machine learning for nudged elastic band
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2324,9 +2636,16 @@
       <a href="../../about/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     About
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2342,7 +2661,7 @@
             
             
               
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -2358,12 +2677,14 @@
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
   <a href="#vscode" class="md-nav__link">
     <span class="md-ellipsis">
-      VsCode란?
+      
+        VsCode란?
+      
     </span>
   </a>
   
@@ -2372,7 +2693,9 @@
         <li class="md-nav__item">
   <a href="#vscode_1" class="md-nav__link">
     <span class="md-ellipsis">
-      VsCode의 설치
+      
+        VsCode의 설치
+      
     </span>
   </a>
   
@@ -2381,7 +2704,9 @@
         <li class="md-nav__item">
   <a href="#vscode_2" class="md-nav__link">
     <span class="md-ellipsis">
-      VsCode 화면 구성
+      
+        VsCode 화면 구성
+      
     </span>
   </a>
   
@@ -2391,7 +2716,9 @@
           <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      탐색기
+      
+        탐색기
+      
     </span>
   </a>
   
@@ -2400,7 +2727,9 @@
           <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      검색
+      
+        검색
+      
     </span>
   </a>
   
@@ -2409,7 +2738,9 @@
           <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
-      소스 제어
+      
+        소스 제어
+      
     </span>
   </a>
   
@@ -2418,7 +2749,9 @@
           <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
-      실행 및 디버깅
+      
+        실행 및 디버깅
+      
     </span>
   </a>
   
@@ -2427,7 +2760,9 @@
           <li class="md-nav__item">
   <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
-      원격 탐색기
+      
+        원격 탐색기
+      
     </span>
   </a>
   
@@ -2436,7 +2771,9 @@
           <li class="md-nav__item">
   <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
-      확장
+      
+        확장
+      
     </span>
   </a>
   
@@ -2450,7 +2787,9 @@
         <li class="md-nav__item">
   <a href="#_7" class="md-nav__link">
     <span class="md-ellipsis">
-      서버와 연결
+      
+        서버와 연결
+      
     </span>
   </a>
   
@@ -2460,7 +2799,9 @@
           <li class="md-nav__item">
   <a href="#x11-forwarding" class="md-nav__link">
     <span class="md-ellipsis">
-      X11 Forwarding
+      
+        X11 Forwarding
+      
     </span>
   </a>
   
@@ -2474,7 +2815,9 @@
         <li class="md-nav__item">
   <a href="#_8" class="md-nav__link">
     <span class="md-ellipsis">
-      필수 확장 프로그램
+      
+        필수 확장 프로그램
+      
     </span>
   </a>
   
@@ -2484,7 +2827,9 @@
           <li class="md-nav__item">
   <a href="#python-python" class="md-nav__link">
     <span class="md-ellipsis">
-      Python : python
+      
+        Python : python
+      
     </span>
   </a>
   
@@ -2494,7 +2839,9 @@
           <li class="md-nav__item">
   <a href="#_9" class="md-nav__link">
     <span class="md-ellipsis">
-      설정
+      
+        설정
+      
     </span>
   </a>
   
@@ -2503,7 +2850,9 @@
           <li class="md-nav__item">
   <a href="#_10" class="md-nav__link">
     <span class="md-ellipsis">
-      기능
+      
+        기능
+      
     </span>
   </a>
   
@@ -2517,7 +2866,9 @@
           <li class="md-nav__item">
   <a href="#fortran-modern-fortran-fortran-intellisense" class="md-nav__link">
     <span class="md-ellipsis">
-      fortran : modern fortran, fortran intellisense
+      
+        fortran : modern fortran, fortran intellisense
+      
     </span>
   </a>
   
@@ -2527,7 +2878,9 @@
           <li class="md-nav__item">
   <a href="#_11" class="md-nav__link">
     <span class="md-ellipsis">
-      설정
+      
+        설정
+      
     </span>
   </a>
   
@@ -2536,7 +2889,9 @@
           <li class="md-nav__item">
   <a href="#_12" class="md-nav__link">
     <span class="md-ellipsis">
-      기능
+      
+        기능
+      
     </span>
   </a>
   
@@ -2562,9 +2917,11 @@
           
           
             <div class="md-content" data-md-component="content">
+              
               <article class="md-content__inner md-typeset">
                 
                   
+
 
 
 <h1 id="editor-vscode">Editor : VsCode</h1>
@@ -2578,30 +2935,30 @@
 </ul>
 <h2 id="vscode_1">VsCode의 설치</h2>
 <p>1) 링크(<a href="https://code.visualstudio.com/docs/?dv=win">https://code.visualstudio.com/docs/?dv=win</a>)에서 VsCode의 설치파일 다운로드 후 실행</p>
-<p><img alt="vs_001" src="../img/vscode/%EC%84%A4%EC%B9%980.PNG" /></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/vscode/%EC%84%A4%EC%B9%980.PNG" data-desc-position="bottom"><img alt="vs_001" src="../img/vscode/%EC%84%A4%EC%B9%980.PNG"></a></p>
 <p>2) "동의합니다" 클릭 후 다음 클릭</p>
-<p><img alt="vs_002" src="../img/vscode/%EC%84%A4%EC%B9%981.jpg" /></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/vscode/%EC%84%A4%EC%B9%981.jpg" data-desc-position="bottom"><img alt="vs_002" src="../img/vscode/%EC%84%A4%EC%B9%981.jpg"></a></p>
 <p>3) 경로 지정 후 다음 클릭</p>
-<p><img alt="vs_003" src="../img/vscode/%EC%84%A4%EC%B9%982.jpg" /></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/vscode/%EC%84%A4%EC%B9%982.jpg" data-desc-position="bottom"><img alt="vs_003" src="../img/vscode/%EC%84%A4%EC%B9%982.jpg"></a></p>
 <p>4) 다음 클릭</p>
-<p><img alt="vs_004" src="../img/vscode/%EC%84%A4%EC%B9%983.jpg" /></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/vscode/%EC%84%A4%EC%B9%983.jpg" data-desc-position="bottom"><img alt="vs_004" src="../img/vscode/%EC%84%A4%EC%B9%983.jpg"></a></p>
 <p>5) 원하는 항목 선택 후 다음 클릭</p>
-<p><img alt="vs_005" src="../img/vscode/%EC%84%A4%EC%B9%984.jpg" /></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/vscode/%EC%84%A4%EC%B9%984.jpg" data-desc-position="bottom"><img alt="vs_005" src="../img/vscode/%EC%84%A4%EC%B9%984.jpg"></a></p>
 <ul>
 <li>PATH 에 추가 : cmd를 실행시킨 후 "code" 명령어를 치면 vscode 실행 가능하게 만듬  </li>
 </ul>
 <p>6) 설치 클릭</p>
-<p><img alt="vs_006" src="../img/vscode/%EC%84%A4%EC%B9%985.jpg" /></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/vscode/%EC%84%A4%EC%B9%985.jpg" data-desc-position="bottom"><img alt="vs_006" src="../img/vscode/%EC%84%A4%EC%B9%985.jpg"></a></p>
 <p>7) VsCode 설치 완료</p>
-<p><img alt="vs_007" src="../img/vscode/%EC%84%A4%EC%B9%986.jpg" /></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/vscode/%EC%84%A4%EC%B9%986.jpg" data-desc-position="bottom"><img alt="vs_007" src="../img/vscode/%EC%84%A4%EC%B9%986.jpg"></a></p>
 <h2 id="vscode_2">VsCode 화면 구성</h2>
 <p>처음 VsCode를 실행시키면 다음과 같이 실행이 된다. VsCode는 다음과 같이 구성되어있다.</p>
-<p><img alt="vs_008" src="../img/vscode/%EC%B4%88%EA%B8%B0%ED%99%94%EB%A9%B42.PNG" /></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/vscode/%EC%B4%88%EA%B8%B0%ED%99%94%EB%A9%B42.PNG" data-desc-position="bottom"><img alt="vs_008" src="../img/vscode/%EC%B4%88%EA%B8%B0%ED%99%94%EB%A9%B42.PNG"></a></p>
 <p>화면 왼쪽에 보면 여러가지 탭들이 있다. 이 탭들은 다음과 같고, 각자 어떤 기능인지 소개하도록 하겠다.</p>
-<p><img alt="vs_009" src="../img/vscode/%EC%B4%88%EA%B8%B0%ED%99%94%EB%A9%B43.PNG" /></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/vscode/%EC%B4%88%EA%B8%B0%ED%99%94%EB%A9%B43.PNG" data-desc-position="bottom"><img alt="vs_009" src="../img/vscode/%EC%B4%88%EA%B8%B0%ED%99%94%EB%A9%B43.PNG"></a></p>
 <h3 id="_1">탐색기</h3>
 <p>폴더를 지정해서 열게 되면 다음과 같은 화면을 볼 수 있다.</p>
-<p><img alt="vs_009" src="../img/vscode/%ED%83%90%EC%83%89%EA%B8%B02.PNG" /></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/vscode/%ED%83%90%EC%83%89%EA%B8%B02.PNG" data-desc-position="bottom"><img alt="vs_009" src="../img/vscode/%ED%83%90%EC%83%89%EA%B8%B02.PNG"></a></p>
 <ul>
 <li>열려있는 편집기 : 현재 내가 VsCode로 열고 있는 파일 전체를 보여준다. 화면 분할을 할 수 있어 다른 파일을 동시에 편집할 수 있다. 그룹은 화면 분할된 탭끼리 묶인다.</li>
 <li>탐색기 : 폴더 열기에서 열었던 폴더와 그 하위폴더들을 보여준다. 상위폴더로는 갈 수 없고 만약 상위폴더를 편집하고 싶다면 <u>파일 -&gt; 폴더 열기</u>로 상위폴더를 다시 열어야한다.</li>
@@ -2609,39 +2966,39 @@
 </ul>
 <h3 id="_2">검색</h3>
 <p>검색에 단어나 문장을 넣으면 VsCode로 연 폴더의 하위 폴더와 파일 내용을 전부 검색해서 보여준다. home폴더같은 상위폴더에 이 기능을 쓰면 리소스를 많이 사용하므로 프로그래밍을 하는 하위폴더에서 사용해야한다.</p>
-<p><img alt="vs_009" src="../img/vscode/%EA%B2%80%EC%83%89.gif" /></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/vscode/%EA%B2%80%EC%83%89.gif" data-desc-position="bottom"><img alt="vs_009" src="../img/vscode/%EA%B2%80%EC%83%89.gif"></a></p>
 <h3 id="_3">소스 제어</h3>
 <p>git에 기록된 파일과 수정한 파일들의 차이점을 보여준다.
 git 폴더를 자동으로 검색하고 git에 기록된 부분을 빨간색, 현재 수정한 부분을 초록색으로 표시한다.</p>
-<p><img alt="vs_009" src="../img/vscode/%EC%86%8C%EC%8A%A4%EC%A0%9C%EC%96%B4.PNG" /></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/vscode/%EC%86%8C%EC%8A%A4%EC%A0%9C%EC%96%B4.PNG" data-desc-position="bottom"><img alt="vs_009" src="../img/vscode/%EC%86%8C%EC%8A%A4%EC%A0%9C%EC%96%B4.PNG"></a></p>
 <h3 id="_4">실행 및 디버깅</h3>
 <p>VsCode만으로 디버깅을 할 수 있다. 디버깅을 하기 전에 Launch.json을 수정해서 디버깅 환경을 설정해야한다. 가장 기본적인 디버깅 방법은 프로그램이 위치한 폴더에서 프로그램을 실행시키는 것이다. 이에 해당하는 launch.json파일은 다음과 같다.</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0.2.0&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;configurations&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="nt">"version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.2.0"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"configurations"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
 <span class="w">        </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Python: Current File&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;python&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;request&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;launch&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;program&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;${file}&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;console&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;integratedTerminal&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;cwd&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;${fileDirname}&quot;</span>
+<span class="w">            </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Python: Current File"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"python"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"request"</span><span class="p">:</span><span class="w"> </span><span class="s2">"launch"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"program"</span><span class="p">:</span><span class="w"> </span><span class="s2">"${file}"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"console"</span><span class="p">:</span><span class="w"> </span><span class="s2">"integratedTerminal"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"cwd"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"${fileDirname}"</span>
 <span class="w">        </span><span class="p">}</span>
 <span class="w">    </span><span class="p">]</span>
 <span class="p">}</span>
 </code></pre></div>
 <p>이후에 디버깅 버튼을 누르면 디버깅을 할 수 있다. 다른 IDE와 동일하게 중단점을 설정하고, 변수의 내용을 확인하며 프로그램이 올바르게 동작하는지 확인할 수 있다.</p>
-<p><img alt="vs_009" src="../img/vscode/%EB%94%94%EB%B2%84%EA%B9%85.PNG" /></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/vscode/%EB%94%94%EB%B2%84%EA%B9%85.PNG" data-desc-position="bottom"><img alt="vs_009" src="../img/vscode/%EB%94%94%EB%B2%84%EA%B9%85.PNG"></a></p>
 <p>조사식을 통해 알고싶은 변수의 내용을 검색할 수 있고, 배열이나 클래스의 내용들을 모두 보여준다.</p>
-<p><img alt="vs_009" src="../img/vscode/%EB%94%94%EB%B2%84%EA%B9%85.gif" /></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/vscode/%EB%94%94%EB%B2%84%EA%B9%85.gif" data-desc-position="bottom"><img alt="vs_009" src="../img/vscode/%EB%94%94%EB%B2%84%EA%B9%85.gif"></a></p>
 <h3 id="_5">원격 탐색기</h3>
 <p>뒤에 나올 확장 탭에서 Remote development를 설치했을 경우 나오는 항목이다. ssh target으로 설정해주어야 한다. 연결한 서버와 서버에서 열었던 폴더들을 모두 보여준다.</p>
-<p><img alt="vs_009" src="../img/vscode/ssh.PNG" /></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/vscode/ssh.PNG" data-desc-position="bottom"><img alt="vs_009" src="../img/vscode/ssh.PNG"></a></p>
 <h3 id="_6">확장</h3>
 <p>VsCode에 설치된 확장과 설치할 수 있는 extension들을 표시한다. extension의 이름을 검색하면 인터넷에서 설치할 수 있는 extension들을 표시해주고, 이를 설치할 수 있다.</p>
-<p><img alt="vs_009" src="../img/vscode/%ED%99%95%EC%9E%A5.gif" /></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/vscode/%ED%99%95%EC%9E%A5.gif" data-desc-position="bottom"><img alt="vs_009" src="../img/vscode/%ED%99%95%EC%9E%A5.gif"></a></p>
 <p>Remote Development를 설치한 경우 설치된 extension이 로컬과 호스트의 extension으로 나뉘고, 각자 분리되서 설치된다. 따라서, 서버에서 extension을 사용하고 싶다면 서버에도 extension을 따로 설치 해주어야 한다.</p>
-<p><img alt="vs_009" src="../img/vscode/%ED%99%95%EC%9E%A52.PNG" /></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/vscode/%ED%99%95%EC%9E%A52.PNG" data-desc-position="bottom"><img alt="vs_009" src="../img/vscode/%ED%99%95%EC%9E%A52.PNG"></a></p>
 <p>extension이 로컬에는 설치되어있지만 서버에는 설치되어있지 않다면 <u>SSH : iron.kaist.ac.kr에 설치</u> 버튼이 있다. 이를 누르면 따로 찾을 필요 없이 서버에 그 extension이 바로 설치되고 서버에서도 로컬에서 사용했던 기능들을 사용할 수 있다.</p>
 <p>추천 extension 리스트</p>
 <ul>
@@ -2658,18 +3015,18 @@ git 폴더를 자동으로 검색하고 git에 기록된 부분을 빨간색, �
 <li>F1 -&gt; remote-ssh 검색 -&gt; Remote-SSH : Connect to Host 선택</li>
 <li>좌측 하단의 초록색 아이콘 클릭 -&gt; connect host 클릭  </li>
 </ul>
-<p><img alt="vs_009" src="../img/vscode/%EC%97%B0%EA%B2%B0.PNG" /></p>
-<p>2) 다음과 같은 화면이 상단에 뜨게 되고, 기존에 터미널에서 접근했던 방법과 동일하게 명령어를 쳐서 서버에 접속한다.<br />
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/vscode/%EC%97%B0%EA%B2%B0.PNG" data-desc-position="bottom"><img alt="vs_009" src="../img/vscode/%EC%97%B0%EA%B2%B0.PNG"></a></p>
+<p>2) 다음과 같은 화면이 상단에 뜨게 되고, 기존에 터미널에서 접근했던 방법과 동일하게 명령어를 쳐서 서버에 접속한다.<br>
 ssh 아이디@iron.kaist.ac.kr  </p>
-<p><img alt="vs_009" src="../img/vscode/%EC%97%B0%EA%B2%B02.PNG" /></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/vscode/%EC%97%B0%EA%B2%B02.PNG" data-desc-position="bottom"><img alt="vs_009" src="../img/vscode/%EC%97%B0%EA%B2%B02.PNG"></a></p>
 <p>3) 새로운 창이 뜨면 linux, continue를 누르고 비밀번호를 입력 후 접속한다.
 접속하면 VsCode를 처음에 실행시킬 때 나오는 화면이 출력되고, 좌측 하단의 초록색 아이콘에 연결된 호스트 이름이 뜨게된다.  </p>
-<p><img alt="vs_009" src="../img/vscode/%EC%97%B0%EA%B2%B03.PNG" /></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/vscode/%EC%97%B0%EA%B2%B03.PNG" data-desc-position="bottom"><img alt="vs_009" src="../img/vscode/%EC%97%B0%EA%B2%B03.PNG"></a></p>
 <p>이후 탐색기에서 폴더를 열면 서버의 파일들을 보고 수정할 수 있다.</p>
 <h3 id="x11-forwarding">X11 Forwarding</h3>
 <p>X11 forwarding을 위해 추가적인 설정을 해줘야 한다.</p>
 <p>1) SSH TARGETS 항목 옆에 톱니바퀴 클릭 -&gt; 맨 위 항목 클릭</p>
-<p><img alt="vs_009" src="../img/vscode/x11.png" /></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/vscode/x11.png" data-desc-position="bottom"><img alt="vs_009" src="../img/vscode/x11.png"></a></p>
 <p>2) config파일 나오면 다음 항목 추가</p>
 <div class="highlight"><pre><span></span><code><span class="w">    </span>ForwardX11<span class="w"> </span>yes<span class="w">  </span>
 <span class="w">    </span>ForwardAgent<span class="w"> </span>yes<span class="w">  </span>
@@ -2684,13 +3041,13 @@ ssh 아이디@iron.kaist.ac.kr  </p>
 <span class="w">        </span>ForwardX11Trusted<span class="w"> </span>yes<span class="w">    </span>
 </code></pre></div>
 <p>3) 윈도우 시작 버튼 -&gt; 시스템 환경 변수 편집 검색 후 실행</p>
-<p><img alt="vs_009" src="../img/vscode/x112.png" /></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/vscode/x112.png" data-desc-position="bottom"><img alt="vs_009" src="../img/vscode/x112.png"></a></p>
 <ol>
 <li>환경변수 클릭 -&gt; 새로만들기 클릭</li>
 <li>변수 이름에 DISPLAY, 변수 값에 127.0.0.1:0 입력</li>
 <li>전부 확인 누른 후 종료</li>
 </ol>
-<p><img alt="vs_009" src="../img/vscode/x11.gif" /></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/vscode/x11.gif" data-desc-position="bottom"><img alt="vs_009" src="../img/vscode/x11.gif"></a></p>
 <p>4) xlaunch를 실행시킨 후 xeyes 명령어를 통해 x11 forwarding이 되는지 확인</p>
 <p>된다면 이제 xcrysden과 같은 x11을 사용하는 프로그램들을 사용할 수 있다.</p>
 <h2 id="_8">필수 확장 프로그램</h2>
@@ -2702,19 +3059,19 @@ ssh 아이디@iron.kaist.ac.kr  </p>
 <li>확장 -&gt; python 옆의 톱니바퀴 클릭 후 확장 설정 클릭  </li>
 <li>python: language server 항목을 jedi에서 pylance로 수정</li>
 </ol>
-<p><img alt="vs_009" src="../img/vscode/python.PNG" /></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/vscode/python.PNG" data-desc-position="bottom"><img alt="vs_009" src="../img/vscode/python.PNG"></a></p>
 <h4 id="_10">기능</h4>
 <p>1) Semantic highlighting</p>
-<p><img alt="vs_009" src="../img/vscode/python1.png" /></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/vscode/python1.png" data-desc-position="bottom"><img alt="vs_009" src="../img/vscode/python1.png"></a></p>
 <p>변수와 함수, 클래스에 색을 다르게 줘서 구분이 편리하도록 만드는 기능</p>
 <p>2) Auto complete (자동 완성)</p>
-<p><img alt="vs_009" src="../img/vscode/python3.gif" /></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/vscode/python3.gif" data-desc-position="bottom"><img alt="vs_009" src="../img/vscode/python3.gif"></a></p>
 <p>tab을 누르면 선택된 단어 자동완성</p>
 <p>3) linting</p>
-<p><img alt="vs_009" src="../img/vscode/python.gif" /></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/vscode/python.gif" data-desc-position="bottom"><img alt="vs_009" src="../img/vscode/python.gif"></a></p>
 <p>틀린 문법을 빨간 물결로 표시, 문법을 어떻게 고쳐야 하는지도 알려줌</p>
 <p>4) go to definition</p>
-<p><img alt="vs_009" src="../img/vscode/python2.gif" /></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/vscode/python2.gif" data-desc-position="bottom"><img alt="vs_009" src="../img/vscode/python2.gif"></a></p>
 <p>함수나 변수가 정의된 파일로 바로 이동하는 기능</p>
 <h3 id="fortran-modern-fortran-fortran-intellisense">fortran : modern fortran, fortran intellisense</h3>
 <p>포트란에서 사용하는 확장 프로그램은 두개로, modern fortran과 fortran intellisense 두개이다. 기본적인 syntax highlighting만 필요하다면 modern fortran만 필요하고, python extension에서 지원하는 다른 기능들은 fortran intellisense와 language server를 설치해야 적용된다.</p>
@@ -2725,19 +3082,19 @@ ssh 아이디@iron.kaist.ac.kr  </p>
 <li>"which fortls"로 fortran language server 경로 확인</li>
 <li>확장 설정에서 fortran intellisense 항목 내 executable path에 찾은 경로 입력</li>
 </ol>
-<p><img alt="vs_009" src="../img/vscode/fortran.PNG" /></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/vscode/fortran.PNG" data-desc-position="bottom"><img alt="vs_009" src="../img/vscode/fortran.PNG"></a></p>
 <h4 id="_12">기능</h4>
 <p>1) syntax highlighting</p>
-<p><img alt="vs_009" src="../img/vscode/fortran2.PNG" /></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/vscode/fortran2.PNG" data-desc-position="bottom"><img alt="vs_009" src="../img/vscode/fortran2.PNG"></a></p>
 <p>변수와 함수, 클래스에 색을 다르게 줘서 구분이 편리하도록 만드는 기능</p>
 <p>2) Auto complete (자동 완성)</p>
-<p><img alt="vs_009" src="../img/vscode/fortran.gif" /></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/vscode/fortran.gif" data-desc-position="bottom"><img alt="vs_009" src="../img/vscode/fortran.gif"></a></p>
 <p>tab을 누르면 선택된 단어 자동완성</p>
 <p>3) linting</p>
-<p><img alt="vs_009" src="../img/vscode/fortran2.gif" /></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/vscode/fortran2.gif" data-desc-position="bottom"><img alt="vs_009" src="../img/vscode/fortran2.gif"></a></p>
 <p>틀린 문법을 빨간 물결로 표시, 문법을 어떻게 고쳐야 하는지도 알려줌</p>
 <p>4) go to definition</p>
-<p><img alt="vs_009" src="../img/vscode/fortran3.gif" /></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/vscode/fortran3.gif" data-desc-position="bottom"><img alt="vs_009" src="../img/vscode/fortran3.gif"></a></p>
 <p>함수나 변수가 정의된 파일로 바로 이동하는 기능</p>
 
 
@@ -2746,6 +3103,27 @@ ssh 아이디@iron.kaist.ac.kr  </p>
 
 
 
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 27, 2021 09:16:12 UTC">July 27, 2021</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
 
 
 
@@ -2758,6 +3136,12 @@ ssh 아이디@iron.kaist.ac.kr  </p>
           
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden="">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Back to top
+</button>
         
       </main>
       
@@ -2785,10 +3169,13 @@ ssh 아이디@iron.kaist.ac.kr  </p>
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.instant", "navigation.sections"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.instant", "navigation.sections", "navigation.top"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
         <script src="../../javascripts/config.js"></script>
       
@@ -2797,5 +3184,7 @@ ssh 아이디@iron.kaist.ac.kr  </p>
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
-  </body>
-</html>
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>
