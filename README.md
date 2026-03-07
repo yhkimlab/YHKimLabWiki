@@ -26,5 +26,5 @@ mkdocs serve    # 로컬에서 확인용
 ```bash
 git add .
 git commit -m "   " # " " 안쪽에 수정사항 기입
-git push origin master
+git push --set-upstream origin origin/master
 ```
