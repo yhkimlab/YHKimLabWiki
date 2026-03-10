@@ -105,7 +105,8 @@ $ sh ../../bin/pg.sh Si.pg.inp
 ```bash
 $ gnuplot --perist pots.gplot
 ```
-<img src="img/04/04_00.JPG" width="500" height="400"/>
+
+<img src="../img/04/04_00.JPG" width="500"/>
 
 
 추가로 자주 사용하는 시각화 스크립트는 다음과 같다.
@@ -146,7 +147,8 @@ valence eigenvalue 비교는 OUT 파일에서 바로 확인할 수 있다.
 (Pseudopotential generation 결과 폴더에서)
 $ grep ‘&v’ OUT
 ```
-<img src="img/04/04_01.JPG" width="520" height="350"/>
+
+<img src="../img/04/04_01.JPG" width="500" />
 
 출력 결과에는 all-electron 영역과 pseudopotential 영역의 valence 오비탈 정보가 나타나며,  
 &v 라벨이 붙은 줄에서 원자가 오비탈의 고유값을 비교할 수 있다.
@@ -168,7 +170,9 @@ pg 계산 폴더에는 all-electron / pseudo 파동함수가 함께 저장된다
 $ gnuplot
 gnuplot > plot 'AEWFNR1' w l, 'PSWFNR1' w l
 ```
-<img src="img/04/04_02.JPG" width="500" height="400"/>
+
+
+<img src="../img/04/04_02.JPG" width="500"/>
 
 확인 포인트:
 
@@ -194,7 +198,7 @@ gnuplot > set xrange [0:20]
 gnuplot >replot 'AECHARGE' u 1:($2+$3-$4) w l    ($4 : 핵 전자밀도)
 ```
 
-<img src="img/04/04_03.JPG" width="500" height="400"/>
+<img src="../img/04/04_03.JPG" width="500" height="400"/>
 
 확인 포인트:  
 • pseudo valence 전하 밀도와 AE valence 전하 밀도가 $r_c$ 이후에서 잘 일치하는가?  
@@ -216,7 +220,7 @@ gnuplot >plot ' AELOGD1' w l
 gnuplot >replot ' PSLOGD1' w l
 ```
 
-<img src="img/04/04_04.JPG" width="500" height="400"/>
+<img src="../img/04/04_04.JPG" width="500" height="400"/>
 
 확인 포인트:
 
@@ -260,7 +264,7 @@ $ sh ../../Utils/pt.sh Si.test.inp Si.pg.vps
 ```
 $ grep ‘&d’ OUT
 ```
-<img src="img/04/04_05.JPG" width="500" height="300"/>
+<img src="../img/04/04_05.JPG" width="500" height="300"/>
  
 
 
@@ -268,7 +272,7 @@ $ grep ‘&d’ OUT
 ```
 $ grep ‘&v’ OUT
 ```
-<img src="img/04/04_06.JPG" width="500" height="500"/>
+<img src="../img/04/04_06.JPG" width="500" height="500"/>
 
  
 
@@ -382,7 +386,7 @@ lattice constant는 Tutorial 1에서와 마찬가지로 일정한 간격으로 l
 계산의 효율을 위해 처음에는 sparse하게 계산한 후 에너지가 가장 낮은 값 근처에서 dense하게 계산하면 좋다. 
 이후 3d 물질에서 lattice constant를 찾기에 적합한 murnaghan fitting을 통해 에너지가 가장 낮은 lattice constant를 찾았다
 
-![lattice_compare](img/05/lattice_comp.PNG)
+![lattice_compare](../img/05/lattice_comp.png)
 
 relativistic 효과를 킨 경우 최적화된 volume은 69.28785 Å 이고, 
 relativistic 효과를 끈 경우 최적화된 volume은 79.22283 Å이다. 
@@ -401,7 +405,7 @@ Tutorial 1에서도 사용한 이 band 그래프이다.
 band path는 모두 $\Gamma-X-W-L-\Gamma-K$ 로 설정해준다. 보고싶은 에너지 범위는 $Fermi energy ±10 eV$이다. 
 이 조건들을 만족시키면서 band 그래프를 그려보면 결과는 다음과 같다.
 
-![band_result](img/05/band2.PNG)
+![band_result](../img/05/band2.png)
 
 페르미 에너지 위 5eV부분을 보면 relativistic의 band structure은 reference와 비슷하지만, 
 non-relativistic의 band structure은 reference와 상이함을 알 수 있다. 
@@ -427,21 +431,25 @@ $ase gui
 
 를 입력하면 xcryden 창이 뜨게 된다.
 
-![ase_gui](img/05/ase_gui.png)
+
+<img src="../img/05/ase_gui.png" width="300"/>
 
 `setup-Surface slab`을 선택하면 원하는 구조의 slab의 .xyz 파일을 생성할 수 있다.
 
-![ase_gui_slab](img/05/ase_gui_slab.png){: style="display:block; height:400px; margin-left:auto; margin-right:auto;" }
-![ase_gui_slab2](img/05/ase_gui_slab2.png){: style="display:block; height:300px; margin-left:auto; margin-right:auto;" }
+
+| <img src="../img/05/ase_gui_slab.png" width="400"/> | <img src="../img/05/ase_gui_slab2.png" width="300"/> |
+| --------------------------------------------------- | ---------------------------------------------------- |
 
 원하는 `Element, Lattice Structure and Constant, Vacuum length`를 입력한 뒤 Apply
 
-![ase_gui_slab3](img/05/ase_gui_slab3.png){: style="display:block; height:300px; margin-left:auto; margin-right:auto;" }
+
+<img src="../img/05/ase_gui_slab3.png" width="500"/>
 
 
 `File-Save`를 눌러 원하는 directory에 `STRUCT.xyz` 로 저장하면 파일이 생성된다.
 
-![ase_gui_slab4](img/05/ase_gui_slab4.png){: style="display:block; height:350px; margin-left:auto; margin-right:auto;" }
+
+<img src="../img/05/ase_gui_slab4.png" width="500"/>
 
 생성된 `STRUCT.xyz`에는 Cell 정보가 vector 좌표로 표현되어 있으므로,
 이를 
@@ -460,7 +468,8 @@ CELL   <size0>   <size1>   <size2>   <angle0>   <angle1>   <angle2>
 
 <br>
 
-![01_010](img/05/slab_model.PNG){: style="display:block; height:300px; margin-left:auto; margin-right:auto;" }
+
+<img src="../img/05/slab_model.png" width="600"/>
 
 <br><br><br>
 
@@ -485,7 +494,8 @@ Au Tutorial에서 했던 것처럼 macroave.in을 통해 Wave function을 시각
 Marcoave.in 은 /home/(username)/bin에 있다
 
 
-![work_compare](img/05/work_compare.png){: style="display:block; height:400px; margin-left:auto; margin-right:auto;" }
+
+<img src="../img/05/work_compare.png" width="700"/>
 
 Vacuum level의 경우 그래프에서, 위치를 고정하지 않았던 쪽의 원자들에 가까운 쪽 level을 직접 그래프에서 측정하는 것이 더 정확하다.
 

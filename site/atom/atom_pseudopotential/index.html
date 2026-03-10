@@ -3393,9 +3393,9 @@
 • <code>PSWFNR0</code> ~ <code>PSWFNR3</code>: 원자가 전자에 대한 슈도 파동함수<br>
 • <code>PSWFNQ0</code> ~ <code>PSWFNQ3</code>: 퓨리에 변환된 원자가 전자에 대한 슈도 파동함수  </p>
 <p>또한 gnuplot를 사용하면 생성된 슈도포텐셜을 시각화할 수 있다  </p>
-<p></p><div class="highlight"><pre><span></span><code>$<span class="w"> </span>gnuplot<span class="w"> </span>--perist<span class="w"> </span>pots.gplot
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>gnuplot<span class="w"> </span>--perist<span class="w"> </span>pots.gplot
 </code></pre></div>
-<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="img/04/04_00.JPG" data-desc-position="bottom"><img src="img/04/04_00.JPG" width="500" height="400"></a><p></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/04/04_00.JPG" data-desc-position="bottom"><img src="../img/04/04_00.JPG" width="500"></a></p>
 <p>추가로 자주 사용하는 시각화 스크립트는 다음과 같다.</p>
 <p>• pseudo : Norm-conserving 조건 확인용 그래프<br>
 • charge : all-electron vs pseudopotential 전자밀도 비교</p>
@@ -3418,10 +3418,10 @@
 <h4 id="1-valence-eigenvalue"><strong>조건 1. 원자가 고유함수 (valence eigenvalue)</strong></h4>
 <p>pg 계산의 OUT 파일에는 all-electron과 pseudopotential 생성 결과가 함께 포함되어 있으므로,<br>
 valence eigenvalue 비교는 OUT 파일에서 바로 확인할 수 있다.</p>
-<p></p><div class="highlight"><pre><span></span><code><span class="o">(</span>Pseudopotential<span class="w"> </span>generation<span class="w"> </span>결과<span class="w"> </span>폴더에서<span class="o">)</span>
+<div class="highlight"><pre><span></span><code><span class="o">(</span>Pseudopotential<span class="w"> </span>generation<span class="w"> </span>결과<span class="w"> </span>폴더에서<span class="o">)</span>
 $<span class="w"> </span>grep<span class="w"> </span>‘<span class="p">&amp;</span>v’<span class="w"> </span>OUT
 </code></pre></div>
-<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="img/04/04_01.JPG" data-desc-position="bottom"><img src="img/04/04_01.JPG" width="520" height="350"></a><p></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/04/04_01.JPG" data-desc-position="bottom"><img src="../img/04/04_01.JPG" width="500"></a></p>
 <p>출력 결과에는 all-electron 영역과 pseudopotential 영역의 valence 오비탈 정보가 나타나며,<br>
 &amp;v 라벨이 붙은 줄에서 원자가 오비탈의 고유값을 비교할 수 있다.</p>
 <p>확인 포인트:<br>
@@ -3432,10 +3432,10 @@ $<span class="w"> </span>grep<span class="w"> </span>‘<span class="p">&amp;</s
 • PSWFNR# : pseudo 원자가 파동함수
 (# = 0,1,2,3 → s,p,d,f)</p>
 <p>예를 들어 Si의 3p 오비탈(R1)을 비교하려면 다음과 같이 그릴 수 있다.</p>
-<p></p><div class="highlight"><pre><span></span><code>$<span class="w"> </span>gnuplot
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>gnuplot
 gnuplot<span class="w"> </span>&gt;<span class="w"> </span>plot<span class="w"> </span><span class="s1">'AEWFNR1'</span><span class="w"> </span>w<span class="w"> </span>l,<span class="w"> </span><span class="s1">'PSWFNR1'</span><span class="w"> </span>w<span class="w"> </span>l
 </code></pre></div>
-<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="img/04/04_02.JPG" data-desc-position="bottom"><img src="img/04/04_02.JPG" width="500" height="400"></a><p></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/04/04_02.JPG" data-desc-position="bottom"><img src="../img/04/04_02.JPG" width="500"></a></p>
 <p>확인 포인트:</p>
 <p>core 근처에서는 pseudo 파동함수가 더 부드럽다
 <span class="arithmatex">\(r_c\)</span> 이후에서는 all-electron과 pseudo 파동함수가 겹친다</p>
@@ -3451,7 +3451,7 @@ gnuplot<span class="w"> </span>&gt;plot<span class="w"> </span><span class="s1">
 gnuplot<span class="w"> </span>&gt;<span class="w"> </span><span class="nb">set</span><span class="w"> </span>xrange<span class="w"> </span><span class="o">[</span><span class="m">0</span>:20<span class="o">]</span>
 gnuplot<span class="w"> </span>&gt;replot<span class="w"> </span><span class="s1">'AECHARGE'</span><span class="w"> </span>u<span class="w"> </span><span class="m">1</span>:<span class="o">(</span><span class="nv">$2</span>+<span class="nv">$3</span>-<span class="nv">$4</span><span class="o">)</span><span class="w"> </span>w<span class="w"> </span>l<span class="w">    </span><span class="o">(</span><span class="nv">$4</span><span class="w"> </span>:<span class="w"> </span>핵<span class="w"> </span>전자밀도<span class="o">)</span>
 </code></pre></div>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="img/04/04_03.JPG" data-desc-position="bottom"><img src="img/04/04_03.JPG" width="500" height="400"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/04/04_03.JPG" data-desc-position="bottom"><img src="../img/04/04_03.JPG" width="500" height="400"></a></p>
 <p>확인 포인트:<br>
 • pseudo valence 전하 밀도와 AE valence 전하 밀도가 <span class="arithmatex">\(r_c\)</span> 이후에서 잘 일치하는가?<br>
 • pseudo 쪽이 core 근처에서 더 부드러운가?</p>
@@ -3465,7 +3465,7 @@ gnuplot<span class="w"> </span>&gt;replot<span class="w"> </span><span class="s1
 gnuplot<span class="w"> </span>&gt;plot<span class="w"> </span><span class="s1">' AELOGD1'</span><span class="w"> </span>w<span class="w"> </span>l
 gnuplot<span class="w"> </span>&gt;replot<span class="w"> </span><span class="s1">' PSLOGD1'</span><span class="w"> </span>w<span class="w"> </span>l
 </code></pre></div>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="img/04/04_04.JPG" data-desc-position="bottom"><img src="img/04/04_04.JPG" width="500" height="400"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/04/04_04.JPG" data-desc-position="bottom"><img src="../img/04/04_04.JPG" width="500" height="400"></a></p>
 <p>확인 포인트:</p>
 <p>• 로그도함수 곡선이 잘 겹치는가?
 • 특히 <span class="arithmatex">\(r_c\)</span> 이후에서 일치하는가?</p>
@@ -3495,11 +3495,11 @@ $<span class="w"> </span>sh<span class="w"> </span>../../Utils/pt.sh<span class=
 <p><strong>Total energy 비교</strong>:<br>
 </p><div class="highlight"><pre><span></span><code>$ grep ‘&amp;d’ OUT
 </code></pre></div>
-<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="img/04/04_05.JPG" data-desc-position="bottom"><img src="img/04/04_05.JPG" width="500" height="300"></a><p></p>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/04/04_05.JPG" data-desc-position="bottom"><img src="../img/04/04_05.JPG" width="500" height="300"></a><p></p>
 <p><strong>Eigenstate 비교</strong>:<br>
 </p><div class="highlight"><pre><span></span><code>$ grep ‘&amp;v’ OUT
 </code></pre></div>
-<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="img/04/04_06.JPG" data-desc-position="bottom"><img src="img/04/04_06.JPG" width="500" height="500"></a><p></p>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/04/04_06.JPG" data-desc-position="bottom"><img src="../img/04/04_06.JPG" width="500" height="500"></a><p></p>
 <p>위 과정을 통해 <code>Si</code> 원자의 all-electron과 pseudopotential에 대한 여러 전자배치의 <code>total energy</code>와 <code>eigenvalue</code>를 비교하여, transferability를 시험할 수 있다.</p>
 <h2 id="3">3. 심화과정</h2>
 <h3 id="3-1-fe">3-1. Fe 원자</h3>
@@ -3597,7 +3597,7 @@ $<span class="w"> </span>sh<span class="w"> </span>../../Utils/pt.sh<span class=
 에너지가 가장 낮은 lattice constant를 찾으면 된다.
 계산의 효율을 위해 처음에는 sparse하게 계산한 후 에너지가 가장 낮은 값 근처에서 dense하게 계산하면 좋다. 
 이후 3d 물질에서 lattice constant를 찾기에 적합한 murnaghan fitting을 통해 에너지가 가장 낮은 lattice constant를 찾았다</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/05/lattice_comp.PNG" data-desc-position="bottom"><img alt="lattice_compare" src="../img/05/lattice_comp.PNG"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/05/lattice_comp.png" data-desc-position="bottom"><img alt="lattice_compare" src="../img/05/lattice_comp.png"></a></p>
 <p>relativistic 효과를 킨 경우 최적화된 volume은 69.28785 Å 이고, 
 relativistic 효과를 끈 경우 최적화된 volume은 79.22283 Å이다. 
 이를 통해 lattice constant를 구하려면 부피의 세제곱근을 하면 된다. 
@@ -3611,7 +3611,7 @@ band structure를 그릴 때 사용할 <a href="https://www.sciencedirect.com/sc
 Tutorial 1에서도 사용한 이 band 그래프이다. 
 band path는 모두 <span class="arithmatex">\(\Gamma-X-W-L-\Gamma-K\)</span> 로 설정해준다. 보고싶은 에너지 범위는 <span class="arithmatex">\(Fermi energy ±10 eV\)</span>이다. 
 이 조건들을 만족시키면서 band 그래프를 그려보면 결과는 다음과 같다.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/05/band2.PNG" data-desc-position="bottom"><img alt="band_result" src="../img/05/band2.PNG"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/05/band2.png" data-desc-position="bottom"><img alt="band_result" src="../img/05/band2.png"></a></p>
 <p>페르미 에너지 위 5eV부분을 보면 relativistic의 band structure은 reference와 비슷하지만, 
 non-relativistic의 band structure은 reference와 상이함을 알 수 있다. 
 따라서 Au pseudopotential은 relativistic 옵션을 켜야하고, 이를 키지 않을시 문제가 생길 수 있다는 것을 확인할 수 있다.</p>
@@ -3626,14 +3626,26 @@ work function의 차이만 비교해보기 위해서 다른 변수들은 전부 
 <div class="highlight"><pre><span></span><code><span class="nv">$ase</span><span class="w"> </span>gui
 </code></pre></div>
 <p>를 입력하면 xcryden 창이 뜨게 된다.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/05/ase_gui.png" data-desc-position="bottom"><img alt="ase_gui" src="../img/05/ase_gui.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/05/ase_gui.png" data-desc-position="bottom"><img src="../img/05/ase_gui.png" width="300"></a></p>
 <p><code>setup-Surface slab</code>을 선택하면 원하는 구조의 slab의 .xyz 파일을 생성할 수 있다.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/05/ase_gui_slab.png" data-desc-position="bottom"><img alt="ase_gui_slab" src="../img/05/ase_gui_slab.png" style="display:block; height:400px; margin-left:auto; margin-right:auto;"></a>
-<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/05/ase_gui_slab2.png" data-desc-position="bottom"><img alt="ase_gui_slab2" src="../img/05/ase_gui_slab2.png" style="display:block; height:300px; margin-left:auto; margin-right:auto;"></a></p>
+<table>
+<thead>
+<tr>
+<th><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/05/ase_gui_slab.png" data-desc-position="bottom"><img src="../img/05/ase_gui_slab.png" width="400"></a></th>
+<th><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/05/ase_gui_slab2.png" data-desc-position="bottom"><img src="../img/05/ase_gui_slab2.png" width="300"></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <p>원하는 <code>Element, Lattice Structure and Constant, Vacuum length</code>를 입력한 뒤 Apply</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/05/ase_gui_slab3.png" data-desc-position="bottom"><img alt="ase_gui_slab3" src="../img/05/ase_gui_slab3.png" style="display:block; height:300px; margin-left:auto; margin-right:auto;"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/05/ase_gui_slab3.png" data-desc-position="bottom"><img src="../img/05/ase_gui_slab3.png" width="500"></a></p>
 <p><code>File-Save</code>를 눌러 원하는 directory에 <code>STRUCT.xyz</code> 로 저장하면 파일이 생성된다.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/05/ase_gui_slab4.png" data-desc-position="bottom"><img alt="ase_gui_slab4" src="../img/05/ase_gui_slab4.png" style="display:block; height:350px; margin-left:auto; margin-right:auto;"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/05/ase_gui_slab4.png" data-desc-position="bottom"><img src="../img/05/ase_gui_slab4.png" width="500"></a></p>
 <p>생성된 <code>STRUCT.xyz</code>에는 Cell 정보가 vector 좌표로 표현되어 있으므로,
 이를 </p>
 <p></p><div class="highlight"><pre><span></span><code>CELL<span class="w">   </span>&lt;size0&gt;<span class="w">   </span>&lt;size1&gt;<span class="w">   </span>&lt;size2&gt;<span class="w">   </span>&lt;angle0&gt;<span class="w">   </span>&lt;angle1&gt;<span class="w">   </span>&lt;angle2&gt;
@@ -3643,7 +3655,7 @@ work function의 차이만 비교해보기 위해서 다른 변수들은 전부 
 <p><strong>(3) Tutorial-SIESTA 계산-A. 기초과정-(2) Au 벌크/슬랩 구조 에서 사용하는 make_bulk.py 파일을 이용</strong>한다.
 <br> ase 방법에서와 동일한 parameter들을 파일 안에서 수정할 수 있으니 확인하기 바란다.</p>
 <p><br></p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/05/slab_model.PNG" data-desc-position="bottom"><img alt="01_010" src="../img/05/slab_model.PNG" style="display:block; height:300px; margin-left:auto; margin-right:auto;"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/05/slab_model.png" data-desc-position="bottom"><img src="../img/05/slab_model.png" width="600"></a></p>
 <p><br><br><br></p>
 <p>Slab 모델을 만든 후에는 basis를 설정해준다. work function을 구할 때는 100meV를 사용하면 reference와의 차이가 매우 크기 때문에 PAO.EnergyShift 항목을 50meV로 바꾸고 계산을 해야 한다.</p>
 <table>
@@ -3696,7 +3708,7 @@ work function의 차이만 비교해보기 위해서 다른 변수들은 전부 
 <p>Metal work function의 <a href="https://public.wsu.edu/~pchemlab/documents/Work-functionvalues.pdf">reference</a>에서 Au의 111면에서 work function은 5.31eV임을 알 수 있다. Relativistic의 경우 0.06 eV정도 차이가 나지만, non-relativistic의 경우 1.04 eV로 차이가 매우 심하게 나게 됨을 알 수 있다.</p>
 <p>Au Tutorial에서 했던 것처럼 macroave.in을 통해 Wave function을 시각화 해보면 다음과 같은 결과를 얻을 수 있다.
 Marcoave.in 은 /home/(username)/bin에 있다</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/05/work_compare.png" data-desc-position="bottom"><img alt="work_compare" src="../img/05/work_compare.png" style="display:block; height:400px; margin-left:auto; margin-right:auto;"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/05/work_compare.png" data-desc-position="bottom"><img src="../img/05/work_compare.png" width="700"></a></p>
 <p>Vacuum level의 경우 그래프에서, 위치를 고정하지 않았던 쪽의 원자들에 가까운 쪽 level을 직접 그래프에서 측정하는 것이 더 정확하다.</p>
 <p><br>
 이와 같은 일련의 과정들을 통해 Pseudopotential을 테스트할 수 있다. 테스트 결과 Au같은 원자번호가 큰 원자의 경우 Relativistic 효과를 고려하는 경우 reference와 거의 일치하지만 Relativistic 효과를 고려하지않는 경우는 reference와 큰 차이가 난다. 따라서 Au의 경우 relativistic 효과를 고려해줘야 한다는 것을 알 수 있다.</p>

@@ -109,7 +109,7 @@ $ gnuplot -persist charge.gplot
 • `core charge`   
 • `valence charge`   
    
-<img src="core vs valence charge.png" width="500" height="400"/>
+<img src="../core_vs_valence_charge.png" width="500" height="400"/>
 
 그래프를 통해 다음과 같은 특징을 확인할 수 있다.
 
@@ -136,17 +136,17 @@ radial wavefunction에서 node의 개수는 다음 조건을 만족해야 한다
 $node = 𝑛−𝑙−1$    
 
 예 :
-| 오비탈 | n | l | node |
-| --- | - | - | ---- |
-| 1s  | 1 | 0 | 0    |
-| 2s  | 2 | 0 | 1    |
-| 2p  | 2 | 1 | 0    |
-| 3s  | 3 | 0 | 2    |
-| 3p  | 3 | 1 | 1    | 
+| 오비탈 | n   | l   | node |
+| ------ | --- | --- | ---- |
+| 1s     | 1   | 0   | 0    |
+| 2s     | 2   | 0   | 1    |
+| 2p     | 2   | 1   | 0    |
+| 3s     | 3   | 0   | 2    |
+| 3p     | 3   | 1   | 1    |
 
 
-![](<s.p.d orbital .png>)Radial wavefunction | ![](<Hydrogenic atom wave functions.png>)Appllied Quantum Physices ch 11.3.2
----|---| 
+| ![](<s.p.d_orbital.png>)Radial wavefunction | ![](<Hydrogenic_atom_wave_functions.png>)Appllied Quantum Physices ch 11.3.2 |
+| ------------------------------------------- | ---------------------------------------------------------------------------- |
 
 
 
@@ -213,7 +213,7 @@ $gnuplot --persist charge+3.gplot
 $gnuplot --persist vcharge+3.gplot
 ```
 
-![alt text](<si ion vs si atom-1.png>)   
+![alt text](<si_ion_vs_si_atom-1.png>)   
 Left : Core charge / Right : Valence charge
 
 charge density를 비교하면 core charge에서는 큰 차이가 없으나, valence charge가 감소하고,   
