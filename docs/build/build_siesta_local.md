@@ -8,7 +8,7 @@
 
 ## 1. WSL 설치하기
 
-SIESTA 프로그램은 linux용 프로그램이므로 windows 컴퓨터에 직접 설치가 불가능하다. windows에서 linux를 사용할 수 있게 해주는 WSL을 설치하거나 linux가 깔려있는 컴퓨터가 필요하다. WSL의 설치에 관한 정보는 [위키 페이지](<https://yhkimlab.github.io/yhkimlabwiki/site/setting/>)에 자세히 설명되어있다. 
+SIESTA 프로그램은 linux용 프로그램이므로 windows 컴퓨터에 직접 설치가 불가능하다. windows에서 linux를 사용할 수 있게 해주는 WSL을 설치하거나 linux가 깔려있는 컴퓨터가 필요하다. WSL의 설치에 관한 정보는 [위키 페이지](<https://yhkimlab.github.io/YHKimLabWiki/site/environment/wsl2/>)에 자세히 설명되어있다. 
 
 WSL을 설치한 후 microsoft store에서 ubuntu를 검색해서 우분투를 설치해준다. 이렇게 설치하면 가장 최신 버전인 22.04.1 LTS버전이 설치될 것이다. 원한다면 이전 버전의 우분투를 사용해도 좋다.
 
@@ -42,7 +42,9 @@ SIESTA 4.x 버전에서는 선형 대수학 라이브러리가 기본적으로 �
 
 ## 3. SIESTA 빌드하기
 
-### 소스 다운로드
+### 3-1. Gfortran을 통한 빌드
+
+#### 소스 다운로드
 
 필요한 패키지를 설치했으면 이제 컴퓨터에 SIESTA를 빌드할 수 있다. SIESTA를 빌드하기 위해서는 우선 SIESTA 프로그램들을 다운로드 받아야 한다. SIESTA의 공식 릴리즈판은 [SIESTA Gitlab](https://gitlab.com/siesta-project/siesta/-/releases)에서 받을 수 있다. 가장 최신 릴리즈인 4.1.5버전의 소스코드를 받으려면 다음 명령어를 사용하면 된다.
 
@@ -57,7 +59,7 @@ SIESTA 4.x 버전에서는 선형 대수학 라이브러리가 기본적으로 �
     cd siesta-4.1.5
 ```
 
-### 빌드 설정하기
+#### 빌드 설정하기
 
 SIESTA를 빌드하기 전에 몇가지 설정이 필요하다.
 
@@ -76,7 +78,7 @@ arch.make파일은 다른 프로그램 빌드시의 configure에 해당하는 �
     sh ../Src/obj_setup.sh
 ```
 
-### SIESTA 빌드
+#### SIESTA 빌드
 
 마지막으로 SIESTA 빌드해준다. 터미널에서 Obj 폴더에서 make라고 쳐주면 된다. 그러면 SIESTA 프로그램이 빌드되어 나오고, 이를 이용해 SIESTA 계산을 진행할 수 있다. make도 병렬화가 되기 때문에 코어 수에 맞춰 -j옵션을 넣어 N개의 코어로 빌드를 더 빠르게 할 수 있다. 예를 들어 ==make -j 4== 라는 명령어를 사용하면 cpu에서 4개의 코어로 빌드가 되어 더 빠르게 빌드를 할 수 있다.
 
@@ -100,7 +102,7 @@ arch.make파일은 다른 프로그램 빌드시의 configure에 해당하는 �
 
 ![build2.png](img/build/build_2.PNG)
 
-추가적으로 TRANSIESTA 계산의 후처리 과정을 위한 TBTRANS등 유틸을 빌드해야한다. 유틸은 Util 폴더에 있고, Util 폴더 안에 있는 build_all.sh 스크립트를 실행시키면 된다.
+추가적으로 TRANSIESTA 계산의 후처리 과정을 위한 `TBTRANS` 등 유틸을 빌드해야한다. 유틸은 Util 폴더에 있고, Util 폴더 안에 있는 build_all.sh 스크립트를 실행시키면 된다.
 
 ```bash
     ./build_all.sh
@@ -112,9 +114,23 @@ arch.make파일은 다른 프로그램 빌드시의 configure에 해당하는 �
 
 마찬가지로 Tbtrans도 /usr/bin/폴더에 링크를 만들어 터미널에서 명령어로 사용하면 좋다. tbtrans는 Utils/TS/TBtrans/tbtrans에 위치해 있고, siesta에서 했던 것과 동일하게 링크를 만들어주면 된다.
 
+
+### 3-2. Anaconda를 통한 빌드
+
+ WSL 환경 내에 Anaconda가 설치가 되어있다면 SIESTA를 보다 쉽게 설치할 수 있다([Anaconda 설치](<https://yhkimlab.github.io/YHKimLabWiki/site/environment/wsl2/>)). Anaconda 명령어를 통해서 SIESTA를 빌드하는 명령어는 다음과 같다.
+
+```
+$ conda install -c conda-forge siesta
+$ conda install -c conda-forge "siesta=*=*openmpi" # openMPI 병렬
+```
+
+Anaconda를 통해 SIESTA를 설치한 이후에는 `siesta` 명령어를 통해서 이를 실행할 수 있으며,
+ `tbtrans` 등 모든 유틸 또한 사용할 수 있다.
+
+
 ## 4. 테스트 계산 해보기
 
-빌드가 다 되었으면 테스트 계산을 해보아 실제로 SIESTA가 잘 동작하는지 확인해보자. Tutorial 예제 중 하나인 gold bulk 계산을 한 경우에 대해 해볼 것이다. 테스트 계산은 아래에서 다운로드 받을 수 있다. 적당한 곳에 이 파일을 복사한 후 다음 명령어로 압축을 풀어준다.
+위 과정을 통해서 빌드가 다 되었으면 테스트 계산을 진행하여 실제로 SIESTA가 잘 동작하는지 확인해보자. Tutorial 예제 중 하나인 gold bulk 계산을 한 경우에 대해 해볼 것이다. 테스트 계산은 아래에서 다운로드 받을 수 있다. 적당한 곳에 이 파일을 복사한 후 다음 명령어로 압축을 풀어준다.
 
 [예제 파일](img/build/test.tar.gz){ .md-button }
 

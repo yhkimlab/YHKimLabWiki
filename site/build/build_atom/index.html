@@ -71,7 +71,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#buiding-atom" class="md-skip">
+        <a href="#atom" class="md-skip">
           Skip to content
         </a>
       
@@ -229,7 +229,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../education/DD/" class="md-tabs__link">
+        <a href="../../atomic_unit/dimension_analysis/" class="md-tabs__link">
           
   
   
@@ -298,7 +298,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../build_siesta_local/" class="md-tabs__link">
+        <a href="../build_siesta_Edison/" class="md-tabs__link">
           
   
   
@@ -648,7 +648,7 @@
   <span class="md-ellipsis">
     
   
-    • Linux용 Windows 하위 시스템
+    Linux용 Windows 하위 시스템(WSL)
   
 
     
@@ -676,7 +676,7 @@
   <span class="md-ellipsis">
     
   
-    • 파이썬으로 시작하기
+    파이썬
   
 
     
@@ -824,7 +824,7 @@
   <span class="md-ellipsis">
     
   
-    3. 명령어
+    3. 명령어 cheat sheet
   
 
     
@@ -840,7 +840,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    3. 명령어
+    3. 명령어 cheat sheet
   
 
           </label>
@@ -1032,14 +1032,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../education/DD/" class="md-nav__link">
+      <a href="../../atomic_unit/dimension_analysis/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    B. Edison (KISTI) Jupyter server
+    Atomic unit
   
 
     
@@ -1206,7 +1206,7 @@
   <span class="md-ellipsis">
     
   
-    A. Equation of state (EOS) 
+    A. Equation of state (EOS)
   
 
     
@@ -1426,10 +1426,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
+  <a href="#1-xmlf90-libgridxc" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Prerequisites
+        1. xmlf90와 libGridXC 설치
       
     </span>
   </a>
@@ -1437,21 +1437,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#compiling-xmlf90-and-libgridxc" class="md-nav__link">
+  <a href="#2-atom" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Compiling xmlf90 and libGridXC
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#compiling-atom" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Compiling ATOM
+        2. ATOM 설치
       
     </span>
   </a>
@@ -1764,14 +1753,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../build_siesta_local/" class="md-nav__link">
+      <a href="../build_siesta_Edison/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    A. SIESTA 로컬에서 설치
+    A. SIESTA Edison에서 설치
   
 
     
@@ -1800,6 +1789,34 @@
     
   
     B. SIESTA 클러스터에서 설치
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../build_siesta_local/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C. SIESTA 로컬에서 설치
   
 
     
@@ -2796,10 +2813,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
+  <a href="#1-xmlf90-libgridxc" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Prerequisites
+        1. xmlf90와 libGridXC 설치
       
     </span>
   </a>
@@ -2807,21 +2824,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#compiling-xmlf90-and-libgridxc" class="md-nav__link">
+  <a href="#2-atom" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Compiling xmlf90 and libGridXC
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#compiling-atom" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Compiling ATOM
+        2. ATOM 설치
       
     </span>
   </a>
@@ -2845,42 +2851,35 @@
 
 
 
-<h1 id="buiding-atom">Buiding ATOM</h1>
+<h1 id="atom">ATOM 설치</h1>
 <h2 id="contents">Contents</h2>
 <ol>
-<li>Prerequisites</li>
-<li>Compiling <code>xmlf90</code> and <code>libGridXC</code></li>
-<li>Compiling <code>ATOM</code></li>
+<li><code>xmlf90</code>와 <code>libGridXC</code> 설치</li>
+<li><code>ATOM</code> 설치</li>
 </ol>
-<h2 id="prerequisites">Prerequisites</h2>
-<p><code>ATOM</code> 프로그램을 통해 <code>SIESTA</code>에 이용되는 원자의 <code>psf</code> 파일을 만들 수 있다. 그 외에도 <code>ATOM</code>은 다음과 같은 목적에 이용된다.<br>
-- 특정 전자 배치에 대한 All-electron DFT (density functional theory) 계산 수행<br>
-- ab-initio pseudopotentials 생성<br>
-- 만들어진 pseudopotential를 통해 원자핵이 미치는 효과 계산<br>
-<code>ATOM</code>를 설치하기 앞서 다음과 같은 패키지를 준비해야한다.  </p>
-<p><code>xmlf90</code> : <a href="https://launchpad.net/xmlf90/+download">https://launchpad.net/xmlf90/+download</a> (1.5.0. 버전)</p>
-<p><code>libGridXC</code> : <a href="https://launchpad.net/libgridxc/+download">https://launchpad.net/libgridxc/+download</a> (0.7.3 버전)</p>
+<h2 id="1-xmlf90-libgridxc">1. <code>xmlf90</code>와 <code>libGridXC</code> 설치</h2>
+<p><code>ATOM</code> 프로그램은 밀도범함수론 코드 <code>SIESTA</code>, <code>abinit</code>, 또는 <code>Quantum Esspresso</code>에 활용할 수 있는 다양한 형식(<code>psf</code>,<code>vps</code>, <code>psml</code>)의 원자 슈도포텐셜(pseudopential) 파일 만들 수 있다. 그 외에도 <code>ATOM</code>을 통해 온-전자(all-electron) 계산, 슈도포텐셜 테스트 등 다양한 계산을 수행할 수 있다.  </p>
+<p><code>ATOM</code>를 설치하기 앞서 다음과 같은 패키지를 준비해야한다.  </p>
+<p><code>xmlf90</code>: <a href="https://launchpad.net/xmlf90/+download">https://launchpad.net/xmlf90/+download</a> (1.5.0. 버전)</p>
+<p><code>libGridXC</code>: <a href="https://launchpad.net/libgridxc/+download">https://launchpad.net/libgridxc/+download</a> (0.8.5 버전)</p>
 <p>리눅스 환경에 다운로드한 후 압축을 풀어주는 명령어는 다음과 같다.</p>
-<p></p><div class="highlight"><pre><span></span><code>$<span class="w"> </span>wget<span class="w"> </span>https://launchpad.net/xmlf90/trunk/1.5/+download/xmlf90-1.5.4.tar.gz<span class="w"> </span>//<span class="w"> </span><span class="m">1</span>.5.4버전
-$<span class="w"> </span>wget<span class="w"> </span>https://launchpad.net/libgridxc/trunk/0.7/+download/libgridxc-0.7.6.tgz<span class="w"> </span>//<span class="w"> </span><span class="m">0</span>.7.6버전
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>wget<span class="w"> </span>https://launchpad.net/xmlf90/trunk/1.5/+download/xmlf90-1.5.0.tgz<span class="w"> </span>//<span class="w"> </span><span class="m">1</span>.5.0버전
+$<span class="w"> </span>wget<span class="w"> </span>https://launchpad.net/libgridxc/trunk/0.8/+download/libgridxc-0.8.5.tgz<span class="w"> </span>//<span class="w"> </span><span class="m">0</span>.8.5버전
 $<span class="w"> </span>tar<span class="w"> </span>-xvzf<span class="w"> </span>xmlf90-1.5.0.tgz
-$<span class="w"> </span>tar<span class="w"> </span>-xvzf<span class="w"> </span>libgridxc-0.7.3.tgz
+$<span class="w"> </span>tar<span class="w"> </span>-xvzf<span class="w"> </span>libgridxc-0.8.5.tgz
 </code></pre></div>
-<br><p></p>
 <p><code>tar</code> 명령어를 사용할 때에 <code>not in gzip format</code> 에러가 일어나는 경우 아래 명령어를 통해 <code>file</code>이 <code>tgz</code>형식인지 확인한다.
 </p><div class="highlight"><pre><span></span><code>$<span class="w"> </span>file<span class="w"> </span><span class="o">(</span>FileName<span class="o">)</span>
 </code></pre></div><p></p>
-<h2 id="compiling-xmlf90-and-libgridxc">Compiling <code>xmlf90</code> and <code>libGridXC</code></h2>
 <p>압축을 풀어준 위치에서 다음과 같은 과정을 통해 컴파일을 진행한다.</p>
-<p><code>xmlf90</code> :</p>
+<p><code>xmlf90</code> 설치:</p>
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>xmlf90-1.5.0
 $<span class="w"> </span>mkdir<span class="w"> </span>Gfortran
 $<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>Sys
 $<span class="w"> </span>cp<span class="w"> </span>gfortran.make<span class="w"> </span>../Gfortran/fortran.mk
 </code></pre></div>
-<p>Gfortran 폴더가 없는 경우 홈페이지에서 다른 버전의 xmlf90을 다운받는다.
-<br><br><br></p>
-<p>라이브러리를 생성하기 전에 fortran.mk을 다음과 같이 수정해준다.</p>
+<p><code>gfortran.make</code> 파일이 없는 경우 홈페이지에서 다른 버전의 xmlf90을 다운받는다.</p>
+<p>라이브러리를 생성하기 전에 fortran.mk을 (intel의 경우) 다음과 같이 수정해준다.</p>
 <div class="highlight"><pre><span></span><code><span class="nv">LDFLAGS</span><span class="o">=</span>-mkl<span class="o">=</span>cluster
 <span class="nv">AR</span><span class="o">=</span>/usr/bin/ar
 </code></pre></div>
@@ -2890,9 +2889,9 @@ $<span class="w"> </span>sh<span class="w"> </span>../config.sh
 $<span class="w"> </span>make
 </code></pre></div>
 -&gt; <code>xmlf90.mk</code> 생성확인<p></p>
-<p><code>libgridxc</code> :</p>
+<p><code>libgridxc</code> 설치:</p>
 <div class="highlight"><pre><span></span><code><span class="o">(</span>설치한<span class="w"> </span>위치로<span class="w"> </span>돌아와서<span class="o">)</span>
-$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>libgridxc-0.7.3
+$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>libgridxc-0.8.5
 $<span class="w"> </span>mkdir<span class="w"> </span>Gfortran
 $<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>Gfortran
 $<span class="w"> </span>cp<span class="w"> </span>../extra/fortran.mk<span class="w"> </span>.
@@ -2905,20 +2904,20 @@ $<span class="w"> </span>make
 <span class="nv">AR</span><span class="o">=</span>/usr/bin/ar
 </code></pre></div>
 <p>-&gt; <code>gridxc.mk</code> 생성확인</p>
-<h2 id="compiling-atom">Compiling <code>ATOM</code></h2>
+<h2 id="2-atom">2. <code>ATOM</code> 설치</h2>
 <p><code>ATOM</code>를 위한 라이브러리가 준비되었으니 이제 <code>ATOM</code>을 설치한다.<br>
-<code>ATOM</code> : <a href="https://departments.icmab.es/leem/SIESTA_MATERIAL/Pseudos/Code/downloads.html">https://departments.icmab.es/leem/SIESTA_MATERIAL/Pseudos/Code/downloads.html</a> (4.2.7 버전)<br>
-리눅스 환경에 설치하고 다음과 같은 커맨드로 압축을 풀어준다.<br>
-<code>ATOM</code> :
-</p><div class="highlight"><pre><span></span><code>$<span class="w"> </span>tar<span class="w"> </span>xvzf<span class="w"> </span>atom-4.2.7-100.gz
+<code>ATOM</code>: <a href="https://siesta-project.org/SIESTA_MATERIAL/Pseudos/Code/downloads.html">https://siesta-project.org/SIESTA_MATERIAL/Pseudos/Code/downloads.html</a> (4.2.7 버전)</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>wget<span class="w"> </span>https://siesta-project.org/SIESTA_MATERIAL/Pseudos/Code/atom-4.2.7-100.tgz<span class="w"> </span>//<span class="w"> </span><span class="m">4</span>.2.7버전
+$<span class="w"> </span>tar<span class="w"> </span>xvzf<span class="w"> </span>atom-4.2.7-100.tgz
 </code></pre></div>
-<code>ATOM</code>도 마찬가지로 컴파일을 해야 한다. 압축을 풀어준 위치에서 컴파일을 진행한다.<p></p>
-<p><code>ATOM</code> :
+<p><code>ATOM</code>도 마찬가지로 컴파일을 해야 한다. 압축을 풀어준 위치에서 컴파일을 진행한다.</p>
+<p><code>ATOM</code> 설치:
 </p><div class="highlight"><pre><span></span><code>$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>atom-4.2.7-100
 $<span class="w"> </span>cp<span class="w"> </span>arch.make.sample<span class="w"> </span>arch.make
 $<span class="w"> </span>vi<span class="w"> </span>arch.make
-<span class="o">(</span>파일이<span class="w"> </span>열리면<span class="w"> </span>아래<span class="w"> </span>부분에<span class="w"> </span>ROOT를<span class="w"> </span>수정한다<span class="o">)</span>
-<span class="nv">XMLF90_ROOT</span><span class="o">=</span><span class="w"> </span>&lt;설치한<span class="w"> </span>xmlf90<span class="w"> </span>위치&gt;/xmlf90-1.5.0/Gfortran
+</code></pre></div>
+<code>arch.make</code> 파일이 열리면 아래 부분에 ROOT를 수정한다. path는 '/' root 부터 절대 경로를 쓰고, 리눅스 명령어 <em>$ pwd</em> 로 절대경로를 확인할 수 있다.<p></p>
+<p></p><div class="highlight"><pre><span></span><code><span class="nv">XMLF90_ROOT</span><span class="o">=</span><span class="w"> </span>&lt;설치한<span class="w"> </span>xmlf90<span class="w"> </span>위치&gt;/xmlf90-1.5.0/Gfortran
 <span class="nv">GRIDXC_ROOT</span><span class="o">=</span><span class="w"> </span>&lt;설치한<span class="w"> </span>libgridxc<span class="w"> </span>위치&gt;/libgridxc-0.8.5/Gfortran
 include<span class="w"> </span><span class="k">$(</span>XMLF90_ROOT<span class="k">)</span>/xmlf90.mk
 include<span class="w"> </span><span class="k">$(</span>GRIDXC_ROOT<span class="k">)</span>/gridxc.mk
