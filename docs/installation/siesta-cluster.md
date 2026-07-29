@@ -36,17 +36,6 @@ SIESTA를 빌드하기 전에 몇가지 설정이 필요하다.
 
 `arch.make` 파일은 다른 프로그램 빌드시의 configure에 해당하는 파일로, 컴파일시 환경설정을 해주는 파일이다. `Obj` 폴더 내에 `gfortran.make`, `intel.make` 예시 파일이 있다. Fortran compiler 환경에 따라서 gfortran을 이용하는 경우 `gfortran.make` 파일을, ifort를 사용하는 경우 `intel.make` 파일을 arch.make 파일로 바꾸어준다.
 
-- GNU 컴파일러(gcc)
-```bash
-mv gfortran.make arch.make # gcc
-```
-```
-CC = gcc
-FPP = $(FC) -E -P -x c
-FC = gfortran
-FC_SERIAL = gfortran
-```
-
 - Intel 컴파일러(icc)
 ```bash
 mv intel.make arch.make # icc
@@ -58,13 +47,24 @@ FC = ifort
 FC_SERIAL = ifort
 ```
 
-추가적으로 **병렬화** 버전의 SIESTA를 설치하고 싶다면 다음과 같은 형태로 `arch.make` 파일을 수정해준다.
+- GNU 컴파일러(gcc)
+```bash
+mv gfortran.make arch.make # gcc
+```
+```
+CC = gcc
+FPP = $(FC) -E -P -x c
+FC = gfortran
+FC_SERIAL = gfortran
+```
+
+기본적으로 계산 속도를 빠르게 하기 위해 **병렬화** 버전의 SIESTA를 설치해야한다. 다음과 같은 형태로 `arch.make` 파일을 수정해준다.
 
 - **MPI**을 사용하는 경우
 ```
-MPIROOT=/opt/intel/oneapi/mpi/2021.6.0 # (예시) 본인의 MPI 경로 지정
-CC = mpicc
-FC = mpifort # or mpif90
+MPIROOT=/opt/intel/oneapi/mpi/2021.6.0 # 클러스터 기준
+CC = mpiicc
+FC = mpiifort # or mpif90
 MPI_INTERFACE = libmpi_f90.a
 MPI_INCLUDE = $(MPIROOT)/include
 FPPFLAGS += -DMPI
